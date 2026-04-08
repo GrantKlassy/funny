@@ -1,0 +1,10 @@
+FROM docker.io/library/node:22-bookworm-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl wget jq file binutils xxd \
+    dnsutils whois host \
+    python3 python3-pip \
+    openssl ncat exiftool \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /investigation
