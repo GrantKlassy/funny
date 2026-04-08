@@ -16,3 +16,9 @@ is it some gov thing?
 Dix? Standard security shit
 We DO NOT BUILD SHIT
 
+## Git Rules
+
+- All commits must be authored and committed as `grantklassy <28637437+GrantKlassy@users.noreply.github.com>`
+- Never add `Co-Authored-By` trailers — GitHub counts them as contributors
+- Push via the `github.com-gk` SSH alias only
+
