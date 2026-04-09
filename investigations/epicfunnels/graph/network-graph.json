@@ -1,0 +1,1215 @@
+{
+  "metadata": {
+    "investigation": "epicfunnels-cpa-scam",
+    "description": "CPA affiliate scam network — Lovable AI generated funnels distributed via TikTok",
+    "generated": "2026-04-08T00:00:00Z",
+    "last_probed": "2026-04-09T02:27:00Z",
+    "version": 2
+  },
+  "nodes": [
+    {
+      "id": "domain:epicfunnels.net",
+      "type": "domain",
+      "label": "epicfunnels.net",
+      "metadata": {
+        "registrar": "Sav.com",
+        "registered": "2025-08-26",
+        "nameservers": ["cheryl.ns.cloudflare.com", "logan.ns.cloudflare.com"],
+        "cloudflare_ns_pair": "cheryl/logan",
+        "status": "live",
+        "role": "scam_landing_page_and_email"
+      }
+    },
+    {
+      "id": "domain:noodledit.com",
+      "type": "domain",
+      "label": "noodledit.com",
+      "metadata": {
+        "registrar": "Cloudflare",
+        "registered": "2024-10-18",
+        "nameservers": ["cass.ns.cloudflare.com", "felicity.ns.cloudflare.com"],
+        "cloudflare_ns_pair": "cass/felicity",
+        "status": "live",
+        "role": "asset_cdn"
+      }
+    },
+    {
+      "id": "domain:mydailysurge.com",
+      "type": "domain",
+      "label": "mydailysurge.com",
+      "metadata": {
+        "registrar": "unknown",
+        "nameservers": ["cass.ns.cloudflare.com", "felicity.ns.cloudflare.com"],
+        "cloudflare_ns_pair": "cass/felicity",
+        "status": "404",
+        "role": "seo_content_farm"
+      }
+    },
+    {
+      "id": "domain:phef6trk.com",
+      "type": "domain",
+      "label": "phef6trk.com",
+      "metadata": {
+        "registrar": "scrubbed",
+        "registrar_previous": "Squarespace",
+        "registered": "2024-06-25",
+        "nameservers": [],
+        "nameservers_previous": ["Google Cloud DNS"],
+        "status": "sinkholed",
+        "sinkhole_ip": "10.0.0.1",
+        "role": "cpa_affiliate_tracker",
+        "whois_status": "completely_scrubbed",
+        "note": "Whois returns empty records, NS records removed since 2026-04-08"
+      }
+    },
+
+    {
+      "id": "subdomain:jessica.epicfunnels.net",
+      "type": "subdomain",
+      "label": "jessica.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "live",
+        "purpose": "scam_funnel",
+        "last_modified": "2026-03-15",
+        "ct_first_seen": "2026-01-18"
+      }
+    },
+    {
+      "id": "subdomain:jenny.epicfunnels.net",
+      "type": "subdomain",
+      "label": "jenny.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "nxdomain",
+        "status_changed": "2026-04-09",
+        "previous_status": "live",
+        "purpose": "scam_funnel",
+        "ct_first_seen": "2026-02-17",
+        "note": "DNS removed between 2026-04-08 and 2026-04-09"
+      }
+    },
+    {
+      "id": "subdomain:kylie.epicfunnels.net",
+      "type": "subdomain",
+      "label": "kylie.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "nxdomain",
+        "status_changed": "2026-04-09",
+        "previous_status": "live",
+        "purpose": "scam_funnel",
+        "ct_first_seen": "2025-12-14",
+        "note": "DNS removed between 2026-04-08 and 2026-04-09"
+      }
+    },
+    {
+      "id": "subdomain:afiliados.epicfunnels.net",
+      "type": "subdomain",
+      "label": "afiliados.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "nxdomain",
+        "purpose": "affiliate_portal",
+        "language": "spanish",
+        "translation": "affiliates"
+      }
+    },
+    {
+      "id": "subdomain:socio.epicfunnels.net",
+      "type": "subdomain",
+      "label": "socio.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "nxdomain",
+        "purpose": "affiliate_portal",
+        "language": "spanish",
+        "translation": "partner"
+      }
+    },
+    {
+      "id": "subdomain:socios.epicfunnels.net",
+      "type": "subdomain",
+      "label": "socios.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "nxdomain",
+        "purpose": "affiliate_portal",
+        "language": "spanish",
+        "translation": "partners"
+      }
+    },
+    {
+      "id": "subdomain:evento.epicfunnels.net",
+      "type": "subdomain",
+      "label": "evento.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "nxdomain",
+        "purpose": "affiliate_portal",
+        "language": "spanish",
+        "translation": "event"
+      }
+    },
+    {
+      "id": "subdomain:app.epicfunnels.net",
+      "type": "subdomain",
+      "label": "app.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "nxdomain",
+        "purpose": "infrastructure",
+        "ct_first_seen": "2023-06-16"
+      }
+    },
+    {
+      "id": "subdomain:demo.epicfunnels.net",
+      "type": "subdomain",
+      "label": "demo.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "nxdomain",
+        "purpose": "infrastructure"
+      }
+    },
+    {
+      "id": "subdomain:link.epicfunnels.net",
+      "type": "subdomain",
+      "label": "link.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "nxdomain",
+        "purpose": "infrastructure",
+        "ct_first_seen": "2023-10-13"
+      }
+    },
+    {
+      "id": "subdomain:m.epicfunnels.net",
+      "type": "subdomain",
+      "label": "m.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "nxdomain",
+        "purpose": "mobile"
+      }
+    },
+    {
+      "id": "subdomain:vpn.epicfunnels.net",
+      "type": "subdomain",
+      "label": "vpn.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "nxdomain",
+        "purpose": "infrastructure"
+      }
+    },
+    {
+      "id": "subdomain:www.epicfunnels.net",
+      "type": "subdomain",
+      "label": "www.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "live",
+        "status_changed": "2026-04-09",
+        "previous_status": "nxdomain",
+        "purpose": "web",
+        "resolves_to": "172.67.192.166",
+        "note": "Now resolves and serves HTTP 200 via Cloudflare"
+      }
+    },
+    {
+      "id": "subdomain:webmail.epicfunnels.net",
+      "type": "subdomain",
+      "label": "webmail.epicfunnels.net",
+      "metadata": {
+        "parent": "epicfunnels.net",
+        "status": "live",
+        "purpose": "email",
+        "software": "Roundcube 1.6.11"
+      }
+    },
+    {
+      "id": "subdomain:b.noodledit.com",
+      "type": "subdomain",
+      "label": "b.noodledit.com",
+      "metadata": {
+        "parent": "noodledit.com",
+        "status": "live",
+        "purpose": "asset_cdn",
+        "backend": "Google Cloud Storage"
+      }
+    },
+    {
+      "id": "subdomain:sassets.noodledit.com",
+      "type": "subdomain",
+      "label": "sassets.noodledit.com",
+      "metadata": {
+        "parent": "noodledit.com",
+        "status": "live",
+        "purpose": "asset_cdn",
+        "backend": "Google Cloud Storage"
+      }
+    },
+    {
+      "id": "subdomain:explore.mydailysurge.com",
+      "type": "subdomain",
+      "label": "explore.mydailysurge.com",
+      "metadata": {
+        "parent": "mydailysurge.com",
+        "status": "live",
+        "purpose": "seo_blog",
+        "platform": "Webflow",
+        "webflow_site_id": "68129c0789b42b5281896601",
+        "last_published": "2026-03-26T11:23:53Z",
+        "last_modified": "2026-04-05T11:33:36Z",
+        "google_analytics": "G-BSTM4RV28F",
+        "google_tag_manager": "GTM-N3JVLCTN",
+        "resolves_to": "104.21.71.114",
+        "proxy_changed": "Now Cloudflare (was Google Frontend)",
+        "note": "Content updated Apr 5, 2026; moved from Google Frontend to Cloudflare proxy"
+      }
+    },
+    {
+      "id": "subdomain:signup.mydailysurge.com",
+      "type": "subdomain",
+      "label": "signup.mydailysurge.com",
+      "metadata": {
+        "parent": "mydailysurge.com",
+        "status": "404",
+        "purpose": "registration"
+      }
+    },
+    {
+      "id": "subdomain:trck.mydailysurge.com",
+      "type": "subdomain",
+      "label": "trck.mydailysurge.com",
+      "metadata": {
+        "parent": "mydailysurge.com",
+        "status": "404",
+        "purpose": "tracking"
+      }
+    },
+    {
+      "id": "subdomain:daily-rotating.mydailysurge.com",
+      "type": "subdomain",
+      "label": "1-31.mydailysurge.com",
+      "metadata": {
+        "parent": "mydailysurge.com",
+        "status": "404",
+        "purpose": "daily_rotating_landing_pages",
+        "note": "Numbered 1 through 31, one per day of month, all now 404"
+      }
+    },
+
+    {
+      "id": "ip:13.220.193.170",
+      "type": "ip",
+      "label": "13.220.193.170",
+      "metadata": {
+        "provider": "AWS",
+        "service": "EC2",
+        "region": "us-east-1",
+        "reverse_dns": "ec2-13-220-193-170.compute-1.amazonaws.com",
+        "internal_hostname": "ip-172-26-15-175.ec2.internal",
+        "hostname_leak": "SMTP banner on port 587",
+        "provisioned": "2025-08-28",
+        "status": "live"
+      }
+    },
+    {
+      "id": "ip:34.36.210.5",
+      "type": "ip",
+      "label": "34.36.210.5",
+      "metadata": {
+        "provider": "Google Cloud",
+        "status": "live"
+      }
+    },
+    {
+      "id": "ip:104.21.50.252",
+      "type": "ip",
+      "label": "104.21.50.252",
+      "metadata": {
+        "provider": "Cloudflare",
+        "status": "live"
+      }
+    },
+    {
+      "id": "ip:172.67.215.119",
+      "type": "ip",
+      "label": "172.67.215.119",
+      "metadata": {
+        "provider": "Cloudflare",
+        "status": "live"
+      }
+    },
+    {
+      "id": "ip:10.0.0.1",
+      "type": "ip",
+      "label": "10.0.0.1 (sinkhole)",
+      "metadata": {
+        "provider": "sinkhole",
+        "status": "sinkholed",
+        "note": "Non-routable RFC1918 address used to disable phef6trk.com"
+      }
+    },
+
+    {
+      "id": "service:ec2:ssh:22",
+      "type": "service",
+      "label": "SSH :22",
+      "metadata": {
+        "port": 22,
+        "protocol": "SSH",
+        "host": "13.220.193.170",
+        "status": "open"
+      }
+    },
+    {
+      "id": "service:ec2:http:80",
+      "type": "service",
+      "label": "HTTP :80",
+      "metadata": {
+        "port": 80,
+        "protocol": "HTTP",
+        "host": "13.220.193.170",
+        "software": "nginx",
+        "status": "open",
+        "note": "Default 'Success!' page"
+      }
+    },
+    {
+      "id": "service:ec2:https:443",
+      "type": "service",
+      "label": "HTTPS :443",
+      "metadata": {
+        "port": 443,
+        "protocol": "HTTPS",
+        "host": "13.220.193.170",
+        "status": "open",
+        "note": "Redirects to HTTP, cert expired"
+      }
+    },
+    {
+      "id": "service:ec2:smtp:587",
+      "type": "service",
+      "label": "SMTP :587",
+      "metadata": {
+        "port": 587,
+        "protocol": "SMTP",
+        "host": "13.220.193.170",
+        "status": "open",
+        "banner_leak": "ip-172-26-15-175.ec2.internal"
+      }
+    },
+    {
+      "id": "service:ec2:imap:143",
+      "type": "service",
+      "label": "IMAP :143",
+      "metadata": {
+        "port": 143,
+        "protocol": "IMAP",
+        "host": "13.220.193.170",
+        "software": "Dovecot",
+        "status": "open"
+      }
+    },
+    {
+      "id": "service:ec2:imaps:993",
+      "type": "service",
+      "label": "IMAPS :993",
+      "metadata": {
+        "port": 993,
+        "protocol": "IMAPS",
+        "host": "13.220.193.170",
+        "software": "Dovecot",
+        "status": "open",
+        "auth_methods": ["PLAIN", "LOGIN"],
+        "banner": "Mail Delivery Agent"
+      }
+    },
+    {
+      "id": "service:ec2:nodejs:3000",
+      "type": "service",
+      "label": "Node.js :3000",
+      "metadata": {
+        "port": 3000,
+        "protocol": "HTTP",
+        "host": "13.220.193.170",
+        "software": "Node.js",
+        "status": "crashed",
+        "http_status": 500,
+        "note": "Likely backend for /api/continue-click and /api/continue redirects"
+      }
+    },
+    {
+      "id": "service:ec2:postgresql:5432",
+      "type": "service",
+      "label": "PostgreSQL :5432",
+      "metadata": {
+        "port": 5432,
+        "protocol": "PostgreSQL",
+        "host": "13.220.193.170",
+        "software": "PostgreSQL",
+        "status": "open",
+        "severity": "critical",
+        "note": "Database exposed to public internet — stores click tracking data"
+      }
+    },
+    {
+      "id": "service:ec2:smtp:25",
+      "type": "service",
+      "label": "SMTP :25 (blocked)",
+      "metadata": {
+        "port": 25,
+        "protocol": "SMTP",
+        "host": "13.220.193.170",
+        "status": "blocked",
+        "note": "AWS default security policy blocks port 25"
+      }
+    },
+    {
+      "id": "service:ec2:redis:6379",
+      "type": "service",
+      "label": "Redis :6379",
+      "metadata": {
+        "port": 6379,
+        "protocol": "Redis",
+        "host": "13.220.193.170",
+        "software": "Redis",
+        "status": "open",
+        "first_seen": "2026-04-09",
+        "severity": "critical",
+        "note": "NEW — not present in original investigation. Redis exposed to public internet. Likely caching or session store."
+      }
+    },
+    {
+      "id": "ip:104.21.11.211",
+      "type": "ip",
+      "label": "104.21.11.211",
+      "metadata": {
+        "provider": "Cloudflare",
+        "status": "live",
+        "note": "Cloudflare proxy IP for epicfunnels.net (discovered in reinvestigation)"
+      }
+    },
+    {
+      "id": "ip:172.67.192.166",
+      "type": "ip",
+      "label": "172.67.192.166",
+      "metadata": {
+        "provider": "Cloudflare",
+        "status": "live",
+        "note": "Cloudflare proxy IP for epicfunnels.net (discovered in reinvestigation)"
+      }
+    },
+    {
+      "id": "ip:104.21.71.114",
+      "type": "ip",
+      "label": "104.21.71.114",
+      "metadata": {
+        "provider": "Cloudflare",
+        "status": "live",
+        "note": "Cloudflare proxy IP for explore.mydailysurge.com (discovered in reinvestigation — was Google Frontend before)"
+      }
+    },
+
+    {
+      "id": "brand:getngoods",
+      "type": "brand",
+      "label": "GetnGoods",
+      "metadata": {
+        "twitter": "@GetnGoods",
+        "role": "scam_frontend",
+        "found_in": "meta author tag in scam page JS bundle"
+      }
+    },
+    {
+      "id": "brand:mydailysurge",
+      "type": "brand",
+      "label": "MyDailySurge",
+      "metadata": {
+        "role": "seo_content_farm",
+        "categories": ["Personal Finance", "Travel", "Home Design", "Wellness"],
+        "stock_photos": "Pexels"
+      }
+    },
+
+    {
+      "id": "platform:lovable",
+      "type": "platform",
+      "label": "Lovable AI",
+      "metadata": {
+        "role": "scam_page_generator",
+        "vibescamming_score": "1.8/10",
+        "default_stack": "Vite + React + Tailwind CSS",
+        "evidence": "OG images hosted on lovable.dev"
+      }
+    },
+    {
+      "id": "platform:webflow",
+      "type": "platform",
+      "label": "Webflow",
+      "metadata": {
+        "role": "seo_blog_host",
+        "site_id": "68129c0789b42b5281896601"
+      }
+    },
+    {
+      "id": "platform:aws",
+      "type": "platform",
+      "label": "AWS EC2",
+      "metadata": {
+        "role": "server_hosting",
+        "region": "us-east-1"
+      }
+    },
+    {
+      "id": "platform:gcloud",
+      "type": "platform",
+      "label": "Google Cloud",
+      "metadata": {
+        "role": "hosting_and_storage",
+        "services": ["Compute", "Cloud Storage"]
+      }
+    },
+    {
+      "id": "platform:cloudflare",
+      "type": "platform",
+      "label": "Cloudflare",
+      "metadata": {
+        "role": "dns_proxy_ssl",
+        "accounts_observed": 2,
+        "ns_pairs": ["cheryl/logan", "cass/felicity"]
+      }
+    },
+
+    {
+      "id": "cert:le-direct-expired",
+      "type": "certificate",
+      "label": "LE R13 (mail server, expired)",
+      "metadata": {
+        "issuer": "Let's Encrypt R13",
+        "cn": "epicfunnels.net",
+        "not_before": "2025-10-27",
+        "not_after": "2026-01-25",
+        "status": "expired",
+        "type": "direct"
+      }
+    },
+    {
+      "id": "cert:cf-wildcard",
+      "type": "certificate",
+      "label": "GTS WE1 wildcard *.epicfunnels.net",
+      "metadata": {
+        "issuer": "Google Trust Services WE1",
+        "cn": "*.epicfunnels.net",
+        "not_before": "2026-02-19",
+        "not_after": "2026-05-20",
+        "status": "valid",
+        "type": "cloudflare_managed"
+      }
+    },
+    {
+      "id": "cert:le-jessica",
+      "type": "certificate",
+      "label": "LE E8 jessica.epicfunnels.net",
+      "metadata": {
+        "issuer": "Let's Encrypt E8",
+        "cn": "jessica.epicfunnels.net",
+        "not_before": "2026-01-18",
+        "not_after": "2026-04-18",
+        "status": "valid",
+        "type": "subdomain_specific"
+      }
+    },
+    {
+      "id": "cert:le-jenny",
+      "type": "certificate",
+      "label": "LE E7 jenny.epicfunnels.net",
+      "metadata": {
+        "issuer": "Let's Encrypt E7",
+        "cn": "jenny.epicfunnels.net",
+        "not_before": "2026-02-17",
+        "not_after": "2026-05-18",
+        "status": "valid",
+        "type": "subdomain_specific"
+      }
+    },
+    {
+      "id": "cert:le-kylie",
+      "type": "certificate",
+      "label": "LE E7 kylie.epicfunnels.net",
+      "metadata": {
+        "issuer": "Let's Encrypt E7",
+        "cn": "kylie.epicfunnels.net",
+        "not_before": "2026-03-03",
+        "not_after": "2026-06-01",
+        "status": "valid",
+        "type": "subdomain_specific"
+      }
+    },
+
+    {
+      "id": "email:mx",
+      "type": "email_config",
+      "label": "MX record",
+      "metadata": {
+        "domain": "epicfunnels.net",
+        "record_type": "MX",
+        "value": "_dc-mx.16d4f49190c7.epicfunnels.net",
+        "target_ip": "13.220.193.170"
+      }
+    },
+    {
+      "id": "email:spf",
+      "type": "email_config",
+      "label": "SPF record",
+      "metadata": {
+        "domain": "epicfunnels.net",
+        "record_type": "SPF",
+        "value": "v=spf1 a mx ip4:13.220.193.170 -all",
+        "policy": "hard_fail"
+      }
+    },
+    {
+      "id": "email:dmarc",
+      "type": "email_config",
+      "label": "DMARC record",
+      "metadata": {
+        "domain": "epicfunnels.net",
+        "record_type": "DMARC",
+        "value": "v=DMARC1; p=quarantine; pct=100",
+        "policy": "quarantine"
+      }
+    },
+
+    {
+      "id": "email:dkim",
+      "type": "email_config",
+      "label": "DKIM record (not activated)",
+      "metadata": {
+        "domain": "epicfunnels.net",
+        "record_type": "DKIM",
+        "selector": "mail",
+        "value": "v=DKIM1; k=rsa; p=DKIM-SUPPORT-IS-NOT-ACTIVATED",
+        "status": "configured_but_inactive",
+        "first_seen": "2026-04-09",
+        "note": "DKIM DNS record exists but RSA key placeholder indicates never completed setup"
+      }
+    },
+
+    {
+      "id": "tracker:phef6trk",
+      "type": "tracker",
+      "label": "CPA Tracker /FGK5P4/2Z57CD5/",
+      "metadata": {
+        "url": "https://www.phef6trk.com/FGK5P4/2Z57CD5/",
+        "type": "cpa_affiliate",
+        "status": "sinkholed",
+        "sinkhole_ip": "10.0.0.1",
+        "note": "Victim clicks redirected here for operator payment"
+      }
+    },
+
+    {
+      "id": "asset:iphone17promax",
+      "type": "asset",
+      "label": "iPhone 17 Pro Max promo",
+      "metadata": {
+        "url": "https://b.noodledit.com/promotions/iphone17promax1000.png",
+        "type": "image",
+        "size_bytes": 401408,
+        "exif": "stripped",
+        "prize_value": "$1000"
+      }
+    },
+    {
+      "id": "asset:macbook",
+      "type": "asset",
+      "label": "MacBook promo",
+      "metadata": {
+        "url": "https://b.noodledit.com/promotions/macbook1000.png",
+        "type": "image",
+        "size_bytes": 208896,
+        "exif": "stripped",
+        "prize_value": "$1000",
+        "note": "Secondary campaign variant, not yet deployed"
+      }
+    },
+    {
+      "id": "asset:logo-mydailysurge",
+      "type": "asset",
+      "label": "MyDailySurge logo",
+      "metadata": {
+        "url": "https://sassets.noodledit.com/pages/logo_mydailysurge.svg",
+        "type": "svg",
+        "size_bytes": 11264,
+        "note": "Programmatically generated, no editor metadata"
+      }
+    },
+    {
+      "id": "asset:js-bundle",
+      "type": "asset",
+      "label": "Scam page JS bundle",
+      "metadata": {
+        "url": "https://jessica.epicfunnels.net/assets/index-CUlwK__p.js",
+        "type": "javascript",
+        "size_bytes": 357376,
+        "beautified_bytes": 606208,
+        "framework": "Vite + React + Tailwind"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "platform:cloudflare",
+      "type": "proxied_by",
+      "metadata": { "ns_pair": "cheryl/logan", "evidence": "DNS NS records", "confidence": "high" }
+    },
+    {
+      "source": "domain:noodledit.com",
+      "target": "platform:cloudflare",
+      "type": "proxied_by",
+      "metadata": { "ns_pair": "cass/felicity", "evidence": "DNS NS records", "confidence": "high" }
+    },
+    {
+      "source": "domain:mydailysurge.com",
+      "target": "platform:cloudflare",
+      "type": "proxied_by",
+      "metadata": { "ns_pair": "cass/felicity", "evidence": "DNS NS records", "confidence": "high" }
+    },
+    {
+      "source": "domain:noodledit.com",
+      "target": "domain:mydailysurge.com",
+      "type": "shared_cloudflare_account",
+      "metadata": { "ns_pair": "cass/felicity", "evidence": "Identical Cloudflare nameservers", "confidence": "high" }
+    },
+
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "ip:13.220.193.170",
+      "type": "resolves_to",
+      "metadata": { "record_type": "A", "via": "MX chain", "evidence": "dig MX + A", "confidence": "high" }
+    },
+    {
+      "source": "domain:mydailysurge.com",
+      "target": "ip:34.36.210.5",
+      "type": "resolves_to",
+      "metadata": { "record_type": "A", "evidence": "dig A record", "confidence": "high" }
+    },
+    {
+      "source": "domain:noodledit.com",
+      "target": "ip:104.21.50.252",
+      "type": "resolves_to",
+      "metadata": { "record_type": "A", "evidence": "dig A record (Cloudflare proxy)", "confidence": "high" }
+    },
+    {
+      "source": "domain:noodledit.com",
+      "target": "ip:172.67.215.119",
+      "type": "resolves_to",
+      "metadata": { "record_type": "A", "evidence": "dig A record (Cloudflare proxy)", "confidence": "high" }
+    },
+    {
+      "source": "domain:phef6trk.com",
+      "target": "ip:10.0.0.1",
+      "type": "resolves_to",
+      "metadata": { "record_type": "A", "evidence": "dig across 3 resolvers", "confidence": "high", "note": "sinkholed" }
+    },
+
+    {
+      "source": "ip:13.220.193.170",
+      "target": "platform:aws",
+      "type": "hosted_on",
+      "metadata": { "evidence": "Reverse DNS ec2-13-220-193-170.compute-1.amazonaws.com", "confidence": "high" }
+    },
+    {
+      "source": "ip:34.36.210.5",
+      "target": "platform:gcloud",
+      "type": "hosted_on",
+      "metadata": { "evidence": "Google Cloud IP range", "confidence": "high" }
+    },
+
+    {
+      "source": "ip:13.220.193.170",
+      "target": "service:ec2:ssh:22",
+      "type": "hosts",
+      "metadata": { "evidence": "port scan", "confidence": "high" }
+    },
+    {
+      "source": "ip:13.220.193.170",
+      "target": "service:ec2:http:80",
+      "type": "hosts",
+      "metadata": { "evidence": "port scan", "confidence": "high" }
+    },
+    {
+      "source": "ip:13.220.193.170",
+      "target": "service:ec2:https:443",
+      "type": "hosts",
+      "metadata": { "evidence": "port scan", "confidence": "high" }
+    },
+    {
+      "source": "ip:13.220.193.170",
+      "target": "service:ec2:smtp:587",
+      "type": "hosts",
+      "metadata": { "evidence": "port scan + SMTP banner", "confidence": "high" }
+    },
+    {
+      "source": "ip:13.220.193.170",
+      "target": "service:ec2:imap:143",
+      "type": "hosts",
+      "metadata": { "evidence": "port scan", "confidence": "high" }
+    },
+    {
+      "source": "ip:13.220.193.170",
+      "target": "service:ec2:imaps:993",
+      "type": "hosts",
+      "metadata": { "evidence": "port scan + SSL handshake", "confidence": "high" }
+    },
+    {
+      "source": "ip:13.220.193.170",
+      "target": "service:ec2:nodejs:3000",
+      "type": "hosts",
+      "metadata": { "evidence": "port scan + HTTP 500 response", "confidence": "high" }
+    },
+    {
+      "source": "ip:13.220.193.170",
+      "target": "service:ec2:postgresql:5432",
+      "type": "hosts",
+      "metadata": { "evidence": "port scan", "confidence": "high" }
+    },
+    {
+      "source": "ip:13.220.193.170",
+      "target": "service:ec2:smtp:25",
+      "type": "hosts",
+      "metadata": { "evidence": "port scan (blocked by AWS)", "confidence": "high" }
+    },
+    {
+      "source": "ip:13.220.193.170",
+      "target": "service:ec2:redis:6379",
+      "type": "hosts",
+      "metadata": { "evidence": "port scan (reinvestigation 2026-04-09)", "confidence": "high", "note": "NEW — not seen in original investigation" }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "ip:104.21.11.211",
+      "type": "resolves_to",
+      "metadata": { "record_type": "A", "evidence": "dig (reinvestigation 2026-04-09)", "confidence": "high", "note": "Cloudflare proxy IP" }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "ip:172.67.192.166",
+      "type": "resolves_to",
+      "metadata": { "record_type": "A", "evidence": "dig (reinvestigation 2026-04-09)", "confidence": "high", "note": "Cloudflare proxy IP" }
+    },
+    {
+      "source": "subdomain:explore.mydailysurge.com",
+      "target": "ip:104.21.71.114",
+      "type": "resolves_to",
+      "metadata": { "record_type": "A", "evidence": "dig (reinvestigation 2026-04-09)", "confidence": "high", "note": "NEW — was Google Frontend (34.36.210.5), now Cloudflare" }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "email:dkim",
+      "type": "has_email_config",
+      "metadata": { "evidence": "dig mail._domainkey.epicfunnels.net TXT", "confidence": "high", "note": "DKIM configured but not activated" }
+    },
+
+    {
+      "source": "subdomain:jessica.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:jenny.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:kylie.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:afiliados.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:socio.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:socios.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:evento.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:app.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:demo.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:link.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:m.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:vpn.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:www.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:webmail.epicfunnels.net",
+      "target": "domain:epicfunnels.net",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "domain:noodledit.com",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:sassets.noodledit.com",
+      "target": "domain:noodledit.com",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:explore.mydailysurge.com",
+      "target": "domain:mydailysurge.com",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:signup.mydailysurge.com",
+      "target": "domain:mydailysurge.com",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:trck.mydailysurge.com",
+      "target": "domain:mydailysurge.com",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:daily-rotating.mydailysurge.com",
+      "target": "domain:mydailysurge.com",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+
+    {
+      "source": "subdomain:jessica.epicfunnels.net",
+      "target": "platform:lovable",
+      "type": "uses_platform",
+      "metadata": { "evidence": "OG images on lovable.dev, Vite+React+Tailwind stack", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:jessica.epicfunnels.net",
+      "target": "brand:getngoods",
+      "type": "serves",
+      "metadata": { "evidence": "meta author tag and @GetnGoods twitter in JS bundle", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:jessica.epicfunnels.net",
+      "target": "tracker:phef6trk",
+      "type": "redirects_to",
+      "metadata": { "via": "/api/continue and /api/continue-click", "http_status": 302, "evidence": "curl -sI follow redirects", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:jessica.epicfunnels.net",
+      "target": "asset:js-bundle",
+      "type": "serves",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:jessica.epicfunnels.net",
+      "target": "cert:le-jessica",
+      "type": "has_certificate",
+      "metadata": { "evidence": "CT logs", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:jenny.epicfunnels.net",
+      "target": "cert:le-jenny",
+      "type": "has_certificate",
+      "metadata": { "evidence": "CT logs", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:kylie.epicfunnels.net",
+      "target": "cert:le-kylie",
+      "type": "has_certificate",
+      "metadata": { "evidence": "CT logs", "confidence": "high" }
+    },
+
+    {
+      "source": "subdomain:explore.mydailysurge.com",
+      "target": "platform:webflow",
+      "type": "uses_platform",
+      "metadata": { "evidence": "Webflow CMS markup, site ID 68129c0789b42b5281896601", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:explore.mydailysurge.com",
+      "target": "brand:mydailysurge",
+      "type": "serves",
+      "metadata": { "evidence": "Content categories match brand identity", "confidence": "high" }
+    },
+
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "platform:gcloud",
+      "type": "backed_by",
+      "metadata": { "service": "Cloud Storage", "evidence": "x-guploader-uploadid and x-goog-* headers", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:sassets.noodledit.com",
+      "target": "platform:gcloud",
+      "type": "backed_by",
+      "metadata": { "service": "Cloud Storage", "evidence": "x-guploader-uploadid and x-goog-* headers", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "asset:iphone17promax",
+      "type": "serves",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "asset:macbook",
+      "type": "serves",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:sassets.noodledit.com",
+      "target": "asset:logo-mydailysurge",
+      "type": "serves",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "domain:noodledit.com",
+      "target": "domain:epicfunnels.net",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Promo images on noodledit.com used in epicfunnels.net scam pages", "confidence": "high" }
+    },
+
+    {
+      "source": "subdomain:webmail.epicfunnels.net",
+      "target": "ip:13.220.193.170",
+      "type": "resolves_to",
+      "metadata": { "via": "Cloudflare proxy to EC2", "confidence": "high" }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "email:mx",
+      "type": "has_email_config",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "email:spf",
+      "type": "has_email_config",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "email:dmarc",
+      "type": "has_email_config",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "cert:le-direct-expired",
+      "type": "has_certificate",
+      "metadata": { "location": "direct connection to EC2", "confidence": "high" }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "cert:cf-wildcard",
+      "type": "has_certificate",
+      "metadata": { "location": "via Cloudflare proxy", "confidence": "high" }
+    },
+
+    {
+      "source": "tracker:phef6trk",
+      "target": "domain:phef6trk.com",
+      "type": "hosted_on",
+      "metadata": { "confidence": "high" }
+    },
+
+    {
+      "source": "brand:getngoods",
+      "target": "brand:mydailysurge",
+      "type": "same_operator",
+      "metadata": {
+        "evidence": "MyDailySurge logo served from noodledit.com which also serves GetnGoods scam assets; shared Cloudflare account between noodledit.com and mydailysurge.com",
+        "confidence": "high"
+      }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "domain:noodledit.com",
+      "type": "same_operator",
+      "metadata": {
+        "evidence": "epicfunnels.net scam pages load assets from noodledit.com CDN",
+        "confidence": "high"
+      }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "domain:mydailysurge.com",
+      "type": "same_operator",
+      "metadata": {
+        "evidence": "MyDailySurge logo in epicfunnels assets, shared CDN infrastructure via noodledit.com",
+        "confidence": "high"
+      }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "domain:phef6trk.com",
+      "type": "same_operator",
+      "metadata": {
+        "evidence": "epicfunnels.net API endpoints redirect to phef6trk.com tracker",
+        "confidence": "medium",
+        "note": "Tracker may be third-party CPA network rather than operator-owned"
+      }
+    }
+  ]
+}

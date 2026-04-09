@@ -242,3 +242,61 @@ Containerized re-investigation confirmed the write-up findings and revealed chan
 - **Roundcube version string**: no longer visible on login page (may have been patched or page changed)
 - **noodledit.com main page**: returns empty response (no content served at root)
 - **Direct SSL cert**: still expired (Jan 25, 2026), Cloudflare auto-renewed wildcard masking it
+
+## Reinvestigation #2 (2026-04-09)
+
+Full 8-probe containerized reinvestigation. All raw data in `artifacts/reinvestigation-2026-04-08/`.
+
+### New Discoveries
+
+- **Redis (port 6379) NOW OPEN** on EC2 server (13.220.193.170) — not present in any previous scan. Exposed to public internet. Likely added as caching or session store layer.
+- **DKIM record found**: `mail._domainkey.epicfunnels.net` has `v=DKIM1; k=rsa; p=DKIM-SUPPORT-IS-NOT-ACTIVATED` — DNS configured but DKIM was never completed. RSA key is a placeholder.
+- **epicfunnels.net root domain** now resolves to Cloudflare IPs (104.21.11.211, 172.67.192.166) and serves HTTP 200
+
+### Infrastructure Changes
+
+| What | Before (2026-04-08) | Now (2026-04-09) | Interpretation |
+|------|---------------------|-------------------|----------------|
+| jenny.epicfunnels.net | Resolves (live) | NXDOMAIN | Funnel removed |
+| kylie.epicfunnels.net | Resolves (live) | NXDOMAIN | Funnel removed |
+| www.epicfunnels.net | NXDOMAIN | Resolves (HTTP 200) | Activated |
+| epicfunnels.net root | Behind CF proxy | HTTP 200 via CF | Now serving content |
+| EC2 port 6379 (Redis) | Not seen | OPEN | New service added |
+| explore.mydailysurge.com proxy | Google Frontend | Cloudflare | CDN/proxy switched |
+| explore.mydailysurge.com Last-Modified | Mar 26, 2026 | **Apr 5, 2026** | Content updated 3 days ago |
+| Roundcube exposed paths | HTTP 403 | HTTP 301 | HTTPS redirect reconfigured |
+| phef6trk.com NS records | Google Cloud DNS | EMPTY | Completely scrubbed |
+| phef6trk.com whois | Squarespace registrar | EMPTY | Registrar scrubbed all records |
+
+### What's Still the Same
+
+- jessica.epicfunnels.net still serving the scam page (same JS bundle `index-CUlwK__p.js`, same CSS)
+- `/api/continue` and `/api/continue-click` still HTTP 302 → `phef6trk.com/FGK5P4/2Z57CD5/` (broken — tracker sinkholed)
+- noodledit.com CDN (b. and sassets. subdomains) still serving all assets (iPhone, MacBook, logo)
+- SMTP 587 still leaking `ip-172-26-15-175.ec2.internal`
+- PostgreSQL 5432 still exposed to internet
+- Node.js 3000 still HTTP 500 (crashed)
+- Direct SSL cert still expired (Jan 25, 2026)
+- Cloudflare wildcard cert still valid through May 20, 2026
+- phef6trk.com still sinkholed at 10.0.0.1 across all 3 resolvers
+- Lovable AI OG image still accessible at lovable.dev
+- explore.mydailysurge.com Webflow site ID, GA, GTM all unchanged
+- mydailysurge.com root still 404 via Google Frontend
+
+### Operator Behavior Analysis
+
+The operator is **actively maintaining infrastructure** despite the broken monetization:
+
+1. **Consolidating funnels**: Removed jenny and kylie subdomains, keeping only jessica. Possibly rotating to a single active funnel or preparing to redeploy under new names.
+2. **Activating root domain**: www.epicfunnels.net and epicfunnels.net root now serve HTTP 200 — possibly building a new landing page or redirector.
+3. **Adding infrastructure**: Redis on port 6379 suggests active development — adding caching, rate limiting, or session management.
+4. **Updating content farm**: explore.mydailysurge.com was updated April 5 (3 days before this probe) and migrated from Google Frontend to Cloudflare. Still investing in SEO.
+5. **NOT fixing the tracker**: /api/continue still points to sinkholed phef6trk.com. Either doesn't know it's sinkholed, or is preparing a new tracker and hasn't switched yet.
+6. **Reconfiguring Roundcube**: Paths changed from 403 to 301, suggesting HTTPS redirect policy was updated.
+
+### Graph Data
+
+Network graph JSON with all entities and connections: `graph/network-graph.json`
+- **63 nodes**: 4 domains, 20 subdomains, 8 IPs, 10 services, 5 platforms, 2 brands, 5 certs, 4 email configs, 4 assets, 1 tracker
+- **71 edges**: resolves_to, hosts, serves, redirects_to, shared_cloudflare_account, uses_platform, has_certificate, has_email_config, backed_by, hosts_assets_for, same_operator, child_of
+- Compatible with D3.js, Cytoscape.js, Sigma.js for visualization

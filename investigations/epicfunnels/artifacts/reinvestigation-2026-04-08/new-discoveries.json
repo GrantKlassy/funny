@@ -1,0 +1,33 @@
+{
+  "probe": "new_discoveries",
+  "timestamp": "2026-04-09T02:27:24+00:00",
+  "lovable_og_image_status": "200",
+  "acme_challenges": {
+    "_acme-challenge.jessica.epicfunnels.net": "",
+    "_acme-challenge.jenny.epicfunnels.net": "",
+    "_acme-challenge.kylie.epicfunnels.net": "",
+    "_acme-challenge.epicfunnels.net": ""
+  },
+  "roundcube": {
+    "status": "301",
+    "version": "",
+    "title": "Roundcube Webmail :: Welcome to Roundcube Webmail"
+  },
+  "roundcube_paths": {
+    "/installer/": "301",
+    "/INSTALL": "301",
+    "/README.md": "301",
+    "/CHANGELOG.md": "301",
+    "/SQL/": "301",
+    "/config/": "301",
+    "/logs/": "301"
+  },
+  "jessica_page": {
+    "status": "200",
+    "content_sha256": "e3a85c35a43afd7735610614a87ff740d766fb83ea00510964437d53eca6d01c"
+  },
+  "jessica_assets": {
+    "js_bundles": "assets/index-CUlwK__p.js",
+    "css_bundles": "assets/index-D8N5ZY6U.css"
+  }
+}

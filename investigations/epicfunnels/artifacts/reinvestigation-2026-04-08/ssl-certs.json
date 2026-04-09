@@ -1,0 +1,11 @@
+{
+  "probe": "ssl_certs",
+  "timestamp": "2026-04-09T02:27:19+00:00",
+  "results": [
+    {"label": "direct-ec2", "host": "13.220.193.170:443", "sni": "epicfunnels.net", "subject": "CN = epicfunnels.net", "issuer": "C = US, O = Let's Encrypt, CN = R13", "not_before": "Oct 27 02:16:30 2025 GMT", "not_after": "Jan 25 02:16:29 2026 GMT", "san": "DNS:epicfunnels.net, DNS:www.epicfunnels.net"},
+    {"label": "jessica-via-cf", "host": "jessica.epicfunnels.net:443", "sni": "jessica.epicfunnels.net", "subject": "CN = epicfunnels.net", "issuer": "C = US, O = Google Trust Services, CN = WE1", "not_before": "Feb 19 22:41:22 2026 GMT", "not_after": "May 20 23:40:11 2026 GMT", "san": "DNS:epicfunnels.net, DNS:*.epicfunnels.net"},
+    {"label": "jenny-via-cf", "host": "jenny.epicfunnels.net:443", "sni": "jenny.epicfunnels.net", "subject": "", "issuer": "", "not_before": "", "not_after": "", "san": ""},
+    {"label": "kylie-via-cf", "host": "kylie.epicfunnels.net:443", "sni": "kylie.epicfunnels.net", "subject": "", "issuer": "", "not_before": "", "not_after": "", "san": ""},
+    {"label": "webmail-via-cf", "host": "webmail.epicfunnels.net:443", "sni": "webmail.epicfunnels.net", "subject": "CN = epicfunnels.net", "issuer": "C = US, O = Google Trust Services, CN = WE1", "not_before": "Feb 19 22:41:22 2026 GMT", "not_after": "May 20 23:40:11 2026 GMT", "san": "DNS:epicfunnels.net, DNS:*.epicfunnels.net"}
+  ]
+}

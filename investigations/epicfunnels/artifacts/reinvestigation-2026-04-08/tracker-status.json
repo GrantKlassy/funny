@@ -1,0 +1,18 @@
+{
+  "probe": "tracker_sinkhole",
+  "timestamp": "2026-04-09T02:27:20+00:00",
+  "dns": {
+    "8.8.8.8": {"a": "10.0.0.1", "ns": ""},
+    "1.1.1.1": {"a": "10.0.0.1", "ns": ""},
+    "9.9.9.9": {"a": "10.0.0.1", "ns": ""}
+  },
+  "whois": {
+    "registrar": "",
+    "status": "",
+    "creation": "",
+    "expiry": ""
+  },
+  "http_attempt": {
+    "result": ""
+  }
+}

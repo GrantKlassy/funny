@@ -1,0 +1,25 @@
+{
+  "probe": "port_scan",
+  "timestamp": "2026-04-09T02:26:58+00:00",
+  "target": "13.220.193.170",
+  "results": [
+    {"port": 22, "status": "open"},
+    {"port": 25, "status": "closed"},
+    {"port": 80, "status": "open"},
+    {"port": 143, "status": "open"},
+    {"port": 443, "status": "open"},
+    {"port": 587, "status": "open"},
+    {"port": 993, "status": "open"},
+    {"port": 3000, "status": "open"},
+    {"port": 3306, "status": "closed"},
+    {"port": 5432, "status": "open"},
+    {"port": 6379, "status": "open"},
+    {"port": 8080, "status": "closed"},
+    {"port": 8443, "status": "closed"},
+    {"port": 9090, "status": "closed"},
+    {"port": 27017, "status": "closed"}
+  ],
+  "banners": {
+    "587": "220 ip-172-26-15-175.ec2.internal 221 ip-172-26-15-175.ec2.internal closing connection ",    "143": "* OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN] Mail Delivery Agent LOGOUT BAD Error in IMAP command received by server. ",    "80": "HTTP/1.1 200 OK Server: nginx Date: Thu, 09 Apr 2026 02:27:19 GMT Content-Type: text/html; charset=utf-8 Content-Length: 2520 ",    "3000": "HTTP/1.1 500 Internal Server Error Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate Date: Thu, 09 Apr 2026 02:27:18 GMT Content-Length: 21  "
+  }
+}

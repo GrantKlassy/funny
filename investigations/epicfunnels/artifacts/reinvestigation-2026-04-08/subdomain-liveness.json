@@ -1,0 +1,27 @@
+{
+  "probe": "subdomain_liveness",
+  "timestamp": "2026-04-09T02:26:53+00:00",
+  "results": [
+    {"target": "jessica.epicfunnels.net", "http_status": "200", "server": "cloudflare", "location": ""},
+    {"target": "jenny.epicfunnels.net", "http_status": "000000", "server": "", "location": ""},
+    {"target": "kylie.epicfunnels.net", "http_status": "000000", "server": "", "location": ""},
+    {"target": "afiliados.epicfunnels.net", "http_status": "000000", "server": "", "location": ""},
+    {"target": "socio.epicfunnels.net", "http_status": "000000", "server": "", "location": ""},
+    {"target": "socios.epicfunnels.net", "http_status": "000000", "server": "", "location": ""},
+    {"target": "evento.epicfunnels.net", "http_status": "000000", "server": "", "location": ""},
+    {"target": "app.epicfunnels.net", "http_status": "000000", "server": "", "location": ""},
+    {"target": "demo.epicfunnels.net", "http_status": "000000", "server": "", "location": ""},
+    {"target": "link.epicfunnels.net", "http_status": "000000", "server": "", "location": ""},
+    {"target": "webmail.epicfunnels.net", "http_status": "301", "server": "cloudflare", "location": "http://webmail.epicfunnels.net/"},
+    {"target": "www.epicfunnels.net", "http_status": "200", "server": "cloudflare", "location": ""},
+    {"target": "epicfunnels.net", "http_status": "200", "server": "cloudflare", "location": ""},
+    {"target": "noodledit.com", "http_status": "000000", "server": "", "location": ""},
+    {"target": "mydailysurge.com", "http_status": "404", "server": "Google Frontend", "location": ""},
+    {"target": "explore.mydailysurge.com", "http_status": "200", "server": "cloudflare", "location": ""},
+    {"target": "https://b.noodledit.com/promotions/iphone17promax1000.png", "http_status": "200", "type": "asset"},
+    {"target": "https://b.noodledit.com/promotions/macbook1000.png", "http_status": "200", "type": "asset"},
+    {"target": "https://sassets.noodledit.com/pages/logo_mydailysurge.svg", "http_status": "200", "type": "asset"},
+    {"target": "jessica.epicfunnels.net/api/continue", "http_status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/", "type": "api_redirect"},
+    {"target": "jessica.epicfunnels.net/api/continue-click", "http_status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/", "type": "api_redirect"}
+  ]
+}
