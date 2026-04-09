@@ -74,10 +74,45 @@ Our **58,400 satisfied customers** at @jessytheupgradeclub agree — this is the
 - An operator who is **STILL updating their SEO blog** (last modified: April 5, 2026) despite the scam being broken for months
 - **500 cached Lua scripts** in Redis (someone was working hard... on something)
 - A **coordinated TikTok engagement bot network** that is still actively liking people's old comments from multiple accounts, driving them to profiles that link to funnels that redirect to a sinkhole
+- A Redis database that **someone else already tried to cryptojack** — 4 malware crontab payloads sitting in the keys, phoning home to a dead C2 domain. Scammers getting scammed.
 
 <p align="center">
 <img src="memes/the-operator.png" width="500">
 </p>
+
+---
+
+### But Wait, There's More
+
+The funny part ends here.
+
+The same infrastructure that runs fake iPhone giveaways for TikTok teenagers also runs fake government benefit portals for people who cannot afford food.
+
+We found **70 promotional assets** in the operation's publicly listable Google Cloud Storage bucket dedicated to impersonating federal assistance programs. They are operated under a dedicated brand called **BenefitsAccessCenter**, complete with its own favicon and Capitol-building-themed imagery.
+
+| They made fake landing pages for: | Targeting: |
+|---|---|
+| SNAP / Food Stamps | People who cannot afford groceries |
+| Unemployment Benefits | People who just lost their jobs |
+| Rental Assistance | People about to be evicted |
+| Senior Benefits | Elderly people on fixed incomes |
+| Student Aid (FAFSA) | Students who need financial aid |
+| Startup Grants | People looking for a way forward |
+| Inflation Relief | People squeezed by rising prices |
+| Stimulus Checks | People waiting for government help |
+| Tariff Relief | People worried about trade policy (**9 assets** — the most heavily produced campaign) |
+| Child/Family Assistance | Parents who need help feeding their kids |
+| Unclaimed Money | People hoping something is owed to them |
+
+The stock photos are chosen to meet the victim where they are. Bananas, eggs, and bread for the food stamps pages. A FAFSA form on a laptop for student aid. A Medicare card and pill organizer for senior benefits. A mother grocery shopping with her small child for family assistance. A briefcase full of cash for "startup grants."
+
+The victim enters their personal information — name, address, phone, email, income, household size — believing they're applying for assistance. The data gets sold as CPA leads. The victim gets nothing. No food stamps. No rental help. No stimulus check. Just spam calls and a spot on a data broker's list.
+
+The operation pivoted into this vertical in September 2025 and went all-in with a mass upload in February 2026 covering every major federal assistance program. The entity behind it — **Moxxi Media** (identified via Microsoft 365 DKIM records on myamericanprizes.com) — has 15+ brand names, 747 assets in their CDN, and uploaded new promotional material as recently as the day this was investigated.
+
+The same legal cover (ActiveProspect, Jornaya, AMOE sweepstakes compliance) that wraps the iPhone giveaway scams wraps these too. The machinery doesn't distinguish. A lead is a lead. Whether it came from someone who wanted a free phone or someone who needed help feeding their family.
+
+Full evidence and analysis: **[investigations/epicfunnels/](investigations/epicfunnels/)**
 
 ---
 
@@ -162,7 +197,7 @@ Where this investigation falls on the privacy iceberg.
 
 If, somehow, you are still reading and want the real technical details:
 
-**[investigations/epicfunnels/](investigations/epicfunnels/)** — Full write-up of a CPA affiliate scam funnel built with Lovable AI, distributed via TikTok, running on a hilariously misconfigured AWS EC2 instance with 6 domains, a shadow hostname called "olivimails.com", a Hestia Control Panel login page visible to the entire internet, and an operator who is *still actively updating their SEO content farm* despite the fact that the scam itself has been broken for months.
+**[investigations/epicfunnels/](investigations/epicfunnels/)** — Full write-up of a CPA affiliate scam operation run by Moxxi Media, built with Lovable AI, distributed via TikTok, running on a hilariously misconfigured AWS EC2 instance with 7 domains, 15+ brands, 747 CDN assets, fake government benefit portals targeting people in financial distress, a Redis that got cryptojacked by a third party, a shadow hostname called "olivimails.com" (now expired), a Hestia Control Panel login page visible to the entire internet, and an operator who is *still actively uploading new scam assets* despite the fact that the monetization has been broken for months.
 
 **:world_map: [THE COMPLETE SCAM FLOW](https://github.com/GrantKlassy/funny/blob/main/investigations/epicfunnels/SCAM-FLOW.md)** — Every domain, subdomain, DNS record, port, service, certificate, and connection mapped out in Mermaid diagrams. The crown jewel. GitHub renders the Mermaid live.
 
@@ -174,12 +209,18 @@ If, somehow, you are still reading and want the real technical details:
 
 ### By The Numbers
 
-- **6** domains (and counting)
-- **21** subdomains (historical)
+- **1** operating entity identified: Moxxi Media
+- **7** connected domains
+- **15+** brand names
+- **747** assets in the GCS CDN bucket (publicly listable, actively updated)
+- **70** promotional assets impersonating government benefit programs
+- **11** categories of government assistance being faked
 - **11** open ports on EC2
 - **7** affiliate IDs through one tracker
 - **500** cached Lua scripts in Redis
+- **4** cryptojacking malware payloads in Redis (from a third party — scammers getting scammed)
 - **2** conflicting SPF records
+- **2** Microsoft 365 tenants (one deleted, one active)
 - **1** DKIM key that says "NOT ACTIVATED"
 - **1** sinkholed tracker
 - **1** dead Node.js app
@@ -187,6 +228,7 @@ If, somehow, you are still reading and want the real technical details:
 - **1** PostgreSQL database on the public internet
 - **1** admin panel exposed to the world
 - **1** engagement bot network still grinding (into a sinkhole)
+- **1** expired domain still used as a server hostname
 - **1** guy with a sword (unrelated)
 - **0** working parts of the actual scam
 
