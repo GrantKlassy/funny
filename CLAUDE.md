@@ -1,10 +1,9 @@
 # funny
 
 I think they might actually be funny
-Home Assistant works over wifi now :think:
-Also that TikTok like, that was pretty cool :)
+The TikTok is definitely funny
 It's at least somewhat funny
-Investigate!!
+Investigate this thingie
 
 ## Investigation: epicfunnels.net
 
