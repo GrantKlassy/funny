@@ -214,9 +214,15 @@ Layer 5: EMAIL
 
 ## Conclusion
 
-Real-world example of Guardio Labs' VibeScamming research. Lovable AI (scored 1.8/10 — most exploitable tool tested) used to generate a scam funnel page. Multi-domain infrastructure with shared Cloudflare accounts, email capability (SPF+DMARC+Roundcube), and CPA affiliate monetization.
+What started as a funny TikTok scam link turned out to be an industrial-scale CPA lead generation operation run by an entity called **Moxxi Media**, active since at least August 2023, spanning 7 connected domains, 15+ brand names, and 8 scam verticals.
 
-The deeper investigation reveals this is not a one-off — it's a **multi-brand, multi-language, templated scam factory** with an SEO content farm (Webflow) feeding traffic into AI-generated scam funnels (Lovable), monetized through CPA affiliate tracking. The operator has infrastructure for rapid deployment of new campaigns: just generate a new Lovable page, point a new subdomain, and go.
+The operation uses Lovable AI (scored 1.8/10 in Guardio Labs' VibeScamming research — the most exploitable tool tested) to generate scam funnel pages, Webflow for SEO content farming, Google Cloud Storage for a 747-asset promotional library, AWS EC2 for email and backend services, and Cloudflare for DNS proxy and SSL. It maintains professionally assembled legal cover — ActiveProspect TCPA consent, Jornaya lead intelligence, AMOE sweepstakes compliance — to legitimize the sale of harvested personal data.
+
+The operation targets two categories of victim. The first is the TikTok user lured by fake iPhone giveaways, gift card prizes, and luxury goods. The second is the person in financial distress — searching for food stamps, unemployment benefits, rental assistance, student aid, or stimulus checks — who lands on a page designed to impersonate a government benefit portal. Both categories end the same way: personal data harvested, sold as CPA leads, victim receives nothing.
+
+The operator's infrastructure is simultaneously overbuilt and falling apart. They have 11 open ports on a single EC2 instance including a passwordless Redis (now containing cryptojacking malware from a third-party botnet), an exposed PostgreSQL database, and an admin panel visible to the entire internet. Their CPA tracker has been sinkholed. Their Node.js backend has crashed. Their email domain has expired. Their engagement bot network on TikTok continues to farm clicks into a dead endpoint. Yet they uploaded new promotional assets as recently as today, renewed an SSL certificate 4 days ago, and published new Webflow content last week. The machine keeps running. The gears keep turning. The monetization goes nowhere.
+
+The complete infrastructure — from the DKIM selectors that reveal the M365 tenant name, to the publicly listable GCS bucket containing 70 government benefits scam assets, to the Redis keys containing someone else's failed cryptojacking attempt — is documented in full below and in the accompanying artifacts.
 
 ## Artifacts Captured (2026-04-08)
 
@@ -806,6 +812,84 @@ One subdomain per day of the month. All numbered subdomains return 404 now — t
 **noodledit.com cert renewed 4 days ago** (2026-04-04) — infrastructure actively maintained.
 
 **CT log history**: myamericanprizes.com has 42 certs dating to Sep 2023. phef6trk.com has 17 certs (only `www.phef6trk.com`). olivimails.com has **zero** CT entries — never had a proper SSL cert.
+
+### Predatory Targeting of Vulnerable Populations
+
+This section documents the operation's government benefits scam vertical. Evidence: 70 promotional assets in the publicly listable GCS bucket `b.noodledit.com`, 10 captured as image evidence in `artifacts/probe-2026-04-08/gov-benefits-evidence/`.
+
+#### What They're Doing
+
+The operation runs dedicated scam funnels that impersonate government benefit programs. They are not stealing benefits directly. They are targeting people who are actively seeking help — people searching for food stamps, unemployment insurance, rental assistance, student aid — and harvesting their personal information for sale to CPA lead buyers.
+
+The victim is someone who cannot afford groceries, is behind on rent, or just lost their job. They find what appears to be a portal to access government assistance. They enter their name, address, phone number, email, income, household size — exactly the information a real benefits application would ask for. They submit. They receive nothing. Their data enters the CPA lead pipeline. They get spam calls. They get sold to data brokers. The assistance never comes.
+
+#### The Dedicated Brand: BenefitsAccessCenter
+
+The operation has a **standalone brand** purpose-built for this vertical:
+- Brand name: BenefitsAccessCenter
+- Dedicated favicon: `favicon_benefitsaccesscenter.svg` (uploaded 2025-11-07)
+- Branded promotional images with the US Capitol building
+- Designed to look like an official government resource
+
+#### 11 Government Benefit Categories
+
+| Category | Key Assets | Imagery |
+|----------|-----------|---------|
+| **SNAP / Food Stamps** | `snap_bac.png`, `foodstamps_bottom_1/2.png`, `food_assistance_image_bundle.png`, `foodbundle.png` | Grocery stock photos — bananas, eggs, orange juice, bread |
+| **Unemployment** | `unemploymentbenefits.png`, `benefitsaccesscenter_promos_unemploymentbenefits.png`, `unemployment_bottom_1/2.png` | Direct deposit screen, US Capitol building, calculator |
+| **Rental Assistance** | `rentalassistance.png`, `rental_bottom_1/2.png` | Keys and apartment building |
+| **Senior Benefits** | `seniorbenefits.png`, `senior_bottom_1/2.png`, `samples_senior.png` | Medicare card, AARP logo, pill organizer, Centrum Silver |
+| **Student Aid** | `studentaid.png`, `studentaid_bottom_1/2.png`, `studentloanrelief.png` | FAFSA form on laptop, calculator, textbooks |
+| **Startup Grants** | `startupgrant_v2.png`, `grants_bottom_1/2.png` | A briefcase full of cash |
+| **Inflation Relief** | `inflation_relief_topphoto_web/mob.png`, `inflation_bottom_1/2.png` | 6 assets with web + mobile responsive versions |
+| **Stimulus Checks** | `resources_stimulus_topphoto_web/mob.png`, `resources_stimulus_bottomphoto_webmob.png` | 5 assets with responsive versions |
+| **Tariff Relief** | `tariff_relief_web/mob/web_2x.png`, `tariff_topphoto_web/mob.png`, `tariff_bottom_1/2.png` | **9 assets** — the most heavily produced campaign, including retina 2x |
+| **Child/Family Assistance** | `child_family_assistance_img1/2_web/mob.png` | 4 assets at 900KB-2MB each |
+| **Unclaimed Money** | `unclaimedmoney_top_web.png`, `unclaimedmoney_bottom_1/2.png` | 3 assets |
+
+Total: **70 assets** dedicated to impersonating government assistance programs.
+
+#### The Production Timeline
+
+The pivot into government benefits scams is visible in the upload dates:
+
+```
+2025-09-20  First gov benefit assets: studentloanrelief.png, startupgrant_v2.png
+2025-10-01  samples_senior.png — targeting seniors
+2025-11-07  favicon_benefitsaccesscenter.svg — BenefitsAccessCenter brand established
+2025-12-03  snap_bac.png — SNAP/food stamps targeting begins
+2026-01-16  Inflation relief + stimulus — full responsive image sets (web + mobile)
+2026-01-28  Tariff relief — 9 assets, heaviest single campaign. Exploiting tariff anxiety.
+2026-02-17  MASS UPLOAD: food stamps, inflation, grants, tariff — all at once
+2026-02-18  MASS UPLOAD: unemployment, rental, senior, student aid — all at once
+2026-02-19  unemploymentbenefits.png
+2026-03-10  Medical and financial bundles
+2026-04-06  OPG Housing — housing assistance, uploaded 2 days before this probe
+```
+
+The operation started with sweepstakes and gift card scams in October 2024. It began testing government benefits lures in September 2025. By February 2026, it went all-in with a coordinated two-day mass upload covering every major federal assistance program. The tariff relief campaign received the most production investment — 9 assets including retina-quality images — because tariff anxiety is high and the operator knows it.
+
+#### The Stock Photo Choices
+
+The imagery is carefully selected to build false trust with vulnerable audiences:
+
+- **Food stamps**: Groceries a family actually needs — bananas, eggs, juice, bread. Not luxury items. The basics.
+- **Senior benefits**: Medicare card, AARP branding, pill organizer, blood pressure monitor. Medical necessities for elderly people on fixed incomes.
+- **Student aid**: A FAFSA application on a laptop. The exact form a desperate student would be searching for help with.
+- **Rental assistance**: Keys and an apartment building. What someone about to be evicted is thinking about.
+- **Startup grants**: A briefcase literally full of cash. The most nakedly manipulative image in the set.
+- **Unemployment**: A "Direct Deposit" phone screen. Suggesting money is about to arrive.
+- **Child/family assistance**: A mother grocery shopping with her small child.
+
+Every image is designed to meet the victim where they already are — anxious, in need, searching for help — and present the scam as the answer.
+
+#### What This Means
+
+This is a CPA lead generation operation that has made a calculated business decision to target people in financial distress. The same infrastructure that runs fake iPhone giveaways for TikTok teenagers also runs fake government benefit portals for people who cannot afford food.
+
+The legal cover is the same across all verticals: ActiveProspect for TCPA consent verification, Jornaya for lead intelligence, AMOE sweepstakes entry for legal compliance. The machinery doesn't care whether it's harvesting data from someone hoping to win an iPhone or someone hoping to feed their children. A lead is a lead. A click is a click.
+
+The BenefitsAccessCenter brand, the professionally produced responsive image sets, the 70 dedicated assets, the two-day mass upload in February 2026 — this is not an afterthought or a test. This is a deliberate, scaled, ongoing campaign to monetize human desperation.
 
 ### Updated Statistics
 
