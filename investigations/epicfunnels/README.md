@@ -25,6 +25,8 @@ CPA affiliate scam funnel built with Lovable AI, distributed via TikTok.
 - **2026-04-08**: Deep OSINT investigation — 12 avenues probed, 2 new domains found
 - **2026-04-08**: Engagement bot network observed LIVE — multiple accounts liking investigator's old TikTok comments simultaneously
 - **2026-04-09**: Operator fully identified — Moxxi Digital (NYC), founded by ex-Fluent Inc veterans. Full chain of attribution from scam page to real humans documented in [OPERATOR-INTEL.md](OPERATOR-INTEL.md)
+- **2026-04-09**: Deep probe — Redis is a warzone (22 threat actors from 6 countries, FLUSHALL spam, crontab injection, Lua RCE exploits), 15 open ports (4 new: FTP, DNS, POP3, POP3S), GCS 747-object inventory confirmed, PostgreSQL requires auth, Hestia API IP-whitelisted
+- **2026-04-09**: Follow-up probes — FTP requires auth (no anonymous), DNS is just a recursive resolver (no hidden zones), POP3 confirms Dovecot mail stack. Full threat actor attribution: 23 IPs across 8 countries (74% China), Baidu Cloud 6-IP botnet cluster identified. Redis malware identified as **WatchDog** cryptojacking campaign (Cado Labs 2022) — `b2f628` is a known campaign ID, `oracle.zzhreceive.top` is a known C2 domain
 
 ## Scam Flow
 
@@ -145,19 +147,24 @@ Full port scan of 13.220.193.170 reveals additional services:
 
 | Port | Service | Status | Notes |
 |------|---------|--------|-------|
-| 22 | SSH | OPEN | |
+| 21 | **FTP** | OPEN | **Discovered via deep probe** |
+| 22 | SSH | OPEN | OpenSSH 9.2p1, ECDSA + ED25519 host keys captured |
 | 25 | SMTP | BLOCKED | AWS default |
-| 80 | HTTP | OPEN | nginx "Success!" page |
-| 443 | HTTPS | OPEN | Redirects to HTTP (expired cert) |
-| 587 | SMTP Submission | OPEN | Banner: `ip-172-26-15-175.ec2.internal` |
+| 53 | **DNS** | OPEN | **Discovered via deep probe — running a nameserver** |
+| 80 | HTTP | OPEN | nginx "Success!" page, TRACE method enabled |
+| 110 | **POP3** | OPEN | **Discovered via deep probe** |
 | 143 | IMAP | OPEN | Dovecot |
+| 443 | HTTPS | OPEN | Redirects to HTTP (expired cert) |
+| 465 | SMTPS | OPEN | Exim, TLS |
+| 587 | SMTP Submission | OPEN | Banner: `ip-172-26-15-175.ec2.internal` |
 | 993 | IMAPS | OPEN | `AUTH=PLAIN AUTH=LOGIN` |
-| 3000 | **Node.js app** | OPEN | **HTTP 500 Internal Server Error** — crashed |
-| 5432 | **PostgreSQL** | OPEN | Database exposed to internet |
+| 995 | **POP3S** | OPEN | **Discovered via deep probe** |
+| 3000 | **Node.js app** | OPEN | **HTTP 500** — crashed. /src/, /dist/, /node_modules/ return 308 (dirs exist) |
+| 5432 | **PostgreSQL** | OPEN | Exposed to internet, **requires password** (fe_sendauth) |
 
 **Port 3000** is a crashed Node.js application — likely the backend that handles `/api/continue-click` and `/api/continue` redirects (fronted by Cloudflare Workers or Pages).
 
-**Port 5432** is a PostgreSQL database **listening on the public internet** — a significant security misconfiguration. This likely stores click tracking data, funnel analytics, or email records.
+**Port 5432** is a PostgreSQL database **listening on the public internet** — but unlike Redis, it at least requires a password. Deep probe confirmed `fe_sendauth: no password supplied` for all common users (postgres, admin, root, hestiacp). The data behind it remains unknown.
 
 ### Asset CDN — Multiple Scam Variants
 
@@ -226,7 +233,7 @@ The operation uses Lovable AI (scored 1.8/10 in Guardio Labs' VibeScamming resea
 
 The operation targets two categories of victim. The first is the TikTok user lured by fake iPhone giveaways, gift card prizes, and luxury goods. The second is the person in financial distress — searching for food stamps, unemployment benefits, rental assistance, student aid, or stimulus checks — who lands on a page designed to impersonate a government benefit portal. Both categories end the same way: personal data harvested, sold as CPA leads, victim receives nothing.
 
-The operator's infrastructure is simultaneously overbuilt and falling apart. They have 11 open ports on a single EC2 instance including a passwordless Redis (now containing cryptojacking malware from a third-party botnet), an exposed PostgreSQL database, and an admin panel visible to the entire internet. Their CPA tracker has been sinkholed. Their Node.js backend has crashed. Their email domain has expired. Their engagement bot network on TikTok continues to farm clicks into a dead endpoint. Yet they uploaded new promotional assets as recently as today, renewed an SSL certificate 4 days ago, and published new Webflow content last week. The machine keeps running. The gears keep turning. The monetization goes nowhere.
+The operator's infrastructure is simultaneously overbuilt and falling apart. They have 15 open ports on a single EC2 instance including a passwordless Redis that has become an active warzone — 24 unique attacker IPs from 6 countries, 218,219 connections, 337 FLUSHALL database wipes, crontab injection attempts, Lua RCE exploits, and replication hijack attacks, all in 75 days of uptime. The 4 cryptojacking malware payloads in the Redis keys are just one of many botnets that have passed through. PostgreSQL is at least password-protected, but exposed to the internet. The admin panel is visible to the entire world. Their CPA tracker has been sinkholed. Their Node.js backend has crashed. Their email domain has expired. Their engagement bot network on TikTok continues to farm clicks into a dead endpoint. Yet they uploaded new promotional assets as recently as today, renewed an SSL certificate 4 days ago, and published new Webflow content last week. The machine keeps running. The gears keep turning. The monetization goes nowhere.
 
 The complete infrastructure — from the DKIM selectors that reveal the M365 tenant name, to the publicly listable GCS bucket containing 70 government benefits scam assets, to the Redis keys containing someone else's failed cryptojacking attempt — is documented in full below and in the accompanying artifacts.
 
@@ -436,44 +443,50 @@ EHLO response includes our IP in the greeting: `Hello [our-ip]` — no relay res
 │  Hestia Control Panel v1.9.4 (:8083)                            │
 │  FQDN: fqdn.olivimails.com                                      │
 │  Manages: nginx, Dovecot, PostgreSQL, Node.js, Redis             │
-│  *** EXPOSED TO INTERNET ***                                     │
+│  Login page exposed, API IP-whitelisted                          │
 └─────────────────────────────────────────────────────────────────┘
      │
      ▼
-┌─ AWS EC2 (13.220.193.170) ──────────────────────────────────────┐
+┌─ AWS EC2 (13.220.193.170) — 15 OPEN PORTS ────────────────────┐
+│  :21  FTP (deep probe discovery)                                 │
 │  :22  SSH (OpenSSH 9.2p1)                                        │
-│  :80  nginx ("Success!" + virtual hosts)                         │
-│  :443 HTTPS (cert expired Jan 2026)                              │
+│  :53  DNS (deep probe discovery — running nameserver)            │
+│  :80  nginx ("Success!" + virtual hosts, TRACE enabled)          │
+│  :110 POP3 (deep probe discovery — Dovecot)                      │
 │  :143 IMAP (Dovecot)                                             │
-│  :587 SMTP (leaks ip-172-26-15-175.ec2.internal)                 │
-│  :993 IMAPS (Dovecot, AUTH=PLAIN, cert=fqdn.olivimails.com)      │
-│  :3000 Node.js (DEAD — HTTP 500 on all endpoints)                │
-│  :5432 PostgreSQL (EXPOSED to internet)                          │
-│  :6379 Redis 7.4.7 (NO AUTH, protected-mode off, 4 keys)        │
-│  :8083 Hestia Control Panel (ADMIN PANEL EXPOSED)                │
+│  :443 HTTPS (cert expired Jan 2026)                              │
+│  :465 SMTPS (Exim, leaks internal hostname)                      │
+│  :587 SMTP Submission (leaks ip-172-26-15-175.ec2.internal)      │
+│  :993 IMAPS (Dovecot, AUTH=PLAIN, cert=fqdn.olivimails.com)     │
+│  :995 POP3S (deep probe discovery — Dovecot over SSL)            │
+│  :3000 Node.js (DEAD — HTTP 500, dirs leak via 308)              │
+│  :5432 PostgreSQL (EXPOSED, requires password)                   │
+│  :6379 Redis 7.4.7 (NO AUTH — WARZONE, 24 attacker IPs)         │
+│  :8083 Hestia Control Panel (login exposed, API whitelisted)     │
 └─────────────────────────────────────────────────────────────────┘
      │
      ▼
-┌─ DOMAINS (6) ───────────────────────────────────────────────────┐
-│  olivimails.com ──── original server hostname (no public DNS)    │
+┌─ DOMAINS (9+) ─────────────────────────────────────────────────┐
+│  olivimails.com ──── original server hostname (EXPIRED)          │
 │  epicfunnels.net ─── scam funnels + email (CF: cheryl/logan)     │
 │  noodledit.com ───── asset CDN on GCS (CF: cass/felicity)        │
 │  mydailysurge.com ── SEO content farm (CF: cass/felicity)        │
 │  phef6trk.com ────── CPA tracker (SINKHOLED at 10.0.0.1)        │
-│  myamericanprizes.com ─ sweepstakes brand (linked from privacy)  │
+│  myamericanprizes.com ─ sweepstakes brand (M365, ActiveProspect) │
+│  rewardzinga.com ──── subscription scam (BBB d/b/a)             │
+│  + snagalot.com, myamericanprizes1.com, easyscanamoe.com        │
 └─────────────────────────────────────────────────────────────────┘
      │
      ▼
 ┌─ THIRD-PARTY INTEGRATIONS ──────────────────────────────────────┐
 │  Google Search Console ── domain verified                        │
-│  Microsoft 365 ────────── MS=ms66511106                          │
+│  Microsoft 365 ────────── MS=ms66511106 (deleted) + ms46839871   │
 │  ActiveProspect ───────── TCPA consent verification              │
-│  Zendesk ──────────────── included in SPF                        │
-│  Outlook.com ──────────── included in SPF                        │
+│  Jornaya (=ActiveProspect) ── lead intelligence / TCPA consent   │
+│  SCA Promotions ───────── AMOE sweepstakes wrapper               │
+│  Zendesk ──────────────── customer "support"                     │
 │  Lovable AI ───────────── scam page generator                    │
 │  Webflow ──────────────── SEO blog host                          │
-│  Jornaya ──────────────── lead intelligence / TCPA consent       │
-│  EasyScan AMOE ────────── sweepstakes entry (key: 4j8lbrw52v)   │
 │  Ve Global ────────────── retargeting platform (in GTM)          │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -906,12 +919,18 @@ GCS bucket objects:   775  (747 + 28 across two buckets)
 GCS bucket size:      122.4 MB
 Promotion categories:   8  (gift cards, electronics, vehicles, luxury, gas, gov benefits, health, travel)
 Last asset upload:     2026-04-08 (day of probe)
+Open ports on EC2:    15  (was 11 — FTP 21, DNS 53, POP3 110, POP3S 995 discovered via full 65535 sweep)
 Operating entity:      Moxxi Media (moxximedia.onmicrosoft.com)
 Platform backend:      CustomerTestConnect (Express.js + Handlebars)
-Redis status:          COMPROMISED by cryptojacking botnet (attack failed)
+Redis status:          ACTIVE WARZONE — 24 external IPs attacking, 33 FLUSHALL, crontab injection, Lua RCE attempts
+Redis connections:     218,219 total (75 days uptime)
+Redis commands:        241,737 total, 18,398 errors, 337 FLUSHALL, 1,455 EVAL, 4,355 SLAVEOF
+Threat actors:         24 unique external IPs from 6+ countries in slowlog
 M365 tenants:          2 (ms66511106 deleted, ms46839871 active)
 CT log entries:        130+ (across all domains)
 Registrars used:       4 (GoDaddy, Squarespace, Cloudflare, Sav.com)
+PostgreSQL:            Requires auth (fe_sendauth for all common users)
+Hestia API:            IP-whitelisted (rejects non-whitelisted connections)
 Working parts:         0 (monetization still broken — tracker sinkholed)
 ```
 
@@ -930,3 +949,313 @@ Deep research into the companies providing legal cover and compliance infrastruc
 **Moxxi Digital (NYC) is the strongest candidate** for the entity behind `moxximedia.onmicrosoft.com`. Founded by Morris Laniado, ex-Fluent Inc. (NYSE: FLNT). Business model: "promotion-based marketing that drives opt-in lead generation at scale." The M365 tenant says "moxxiMEDIA" but the public company calls itself "moxxiDIGITAL" — possible rebrand, subsidiary, or different entity. Not confirmed, but the business model alignment is exact.
 
 **Three new connected domains**: `snagalot.com` (mirrors giveaway rules), `myamericanprizes1.com` (variant domain), `easyscanamoe.com` (SCA Promotions AMOE system). Total connected domains: **9**.
+
+## Deep Probe (2026-04-09)
+
+6 containerized probes using `redis-cli`, `psql`, `nmap`, `curl`, and Python against the EC2 server. All read-only, standard open-source tools. Raw data in `artifacts/deep-probe-2026-04-08/`.
+
+### CRITICAL: Redis Is an Active Warzone
+
+The exposed Redis 7.4.7 on port 6379 is not just open — it is under **continuous automated attack** from botnets worldwide. The `SLOWLOG` (entries 293-420) and `INFO` commandstats paint the picture of a database that has been discovered by every major Redis exploit scanner on the internet.
+
+**By the numbers:**
+- **218,219** total connections received in 75 days of uptime
+- **241,737** commands processed, **18,398** errors
+- **337** `FLUSHALL` commands — complete database wipes
+- **2,731** `FLUSHDB` commands
+- **4,355** `SLAVEOF` commands — replication hijack attempts
+- **1,455** `EVAL` commands (Lua RCE attempts, **all failed**)
+- **10,238** `CONFIG SET` commands (10,086 failed — crontab/dir injection attempts)
+- **3,934** `SET` commands (payload injection)
+- **893** `SAVE` commands (RDB dump after payload injection)
+- **500** cached Lua scripts (from EVAL spam)
+- **955** evicted scripts (cache overflow from attack volume)
+
+**24 unique external attacker IPs in the slowlog** (excluding localhost):
+
+| IP | Commands | Country | Attack Type |
+|----|----------|---------|-------------|
+| 180.76.114.78 | 19 | China (Baidu/Beijing) | FLUSHALL + SAVE + CONFIG SET (crontab injection) |
+| 183.6.4.31 | 14 | China (Guangdong) | FLUSHALL + SAVE + COMMAND reconnaissance |
+| 113.209.196.69 | 11 | China (Guangdong) | FLUSHALL + SAVE (repeated sessions) |
+| 183.56.243.176 | 10 | China (Guangdong) | FLUSHALL + SAVE + COMMAND reconnaissance |
+| 120.48.43.118 | 10 | China (Alibaba Cloud) | **CONFIG SET dir /var/spool/cron/crontabs** + CONFIG SET dbfilename httpgd |
+| 183.56.219.190 | 8 | China (Guangdong) | FLUSHALL + SAVE + COMMAND |
+| 180.76.52.82 | 6 | China (Baidu) | FLUSHALL + SAVE + COMMAND |
+| 120.48.35.163 | 5 | China (Alibaba Cloud) | FLUSHALL + SAVE |
+| 81.71.51.170 | 4 | China (Tencent Cloud) | FLUSHALL + SAVE |
+| 200.188.48.146 | 4 | Mexico | **CONFIG SET stop-writes-on-bgsave-error no** + FLUSHALL |
+| 194.163.170.77 | 4 | Germany (Contabo) | SAVE + COMMAND DOCS |
+| 14.18.118.84 | 4 | China (Guangdong) | FLUSHALL + SAVE |
+| 198.74.62.88 | 2 | USA (Linode) | FLUSHALL + SAVE |
+| 180.76.58.237 | 2 | China (Baidu) | FLUSHALL + SAVE |
+| 116.153.32.50 | 2 | China (Shanghai) | FLUSHALL + SAVE |
+| 47.94.213.192 | 1 | China (Alibaba Cloud) | SAVE |
+| 47.112.215.87 | 1 | China (Alibaba Cloud) | **EVAL package.loadlib** (Lua RCE attempt) |
+| 27.185.41.158 | 1 | China (Hebei) | **CONFIG SET dir /etc/cron.d** |
+| 3.132.26.232 | 1 | USA (AWS Ohio) | INFO reconnaissance |
+| 192.184.150.96 | 1 | USA (Sonic.net) | INFO reconnaissance (this is us) |
+| 130.131.161.238 | 1 | USA | INFO reconnaissance |
+| 120.48.174.141 | 1 | China (Alibaba Cloud) | SAVE |
+| 118.196.34.36 | 1 | China | COMMAND reconnaissance |
+| 111.90.158.78 | 1 | Malaysia | FLUSHALL |
+
+**Attack types observed:**
+
+1. **Crontab injection** (120.48.43.118, 27.185.41.158): `CONFIG SET dir /var/spool/cron/crontabs` then `CONFIG SET dbfilename httpgd` then `SAVE` — writes the Redis DB as a crontab file. The existing `backup1`-`backup4` malware keys are the payloads. **Failed** because Redis runs in Docker (`dir=/data`, PID 1) and cannot reach the host crontab.
+
+2. **Lua RCE** (47.112.215.87): `EVAL "local ver = string.match(_VERSION,'%d.%d');local io_l = package.loadlib(string.format('/usr/lib/x86_64-linux-gnu/liblua%s.so.0',..."` — attempts to load system libraries via Lua's `package.loadlib` for arbitrary code execution. **Failed** — all 1,455 EVAL calls returned errors.
+
+3. **Replication hijack** (multiple IPs): 4,355 `SLAVEOF` commands attempted to make this Redis a replica of an attacker-controlled server, which would allow injecting arbitrary data. The commandstats show these were executed but the replication state shows `connected_slaves:0`, `role:master` — the server remained standalone.
+
+4. **Data destruction** (widespread): 337 `FLUSHALL` commands from 15+ IPs. The database has been wiped hundreds of times. The 4 malware keys persist because the botnet that planted them keeps re-injecting after each wipe.
+
+5. **Persistence manipulation** (200.188.48.146): `CONFIG SET stop-writes-on-bgsave-error no` — disables the safety check that stops writes when RDB snapshots fail, ensuring malware payloads survive even with disk errors.
+
+**Geographic distribution**: ~75% China (Baidu, Alibaba Cloud, Tencent Cloud, various ISPs in Guangdong/Beijing/Shanghai/Hebei), ~10% USA (AWS, Linode, Sonic.net), plus Germany, Mexico, Malaysia. This is consistent with the global distribution of automated Redis exploit botnets.
+
+### nmap: 15 Open Ports (4 New)
+
+Full 65535-port TCP SYN sweep (`nmap -sS -p- --open -T4 --min-rate 1000`) discovered 4 previously unknown ports:
+
+| Port | Service | New? | Notes |
+|------|---------|------|-------|
+| 21 | FTP | **YES** | Not previously detected — not probed further |
+| 22 | SSH | | OpenSSH 9.2p1 (Debian Bookworm) |
+| 53 | DNS | **YES** | Running a nameserver on the EC2 — possibly Hestia's built-in BIND |
+| 80 | HTTP | | nginx, TRACE enabled |
+| 110 | POP3 | **YES** | Dovecot POP3 access (in addition to IMAP) |
+| 143 | IMAP | | Dovecot, cert=fqdn.olivimails.com |
+| 443 | HTTPS | | nginx, cert expired, redirects to HTTP |
+| 465 | SMTPS | | Exim, AUTH PLAIN LOGIN, leaks internal hostname |
+| 587 | SMTP | | Exim submission, STARTTLS, leaks `ip-172-26-15-175.ec2.internal` |
+| 993 | IMAPS | | Dovecot, AUTH=PLAIN AUTH=LOGIN |
+| 995 | POP3S | **YES** | Dovecot POP3 over SSL |
+| 3000 | Node.js | | HTTP 500 on all endpoints — app crashed |
+| 5432 | PostgreSQL | | Exposed, requires password |
+| 6379 | Redis | | 7.4.7, NO AUTH, under active attack |
+| 8083 | Hestia | | Admin panel, IP-whitelisted API |
+
+nmap service version scan (`-sV -sC -O`) confirmed:
+- All SSL services use the same Hestia self-signed cert (`CN=fqdn.olivimails.com`)
+- SMTP on 465 and 587 both leak the internal hostname in EHLO banner
+- `redis-info` NSE script confirmed Redis 7.4.7, standalone mode, 4 keys in db0
+
+### PostgreSQL: Locked Down
+
+`psql -h 13.220.193.170 -w` tested 8 common usernames: `postgres`, `admin`, `root`, `hestiacp`, `hestia`, `epicfunnels`, `olivimails`, `noodledit`. All returned `fe_sendauth: no password supplied`. Unlike Redis, PostgreSQL requires authentication. The data behind it (likely the backend for CustomerTestConnect / MyAmericanPrizes) remains inaccessible without credentials.
+
+### Node.js: Dead but Leaky
+
+The crashed Node.js app on port 3000 reveals directory structure through HTTP 308 redirects:
+- `/node_modules/`, `/dist/`, `/build/`, `/src/`, `/public/` — all return 308 (Moved Permanently)
+- This confirms the filesystem paths exist on the server
+- Every actual endpoint returns HTTP 500 — the application is completely non-functional
+- No git exposure (`.git/HEAD` returns 500, not a git object)
+- No source maps accessible
+
+### GCS Inventory: 747 Objects Confirmed
+
+Full XML bucket listing with pagination confirms the prior count:
+- **b.noodledit.com**: 747 objects, 122.41 MB
+- Categories: 533 promotions, 159 pages, 55 themes
+- Date range: 2024-10-22 to 2026-04-08
+- No sensitive files (.env, .sql, .bak, credentials) found in object keys
+- The bucket inventory is consistent with the prior probe — no new uploads between probes
+
+### Hestia Control Panel: IP Whitelisted
+
+The Hestia API at `https://13.220.193.170:8083` returns `Error: IP is not allowed to connect with API` for all API endpoints. The login page is still accessible (serves the v1.9.4 login form), but the REST API is restricted to whitelisted IPs. This is the one security measure the operator actually configured correctly.
+
+### Updated Infrastructure Diagram
+
+```
+┌─ MANAGEMENT LAYER ──────────────────────────────────────────────┐
+│  Hestia Control Panel v1.9.4 (:8083)                            │
+│  FQDN: fqdn.olivimails.com                                      │
+│  Manages: nginx, Dovecot, PostgreSQL, Node.js, Redis             │
+│  Login page exposed, API IP-whitelisted                          │
+└─────────────────────────────────────────────────────────────────┘
+     │
+     ▼
+┌─ AWS EC2 (13.220.193.170) — 15 OPEN PORTS ────────────────────┐
+│  :21  FTP (discovered via deep probe)                            │
+│  :22  SSH (OpenSSH 9.2p1)                                        │
+│  :53  DNS (discovered via deep probe — running nameserver)       │
+│  :80  nginx ("Success!" + virtual hosts, TRACE enabled)          │
+│  :110 POP3 (discovered via deep probe — Dovecot)                 │
+│  :143 IMAP (Dovecot)                                             │
+│  :443 HTTPS (cert expired Jan 2026)                              │
+│  :465 SMTPS (Exim, leaks internal hostname)                      │
+│  :587 SMTP Submission (leaks ip-172-26-15-175.ec2.internal)      │
+│  :993 IMAPS (Dovecot, AUTH=PLAIN, cert=fqdn.olivimails.com)     │
+│  :995 POP3S (discovered via deep probe — Dovecot over SSL)       │
+│  :3000 Node.js (DEAD — HTTP 500, dirs leak via 308)              │
+│  :5432 PostgreSQL (EXPOSED, requires password)                   │
+│  :6379 Redis 7.4.7 (NO AUTH — ACTIVE WARZONE, 24 attacker IPs)  │
+│  :8083 Hestia Control Panel (login exposed, API whitelisted)     │
+│                                                                  │
+│  Redis stats: 218K connections, 337 FLUSHALL, 4355 SLAVEOF,     │
+│  1455 EVAL (Lua RCE), crontab injection, 24 threat actors        │
+└─────────────────────────────────────────────────────────────────┘
+     │
+     ▼
+┌─ DOMAINS (6+) ─────────────────────────────────────────────────┐
+│  olivimails.com ──── original server hostname (EXPIRED)          │
+│  epicfunnels.net ─── scam funnels + email (CF: cheryl/logan)     │
+│  noodledit.com ───── asset CDN on GCS (CF: cass/felicity)        │
+│  mydailysurge.com ── SEO content farm (CF: cass/felicity)        │
+│  phef6trk.com ────── CPA tracker (SINKHOLED at 10.0.0.1)        │
+│  myamericanprizes.com ─ sweepstakes brand (M365, ActiveProspect) │
+│  rewardzinga.com ──── subscription scam (BBB d/b/a)             │
+│  + snagalot.com, myamericanprizes1.com, easyscanamoe.com        │
+└─────────────────────────────────────────────────────────────────┘
+     │
+     ▼
+┌─ THIRD-PARTY INTEGRATIONS ──────────────────────────────────────┐
+│  Google Search Console ── domain verified                        │
+│  Microsoft 365 ────────── MS=ms66511106 (deleted) + ms46839871   │
+│  ActiveProspect ───────── TCPA consent verification              │
+│  Jornaya (=ActiveProspect) ── lead intelligence / TCPA consent   │
+│  SCA Promotions ───────── AMOE sweepstakes wrapper               │
+│  Zendesk ──────────────── customer "support"                     │
+│  Lovable AI ───────────── scam page generator                    │
+│  Webflow ──────────────── SEO blog host                          │
+│  Ve Global ────────────── retargeting platform (in GTM)          │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Deep Probe Artifacts
+
+All saved in `artifacts/deep-probe-2026-04-08/`:
+
+- `redis-full.json` — Complete Redis enumeration: INFO all, CONFIG GET *, CLIENT LIST, SLOWLOG, MEMORY STATS, ACL LIST, MODULE LIST, CLUSTER INFO, key inventory with type/TTL/encoding/size for all 4 keys across all 16 databases
+- `postgresql-discovery.json` — Connection attempts for 8 usernames, all returning fe_sendauth
+- `nmap-comprehensive.json` — Targeted service scan (-sV -sC -O), full 65535 TCP SYN sweep (-sS -p-), redis-info NSE, HTTP NSE scripts, all raw output + XML
+- `nodejs-deep.json` — Git exposure test, source map checks, 50+ path enumeration, error probing, header analysis
+- `gcs-inventory.json` — Full XML bucket listing for both b.noodledit.com (747 objects) and sassets.noodledit.com (28 objects), Python-parsed with key/size/date/etag for every object, sensitive file detection, metadata extraction
+- `hestia-panel.json` — Login page analysis, API endpoint tests (all IP-rejected), directory enumeration, SSL cert details
+
+## Follow-up Probes (2026-04-09)
+
+New port investigation, threat actor attribution, and malware identification. Raw data in `artifacts/new-ports-2026-04-09/`.
+
+### FTP (Port 21): Locked
+
+- **Banner**: `220 Welcome! Please note that all activity is logged.`
+- **Anonymous login**: REJECTED (`530 Login incorrect`)
+- **Features**: UTF8, EPRT, EPSV, MDTM, PASV, **PBSZ, PROT** (FTP-TLS capable), REST STREAM, SIZE, TVFS
+- **Verdict**: vsftpd-style server, properly configured — no anonymous access. PBSZ/PROT indicate FTPS capability. The "all activity is logged" banner is either genuine or cargo-cult security. Either way, no data accessible without credentials.
+
+### DNS (Port 53): Recursive Resolver, Not Authoritative
+
+Port 53 is **not** an authoritative nameserver — it's a **recursive resolver** (flags: `qr rd ra`). This is Hestia Control Panel's built-in BIND running as a local DNS cache.
+
+- **Zone transfers**: Failed (expected — not a zone authority)
+- **Resolves epicfunnels.net**: Via Cloudflare (SOA: cheryl.ns.cloudflare.com) — normal public resolution
+- **olivimails.com**: NXDOMAIN everywhere (domain expired, confirmed)
+- **Subdomain resolution**: Only jessica, webmail, and mail still live (all Cloudflare IPs 172.67.192.166 / 104.21.11.211). jenny, kylie, app, demo, admin, ftp, dns — all NXDOMAIN.
+- **version.bind**: NXDOMAIN (version hidden)
+- **Verdict**: No hidden zones to dump, no internal records leaked. Just a local resolver for the server's own DNS needs. Not an intel goldmine.
+
+### POP3 (Ports 110/995): Dovecot, As Expected
+
+- **Banner**: `+OK Mail Delivery Agent` (same as IMAP)
+- **Port 110**: STARTTLS available, SASL PLAIN + LOGIN auth
+- **Port 995**: Already TLS-wrapped, same auth methods
+- **Capabilities**: TOP, UIDL, PIPELINING, RESP-CODES, AUTH-RESP-CODE
+- **Verdict**: Standard Dovecot POP3 access alongside IMAP. No additional intel — confirms the complete email stack (SMTP/IMAP/POP3 on Exim+Dovecot).
+
+### Threat Actor Attribution (Redis Attackers)
+
+Full reverse DNS + whois for all 23 external IPs from the Redis slowlog. The **overwhelming majority are Chinese cloud infrastructure** — Baidu Cloud, Alibaba Cloud, Tencent Cloud, ChinaNet, and ByteDance's Volcano Engine.
+
+| IP | Provider | ASN | Country | Attack Type | Threat Level |
+|----|----------|-----|---------|-------------|-------------|
+| **120.48.43.118** | **Baidu Cloud** | AS38365 | CN | **CONFIG SET dir /var/spool/cron/crontabs** — crontab injection | **HIGH** |
+| **47.112.215.87** | **Alibaba Cloud** | APNIC range | CN | **EVAL package.loadlib** — Lua RCE sandbox escape | **HIGH** |
+| **27.185.41.158** | **ChinaNet Hebei** | ChinaTelecom | CN | **CONFIG SET dir /etc/cron.d** — cron.d injection | **HIGH** |
+| **200.188.48.146** | Unknown ISP | — | MX | CONFIG SET stop-writes-on-bgsave-error no — RDB attack prep | MEDIUM |
+| 180.76.114.78 | Baidu Cloud | AS38365 | CN | FLUSHALL + SAVE + CONFIG SET (repeated sessions) | MEDIUM |
+| 180.76.52.82 | Baidu Cloud | AS38365 | CN | FLUSHALL + SAVE + COMMAND | MEDIUM |
+| 180.76.58.237 | Baidu Cloud | AS38365 | CN | FLUSHALL + SAVE | MEDIUM |
+| 120.48.35.163 | Baidu Cloud | AS38365 | CN | FLUSHALL + SAVE | MEDIUM |
+| 120.48.174.141 | Baidu Cloud | AS38365 | CN | SAVE | LOW |
+| 183.6.4.31 | ChinaNet Guangdong | ChinaTelecom | CN | FLUSHALL + SAVE + COMMAND | MEDIUM |
+| 183.56.243.176 | ChinaNet Guangdong | ChinaTelecom | CN | FLUSHALL + SAVE + COMMAND | MEDIUM |
+| 183.56.219.190 | ChinaNet Guangdong | ChinaTelecom | CN | FLUSHALL + SAVE + COMMAND | MEDIUM |
+| 14.18.118.84 | ChinaNet Guangdong | ChinaTelecom | CN | FLUSHALL + SAVE | MEDIUM |
+| 113.209.196.69 | Beijing Primezone | — | CN | FLUSHALL + SAVE | MEDIUM |
+| 116.153.32.50 | China Unicom | AS4837 | CN | FLUSHALL + SAVE | MEDIUM |
+| 81.71.51.170 | Tencent Cloud | — | CN | FLUSHALL + SAVE | MEDIUM |
+| 47.94.213.192 | Alibaba Cloud | APNIC range | CN | SAVE | LOW |
+| 118.196.34.36 | ByteDance Volcano Engine | AS137718 | CN | COMMAND recon | LOW |
+| 111.90.158.78 | **Shinjiru Technology** | AS19324 | MY | FLUSHALL | MEDIUM |
+| 198.74.62.88 | Linode / Akamai | — | US | FLUSHALL + SAVE | MEDIUM |
+| 194.163.170.77 | Contabo GmbH (vmi3002568.contaboserver.net) | AS51167 | DE | SAVE + COMMAND DOCS | LOW |
+| 3.132.26.232 | AWS (scan.visionheight.com) | — | US | INFO recon | SCANNER |
+| 130.131.161.238 | Stretchoid (azpdcgeh5752.stretchoid.com) | — | NL | INFO recon | SCANNER |
+
+**Country breakdown**: China 17 (74%), USA 2, Germany 1, Malaysia 1, Mexico 1, Netherlands 1.
+
+**Provider clusters**:
+- **Baidu Cloud** (6 IPs in 120.48.0.0/16 and 180.76.0.0/16): The largest single cluster. Includes the crontab injector. Abuse contact: huxin05@baidu.com.
+- **ChinaNet/China Telecom** (5 IPs across Guangdong + Hebei): Residential/business IPs. Includes the cron.d injector. Abuse: anti-spam@chinatelecom.cn.
+- **Alibaba Cloud** (2 IPs in 47.x APNIC range): Includes the Lua RCE actor.
+- **Shinjiru** (Malaysia): Known bulletproof hosting provider popular with cybercriminals.
+- **Stretchoid** + **scan.visionheight.com**: Known internet measurement scanners — not threat actors, just cataloging open Redis instances.
+
+**Key finding**: All three HIGH-threat actors (crontab injection, Lua RCE, cron.d injection) are on **Chinese cloud infrastructure**. The Baidu Cloud IPs show coordinated behavior across multiple sessions spanning weeks — likely a single botnet fleet operating across 6 VMs in the same ASN.
+
+### Redis Malware: WatchDog Cryptojacking Campaign
+
+The 4 `backup1`-`backup4` keys containing crontab payloads that phone home to `oracle.zzhreceive.top` are **WatchDog** — a long-running cryptojacking operation first exposed by **Palo Alto Unit 42** in February 2021, with additional reporting by CrowdStrike, Cado Labs (now Darktrace), Tropico Security, Fortinet, and Securonix.
+
+**Identification** — every indicator matches documented WatchDog IOCs:
+
+| Indicator | WatchDog Match |
+|---|---|
+| `oracle.zzhreceive.top` | Confirmed C2 domain (Unit 42, CrowdStrike, Cado Labs, Tropico) |
+| `/b2f628/` URL path | Campaign signature (appears across all reports since late 2020) |
+| `/b2f628fff19fda999999999/` | Extended variant path (CrowdStrike, Unit 42 updated report) |
+| `b.sh` script name | Redis propagation script (Securonix IOC list, Tropico) |
+| `cd1` = obfuscated `curl` | WatchDog evasion technique (CrowdStrike) |
+| `wd1` = obfuscated `wget` | Renames wget to block competing malware (CrowdStrike, Tropico) |
+| `backup1`-`backup4` key names | Standard WatchDog Redis crontab injection pattern (Tropico honeypot) |
+| Crontab intervals `*/2` through `*/5` | WatchDog redundancy pattern — staggered download methods |
+
+**WatchDog group profile**:
+- **Active since**: January 27, 2019 — one of the longest-running cryptojacking operations documented
+- **Goal**: Monero (XMR) mining via XMRig
+- **Scale**: 476+ simultaneously compromised systems, 209 XMR (~$32,056 USD) documented profit
+- **Tooling**: GoLang binaries (`networkmanager`, `phpguard`, `phpupdate`), bash scripts, 33 unique exploits
+- **Targets**: Exposed Redis, Docker Engine API, PostgreSQL, and 30+ other services
+
+**TeamTNT connection**: The `zzhreceive` naming was originally TeamTNT (`zzhrecieve.anondns.net` — note the misspelling). Both domains resolved to `199.19.226.117`. Unit 42 initially attributed to TeamTNT (June 2021) but corrected to WatchDog (October 2021) — WatchDog was using stolen/copied TeamTNT tooling, including logos and the `hilde@teamtnt.red` email, but lacks TeamTNT's more advanced Kubernetes exploitation.
+
+**Attack chain**:
+1. **Initial access**: Exploit unauthenticated Redis (port 6379) or Docker API (port 2375)
+2. **Persistence**: Write `backup1`-`backup4` crontab keys, then `CONFIG SET dir /var/spool/cron/crontabs/` + `CONFIG SET dbfilename root` + `SAVE`
+3. **Stage 1** (`cronb.sh`/`b.sh`): Check infection status, enumerate processes, fetch next payload
+4. **Stage 2** (`ar.sh`): Process hiding via `ps` hijacking, timestomping, remove Alibaba Cloud Agent
+5. **Stage 3**: XMRig miner with systemd persistence
+6. **Stage 4** (`c.sh` + `d.sh`): Lateral movement — `c.sh` propagates via Redis (disables SELinux, configures iptables), `d.sh` targets Docker endpoints
+
+**Why it failed here**: Redis runs in Docker (PID 1, `dir=/data`). The crontab injection cannot reach the host filesystem from inside the container. The malware keys persist because WatchDog keeps re-injecting them after each FLUSHALL wipe by competing botnets, but the mining payload never executes.
+
+**C2 status**: `oracle.zzhreceive.top` is dead (NXDOMAIN). Previously resolved to `199.19.226.117`. No Wayback Machine snapshots exist. The `.top` TLD (ZDNS/China) is ranked by Unit 42 in the top 10 TLDs for malicious domain proportion.
+
+**Wider context** (Tropico honeypot research): WatchDog is one of **5 identified groups** actively attacking exposed Redis — alongside Kinsing, Cleanfda, TA-NATALSTATUS, and RedisRaider. 87% of Redis attacks use cron-based persistence. 82.5% of attacking IPs come from Chinese infrastructure. ~60,000 of 360,000 publicly accessible Redis servers worldwide have no password.
+
+**Assessment**: The WatchDog malware is **not related to the scam operators** (Moxxi Digital). It is opportunistic cryptojacking by a well-known botnet. The scam operator's Redis was discovered by internet-wide scanners and became a warzone entirely independent of the scam operation.
+
+Full analysis with SHA256 hashes, Monero wallet addresses, and source references: `artifacts/new-ports-2026-04-09/watchdog-malware-analysis.md`
+
+### Follow-up Probe Artifacts
+
+All saved in `artifacts/new-ports-2026-04-09/`:
+
+- `ftp-probe.json` — FTP anonymous login attempt, banner, features list
+- `dns-probe.json` — DNS recursive resolver analysis, zone transfer attempts, subdomain resolution, version query
+- `pop3-probe.json` — POP3/POP3S banner and capabilities
+- `threat-actor-attribution.json` — Full reverse DNS + whois for all 23 external Redis attacker IPs with ASN, org, country, netname, CIDR, abuse contacts

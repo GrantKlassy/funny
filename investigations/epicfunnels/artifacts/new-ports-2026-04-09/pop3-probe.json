@@ -1,0 +1,21 @@
+{
+  "probe": "pop3_banner",
+  "timestamp": "2026-04-09T06:54:49+00:00",
+  "target": "13.220.193.170",
+  "pop3_110": {
+    "banner": "+OK Mail Delivery Agent",
+    "capabilities": ["CAPA", "TOP", "UIDL", "RESP-CODES", "PIPELINING", "AUTH-RESP-CODE", "STLS", "USER", "SASL PLAIN LOGIN"],
+    "starttls": true
+  },
+  "pop3s_995": {
+    "banner": "+OK Mail Delivery Agent",
+    "capabilities": ["CAPA", "TOP", "UIDL", "RESP-CODES", "PIPELINING", "AUTH-RESP-CODE", "USER", "SASL PLAIN LOGIN"],
+    "starttls": false
+  },
+  "notes": [
+    "Dovecot POP3 — same Mail Delivery Agent as IMAP",
+    "SASL PLAIN + LOGIN auth (credentials required)",
+    "STLS available on port 110, not needed on 995 (already TLS)",
+    "No additional intel beyond confirming Dovecot mail stack"
+  ]
+}

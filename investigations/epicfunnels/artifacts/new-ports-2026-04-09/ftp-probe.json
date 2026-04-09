@@ -1,0 +1,16 @@
+{
+  "probe": "ftp_anonymous",
+  "timestamp": "2026-04-09T06:54:48+00:00",
+  "target": "13.220.193.170:21",
+  "result": "anonymous_login_rejected",
+  "banner": "220 Welcome! Please note that all activity is logged.",
+  "auth_response": "530 Login incorrect",
+  "features": ["UTF8", "EPRT", "EPSV", "MDTM", "PASV", "PBSZ", "PROT", "REST STREAM", "SIZE", "TVFS"],
+  "notes": [
+    "vsftpd-style FTP server",
+    "Anonymous login rejected (530)",
+    "PBSZ + PROT features indicate FTP-TLS (FTPS) capability",
+    "Banner warns activity is logged — operator is at least somewhat security-aware on this port",
+    "All commands after USER/PASS rejected with 530 — cannot proceed without valid credentials"
+  ]
+}

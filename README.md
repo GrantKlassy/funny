@@ -50,12 +50,12 @@ Our **58,400 satisfied customers** at @jessytheupgradeclub agree — this is the
 ### Included With Your Prize:
 
 - An **AI-generated scam page** built with Lovable AI (scored 1.8/10 for scam prevention — the lowest of any tool tested)
-- **6 domains**, 21 subdomains, 11 open ports, and **0 working parts** of the actual scam
+- **10 domains**, 21 subdomains, **15 open ports**, and **0 working parts** of the actual scam
 
 **Infrastructure:**
 
-- A Redis database **open to the entire internet** with no password (`protected-mode: no`, `requirepass: ""`, bound to `*`)
-- A PostgreSQL database **also open to the entire internet**
+- A Redis database **open to the entire internet** with no password (`protected-mode: no`, `requirepass: ""`, bound to `*`) — now an **active warzone** with 218,219 connections, **23 attacker IPs from 8 countries**, crontab injection attempts, Lua RCE exploits, replication hijacking, and 337 FLUSHALL database wipes in 75 days
+- A PostgreSQL database exposed to the internet (at least requires a password — `fe_sendauth: no password supplied`)
 - A **dead Node.js app** returning HTTP 500 on every single endpoint
 - An **expired SSL certificate** that nobody renewed (January 2026)
 - The **Hestia Control Panel** admin interface exposed to the whole world on port 8083
@@ -74,7 +74,41 @@ Our **58,400 satisfied customers** at @jessytheupgradeclub agree — this is the
 - An operator who is **STILL updating their SEO blog** (last modified: April 5, 2026) despite the scam being broken for months
 - **500 cached Lua scripts** in Redis (someone was working hard... on something)
 - A **coordinated TikTok engagement bot network** that is still actively liking people's old comments from multiple accounts, driving them to profiles that link to funnels that redirect to a sinkhole
-- A Redis database that **someone else already tried to cryptojack** — 4 malware crontab payloads sitting in the keys, phoning home to a dead C2 domain. Scammers getting scammed.
+- A Redis database that **someone else already cryptojacked** — 4 malware crontab payloads planted by **[WatchDog](https://unit42.paloaltonetworks.com/watchdog-cryptojacking/)**, a cryptojacking operation active since 2019, first exposed by Palo Alto Unit 42. Campaign ID `b2f628`, C2 domain `oracle.zzhreceive.top` (dead), XMRig Monero miner. Attack failed because Redis runs in Docker. The malware keys persist because WatchDog keeps re-injecting them after each FLUSHALL wipe by competing botnets. Scammers getting scammed by cryptojackers getting wiped by other cryptojackers.
+
+**The Redis Warzone — Who's Attacking:**
+
+The scam operator left their Redis database open to the internet with no password. Within 75 days, **23 unique threat actors from 8 countries** found it and started fighting over it. We ran reverse DNS and WHOIS on every single one:
+
+| Threat Level | IP | Who | Country | What They Did |
+|---|---|---|---|---|
+| **HIGH** | `120.48.43.118` | **Baidu Cloud** | China | `CONFIG SET dir /var/spool/cron/crontabs` — tried to write a crontab file to the host OS |
+| **HIGH** | `47.112.215.87` | **Alibaba Cloud** | China | `EVAL package.loadlib` — Lua sandbox escape, attempted arbitrary code execution |
+| **HIGH** | `27.185.41.158` | **ChinaNet Hebei** | China | `CONFIG SET dir /etc/cron.d` — same crontab injection, different path |
+| MEDIUM | `200.188.48.146` | Unknown ISP | Mexico | `CONFIG SET stop-writes-on-bgsave-error no` — prepping for RDB payload dump |
+| MEDIUM | `180.76.114.78` | **Baidu Cloud** | China | FLUSHALL + SAVE + CONFIG SET — repeated sessions over weeks |
+| MEDIUM | `180.76.52.82` | **Baidu Cloud** | China | Same botnet fleet as above |
+| MEDIUM | `180.76.58.237` | **Baidu Cloud** | China | Same botnet fleet as above |
+| MEDIUM | `120.48.35.163` | **Baidu Cloud** | China | Same botnet fleet as above |
+| MEDIUM | `183.6.4.31` | **ChinaNet Guangdong** | China | FLUSHALL + SAVE — persistent across multiple weeks |
+| MEDIUM | `183.56.243.176` | **ChinaNet Guangdong** | China | FLUSHALL + SAVE |
+| MEDIUM | `183.56.219.190` | **ChinaNet Guangdong** | China | FLUSHALL + SAVE |
+| MEDIUM | `14.18.118.84` | **ChinaNet Guangdong** | China | FLUSHALL + SAVE |
+| MEDIUM | `113.209.196.69` | **Beijing Primezone** | China | FLUSHALL + SAVE |
+| MEDIUM | `116.153.32.50` | **China Unicom** | China | FLUSHALL + SAVE |
+| MEDIUM | `81.71.51.170` | **Tencent Cloud** | China | FLUSHALL + SAVE |
+| MEDIUM | `111.90.158.78` | **Shinjiru Technology** | Malaysia | FLUSHALL — bulletproof hosting provider popular with cybercriminals |
+| MEDIUM | `198.74.62.88` | **Linode / Akamai** | USA | FLUSHALL + SAVE |
+| LOW | `120.48.174.141` | Baidu Cloud | China | SAVE |
+| LOW | `47.94.213.192` | Alibaba Cloud | China | SAVE |
+| LOW | `118.196.34.36` | **ByteDance / Volcano Engine** | China | COMMAND recon — yes, the TikTok parent company's cloud platform |
+| LOW | `194.163.170.77` | Contabo GmbH (`vmi3002568.contaboserver.net`) | Germany | SAVE + COMMAND DOCS |
+| SCANNER | `3.132.26.232` | AWS (`scan.visionheight.com`) | USA | INFO — internet-wide scanner, cataloging open Redis |
+| SCANNER | `130.131.161.238` | Stretchoid (`azpdcgeh5752.stretchoid.com`) | Netherlands | INFO — internet measurement company |
+
+**74% of the attackers are Chinese cloud infrastructure.** Baidu Cloud alone has **6 IPs** in the same ASN running coordinated attacks. All three HIGH-threat actors — crontab injection, Lua RCE, cron.d injection — are on Chinese cloud platforms. The malware that successfully planted itself (WatchDog) propagates primarily through Chinese cloud infrastructure. According to Tropico Security's honeypot research, **82.5%** of all Redis attacks worldwide originate from Chinese infrastructure (Alibaba Cloud, Tencent, Baidu). Our numbers match.
+
+The scam operator's Redis isn't just open — it's a **live battlefield** where botnets from multiple countries are competing to plant malware, wipe each other's payloads, and hijack the server's compute resources. WatchDog plants its crontab payloads. Another botnet FLUSHALLs the database. WatchDog re-injects. Someone else tries to make the server a replica. The whole thing has been wiped **337 times** in 75 days. Nobody is winning. The scam operator has no idea any of this is happening.
 
 <p align="center">
 <img src="memes/the-operator.png" width="500">
@@ -129,7 +163,7 @@ The entity behind it: **[Moxxi Digital, LLC](investigations/epicfunnels/OPERATOR
 | :bust_in_silhouette: | Kylie from TikTok | DNS removed |
 | :bust_in_silhouette: | Grant Klassy | Seriously at his limit |
 | :bust_in_silhouette: | Someone from the Zendesk SPF record | Confused |
-| :bust_in_silhouette: | The Redis database | Exposed (no auth, all interfaces, 75 days uptime) |
+| :bust_in_silhouette: | The Redis database | Active warzone (218K connections, 23 attackers from 8 countries, WatchDog cryptojacker, 337 FLUSHALL) |
 | :bust_in_silhouette: | ActiveProspect TCPA verification | Definitely legit lead gen |
 | :bust_in_silhouette: | The engagement bots | Still liking old TikTok comments (into a sinkhole) |
 | :bust_in_silhouette: | Morris Laniado | President, Moxxi Digital. Ex-Fluent Inc. AVP Data Revenue. Lives near the UPS Store. |
@@ -266,7 +300,7 @@ No FTC action against Moxxi Digital yet.
 
 If, somehow, you are still reading and want the real technical details:
 
-**[investigations/epicfunnels/](investigations/epicfunnels/)** — Full write-up of a CPA affiliate scam operation run by Moxxi Digital (ex-Fluent Inc. alumni), built with Lovable AI, distributed via TikTok, running on a hilariously misconfigured AWS EC2 instance with 10 domains, 15+ brands, 747 CDN assets, fake government benefit portals targeting people in financial distress, a Redis that got cryptojacked by a third party, a shadow hostname called "olivimails.com" (now expired), a Hestia Control Panel login page visible to the entire internet, and an operator who is *still actively uploading new scam assets* despite the fact that the monetization has been broken for months. Plus a [complete chain of attribution](investigations/epicfunnels/OPERATOR-INTEL.md) from scam landing page to real humans.
+**[investigations/epicfunnels/](investigations/epicfunnels/)** — Full write-up of a CPA affiliate scam operation run by Moxxi Digital (ex-Fluent Inc. alumni), built with Lovable AI, distributed via TikTok, running on a hilariously misconfigured AWS EC2 instance with 10 domains, 15 open ports, 15+ brands, 747 CDN assets, fake government benefit portals targeting people in financial distress, a Redis that has become an active warzone (218K connections, 23 attacker IPs from 8 countries, crontab injection, Lua RCE exploits, 337 database wipes, WatchDog cryptojacker, a 6-IP Baidu Cloud botnet fleet), a shadow hostname called "olivimails.com" (now expired), a Hestia Control Panel login page visible to the entire internet, and an operator who is *still actively uploading new scam assets* despite the fact that the monetization has been broken for months. Plus a [complete chain of attribution](investigations/epicfunnels/OPERATOR-INTEL.md) from scam landing page to real humans. Plus full [threat actor attribution](investigations/epicfunnels/artifacts/new-ports-2026-04-09/threat-actor-attribution.json) on every IP that attacked the Redis.
 
 **:world_map: [THE COMPLETE SCAM FLOW](https://github.com/GrantKlassy/funny/blob/main/investigations/epicfunnels/SCAM-FLOW.md)** — Every domain, subdomain, DNS record, port, service, certificate, and connection mapped out in Mermaid diagrams. The crown jewel. GitHub renders the Mermaid live.
 
@@ -287,26 +321,35 @@ If, somehow, you are still reading and want the real technical details:
 - **10** connected domains (epicfunnels.net, noodledit.com, mydailysurge.com, phef6trk.com, myamericanprizes.com, olivimails.com, rewardzinga.com, easyscanamoe.com, snagalot.com, myamericanprizes1.com)
 - **15+** brand names
 - **747** assets in the GCS CDN bucket (publicly listable, actively updated)
+- **218,219** connections to the exposed Redis in 75 days (it never stops)
+- **23** unique attacker IPs in the Redis slowlog from **8 countries** — 74% Chinese cloud infrastructure (scammers getting scammed by botnets)
+- **337** FLUSHALL commands (complete database wipes by automated attackers)
+- **4,355** SLAVEOF commands (replication hijack attempts)
+- **1,455** Lua EVAL commands (RCE exploit attempts, all failed)
+- **6** Baidu Cloud IPs in a single coordinated botnet fleet (AS38365)
 - **70** promotional assets impersonating government benefit programs
+- **15** open ports on one EC2 instance (4 new: FTP, DNS, POP3, POP3S — discovered via full 65535 port sweep)
 - **11** categories of government assistance being faked
-- **11** open ports on EC2
 - **7** affiliate IDs through one tracker
-- **500** cached Lua scripts in Redis
-- **4** cryptojacking malware payloads in Redis (from a third party — scammers getting scammed)
+- **500** cached Lua scripts in Redis (from EVAL spam by botnets)
+- **4** cryptojacking malware payloads in Redis — **WatchDog** (Palo Alto Unit 42, active since 2019, campaign `b2f628`, C2 `oracle.zzhreceive.top`)
 - **3** third-party companies providing legal cover (ActiveProspect, SCA Promotions, EasyScan AMOE)
 - **2** TCPA compliance vendors that are actually the same company (ActiveProspect acquired Jornaya, Jan 2026)
+- **2** confirmed crontab injection attempts (`CONFIG SET dir /var/spool/cron/crontabs` and `CONFIG SET dir /etc/cron.d`)
 - **2** conflicting SPF records
 - **2** Microsoft 365 tenants (one deleted, one active)
 - **1** DKIM key that says "NOT ACTIVATED"
 - **1** sinkholed tracker
 - **1** dead Node.js app
-- **1** completely open Redis
-- **1** PostgreSQL database on the public internet
-- **1** admin panel exposed to the world
+- **1** completely open Redis (now an active warzone — 23 threat actors, 8 countries, 5 attack types, WatchDog cryptojacker, Baidu Cloud botnet fleet)
+- **1** PostgreSQL database on the public internet (at least requires a password)
+- **1** admin panel exposed to the world (API IP-whitelisted — the one thing they secured)
 - **1** engagement bot network still grinding (into a sinkhole)
 - **1** expired domain still used as a server hostname
 - **1** UPS Store mailbox pretending to be a corporate office (Red Bank, NJ)
 - **1** professional bridge player's company administering the "prize" (SCA Promotions, Dallas TX)
+- **1** Lua RCE exploit attempt using `package.loadlib` against the Redis (Alibaba Cloud, China)
+- **1** ByteDance/Volcano Engine IP doing recon on the Redis (yes, the TikTok parent company's cloud)
 - **1** guy with a sword (unrelated)
 - **1** billion leads certified annually by the consent verification monopoly enabling this
 - **$1,000** — the grand prize (one winner per year, random drawing, good luck)

@@ -1,0 +1,4724 @@
+{
+  "probe": "gcs_inventory",
+  "timestamp": "2026-04-09T06:36:07.741785Z",
+  "b_noodledit": {
+    "bucket": "b.noodledit.com",
+    "total_objects": 747,
+    "total_size_bytes": 128358418,
+    "total_size_mb": 122.41,
+    "newest": {
+      "key": "promotions/creditcard.png",
+      "size_bytes": 58215,
+      "last_modified": "2026-04-08T20:23:11.620Z",
+      "etag": "fa6b974e3b48c0b31c1e52b9516035e8"
+    },
+    "oldest": {
+      "key": "themes/money-test-img.jpg",
+      "size_bytes": 45937,
+      "last_modified": "2024-10-22T19:10:37.294Z",
+      "etag": "4d3aa9c39f5641b28148e58857fd0435"
+    },
+    "categories": {
+      "promotions": {
+        "count": 533,
+        "total_bytes": 101918547
+      },
+      "pages": {
+        "count": 159,
+        "total_bytes": 25843096
+      },
+      "themes": {
+        "count": 55,
+        "total_bytes": 596775
+      }
+    },
+    "sensitive_files_flagged": [],
+    "objects": [
+      {
+        "key": "promotions/creditcard.png",
+        "size_bytes": 58215,
+        "last_modified": "2026-04-08T20:23:11.620Z",
+        "etag": "fa6b974e3b48c0b31c1e52b9516035e8"
+      },
+      {
+        "key": "pages/Picture2.jpg",
+        "size_bytes": 46042,
+        "last_modified": "2026-04-06T15:47:28.881Z",
+        "etag": "9af470c7c85ddf9b3b3ae24f5d500836"
+      },
+      {
+        "key": "pages/OPG Housing.jpg",
+        "size_bytes": 20782,
+        "last_modified": "2026-04-06T15:47:26.250Z",
+        "etag": "57d0ca49f83a97e14781e8309d049a25"
+      },
+      {
+        "key": "pages/icon_phone.svg",
+        "size_bytes": 2465,
+        "last_modified": "2026-04-01T15:14:26.427Z",
+        "etag": "d310b6585fe8488f94429df0bbe8ba06"
+      },
+      {
+        "key": "promotions/starbucks500.svg",
+        "size_bytes": 26306,
+        "last_modified": "2026-03-31T16:07:15.171Z",
+        "etag": "30c74e196bc29b09dcf9701360596e7c"
+      },
+      {
+        "key": "pages/dark_gr_check.svg",
+        "size_bytes": 1302,
+        "last_modified": "2026-03-30T20:57:30.179Z",
+        "etag": "32460a14e81cc0c1877b037546b477b8"
+      },
+      {
+        "key": "pages/magnifyingglass.svg",
+        "size_bytes": 1392,
+        "last_modified": "2026-03-30T20:53:35.441Z",
+        "etag": "8b2bb676cd12ba4ef3ced30ace4e6832"
+      },
+      {
+        "key": "promotions/kawasakimotorcycle.png",
+        "size_bytes": 102636,
+        "last_modified": "2026-03-30T18:45:30.963Z",
+        "etag": "e256e4d5be2e68e94654f45736640110"
+      },
+      {
+        "key": "promotions/norwegiancruiselinecruise.png",
+        "size_bytes": 84337,
+        "last_modified": "2026-03-30T18:44:48.647Z",
+        "etag": "43e49abc18243962368910cde429146f"
+      },
+      {
+        "key": "promotions/hermespurse.png",
+        "size_bytes": 93421,
+        "last_modified": "2026-03-30T18:44:05.694Z",
+        "etag": "0c20421c7222f90fb46942120e760044"
+      },
+      {
+        "key": "promotions/fordmavericktruck.png",
+        "size_bytes": 73870,
+        "last_modified": "2026-03-30T18:43:02.122Z",
+        "etag": "2e569991050c509cf47fbb2179ba7883"
+      },
+      {
+        "key": "promotions/celinepurse.png",
+        "size_bytes": 182393,
+        "last_modified": "2026-03-30T18:42:28.781Z",
+        "etag": "f2192d551040b6b0c1571c37d1730dc7"
+      },
+      {
+        "key": "pages/bonusbox.png",
+        "size_bytes": 52108,
+        "last_modified": "2026-03-30T17:10:59.886Z",
+        "etag": "690dc00dda9e01dd93b1cea3935f4161"
+      },
+      {
+        "key": "pages/express_green_checkmark.svg",
+        "size_bytes": 822,
+        "last_modified": "2026-03-30T16:39:09.948Z",
+        "etag": "be702533f17d8a0f1e27e9e81348f42f"
+      },
+      {
+        "key": "pages/express_amazon.svg",
+        "size_bytes": 11723,
+        "last_modified": "2026-03-30T16:32:49.104Z",
+        "etag": "c3774cb669c320a022739f02ed2d8400"
+      },
+      {
+        "key": "promotions/princesscruisescruise.png",
+        "size_bytes": 102009,
+        "last_modified": "2026-03-27T15:59:53.614Z",
+        "etag": "24392ac2c6d65d2f849e546e384e3b22"
+      },
+      {
+        "key": "promotions/indianscoutmotorcycle.png",
+        "size_bytes": 89599,
+        "last_modified": "2026-03-27T15:59:03.087Z",
+        "etag": "9e88365749c4611645cd1ce9ac6bed62"
+      },
+      {
+        "key": "promotions/chevroletcoloradotruck.png",
+        "size_bytes": 78500,
+        "last_modified": "2026-03-27T15:58:33.252Z",
+        "etag": "0845f98f8823c256bb75d0bb07e838ba"
+      },
+      {
+        "key": "promotions/nissanfrontiertruck.png",
+        "size_bytes": 78690,
+        "last_modified": "2026-03-27T15:57:09.787Z",
+        "etag": "fc217e13f57893e0e611d753cf9e88c0"
+      },
+      {
+        "key": "promotions/gmccanyontruck.png",
+        "size_bytes": 105841,
+        "last_modified": "2026-03-27T15:56:08.697Z",
+        "etag": "12bf8f344ccafc61c8ae0c9a148490ed"
+      },
+      {
+        "key": "promotions/hondamotorcycle.png",
+        "size_bytes": 99913,
+        "last_modified": "2026-03-27T15:54:49.450Z",
+        "etag": "008f6712480ee26de61f5fba141f3652"
+      },
+      {
+        "key": "promotions/elf_cosmetics_samples.png",
+        "size_bytes": 188104,
+        "last_modified": "2026-03-24T17:19:32.751Z",
+        "etag": "e3534c7bb95990ccaf3846613b0bb7a6"
+      },
+      {
+        "key": "promotions/elf_cosmetics_samples.jpg",
+        "size_bytes": 59905,
+        "last_modified": "2026-03-24T17:16:57.485Z",
+        "etag": "08efe0cac264b9ce522cb3f37d81dd48"
+      },
+      {
+        "key": "promotions/amazon500.svg",
+        "size_bytes": 12792,
+        "last_modified": "2026-03-24T13:33:53.448Z",
+        "etag": "42c2c99a6d96ef409dd2c16acb20964c"
+      },
+      {
+        "key": "themes/playzoodle_favicon.png",
+        "size_bytes": 858,
+        "last_modified": "2026-03-20T15:57:02.609Z",
+        "etag": "2299bf36ea52837d4a640a3edbfea79f"
+      },
+      {
+        "key": "promotions/Ticketmaster_USA.svg",
+        "size_bytes": 1889818,
+        "last_modified": "2026-03-19T14:25:31.393Z",
+        "etag": "20225874c388da09bf9aa5e6e53a14ca"
+      },
+      {
+        "key": "promotions/cardcash.png",
+        "size_bytes": 77169,
+        "last_modified": "2026-03-16T21:44:59.762Z",
+        "etag": "b1c73ca44709dceafeaf361de8240e52"
+      },
+      {
+        "key": "pages/location_icon.svg",
+        "size_bytes": 749,
+        "last_modified": "2026-03-13T20:14:21.146Z",
+        "etag": "7a0be45322ec5bcaa4d0534610965820"
+      },
+      {
+        "key": "themes/mds_logo.svg",
+        "size_bytes": 11264,
+        "last_modified": "2026-03-12T19:56:13.316Z",
+        "etag": "30e21d992e1322ad8ae507aea8f0da4d"
+      },
+      {
+        "key": "promotions/omahasteaks1000.svg",
+        "size_bytes": 34392,
+        "last_modified": "2026-03-11T21:04:56.870Z",
+        "etag": "a03f720d5657aff5265281aad791574c"
+      },
+      {
+        "key": "pages/logo_freshhealthplan.svg",
+        "size_bytes": 26589,
+        "last_modified": "2026-03-11T20:43:21.085Z",
+        "etag": "63f892f7468326d293931366bff4a6a3"
+      },
+      {
+        "key": "promotions/speedway.png",
+        "size_bytes": 24933,
+        "last_modified": "2026-03-11T19:43:54.471Z",
+        "etag": "489408607945ad4e41e9c1ac2773d48d"
+      },
+      {
+        "key": "promotions/bp.svg",
+        "size_bytes": 13728,
+        "last_modified": "2026-03-11T19:43:48.674Z",
+        "etag": "449fef3e03f2d7e7cd5ee2966a1d3dda"
+      },
+      {
+        "key": "promotions/exxon.svg",
+        "size_bytes": 1785,
+        "last_modified": "2026-03-11T19:43:23.588Z",
+        "etag": "25f9beb077509c59cfac1c0b8071fd02"
+      },
+      {
+        "key": "promotions/shellgas.svg",
+        "size_bytes": 6174,
+        "last_modified": "2026-03-11T19:43:18.156Z",
+        "etag": "d27bffe4784a2a818827657993f05128"
+      },
+      {
+        "key": "pages/fresh_logo.svg",
+        "size_bytes": 21560,
+        "last_modified": "2026-03-11T17:54:01.843Z",
+        "etag": "d966cbf0a4ed6d8f80cce3682aa9763b"
+      },
+      {
+        "key": "promotions/speedway750.png",
+        "size_bytes": 24179,
+        "last_modified": "2026-03-11T16:43:32.919Z",
+        "etag": "f9ee1e49dcc14d37a073c89ba49580ed"
+      },
+      {
+        "key": "promotions/bp750.svg",
+        "size_bytes": 17334,
+        "last_modified": "2026-03-11T16:43:22.797Z",
+        "etag": "5cc9d149599a00a372f63400b9cc2efb"
+      },
+      {
+        "key": "promotions/exxon750.svg",
+        "size_bytes": 5378,
+        "last_modified": "2026-03-11T16:41:53.302Z",
+        "etag": "6d3b4c1813b8101464afcc566ee3831a"
+      },
+      {
+        "key": "promotions/shellgas750.svg",
+        "size_bytes": 9782,
+        "last_modified": "2026-03-11T16:41:39.168Z",
+        "etag": "13cd94e28d08261f6ba8a9d78380e366"
+      },
+      {
+        "key": "promotions/financialgeneral_bottom_2.png",
+        "size_bytes": 441098,
+        "last_modified": "2026-03-10T15:43:34.795Z",
+        "etag": "48643365541dc3c9ab4a4cd8b5524002"
+      },
+      {
+        "key": "promotions/financialgeneral_bottom_1.png",
+        "size_bytes": 491526,
+        "last_modified": "2026-03-10T15:43:22.780Z",
+        "etag": "49057cb0fff8f7e1fb93f4b1352537ac"
+      },
+      {
+        "key": "promotions/financialgeneral_bundle.png",
+        "size_bytes": 71101,
+        "last_modified": "2026-03-10T15:43:09.974Z",
+        "etag": "94ef7be2a5c507f6675afa25d48f1509"
+      },
+      {
+        "key": "promotions/publix750.svg",
+        "size_bytes": 7298,
+        "last_modified": "2026-03-10T13:44:00.643Z",
+        "etag": "f5ecbcc30d3491c328702769d0ad6a37"
+      },
+      {
+        "key": "promotions/medical_bottom_2.png",
+        "size_bytes": 371976,
+        "last_modified": "2026-03-10T01:35:35.700Z",
+        "etag": "407af4137ca28912d7bd76e5fec84f98"
+      },
+      {
+        "key": "promotions/medical_bottom_1.png",
+        "size_bytes": 488000,
+        "last_modified": "2026-03-10T01:31:22.306Z",
+        "etag": "d58c98df85687af3ea39df15b70cda8b"
+      },
+      {
+        "key": "promotions/medical_bundle.png",
+        "size_bytes": 72803,
+        "last_modified": "2026-03-10T01:30:13.662Z",
+        "etag": "fb9cd17e426d3088c2ec7180813b5356"
+      },
+      {
+        "key": "pages/wreath_right.svg",
+        "size_bytes": 21005,
+        "last_modified": "2026-03-04T21:02:16.962Z",
+        "etag": "4e9fcca49ad9bb8d03ba6e7b239fecac"
+      },
+      {
+        "key": "pages/wreath_left.svg",
+        "size_bytes": 20234,
+        "last_modified": "2026-03-04T21:02:14.930Z",
+        "etag": "5b68cd4775ef6cda75f2defe002a1231"
+      },
+      {
+        "key": "pages/treasurechest.png",
+        "size_bytes": 29552,
+        "last_modified": "2026-03-04T21:02:12.775Z",
+        "etag": "7743c9c6546a4b6aeed5987401d837d0"
+      },
+      {
+        "key": "promotions/samsunggalaxys26.png",
+        "size_bytes": 48017,
+        "last_modified": "2026-03-03T16:35:51.702Z",
+        "etag": "a0f5b236d41a97a77c72beeabf93c299"
+      },
+      {
+        "key": "promotions/pepsi_bundle.png",
+        "size_bytes": 82627,
+        "last_modified": "2026-03-02T15:30:15.088Z",
+        "etag": "2097467df9491178f27e9d2a86497cfd"
+      },
+      {
+        "key": "promotions/coke_bundle.png",
+        "size_bytes": 100766,
+        "last_modified": "2026-03-02T15:29:57.615Z",
+        "etag": "6c629d769afa8a59ff43756808e40647"
+      },
+      {
+        "key": "pages/pepsi_bundle.png",
+        "size_bytes": 82627,
+        "last_modified": "2026-03-02T15:29:27.708Z",
+        "etag": "2097467df9491178f27e9d2a86497cfd"
+      },
+      {
+        "key": "pages/check sm.svg",
+        "size_bytes": 400,
+        "last_modified": "2026-03-01T23:47:58.311Z",
+        "etag": "1e4daa8ed6be4370817ad1c65b5f06e7"
+      },
+      {
+        "key": "promotions/cokeversus.svg",
+        "size_bytes": 868014,
+        "last_modified": "2026-02-27T18:53:30.491Z",
+        "etag": "5cfd48a8c5f6757651104742743dfc57"
+      },
+      {
+        "key": "themes/checkgo_darkbg.svg",
+        "size_bytes": 8302,
+        "last_modified": "2026-02-27T18:48:13.279Z",
+        "etag": "c4bfa6d4957a185d44051a2b509956f1"
+      },
+      {
+        "key": "themes/lendli_darkbg.svg",
+        "size_bytes": 4620,
+        "last_modified": "2026-02-27T18:48:10.347Z",
+        "etag": "446e2600075584d9ddf2e06afb19021f"
+      },
+      {
+        "key": "themes/CheckGo_logo.svg",
+        "size_bytes": 8107,
+        "last_modified": "2026-02-27T18:33:01.817Z",
+        "etag": "13f8acd59f8c082be85ab6e4ed8c2b90"
+      },
+      {
+        "key": "themes/Lendli_logo.svg",
+        "size_bytes": 4425,
+        "last_modified": "2026-02-27T18:21:03.058Z",
+        "etag": "11846cc10bceef870562d44c856379c5"
+      },
+      {
+        "key": "promotions/pepsiversus.svg",
+        "size_bytes": 3066996,
+        "last_modified": "2026-02-27T18:20:26.189Z",
+        "etag": "5888d88240f28e600f48556437793523"
+      },
+      {
+        "key": "themes/TheDailyTipJarv2.png",
+        "size_bytes": 10904,
+        "last_modified": "2026-02-27T16:21:43.522Z",
+        "etag": "6eea8566ef05bf8e251b74b164b56ba6"
+      },
+      {
+        "key": "themes/thedailytipjar_logo.svg",
+        "size_bytes": 23316,
+        "last_modified": "2026-02-27T16:20:31.566Z",
+        "etag": "b04eb290efa5a76bf506fe3bcd1be899"
+      },
+      {
+        "key": "themes/The Daily Tip Jar v2.png",
+        "size_bytes": 10904,
+        "last_modified": "2026-02-27T15:19:00.799Z",
+        "etag": "6eea8566ef05bf8e251b74b164b56ba6"
+      },
+      {
+        "key": "themes/The Daily Tip Jar logo 1.png",
+        "size_bytes": 8763,
+        "last_modified": "2026-02-27T15:18:56.486Z",
+        "etag": "197fe7bba4b96d64cc1069822981ade7"
+      },
+      {
+        "key": "pages/gift_card_left.svg",
+        "size_bytes": 1601,
+        "last_modified": "2026-02-26T16:58:29.440Z",
+        "etag": "e806a517b92d8e4151d20ce24a20b8a4"
+      },
+      {
+        "key": "pages/gift_card_right.svg",
+        "size_bytes": 1545,
+        "last_modified": "2026-02-26T16:46:55.927Z",
+        "etag": "3f989311e97028d61861e6ccaec0548b"
+      },
+      {
+        "key": "pages/getngoods_check.svg",
+        "size_bytes": 1844,
+        "last_modified": "2026-02-24T20:57:59.763Z",
+        "etag": "8b81d392612530d26fd44b20ef23cc8e"
+      },
+      {
+        "key": "pages/5_stars_icon.svg",
+        "size_bytes": 1231,
+        "last_modified": "2026-02-24T20:56:28.002Z",
+        "etag": "46f57a8bbe25ba4c17029b4bc5b5e31a"
+      },
+      {
+        "key": "promotions/smartwalkingstick (1).png",
+        "size_bytes": 22156,
+        "last_modified": "2026-02-23T21:35:24.021Z",
+        "etag": "d0b5c8dcf491198575077cd7f6935d3a"
+      },
+      {
+        "key": "promotions/smartwalkingstick.png",
+        "size_bytes": 38440,
+        "last_modified": "2026-02-23T18:59:37.737Z",
+        "etag": "4b7a329909a37e05963c5940ef93660c"
+      },
+      {
+        "key": "promotions/samsunggalaxytaba9plus.png",
+        "size_bytes": 97179,
+        "last_modified": "2026-02-23T18:59:02.867Z",
+        "etag": "e78b17a5971275b2c20c73301e9a571a"
+      },
+      {
+        "key": "promotions/rollatorwalker.png",
+        "size_bytes": 40540,
+        "last_modified": "2026-02-23T18:58:32.774Z",
+        "etag": "5b6b03a183db6fdee21b5b9c94b159a1"
+      },
+      {
+        "key": "promotions/googlecard.svg",
+        "size_bytes": 2308,
+        "last_modified": "2026-02-20T19:48:18.527Z",
+        "etag": "41f9a2e2c5e5f5ef3596ce30ecddbe4d"
+      },
+      {
+        "key": "promotions/applecard.svg",
+        "size_bytes": 1155,
+        "last_modified": "2026-02-20T19:47:48.034Z",
+        "etag": "6c1e036fe3712177c9642778672f6132"
+      },
+      {
+        "key": "promotions/unemploymentbenefits.png",
+        "size_bytes": 76636,
+        "last_modified": "2026-02-19T21:55:10.855Z",
+        "etag": "6f739b4f3eacf4d7d99dff7a6d21d286"
+      },
+      {
+        "key": "promotions/krogervsaldi new.svg",
+        "size_bytes": 6977,
+        "last_modified": "2026-02-19T16:27:25.960Z",
+        "etag": "feb8ec48cfa4d49fe6cfdb2f3d59ce78"
+      },
+      {
+        "key": "promotions/krogervsaldi.svg",
+        "size_bytes": 6830,
+        "last_modified": "2026-02-19T16:25:17.362Z",
+        "etag": "ce661dbfa542bdfb88f5bd3813ec146b"
+      },
+      {
+        "key": "promotions/cashappvsvenmo.svg",
+        "size_bytes": 11062,
+        "last_modified": "2026-02-19T15:27:43.421Z",
+        "etag": "d13168ecb85008d82a61bb8b7de96510"
+      },
+      {
+        "key": "promotions/benefitsaccesscenter_promos_unemploymentbenefits.png",
+        "size_bytes": 85049,
+        "last_modified": "2026-02-18T21:04:50.082Z",
+        "etag": "e642988f30147426d27c3336450ffa20"
+      },
+      {
+        "key": "promotions/studentaid.png",
+        "size_bytes": 91326,
+        "last_modified": "2026-02-18T20:44:44.492Z",
+        "etag": "cbc02b6851a5663cf7ca41ac4fea291f"
+      },
+      {
+        "key": "promotions/rentalassistance.png",
+        "size_bytes": 111040,
+        "last_modified": "2026-02-18T20:42:51.278Z",
+        "etag": "28f43e74108abf5fa1c774230e6c817b"
+      },
+      {
+        "key": "promotions/parentalcare.png",
+        "size_bytes": 98324,
+        "last_modified": "2026-02-18T20:40:52.974Z",
+        "etag": "1b1a44df56be000d35a8555beed8ffe9"
+      },
+      {
+        "key": "promotions/seniorbenefits.png",
+        "size_bytes": 64445,
+        "last_modified": "2026-02-18T20:38:35.474Z",
+        "etag": "be667f8aa5311e5a42c1fb82da5f23c9"
+      },
+      {
+        "key": "promotions/newbalancetestpackage.png",
+        "size_bytes": 91592,
+        "last_modified": "2026-02-18T19:07:02.546Z",
+        "etag": "cb6f85745f72726bfce822e4c934a449"
+      },
+      {
+        "key": "promotions/niketestpackage.png",
+        "size_bytes": 97493,
+        "last_modified": "2026-02-18T19:06:25.991Z",
+        "etag": "2046d511d8441fe8b5e432003111ce6b"
+      },
+      {
+        "key": "promotions/studentaid_bottom_2.png",
+        "size_bytes": 449603,
+        "last_modified": "2026-02-18T02:16:41.966Z",
+        "etag": "13bf439927affa16d81176beae5e0f62"
+      },
+      {
+        "key": "promotions/studentaid_bottom_1.png",
+        "size_bytes": 416434,
+        "last_modified": "2026-02-18T02:15:46.511Z",
+        "etag": "6a4548a0c1df0954c83a09a0be6ef509"
+      },
+      {
+        "key": "promotions/rental_bottom_2.png",
+        "size_bytes": 386721,
+        "last_modified": "2026-02-18T02:08:50.663Z",
+        "etag": "3b2f3baba448953eed3575211adc8ab0"
+      },
+      {
+        "key": "promotions/rental_bottom_1.png",
+        "size_bytes": 497955,
+        "last_modified": "2026-02-18T02:07:50.968Z",
+        "etag": "88ec1f2a4180d2a3669477980931ce05"
+      },
+      {
+        "key": "promotions/parent_bottom_2.png",
+        "size_bytes": 194201,
+        "last_modified": "2026-02-18T01:51:53.044Z",
+        "etag": "b7da1776cc52c0da66026360a8bc53e4"
+      },
+      {
+        "key": "promotions/parent_bottom_1.png",
+        "size_bytes": 231277,
+        "last_modified": "2026-02-18T01:49:57.350Z",
+        "etag": "5d6a4aec7eb926f800cc47a4b1bfcaa2"
+      },
+      {
+        "key": "promotions/unemployment_bottom_2.png",
+        "size_bytes": 434720,
+        "last_modified": "2026-02-18T01:39:33.504Z",
+        "etag": "17f472febf2273a0b56c77c717fad8ea"
+      },
+      {
+        "key": "promotions/unemployment_bottom_1.png",
+        "size_bytes": 440730,
+        "last_modified": "2026-02-18T01:38:32.405Z",
+        "etag": "cbf62d044cc8b3d1bad97fb807382a1c"
+      },
+      {
+        "key": "promotions/senior_bottom_2.png",
+        "size_bytes": 229940,
+        "last_modified": "2026-02-18T01:25:40.471Z",
+        "etag": "1daa0404075074a5cf3266ed6adca9a7"
+      },
+      {
+        "key": "promotions/senior_bottom_1.png",
+        "size_bytes": 226351,
+        "last_modified": "2026-02-18T01:23:22.916Z",
+        "etag": "fb5ed28e8bda5a2ae75a7c57d7e10318"
+      },
+      {
+        "key": "promotions/tariff_bottom_2.png",
+        "size_bytes": 253547,
+        "last_modified": "2026-02-17T21:11:27.896Z",
+        "etag": "5953fb1a808bef367a3c0e2c38eb74e9"
+      },
+      {
+        "key": "promotions/tariff_bottom_1.png",
+        "size_bytes": 212763,
+        "last_modified": "2026-02-17T21:09:49.482Z",
+        "etag": "20af422ad80110b7f5b9bbca2cec905c"
+      },
+      {
+        "key": "promotions/inflation_bottom_2.png",
+        "size_bytes": 278187,
+        "last_modified": "2026-02-17T20:48:23.499Z",
+        "etag": "bb3b0e4ec6e8b489d1b82b7a651e878a"
+      },
+      {
+        "key": "promotions/inflation_bottom_1.png",
+        "size_bytes": 272394,
+        "last_modified": "2026-02-17T20:45:39.883Z",
+        "etag": "b77d6943300d5eb718c90d3c7c7bdd53"
+      },
+      {
+        "key": "promotions/grants_bottom_2.png",
+        "size_bytes": 809213,
+        "last_modified": "2026-02-17T19:16:29.012Z",
+        "etag": "063806fc333c979b46d26c8cc23eee4e"
+      },
+      {
+        "key": "promotions/grants_bottom_1.png",
+        "size_bytes": 814413,
+        "last_modified": "2026-02-17T19:13:52.855Z",
+        "etag": "cdc001bd7082dac9d5e238dd4bb16753"
+      },
+      {
+        "key": "promotions/foodbundle.png",
+        "size_bytes": 75364,
+        "last_modified": "2026-02-17T19:03:17.825Z",
+        "etag": "562f52b7639ee0cf8433c49d6f7df9c8"
+      },
+      {
+        "key": "promotions/foodstamps_bottom_2.png",
+        "size_bytes": 162786,
+        "last_modified": "2026-02-17T18:54:30.443Z",
+        "etag": "84d7ae6e94692956bce3c1bfea474937"
+      },
+      {
+        "key": "promotions/foodstamps_bottom_1.png",
+        "size_bytes": 253573,
+        "last_modified": "2026-02-17T18:52:57.063Z",
+        "etag": "7ec41bb479085b0e3622b58d2a045e5a"
+      },
+      {
+        "key": "promotions/sewingmachine.png",
+        "size_bytes": 63743,
+        "last_modified": "2026-02-17T16:54:32.429Z",
+        "etag": "50dd7464ee1b87aea5b35114e998721b"
+      },
+      {
+        "key": "promotions/unclaimedmoney_bottom_2.png",
+        "size_bytes": 219029,
+        "last_modified": "2026-02-13T19:43:11.808Z",
+        "etag": "0f69a148cca150901670009f108a9ce2"
+      },
+      {
+        "key": "promotions/unclaimedmoney_bottom_1.png",
+        "size_bytes": 215416,
+        "last_modified": "2026-02-13T19:42:51.774Z",
+        "etag": "332640019cbdd3844b176d44006d586c"
+      },
+      {
+        "key": "promotions/unclaimedmoney_top_web.png",
+        "size_bytes": 942248,
+        "last_modified": "2026-02-13T19:30:22.802Z",
+        "etag": "24bc5c11c788e28e7dbd3646aef62b49"
+      },
+      {
+        "key": "pages/play_zoodle_icon.svg",
+        "size_bytes": 9734,
+        "last_modified": "2026-02-13T18:31:09.126Z",
+        "etag": "e91a1ab5dfb5723b8185461aadfb5ce2"
+      },
+      {
+        "key": "pages/gift_icon.svg",
+        "size_bytes": 1677,
+        "last_modified": "2026-02-13T18:31:06.237Z",
+        "etag": "6634a99984b370303aa4b6c8dc7a8173"
+      },
+      {
+        "key": "promotions/dewalt_largeset.png",
+        "size_bytes": 85416,
+        "last_modified": "2026-02-12T17:09:04.405Z",
+        "etag": "d5b2694ce71686213409879d6cd48631"
+      },
+      {
+        "key": "promotions/ebike_v2.png",
+        "size_bytes": 65491,
+        "last_modified": "2026-02-12T17:07:53.695Z",
+        "etag": "78f40b35d15587151d39936361b92ab5"
+      },
+      {
+        "key": "promotions/motorcycle.png",
+        "size_bytes": 79155,
+        "last_modified": "2026-02-12T17:07:19.995Z",
+        "etag": "5385ed1e8c8237a7358df23dba4ba921"
+      },
+      {
+        "key": "promotions/fishingtackle.png",
+        "size_bytes": 60969,
+        "last_modified": "2026-02-12T17:06:14.510Z",
+        "etag": "e97900ab99539b1c5d49aa6a7dbee22e"
+      },
+      {
+        "key": "promotions/mystery_birthdaybox.png",
+        "size_bytes": 67553,
+        "last_modified": "2026-02-11T19:11:56.262Z",
+        "etag": "cde8de25675e5efb522668ce33478f19"
+      },
+      {
+        "key": "promotions/tools500.png",
+        "size_bytes": 133026,
+        "last_modified": "2026-02-11T19:11:16.014Z",
+        "etag": "406f959482b7f53b5c2f131e0c08a61c"
+      },
+      {
+        "key": "promotions/household500.png",
+        "size_bytes": 132595,
+        "last_modified": "2026-02-11T19:10:44.119Z",
+        "etag": "eadcb4fbd1242abd7a25ae8ca024fa21"
+      },
+      {
+        "key": "promotions/clothing500.png",
+        "size_bytes": 226188,
+        "last_modified": "2026-02-11T19:10:07.958Z",
+        "etag": "6b78111698133c9703deeeb8b76e9c84"
+      },
+      {
+        "key": "promotions/sports500.png",
+        "size_bytes": 125501,
+        "last_modified": "2026-02-11T19:09:34.178Z",
+        "etag": "26382d8c839e00c2c2c330fef54ff8a5"
+      },
+      {
+        "key": "promotions/nike500.svg",
+        "size_bytes": 9140,
+        "last_modified": "2026-02-10T17:19:51.485Z",
+        "etag": "f3967e0da8f3a85e08bf8a01ab4292b9"
+      },
+      {
+        "key": "themes/icon_iamhere.svg",
+        "size_bytes": 904,
+        "last_modified": "2026-02-05T18:15:13.781Z",
+        "etag": "e47b42b8112f9f75b8a9f6ff5ab9800e"
+      },
+      {
+        "key": "themes/icon_offers.svg",
+        "size_bytes": 1064,
+        "last_modified": "2026-02-05T18:15:10.315Z",
+        "etag": "1b3f08d034abd10a843036164d77a427"
+      },
+      {
+        "key": "themes/greenCheckIcon.svg",
+        "size_bytes": 825,
+        "last_modified": "2026-02-05T15:49:44.547Z",
+        "etag": "54a312dc5cae808e897319222eee0b13"
+      },
+      {
+        "key": "themes/mysteryProgressBar.png",
+        "size_bytes": 634,
+        "last_modified": "2026-02-04T20:19:15.490Z",
+        "etag": "ce2705e38b0de05cceafa25bcf7fe369"
+      },
+      {
+        "key": "themes/mysteryIcon.svg",
+        "size_bytes": 1810,
+        "last_modified": "2026-02-04T19:52:25.943Z",
+        "etag": "a9c7600b2921727836db5734dc444fa0"
+      },
+      {
+        "key": "promotions/resources_check.png",
+        "size_bytes": 128454,
+        "last_modified": "2026-02-03T22:14:58.027Z",
+        "etag": "db0935ebbaf125d981bc1df3e3911dc8"
+      },
+      {
+        "key": "pages/child_family_assistance_img1_web.png",
+        "size_bytes": 2087301,
+        "last_modified": "2026-02-03T21:24:37.286Z",
+        "etag": "84f1a140cb0ab597d529f51ce2a3f5ca"
+      },
+      {
+        "key": "promotions/child_family_assistance_img1_mob.png",
+        "size_bytes": 954563,
+        "last_modified": "2026-02-03T20:48:06.404Z",
+        "etag": "485178e904b5f1553df67c6b937298e5"
+      },
+      {
+        "key": "promotions/child_family_assistance_img2_mob.png",
+        "size_bytes": 895139,
+        "last_modified": "2026-02-03T20:47:56.638Z",
+        "etag": "60c8ff5c42d7a8f1c0282e412697365c"
+      },
+      {
+        "key": "promotions/publix_bundle.png",
+        "size_bytes": 77805,
+        "last_modified": "2026-02-03T19:10:41.888Z",
+        "etag": "5433b016ef317cdb25716fbc69bb8d4b"
+      },
+      {
+        "key": "promotions/aldi_bundle.png",
+        "size_bytes": 71393,
+        "last_modified": "2026-02-03T19:10:11.886Z",
+        "etag": "8e6b680aebb09ee6e85cad5f628daa92"
+      },
+      {
+        "key": "promotions/check1000_no_shadow.png",
+        "size_bytes": 62031,
+        "last_modified": "2026-02-03T17:18:39.765Z",
+        "etag": "0de6ae6dec1edbba42a32306ad99a2b0"
+      },
+      {
+        "key": "promotions/resources_stimulus_topphoto_mob.png",
+        "size_bytes": 236309,
+        "last_modified": "2026-02-03T17:02:48.788Z",
+        "etag": "173eacb69cbc58c5a37d9ae3b0dff3f7"
+      },
+      {
+        "key": "promotions/resources_stimulus_topphoto_web.png",
+        "size_bytes": 1023151,
+        "last_modified": "2026-02-03T17:02:43.231Z",
+        "etag": "c9860f5dc544958db0fd2b94fb592f6e"
+      },
+      {
+        "key": "promotions/resources_stimulus_bottomphoto_webmob.png",
+        "size_bytes": 162454,
+        "last_modified": "2026-02-02T17:27:31.191Z",
+        "etag": "eafb5b930d33c691c4d4fc7fa7b57121"
+      },
+      {
+        "key": "promotions/krogerbundle_v2.png",
+        "size_bytes": 78920,
+        "last_modified": "2026-02-02T15:05:49.893Z",
+        "etag": "4f012571978bd11d5182e19d4ad24901"
+      },
+      {
+        "key": "promotions/hyvee750.svg",
+        "size_bytes": 11544,
+        "last_modified": "2026-01-30T19:43:58.661Z",
+        "etag": "925a75f167db8b539f44dba357e9eb14"
+      },
+      {
+        "key": "promotions/winco750.svg",
+        "size_bytes": 8372,
+        "last_modified": "2026-01-30T19:43:25.257Z",
+        "etag": "63cc67a8ef047c21182c93632a58397f"
+      },
+      {
+        "key": "promotions/rituals.svg",
+        "size_bytes": 66033,
+        "last_modified": "2026-01-30T15:02:25.354Z",
+        "etag": "0691f57c18a4238cf2ffd93ba6b57cce"
+      },
+      {
+        "key": "promotions/electricsnowshovel.png",
+        "size_bytes": 50243,
+        "last_modified": "2026-01-29T22:19:33.302Z",
+        "etag": "788c567a0306aa873cde71fb4efcf522"
+      },
+      {
+        "key": "pages/tariff_topphoto_web.png",
+        "size_bytes": 932974,
+        "last_modified": "2026-01-28T20:37:57.817Z",
+        "etag": "67f02fcec656c9107012ecaf6f575b0f"
+      },
+      {
+        "key": "pages/tariff_bottomphoto_webmob.png",
+        "size_bytes": 276407,
+        "last_modified": "2026-01-28T20:37:50.640Z",
+        "etag": "8d532150d73f25b3ec4f5b5bda1d00fc"
+      },
+      {
+        "key": "pages/tariff_topphoto_mob.png",
+        "size_bytes": 215077,
+        "last_modified": "2026-01-28T20:37:45.802Z",
+        "etag": "5dccd31f393982febb444401a1aa52ef"
+      },
+      {
+        "key": "pages/tariff_relief_web_2x.png",
+        "size_bytes": 1732638,
+        "last_modified": "2026-01-28T18:41:41.768Z",
+        "etag": "0bda40e11492ef0b4ce691720734e0ff"
+      },
+      {
+        "key": "pages/tariff_relief_web.png",
+        "size_bytes": 513130,
+        "last_modified": "2026-01-28T14:56:26.370Z",
+        "etag": "27a1ac4a33d2717c7be5b564daf9cec7"
+      },
+      {
+        "key": "pages/cost_saving_mob.png",
+        "size_bytes": 286899,
+        "last_modified": "2026-01-28T14:50:36.036Z",
+        "etag": "2cc6e9e85c3d07d570886972c23b9ceb"
+      },
+      {
+        "key": "pages/cost_saving_web.png",
+        "size_bytes": 312766,
+        "last_modified": "2026-01-28T14:44:00.869Z",
+        "etag": "e1774a340d7f339bfcebffa556ca1ea8"
+      },
+      {
+        "key": "pages/tariff_relief_mob.png",
+        "size_bytes": 800152,
+        "last_modified": "2026-01-28T14:31:53.269Z",
+        "etag": "625f2834f017e03f2f737b54c900e3e4"
+      },
+      {
+        "key": "pages/tariff_relieft_web.png",
+        "size_bytes": 1732638,
+        "last_modified": "2026-01-28T14:31:46.832Z",
+        "etag": "0bda40e11492ef0b4ce691720734e0ff"
+      },
+      {
+        "key": "promotions/chanelperfumeset250.png",
+        "size_bytes": 74100,
+        "last_modified": "2026-01-28T02:14:34.631Z",
+        "etag": "9d5cc65b45b0ac76d3280ea944319b7a"
+      },
+      {
+        "key": "promotions/cashappcardvday1000.png",
+        "size_bytes": 156861,
+        "last_modified": "2026-01-28T02:13:41.202Z",
+        "etag": "0e900a94a6ecbd95510460456ff4cc82"
+      },
+      {
+        "key": "promotions/vdaygeneric1000.svg",
+        "size_bytes": 30330,
+        "last_modified": "2026-01-28T02:12:41.916Z",
+        "etag": "457171ee7522b9f4563285aef20fc21b"
+      },
+      {
+        "key": "promotions/diamondringvday.png",
+        "size_bytes": 82746,
+        "last_modified": "2026-01-28T02:11:18.996Z",
+        "etag": "4cba2d4ccd0661faaa7bac969c792df3"
+      },
+      {
+        "key": "promotions/walmartvday1000.png",
+        "size_bytes": 120890,
+        "last_modified": "2026-01-28T02:10:19.952Z",
+        "etag": "7393f93f537116f731cd5823a54a157a"
+      },
+      {
+        "key": "promotions/sephoravday1000.png",
+        "size_bytes": 47666,
+        "last_modified": "2026-01-28T02:09:49.407Z",
+        "etag": "1888a62f296e41f58c51efef57aa5211"
+      },
+      {
+        "key": "promotions/amazonvday1000.png",
+        "size_bytes": 107227,
+        "last_modified": "2026-01-28T02:09:10.998Z",
+        "etag": "80eab684687b033fd8b69594118f4c67"
+      },
+      {
+        "key": "pages/moneybag_conz_mob.png",
+        "size_bytes": 202008,
+        "last_modified": "2026-01-27T20:52:30.142Z",
+        "etag": "bcca77860b39bc2255c084b5d8e20f0e"
+      },
+      {
+        "key": "pages/moneybag_conz.png",
+        "size_bytes": 1017726,
+        "last_modified": "2026-01-27T20:39:07.475Z",
+        "etag": "be29ca26c858cfcfce49136a4d540b99"
+      },
+      {
+        "key": "promotions/reclinerchair.png",
+        "size_bytes": 102314,
+        "last_modified": "2026-01-27T18:56:37.688Z",
+        "etag": "a0d76afacce5ca331ecc28756b166710"
+      },
+      {
+        "key": "promotions/butcheredbox.png",
+        "size_bytes": 105121,
+        "last_modified": "2026-01-27T18:55:35.751Z",
+        "etag": "3fb1ff5f046c5b4669f63e20c16becc9"
+      },
+      {
+        "key": "pages/NSFG_card_web.png",
+        "size_bytes": 252552,
+        "last_modified": "2026-01-27T16:12:48.231Z",
+        "etag": "c575375d2ed271e86c1d3642f4387ffa"
+      },
+      {
+        "key": "pages/NFSG_card_mob.png",
+        "size_bytes": 34954,
+        "last_modified": "2026-01-27T16:12:42.084Z",
+        "etag": "dd322ef18d3541aaaf7371a895f29c9d"
+      },
+      {
+        "key": "promotions/milka.png",
+        "size_bytes": 96112,
+        "last_modified": "2026-01-26T19:58:44.861Z",
+        "etag": "ddd65883e2f87c69360fd761f8d7afca"
+      },
+      {
+        "key": "promotions/versus_pepsicoke_horizontal.svg",
+        "size_bytes": 16559,
+        "last_modified": "2026-01-26T19:05:32.987Z",
+        "etag": "21949cecec03532bc5320303fc1f510f"
+      },
+      {
+        "key": "pages/food_assistance_image_bundle.png",
+        "size_bytes": 343382,
+        "last_modified": "2026-01-22T22:31:37.095Z",
+        "etag": "765540544fd8f0362504329c0224de0d"
+      },
+      {
+        "key": "pages/check1000_no_shadow.png",
+        "size_bytes": 62031,
+        "last_modified": "2026-01-22T22:04:25.410Z",
+        "etag": "0de6ae6dec1edbba42a32306ad99a2b0"
+      },
+      {
+        "key": "themes/white_flag_icon.svg",
+        "size_bytes": 678,
+        "last_modified": "2026-01-22T16:35:50.264Z",
+        "etag": "60a5a8285e58ed4fe86ad8d268e2f982"
+      },
+      {
+        "key": "promotions/mysterybox_bow.png",
+        "size_bytes": 47136,
+        "last_modified": "2026-01-22T14:32:45.612Z",
+        "etag": "fc32789323a0badbe204352f559fa827"
+      },
+      {
+        "key": "promotions/amazonprime_box1000.png",
+        "size_bytes": 60550,
+        "last_modified": "2026-01-20T21:30:24.733Z",
+        "etag": "90b4483c7ceb4d79db010da5d2c15cd3"
+      },
+      {
+        "key": "promotions/subway500.svg",
+        "size_bytes": 24034,
+        "last_modified": "2026-01-20T21:29:03.312Z",
+        "etag": "39238556100258edd6d3eccd51a1e65e"
+      },
+      {
+        "key": "promotions/subway1000.svg",
+        "size_bytes": 24412,
+        "last_modified": "2026-01-20T21:28:24.297Z",
+        "etag": "f14669ad6378d22df50785df1e74631d"
+      },
+      {
+        "key": "promotions/tacobell500.svg",
+        "size_bytes": 10346,
+        "last_modified": "2026-01-20T21:27:10.057Z",
+        "etag": "292601f31144a7762461160a47af7396"
+      },
+      {
+        "key": "promotions/tacobell1000.svg",
+        "size_bytes": 10724,
+        "last_modified": "2026-01-20T21:26:03.906Z",
+        "etag": "4949c8187df900be2baafc39a02ae130"
+      },
+      {
+        "key": "promotions/dunkindonuts500.svg",
+        "size_bytes": 10287,
+        "last_modified": "2026-01-20T21:23:16.850Z",
+        "etag": "4735780811c6ee1de149f9e0dd6e171f"
+      },
+      {
+        "key": "promotions/dunkindonuts1000.svg",
+        "size_bytes": 10665,
+        "last_modified": "2026-01-20T21:22:31.904Z",
+        "etag": "6749af3f7863c1eca9d30306fe4516ad"
+      },
+      {
+        "key": "pages/inflation_relief_topphoto_web.png",
+        "size_bytes": 1157640,
+        "last_modified": "2026-01-16T19:02:09.099Z",
+        "etag": "21a2448f02842ea05cd4d9f082ffe039"
+      },
+      {
+        "key": "pages/inflation_relief_topphoto_mob.png",
+        "size_bytes": 275084,
+        "last_modified": "2026-01-16T19:02:06.419Z",
+        "etag": "5dd79c4ba07a9b4e5d50c8133400ff00"
+      },
+      {
+        "key": "pages/inflation_relief_bottomphoto_webmob.png",
+        "size_bytes": 301738,
+        "last_modified": "2026-01-16T19:02:03.450Z",
+        "etag": "adf8dc6a4cf502be3635a8e1687adaca"
+      },
+      {
+        "key": "pages/resources_stimulus_topphoto_web.png",
+        "size_bytes": 1023151,
+        "last_modified": "2026-01-16T16:05:07.896Z",
+        "etag": "c9860f5dc544958db0fd2b94fb592f6e"
+      },
+      {
+        "key": "pages/resources_stimulus_topphoto_mob.png",
+        "size_bytes": 236309,
+        "last_modified": "2026-01-16T16:05:05.119Z",
+        "etag": "173eacb69cbc58c5a37d9ae3b0dff3f7"
+      },
+      {
+        "key": "pages/resources_stimulus_bottomphoto_webmob.png",
+        "size_bytes": 162454,
+        "last_modified": "2026-01-16T16:04:40.639Z",
+        "etag": "eafb5b930d33c691c4d4fc7fa7b57121"
+      },
+      {
+        "key": "pages/bottomphoto_webmob.png",
+        "size_bytes": 178350,
+        "last_modified": "2026-01-14T17:30:25.396Z",
+        "etag": "ab29a37afa04309f8317743b879d89c8"
+      },
+      {
+        "key": "pages/topphoto_mob.png",
+        "size_bytes": 267266,
+        "last_modified": "2026-01-14T17:30:22.059Z",
+        "etag": "e7a8b5f41cce3fa74881d9324b1df453"
+      },
+      {
+        "key": "pages/topphoto_web.png",
+        "size_bytes": 1090640,
+        "last_modified": "2026-01-14T17:30:16.317Z",
+        "etag": "e43abb2d99423cc0fb44790ff3d6eb2a"
+      },
+      {
+        "key": "promotions/birkenstockbostonclogs.png",
+        "size_bytes": 130884,
+        "last_modified": "2026-01-13T18:32:10.992Z",
+        "etag": "17549f169ba0b8d4c2ec0847b0a1d0ac"
+      },
+      {
+        "key": "promotions/lazysofabed.png",
+        "size_bytes": 131041,
+        "last_modified": "2026-01-13T18:31:27.389Z",
+        "etag": "cf0d6b501bb1694e2826cef82911b3ff"
+      },
+      {
+        "key": "promotions/playstation5 (1).png",
+        "size_bytes": 247068,
+        "last_modified": "2026-01-13T18:30:01.174Z",
+        "etag": "0b8fe6d7e30d0afbbbe68c86d3bd9a53"
+      },
+      {
+        "key": "promotions/uggboots.png",
+        "size_bytes": 115702,
+        "last_modified": "2026-01-13T18:29:16.596Z",
+        "etag": "88e1a1769b3331675656624b7295fb2a"
+      },
+      {
+        "key": "promotions/coachbag.png",
+        "size_bytes": 201777,
+        "last_modified": "2026-01-09T16:59:37.593Z",
+        "etag": "de702d4853d679fa9e745ba24b37986d"
+      },
+      {
+        "key": "promotions/charlottetilbury.png",
+        "size_bytes": 291396,
+        "last_modified": "2026-01-09T16:58:45.683Z",
+        "etag": "656f5ca09356170cc3fb52b0fdfc80f6"
+      },
+      {
+        "key": "promotions/pampers1000.svg",
+        "size_bytes": 14216,
+        "last_modified": "2026-01-08T16:58:59.901Z",
+        "etag": "e120c784d7e66792f9752e3076772c58"
+      },
+      {
+        "key": "promotions/tesla.png",
+        "size_bytes": 75575,
+        "last_modified": "2026-01-07T15:09:28.964Z",
+        "etag": "daca69b24d7c937c611ab8fb1e6899c5"
+      },
+      {
+        "key": "promotions/familydollar1000.svg",
+        "size_bytes": 27764,
+        "last_modified": "2026-01-06T22:48:42.178Z",
+        "etag": "0ab3cbefe00979d99734ebc16fd09b2b"
+      },
+      {
+        "key": "promotions/longhorn1000.svg",
+        "size_bytes": 22718,
+        "last_modified": "2026-01-06T22:48:11.809Z",
+        "etag": "9b38f14530d4a0be38bdd0030515f9df"
+      },
+      {
+        "key": "promotions/lidl1000.svg",
+        "size_bytes": 7335,
+        "last_modified": "2026-01-06T22:47:43.195Z",
+        "etag": "e57a41522e236e68fbe3cd82c1714fed"
+      },
+      {
+        "key": "promotions/savealot1000.svg",
+        "size_bytes": 9527,
+        "last_modified": "2026-01-06T22:47:09.862Z",
+        "etag": "13eb230d347643fc03cbff3facec2149"
+      },
+      {
+        "key": "promotions/fiveguys1000.svg",
+        "size_bytes": 11697,
+        "last_modified": "2026-01-06T22:46:37.991Z",
+        "etag": "aaaebad4327fa9dffa19d2fc6c92206f"
+      },
+      {
+        "key": "themes/reward_lock_icon.svg",
+        "size_bytes": 751,
+        "last_modified": "2026-01-06T16:53:02.021Z",
+        "etag": "d7d2cb00a560ee944910c451dc7df728"
+      },
+      {
+        "key": "themes/star_icon_white.svg",
+        "size_bytes": 786,
+        "last_modified": "2026-01-06T16:48:28.684Z",
+        "etag": "41b2db606a980d197e9e0ecb5fb29a5c"
+      },
+      {
+        "key": "themes/trapezoid_header_bg.svg",
+        "size_bytes": 497,
+        "last_modified": "2026-01-06T16:15:55.827Z",
+        "etag": "cf503eab8bdb598749c03610eebb5464"
+      },
+      {
+        "key": "promotions/appleairpods129.png",
+        "size_bytes": 143295,
+        "last_modified": "2026-01-06T13:47:41.017Z",
+        "etag": "2a7e972039036788b545e3a66d6b2ead"
+      },
+      {
+        "key": "pages/engagement_checkmark.svg",
+        "size_bytes": 819,
+        "last_modified": "2026-01-02T16:18:10.233Z",
+        "etag": "f6f51244de53963cfe50975da5303b73"
+      },
+      {
+        "key": "promotions/nikebundle.png",
+        "size_bytes": 59299,
+        "last_modified": "2025-12-30T19:43:14.580Z",
+        "etag": "e24bf2ddfa109d2da4806cdf449f0c37"
+      },
+      {
+        "key": "pages/button_dropshadow.svg",
+        "size_bytes": 575,
+        "last_modified": "2025-12-30T15:39:42.103Z",
+        "etag": "68fc8e3199d198718a551634b4effa18"
+      },
+      {
+        "key": "promotions/fanduel1000.svg",
+        "size_bytes": 10261,
+        "last_modified": "2025-12-29T16:28:16.954Z",
+        "etag": "d3fe82293f1e6125a2d49cc0bd948c0e"
+      },
+      {
+        "key": "promotions/draftkings1000.svg",
+        "size_bytes": 23521,
+        "last_modified": "2025-12-29T16:27:40.649Z",
+        "etag": "4fe95093e01d738a11038f512737d6d7"
+      },
+      {
+        "key": "promotions/check25k.png",
+        "size_bytes": 480970,
+        "last_modified": "2025-12-22T21:14:53.411Z",
+        "etag": "97d85d6a2c210fef6d5538f4a08ae222"
+      },
+      {
+        "key": "promotions/pandorabracelet.png",
+        "size_bytes": 79286,
+        "last_modified": "2025-12-22T19:24:57.809Z",
+        "etag": "6c081006a044dc8077dac2456224d0f3"
+      },
+      {
+        "key": "promotions/kyliecosmetics.png",
+        "size_bytes": 66598,
+        "last_modified": "2025-12-22T19:23:14.604Z",
+        "etag": "f467b6f0660d75c512f350bea8407fff"
+      },
+      {
+        "key": "promotions/promoimage_michaelkorsbags.png",
+        "size_bytes": 113864,
+        "last_modified": "2025-12-22T19:20:33.893Z",
+        "etag": "381d434ac768bea7ac1661e5cdacaa41"
+      },
+      {
+        "key": "promotions/diamondringset.png",
+        "size_bytes": 141369,
+        "last_modified": "2025-12-22T19:19:28.607Z",
+        "etag": "a72791c1555b6c2a2adfcf18890e1447"
+      },
+      {
+        "key": "promotions/visa750.svg",
+        "size_bytes": 5029,
+        "last_modified": "2025-12-22T17:58:21.567Z",
+        "etag": "881e52aef9d1ce2be27af38a769bdf6c"
+      },
+      {
+        "key": "pages/arrowdown_white.svg",
+        "size_bytes": 257,
+        "last_modified": "2025-12-19T21:56:14.839Z",
+        "etag": "a84dcdb417bd1601a09540aebeba70aa"
+      },
+      {
+        "key": "pages/form_arrow.svg",
+        "size_bytes": 136,
+        "last_modified": "2025-12-19T21:17:05.631Z",
+        "etag": "fd542ab55a613906f79cac52c295ecec"
+      },
+      {
+        "key": "themes/icon_lightbulb.svg",
+        "size_bytes": 5521,
+        "last_modified": "2025-12-19T17:16:33.061Z",
+        "etag": "c5e9d6d50ce16ade69b9477f20845110"
+      },
+      {
+        "key": "pages/flagmob_v2.png",
+        "size_bytes": 571659,
+        "last_modified": "2025-12-18T20:16:19.189Z",
+        "etag": "29f911276c86dece6f40a76f0d1f413a"
+      },
+      {
+        "key": "pages/bac_white.svg",
+        "size_bytes": 20675,
+        "last_modified": "2025-12-18T18:15:46.367Z",
+        "etag": "0ac0a9f81addac07461bbcb32a4f2040"
+      },
+      {
+        "key": "pages/resources_check.png",
+        "size_bytes": 128454,
+        "last_modified": "2025-12-18T04:01:31.543Z",
+        "etag": "db0935ebbaf125d981bc1df3e3911dc8"
+      },
+      {
+        "key": "pages/flagmob.png",
+        "size_bytes": 571675,
+        "last_modified": "2025-12-18T03:57:53.885Z",
+        "etag": "b8d8b5d6016ac0ffb289a7b3e3668aa9"
+      },
+      {
+        "key": "pages/flagweb.png",
+        "size_bytes": 931703,
+        "last_modified": "2025-12-18T03:57:50.894Z",
+        "etag": "d4c88761cdaa33ccaa997e64d1d32f63"
+      },
+      {
+        "key": "pages/icon_find.svg",
+        "size_bytes": 2657,
+        "last_modified": "2025-12-17T23:26:20.029Z",
+        "etag": "cc3d70edc15dcbfa4c4786bc9efbf475"
+      },
+      {
+        "key": "pages/check1000.svg",
+        "size_bytes": 293580,
+        "last_modified": "2025-12-03T19:36:10.386Z",
+        "etag": "ba406652dfe9d54a8fdda79e5227c510"
+      },
+      {
+        "key": "pages/money_bac.png",
+        "size_bytes": 277030,
+        "last_modified": "2025-12-03T19:19:07.794Z",
+        "etag": "a35e606fa0784d4f41532db3c6aa1b0e"
+      },
+      {
+        "key": "pages/snap_bac.png",
+        "size_bytes": 525890,
+        "last_modified": "2025-12-03T19:19:03.424Z",
+        "etag": "c4711d43bc72181a99d723f1a1ffd3fa"
+      },
+      {
+        "key": "promotions/snap_bac.png",
+        "size_bytes": 525890,
+        "last_modified": "2025-12-03T19:17:28.453Z",
+        "etag": "c4711d43bc72181a99d723f1a1ffd3fa"
+      },
+      {
+        "key": "promotions/money_bac.png",
+        "size_bytes": 277030,
+        "last_modified": "2025-12-03T19:17:23.546Z",
+        "etag": "a35e606fa0784d4f41532db3c6aa1b0e"
+      },
+      {
+        "key": "pages/blueline_short.svg",
+        "size_bytes": 178,
+        "last_modified": "2025-12-02T20:23:36.841Z",
+        "etag": "11e7f0c470c5954c0bd34369d15af13f"
+      },
+      {
+        "key": "pages/jump_page_grey_reward.png",
+        "size_bytes": 987,
+        "last_modified": "2025-12-02T20:15:09.152Z",
+        "etag": "3ab8ec375a3c25498f20d73dd4450800"
+      },
+      {
+        "key": "pages/white_check_blue_bg.svg",
+        "size_bytes": 806,
+        "last_modified": "2025-12-02T20:12:56.783Z",
+        "etag": "c1e4ca1a1816484049535e486ae9cec4"
+      },
+      {
+        "key": "promotions/chanelperfume.png",
+        "size_bytes": 89379,
+        "last_modified": "2025-12-02T17:33:14.377Z",
+        "etag": "32397917c5070d4bfa731342ebd24a14"
+      },
+      {
+        "key": "promotions/diamondring.png",
+        "size_bytes": 112155,
+        "last_modified": "2025-12-02T17:31:43.695Z",
+        "etag": "c7e32ebf43c8bd737b0ace4d704a08d7"
+      },
+      {
+        "key": "promotions/stanleyloveshackfancy.png",
+        "size_bytes": 86583,
+        "last_modified": "2025-12-02T17:31:00.390Z",
+        "etag": "25729725c7765cd43df3daadd923fc02"
+      },
+      {
+        "key": "promotions/bmw3series.png",
+        "size_bytes": 88921,
+        "last_modified": "2025-12-02T17:27:45.461Z",
+        "etag": "5b2ab4331e6693b5cbb9e2aa9086b771"
+      },
+      {
+        "key": "pages/blue_verified_check.svg",
+        "size_bytes": 1785,
+        "last_modified": "2025-11-26T14:50:03.005Z",
+        "etag": "33d7719a3f6f402fd22035192a699882"
+      },
+      {
+        "key": "pages/star_review.svg",
+        "size_bytes": 322,
+        "last_modified": "2025-11-25T22:03:44.823Z",
+        "etag": "c169aa6ee025bd4e692f5533b5166e4b"
+      },
+      {
+        "key": "pages/gold_icon_dollar.svg",
+        "size_bytes": 2334,
+        "last_modified": "2025-11-25T20:19:10.114Z",
+        "etag": "00a8cd37630b1cff4ccfd71a47a8da0d"
+      },
+      {
+        "key": "pages/gold_icon_search.svg",
+        "size_bytes": 1651,
+        "last_modified": "2025-11-25T20:18:20.573Z",
+        "etag": "aa47294d80143974cf61c4b5450a878b"
+      },
+      {
+        "key": "promotions/mysterybox_apple.png",
+        "size_bytes": 72221,
+        "last_modified": "2025-11-17T22:01:10.087Z",
+        "etag": "5a466b6ab18fd8446d906bb3d48ca202"
+      },
+      {
+        "key": "promotions/christmas1000.svg",
+        "size_bytes": 59209,
+        "last_modified": "2025-11-13T21:56:34.615Z",
+        "etag": "40789d6ffd79eaa314df9b5db4fa3172"
+      },
+      {
+        "key": "promotions/christmas500.svg",
+        "size_bytes": 58482,
+        "last_modified": "2025-11-13T21:55:48.126Z",
+        "etag": "61a2e1edcc90d9f48bb90a3ba76710e0"
+      },
+      {
+        "key": "pages/New prismique logo.svg",
+        "size_bytes": 11177,
+        "last_modified": "2025-11-13T21:54:04.390Z",
+        "etag": "94cb8346100a4de428b2572ad9616291"
+      },
+      {
+        "key": "pages/white_check_vector.svg",
+        "size_bytes": 1273,
+        "last_modified": "2025-11-12T16:30:11.772Z",
+        "etag": "ff8bc3ffb0cf057a1c040ade50bf733f"
+      },
+      {
+        "key": "pages/arrow_down_orange_border.svg",
+        "size_bytes": 364,
+        "last_modified": "2025-11-11T18:33:15.701Z",
+        "etag": "6dc3e4a2f58b82f4860f814252176100"
+      },
+      {
+        "key": "promotions/money.png",
+        "size_bytes": 70728,
+        "last_modified": "2025-11-07T19:35:52.037Z",
+        "etag": "eb748a18ea85240660df3581d9360d84"
+      },
+      {
+        "key": "themes/favicon_benefitsaccesscenter.svg",
+        "size_bytes": 1887,
+        "last_modified": "2025-11-07T19:10:17.903Z",
+        "etag": "9810011f26b09f6507904a3e9df5fc44"
+      },
+      {
+        "key": "pages/background.svg",
+        "size_bytes": 319,
+        "last_modified": "2025-11-05T05:14:50.945Z",
+        "etag": "d19c76cacb28dd07d1fb29b53f37c7e8"
+      },
+      {
+        "key": "pages/arrow_down_orange.svg",
+        "size_bytes": 362,
+        "last_modified": "2025-11-05T05:14:48.065Z",
+        "etag": "78b66304d5877991c769f4a59787f0bc"
+      },
+      {
+        "key": "themes/gr_lock.svg",
+        "size_bytes": 1894,
+        "last_modified": "2025-11-05T04:49:13.738Z",
+        "etag": "502243867b8018c85be2d3804e47cd33"
+      },
+      {
+        "key": "themes/icon_pencil_bg.svg",
+        "size_bytes": 927,
+        "last_modified": "2025-11-04T20:07:18.515Z",
+        "etag": "bd5f8c98a9aed3becfc1ca11e8200c50"
+      },
+      {
+        "key": "pages/gear2.svg",
+        "size_bytes": 1522,
+        "last_modified": "2025-11-04T17:55:49.630Z",
+        "etag": "36293d19b1b92f67432231da5a25a51d"
+      },
+      {
+        "key": "pages/gear1.svg",
+        "size_bytes": 1522,
+        "last_modified": "2025-11-04T17:55:46.503Z",
+        "etag": "41994844248258a5cf8359cdafe72026"
+      },
+      {
+        "key": "themes/icon_book.svg",
+        "size_bytes": 2064,
+        "last_modified": "2025-11-04T14:11:35.981Z",
+        "etag": "f75cbd6a8e824239248dde01a76b38ef"
+      },
+      {
+        "key": "themes/icon_tag.svg",
+        "size_bytes": 1038,
+        "last_modified": "2025-11-04T14:09:15.562Z",
+        "etag": "198c32574a717779f5f9ba95a0b8a423"
+      },
+      {
+        "key": "themes/icon_location.svg",
+        "size_bytes": 896,
+        "last_modified": "2025-11-04T03:05:41.870Z",
+        "etag": "6e01f8a9e977b35d6f18ece3ebc2642e"
+      },
+      {
+        "key": "themes/gr_check.svg",
+        "size_bytes": 1306,
+        "last_modified": "2025-11-04T03:04:44.616Z",
+        "etag": "ab109b746639cc4c288b2bdf36c9a477"
+      },
+      {
+        "key": "themes/gr check.svg",
+        "size_bytes": 1306,
+        "last_modified": "2025-11-04T03:04:29.855Z",
+        "etag": "ab109b746639cc4c288b2bdf36c9a477"
+      },
+      {
+        "key": "pages/logo_bac_v2.svg",
+        "size_bytes": 20978,
+        "last_modified": "2025-10-30T17:53:13.754Z",
+        "etag": "af84d7f1038d561fcdeb816fea8ca512"
+      },
+      {
+        "key": "promotions/ebooknovels250.png",
+        "size_bytes": 348020,
+        "last_modified": "2025-10-30T15:22:18.041Z",
+        "etag": "dbe62d36c79639643edb10950dcb09ed"
+      },
+      {
+        "key": "promotions/ebooknovels.png",
+        "size_bytes": 375841,
+        "last_modified": "2025-10-30T15:20:27.821Z",
+        "etag": "ec5aa502b96ee152d53b49718dafe456"
+      },
+      {
+        "key": "pages/theme_web_v2.png",
+        "size_bytes": 259759,
+        "last_modified": "2025-10-29T17:57:44.251Z",
+        "etag": "82a48aab179a927666b8af7478ea786e"
+      },
+      {
+        "key": "pages/theme_mob_v2.png",
+        "size_bytes": 68787,
+        "last_modified": "2025-10-29T17:57:40.509Z",
+        "etag": "314d8d79ee3eadf93e9bb8a35e1b0717"
+      },
+      {
+        "key": "promotions/promo_cash_v2.png",
+        "size_bytes": 116687,
+        "last_modified": "2025-10-29T17:56:31.738Z",
+        "etag": "ffdd78173f55b1cb76c620ff012ed61f"
+      },
+      {
+        "key": "promotions/promo_cash.png",
+        "size_bytes": 107993,
+        "last_modified": "2025-10-29T14:25:16.025Z",
+        "etag": "ce294d791982f4edc3425bedd96771b9"
+      },
+      {
+        "key": "pages/theme_web.png",
+        "size_bytes": 259562,
+        "last_modified": "2025-10-28T19:58:48.959Z",
+        "etag": "cdaa3040c77c786a659ba34d2921b2ad"
+      },
+      {
+        "key": "pages/theme_mob.png",
+        "size_bytes": 331442,
+        "last_modified": "2025-10-28T19:58:46.329Z",
+        "etag": "9e05392075ad96ceede4f883f2819e7c"
+      },
+      {
+        "key": "pages/promo_cash.png",
+        "size_bytes": 107993,
+        "last_modified": "2025-10-28T19:58:43.617Z",
+        "etag": "ce294d791982f4edc3425bedd96771b9"
+      },
+      {
+        "key": "pages/logo_bac.svg",
+        "size_bytes": 20874,
+        "last_modified": "2025-10-28T19:58:40.979Z",
+        "etag": "5f80e47c2493a97fbdb1ccccf6eba561"
+      },
+      {
+        "key": "pages/icon_secure.svg",
+        "size_bytes": 3769,
+        "last_modified": "2025-10-28T19:58:37.537Z",
+        "etag": "95bc6a68b8493f665f898f4219c4bc30"
+      },
+      {
+        "key": "pages/icon_checkmark.svg",
+        "size_bytes": 1271,
+        "last_modified": "2025-10-28T19:58:34.978Z",
+        "etag": "d8b5d280b74030225544d1a17580c354"
+      },
+      {
+        "key": "pages/icon_access.svg",
+        "size_bytes": 4923,
+        "last_modified": "2025-10-28T19:58:30.768Z",
+        "etag": "fe14ea3499d51f92a58940858fad6aa2"
+      },
+      {
+        "key": "pages/drop_select_arr.svg",
+        "size_bytes": 215,
+        "last_modified": "2025-10-22T15:51:29.259Z",
+        "etag": "ca77efe257ce0bd68e5650a19edabcaf"
+      },
+      {
+        "key": "pages/gender_validated_check.png",
+        "size_bytes": 1489,
+        "last_modified": "2025-10-22T15:38:17.497Z",
+        "etag": "8c46e2cfc84a597f1374ca105b16d626"
+      },
+      {
+        "key": "pages/faveicon_mydailysurge.svg",
+        "size_bytes": 690,
+        "last_modified": "2025-10-22T13:47:25.400Z",
+        "etag": "3f1612908aa06be52c90cb5e46070a2b"
+      },
+      {
+        "key": "pages/right-arr.png",
+        "size_bytes": 939,
+        "last_modified": "2025-10-22T13:22:22.741Z",
+        "etag": "8f9c4352c441d3b91953c61fc8ae4146"
+      },
+      {
+        "key": "pages/left-arr.png",
+        "size_bytes": 948,
+        "last_modified": "2025-10-22T13:22:20.343Z",
+        "etag": "11c122968ad29ecd65938c276159e779"
+      },
+      {
+        "key": "pages/time-icon.png",
+        "size_bytes": 2162,
+        "last_modified": "2025-10-22T13:17:19.450Z",
+        "etag": "06324933172a53beef3df52b0cf5b860"
+      },
+      {
+        "key": "pages/green_circle_check.png",
+        "size_bytes": 321,
+        "last_modified": "2025-10-22T13:12:08.660Z",
+        "etag": "7e90d10748e3d0cb3313fe165d279502"
+      },
+      {
+        "key": "promotions/audemarspiguet.png",
+        "size_bytes": 140558,
+        "last_modified": "2025-10-21T17:42:04.918Z",
+        "etag": "9de92f2dc0cf4c22454256f15ac374d0"
+      },
+      {
+        "key": "promotions/rolex.png",
+        "size_bytes": 123011,
+        "last_modified": "2025-10-21T17:40:57.693Z",
+        "etag": "db6a6fdbb9f876bff3a5cfcc95794f35"
+      },
+      {
+        "key": "promotions/luxurywatch.png",
+        "size_bytes": 187860,
+        "last_modified": "2025-10-21T17:38:46.178Z",
+        "etag": "7e1434053f5b6ca5a4cf7b6934152099"
+      },
+      {
+        "key": "pages/leaves.svg",
+        "size_bytes": 15494,
+        "last_modified": "2025-10-21T17:36:16.767Z",
+        "etag": "a397251ee59a6018a99697d6384f208b"
+      },
+      {
+        "key": "promotions/spirithalloween.png",
+        "size_bytes": 182898,
+        "last_modified": "2025-10-20T14:30:07.594Z",
+        "etag": "11d802adfc0e9a61b69336ccd1413b02"
+      },
+      {
+        "key": "pages/test_cart.png",
+        "size_bytes": 1626,
+        "last_modified": "2025-10-16T13:28:02.484Z",
+        "etag": "a9361b1179cd8f006fc1e70b6febacc1"
+      },
+      {
+        "key": "pages/playzoodle_logo.svg",
+        "size_bytes": 9199,
+        "last_modified": "2025-10-14T18:14:45.361Z",
+        "etag": "55ea5063737549e6b15f1e7b9daf4bbd"
+      },
+      {
+        "key": "themes/favicon_snagngoods.png",
+        "size_bytes": 958,
+        "last_modified": "2025-10-14T14:46:44.610Z",
+        "etag": "cf658555cb37de29283ec4e94d6c9937"
+      },
+      {
+        "key": "themes/icon_location_blue_big.svg",
+        "size_bytes": 909,
+        "last_modified": "2025-10-10T19:55:15.872Z",
+        "etag": "cd594c57f20b494ec109883cca4f5352"
+      },
+      {
+        "key": "themes/icon_pencil_gray_big.svg",
+        "size_bytes": 934,
+        "last_modified": "2025-10-10T19:45:49.793Z",
+        "etag": "d2286bf34ea61692f1e5d4d5f3c66645"
+      },
+      {
+        "key": "themes/icon_tag_gray_big.svg",
+        "size_bytes": 1033,
+        "last_modified": "2025-10-10T19:41:04.446Z",
+        "etag": "3cbc0fbd20468c60148cd34b8341063b"
+      },
+      {
+        "key": "promotions/ingotoolkit100.png",
+        "size_bytes": 66159,
+        "last_modified": "2025-10-09T21:59:18.936Z",
+        "etag": "25734c61bcce60a76c9285ffb20e271c"
+      },
+      {
+        "key": "promotions/ingotoolkit.png",
+        "size_bytes": 73442,
+        "last_modified": "2025-10-09T21:57:45.452Z",
+        "etag": "a6787de82b072a7687636472f77cdf85"
+      },
+      {
+        "key": "promotions/chickfila750_holiday.svg",
+        "size_bytes": 50998,
+        "last_modified": "2025-10-09T21:56:58.937Z",
+        "etag": "328ec31df66c8be8acef1d01386d9f8f"
+      },
+      {
+        "key": "promotions/outback1000_holiday.svg",
+        "size_bytes": 48558,
+        "last_modified": "2025-10-09T21:56:13.819Z",
+        "etag": "c5a37f8d12e347884cb4085a5ddb97f3"
+      },
+      {
+        "key": "promotions/rv_high_value.png",
+        "size_bytes": 84572,
+        "last_modified": "2025-10-09T15:55:21.326Z",
+        "etag": "1c40a7a4bb0bf0ab9f6d79f806a66866"
+      },
+      {
+        "key": "promotions/corvette_high_value.png",
+        "size_bytes": 73622,
+        "last_modified": "2025-10-09T15:54:40.905Z",
+        "etag": "64400e32cdda450f11a753b25e6156ea"
+      },
+      {
+        "key": "promotions/toyotarav4_high_value.png",
+        "size_bytes": 83116,
+        "last_modified": "2025-10-09T15:53:53.177Z",
+        "etag": "3fc9f4c35260fd4c3cc90f60444df423"
+      },
+      {
+        "key": "promotions/f1truck_high_value.png",
+        "size_bytes": 84924,
+        "last_modified": "2025-10-09T15:52:35.748Z",
+        "etag": "e35ef96799fb1ea9e13c45e4c6aff6ca"
+      },
+      {
+        "key": "promotions/win25k.png",
+        "size_bytes": 47680,
+        "last_modified": "2025-10-09T15:51:02.635Z",
+        "etag": "a8d239478be5052c31958d9ef415b299"
+      },
+      {
+        "key": "promotions/win50k.png",
+        "size_bytes": 47969,
+        "last_modified": "2025-10-09T15:50:13.246Z",
+        "etag": "71a01c920083bbcc6c3047cc7b07991e"
+      },
+      {
+        "key": "promotions/win75k.png",
+        "size_bytes": 49519,
+        "last_modified": "2025-10-09T15:49:32.398Z",
+        "etag": "2c78d131df528b70fcbb6e5519d3670c"
+      },
+      {
+        "key": "pages/avatar.svg",
+        "size_bytes": 1063,
+        "last_modified": "2025-10-08T20:59:35.161Z",
+        "etag": "a8260c2ab0a5902e863e585619e17a1a"
+      },
+      {
+        "key": "promotions/hotwheels.png",
+        "size_bytes": 84459,
+        "last_modified": "2025-10-08T12:39:47.294Z",
+        "etag": "d91a1d30f302cff5438878d9d8fab959"
+      },
+      {
+        "key": "promotions/hotwheels100.png",
+        "size_bytes": 84694,
+        "last_modified": "2025-10-08T12:39:02.993Z",
+        "etag": "b19334467a369ec063f769f789c6d17f"
+      },
+      {
+        "key": "pages/snagngoods_logo.svg",
+        "size_bytes": 243412,
+        "last_modified": "2025-10-07T19:04:35.313Z",
+        "etag": "132ba328a57c0b2a4010e947ce37ca5a"
+      },
+      {
+        "key": "promotions/toyotarav4_hires.png",
+        "size_bytes": 83116,
+        "last_modified": "2025-10-06T14:26:33.132Z",
+        "etag": "3fc9f4c35260fd4c3cc90f60444df423"
+      },
+      {
+        "key": "pages/grey_left_arrow.svg",
+        "size_bytes": 340,
+        "last_modified": "2025-10-03T20:26:41.463Z",
+        "etag": "851ca9e18ecca9c98067d6979b7b2c48"
+      },
+      {
+        "key": "pages/grey_right_arrow.svg",
+        "size_bytes": 343,
+        "last_modified": "2025-10-03T20:26:38.216Z",
+        "etag": "976497b3a55132644b64b702a4e84fb2"
+      },
+      {
+        "key": "promotions/header1_win100.png",
+        "size_bytes": 195209,
+        "last_modified": "2025-10-03T18:40:20.097Z",
+        "etag": "c131ea3da3b16fdda665e00a3ee5f093"
+      },
+      {
+        "key": "promotions/prizezar_promo_image.svg",
+        "size_bytes": 7867783,
+        "last_modified": "2025-10-03T17:33:26.642Z",
+        "etag": "256f1bba7004338cf93b82ea2466c427"
+      },
+      {
+        "key": "promotions/gadget_producttester.png",
+        "size_bytes": 76272,
+        "last_modified": "2025-10-03T14:55:04.988Z",
+        "etag": "23e7a663e4dc283baa167410af0af46d"
+      },
+      {
+        "key": "promotions/mystery_walmart1000holiday.png",
+        "size_bytes": 318988,
+        "last_modified": "2025-10-03T14:52:08.625Z",
+        "etag": "928ef06193c61053b67fae94e390d196"
+      },
+      {
+        "key": "promotions/mysterybox1000_halloween.png",
+        "size_bytes": 390021,
+        "last_modified": "2025-10-03T14:35:21.317Z",
+        "etag": "8855e34e2ec31fc44e2d5ca72f6dd988"
+      },
+      {
+        "key": "promotions/amazon1000_halloween.svg",
+        "size_bytes": 73347,
+        "last_modified": "2025-10-03T14:34:39.182Z",
+        "etag": "bc10f95aa78d9e1cfbcb4d6fdb63439d"
+      },
+      {
+        "key": "promotions/walmart750_halloween.svg",
+        "size_bytes": 230519,
+        "last_modified": "2025-10-03T13:28:58.514Z",
+        "etag": "9cc91080adaf06d81448b58f98db5fa5"
+      },
+      {
+        "key": "promotions/dollartree1000_holiday.svg",
+        "size_bytes": 178623,
+        "last_modified": "2025-10-03T13:28:17.537Z",
+        "etag": "a00c8a1c5c3510725454d7f0757ee131"
+      },
+      {
+        "key": "promotions/mystery_amazon1000holiday.png",
+        "size_bytes": 315859,
+        "last_modified": "2025-10-03T13:23:40.625Z",
+        "etag": "6e3216992c41fd9e1a172b2661ade95b"
+      },
+      {
+        "key": "promotions/gascard1000_holiday.png",
+        "size_bytes": 72054,
+        "last_modified": "2025-10-03T13:22:50.643Z",
+        "etag": "3e5c6077762b747d3aa9d4622536b609"
+      },
+      {
+        "key": "promotions/macbook1000_holiday.png",
+        "size_bytes": 248121,
+        "last_modified": "2025-10-03T13:22:00.023Z",
+        "etag": "24b691fc5a3275c919a3378e7d19037e"
+      },
+      {
+        "key": "promotions/health_checkup.png",
+        "size_bytes": 238509,
+        "last_modified": "2025-10-03T13:19:51.487Z",
+        "etag": "938d2dddb5b137f56af1e868ca15397f"
+      },
+      {
+        "key": "promotions/amazon1000_blackfriday.png",
+        "size_bytes": 45669,
+        "last_modified": "2025-10-03T12:50:48.160Z",
+        "etag": "8d8b47ea849e8b97354dd630297c6f78"
+      },
+      {
+        "key": "promotions/walmart1000_blackfriday.svg",
+        "size_bytes": 15970,
+        "last_modified": "2025-10-03T12:50:02.313Z",
+        "etag": "ce2efcc1bf43674d9cc9d37507b89412"
+      },
+      {
+        "key": "promotions/mysterybox_blackfriday.png",
+        "size_bytes": 49346,
+        "last_modified": "2025-10-03T12:49:12.583Z",
+        "etag": "54c882c32b3d5246f7941376a93a9020"
+      },
+      {
+        "key": "promotions/iphone17promax_blackfriday.png",
+        "size_bytes": 90368,
+        "last_modified": "2025-10-03T12:48:13.741Z",
+        "etag": "e083244134e94aa0d10cc10d77aee45b"
+      },
+      {
+        "key": "pages/red_left_arrow.svg",
+        "size_bytes": 340,
+        "last_modified": "2025-10-02T21:20:13.428Z",
+        "etag": "a2c8541c87f8f6c2b4156bd1ae4e16ca"
+      },
+      {
+        "key": "pages/red_right_arrow.svg",
+        "size_bytes": 343,
+        "last_modified": "2025-10-02T21:20:10.532Z",
+        "etag": "c51304d0fae9aced537dcd1be298b726"
+      },
+      {
+        "key": "pages/grey_background_ribbon.svg",
+        "size_bytes": 511,
+        "last_modified": "2025-10-02T17:01:28.989Z",
+        "etag": "218af101f39697b5cd0ae8eac08ebfc7"
+      },
+      {
+        "key": "promotions/walmart750_holiday.png",
+        "size_bytes": 66511,
+        "last_modified": "2025-10-02T12:39:40.018Z",
+        "etag": "2474174ead9f01fab3df1c167a034278"
+      },
+      {
+        "key": "promotions/samples_generic.png",
+        "size_bytes": 82197,
+        "last_modified": "2025-10-01T12:44:05.754Z",
+        "etag": "b1b26d2a05917d2d3cbe556e8265334a"
+      },
+      {
+        "key": "promotions/samples_senior.png",
+        "size_bytes": 87043,
+        "last_modified": "2025-10-01T12:42:32.197Z",
+        "etag": "e91a464d2dc683ee0a3271b28ca1f238"
+      },
+      {
+        "key": "themes/header2_pleasecontinue.png",
+        "size_bytes": 52869,
+        "last_modified": "2025-09-30T18:31:41.652Z",
+        "etag": "39b50525967860fae939c12fac461c6d"
+      },
+      {
+        "key": "pages/header1_win100.png",
+        "size_bytes": 195209,
+        "last_modified": "2025-09-30T18:28:55.780Z",
+        "etag": "c131ea3da3b16fdda665e00a3ee5f093"
+      },
+      {
+        "key": "pages/pattern_fullopacity.png",
+        "size_bytes": 58663,
+        "last_modified": "2025-09-30T18:13:53.791Z",
+        "etag": "efcbf6105b47708e6d4120b8e46335a4"
+      },
+      {
+        "key": "pages/claim_banner.png",
+        "size_bytes": 309001,
+        "last_modified": "2025-09-30T15:24:49.110Z",
+        "etag": "dff1ab15e8bc0c10db6df0150858d957"
+      },
+      {
+        "key": "pages/ribbon.svg",
+        "size_bytes": 15462,
+        "last_modified": "2025-09-30T14:57:19.361Z",
+        "etag": "bd31f2e24445517b5a073b0d2072a4f0"
+      },
+      {
+        "key": "pages/icon_treasurechest.svg",
+        "size_bytes": 4239,
+        "last_modified": "2025-09-30T00:54:08.220Z",
+        "etag": "11863441721db00314f6f059ea99c140"
+      },
+      {
+        "key": "pages/icon_tresaurechest.svg",
+        "size_bytes": 4239,
+        "last_modified": "2025-09-30T00:51:41.425Z",
+        "etag": "11863441721db00314f6f059ea99c140"
+      },
+      {
+        "key": "pages/icon_shoppingcart.svg",
+        "size_bytes": 8294,
+        "last_modified": "2025-09-30T00:51:39.178Z",
+        "etag": "a5d35f7a978d5fa8d27b69bd54332fcf"
+      },
+      {
+        "key": "pages/icon_shield.svg",
+        "size_bytes": 2067,
+        "last_modified": "2025-09-30T00:51:36.458Z",
+        "etag": "6cade5c982b0aaede2447c61dd3d8670"
+      },
+      {
+        "key": "pages/icon_creditcard.svg",
+        "size_bytes": 548,
+        "last_modified": "2025-09-30T00:51:34.081Z",
+        "etag": "6d2ee7d22131465db13049e64a9a7545"
+      },
+      {
+        "key": "pages/seal3.svg",
+        "size_bytes": 18790,
+        "last_modified": "2025-09-30T00:42:10.327Z",
+        "etag": "cb1e758ef0e8d8b02ebe9028c480c9d4"
+      },
+      {
+        "key": "pages/seal2.svg",
+        "size_bytes": 20440,
+        "last_modified": "2025-09-30T00:42:08.100Z",
+        "etag": "4e9d7a678500769768fb51aa2d4f675c"
+      },
+      {
+        "key": "pages/seal1.svg",
+        "size_bytes": 17214,
+        "last_modified": "2025-09-30T00:42:05.617Z",
+        "etag": "6583f681f342143ae18e18d4d3fb16b6"
+      },
+      {
+        "key": "pages/headline_lp.svg",
+        "size_bytes": 442938,
+        "last_modified": "2025-09-30T00:27:06.725Z",
+        "etag": "9f14a1b09316a18434571c92407551b3"
+      },
+      {
+        "key": "pages/prizezappy_logo_top.svg",
+        "size_bytes": 5398,
+        "last_modified": "2025-09-30T00:23:41.323Z",
+        "etag": "04db7d0ca38bc3747a9ab791c8473be7"
+      },
+      {
+        "key": "pages/logo top.svg",
+        "size_bytes": 5398,
+        "last_modified": "2025-09-30T00:22:57.185Z",
+        "etag": "04db7d0ca38bc3747a9ab791c8473be7"
+      },
+      {
+        "key": "pages/Prize Zappy.svg",
+        "size_bytes": 3772,
+        "last_modified": "2025-09-30T00:19:33.166Z",
+        "etag": "a41cf8cfc6b468b2cfc1c06d7ba89345"
+      },
+      {
+        "key": "pages/pattern.png",
+        "size_bytes": 46545,
+        "last_modified": "2025-09-30T00:18:02.446Z",
+        "etag": "df0a4bbcf4a2785e9daba40ed2fc879c"
+      },
+      {
+        "key": "promotions/apple.svg",
+        "size_bytes": 1728,
+        "last_modified": "2025-09-29T22:02:05.782Z",
+        "etag": "85653c526b95c750334cc638e9d71ffb"
+      },
+      {
+        "key": "promotions/aldi1000.svg",
+        "size_bytes": 20106,
+        "last_modified": "2025-09-29T21:55:21.104Z",
+        "etag": "58f0ba91ec8169cbfb7902a87b8caf53"
+      },
+      {
+        "key": "promotions/kroger1000 (1).svg",
+        "size_bytes": 12630,
+        "last_modified": "2025-09-29T21:54:18.086Z",
+        "etag": "73c1642cbe72b0e182b358229b999e4b"
+      },
+      {
+        "key": "promotions/mysterybox_fastfood.png",
+        "size_bytes": 333144,
+        "last_modified": "2025-09-29T21:52:22.136Z",
+        "etag": "d1257644950b19b93f06dc96d2bc3241"
+      },
+      {
+        "key": "promotions/michaels750.svg",
+        "size_bytes": 10924,
+        "last_modified": "2025-09-29T21:47:08.003Z",
+        "etag": "541c3ed255d10e5aba9713c69a703a50"
+      },
+      {
+        "key": "promotions/iphone17promax.png",
+        "size_bytes": 427034,
+        "last_modified": "2025-09-29T21:45:27.320Z",
+        "etag": "f01865e110391451d8090dc2c860384c"
+      },
+      {
+        "key": "promotions/iphone17promax1000.png",
+        "size_bytes": 392047,
+        "last_modified": "2025-09-29T21:44:42.005Z",
+        "etag": "07343d2affaf0975010c82671469e2eb"
+      },
+      {
+        "key": "promotions/totaldrive1000.svg",
+        "size_bytes": 5989,
+        "last_modified": "2025-09-29T21:43:16.633Z",
+        "etag": "5238675e607e76e3245acb9b7a3731f7"
+      },
+      {
+        "key": "promotions/phonestorage1000.svg",
+        "size_bytes": 8238,
+        "last_modified": "2025-09-29T21:42:23.674Z",
+        "etag": "9ec50ca05aa07031ec0d68cf298ffe49"
+      },
+      {
+        "key": "promotions/mcafee1000.svg",
+        "size_bytes": 8234,
+        "last_modified": "2025-09-29T21:41:11.484Z",
+        "etag": "029c22950d0a11ed9a1145baec583b02"
+      },
+      {
+        "key": "promotions/norton1000.svg",
+        "size_bytes": 10058,
+        "last_modified": "2025-09-29T21:40:03.618Z",
+        "etag": "711e6b9b9462f0f34015ff71313fdfd8"
+      },
+      {
+        "key": "pages/blueline.png",
+        "size_bytes": 103,
+        "last_modified": "2025-09-29T16:20:24.463Z",
+        "etag": "b32b19bc358bd6b66a8d4e6f7f1713d5"
+      },
+      {
+        "key": "pages/bluecheck.svg",
+        "size_bytes": 806,
+        "last_modified": "2025-09-29T15:25:45.322Z",
+        "etag": "c1e4ca1a1816484049535e486ae9cec4"
+      },
+      {
+        "key": "pages/whitecheck_greencircle.png",
+        "size_bytes": 1344,
+        "last_modified": "2025-09-26T16:01:40.102Z",
+        "etag": "a70a8ec3c0823faff2229e891e0bb04b"
+      },
+      {
+        "key": "pages/LendliV2.svg",
+        "size_bytes": 4425,
+        "last_modified": "2025-09-25T18:56:42.295Z",
+        "etag": "11846cc10bceef870562d44c856379c5"
+      },
+      {
+        "key": "pages/CheckGo.svg",
+        "size_bytes": 8107,
+        "last_modified": "2025-09-25T18:46:42.033Z",
+        "etag": "13f8acd59f8c082be85ab6e4ed8c2b90"
+      },
+      {
+        "key": "themes/bg_bar_long.svg",
+        "size_bytes": 2585,
+        "last_modified": "2025-09-24T15:50:53.781Z",
+        "etag": "f645937a45508cedfdc3aba5131d50f5"
+      },
+      {
+        "key": "themes/bar_lock.png",
+        "size_bytes": 1289,
+        "last_modified": "2025-09-24T15:26:41.328Z",
+        "etag": "60113aa459973225436f4a47d2954783"
+      },
+      {
+        "key": "themes/lock_step_2.svg",
+        "size_bytes": 16009,
+        "last_modified": "2025-09-24T14:53:43.512Z",
+        "etag": "b60f50b9bf470274aae5e08c5b8093bb"
+      },
+      {
+        "key": "themes/bg_arrowdown_dark.svg",
+        "size_bytes": 496,
+        "last_modified": "2025-09-24T13:42:39.779Z",
+        "etag": "5a65dd9ffc5823d6143c547716d53f3a"
+      },
+      {
+        "key": "themes/inflow_walmart_gc.svg",
+        "size_bytes": 97027,
+        "last_modified": "2025-09-23T21:28:51.806Z",
+        "etag": "d675f50636e6a3c1f26accb895411670"
+      },
+      {
+        "key": "themes/bg_bar.svg",
+        "size_bytes": 2592,
+        "last_modified": "2025-09-23T21:23:41.160Z",
+        "etag": "54d6ccee00fbe39f9d1c866cad830559"
+      },
+      {
+        "key": "themes/bg_arrowdown.svg",
+        "size_bytes": 499,
+        "last_modified": "2025-09-23T21:23:38.185Z",
+        "etag": "e1c289dccab5446ec203ea685c5f045d"
+      },
+      {
+        "key": "themes/bar_star.svg",
+        "size_bytes": 12316,
+        "last_modified": "2025-09-23T21:23:35.975Z",
+        "etag": "9711427ec5ad508c71e9e3c6fc66e6cb"
+      },
+      {
+        "key": "themes/bar_lock.svg",
+        "size_bytes": 16026,
+        "last_modified": "2025-09-23T21:23:33.798Z",
+        "etag": "eb224961fb6582eb0c726955f62a2424"
+      },
+      {
+        "key": "themes/bar_greencheck.svg",
+        "size_bytes": 806,
+        "last_modified": "2025-09-23T21:23:31.234Z",
+        "etag": "2c3e4677dc8a970ba602cbf5939ed2f8"
+      },
+      {
+        "key": "themes/bluecheck.svg",
+        "size_bytes": 806,
+        "last_modified": "2025-09-23T21:23:13.737Z",
+        "etag": "c1e4ca1a1816484049535e486ae9cec4"
+      },
+      {
+        "key": "promotions/gascard500 (1).svg",
+        "size_bytes": 1886712,
+        "last_modified": "2025-09-20T10:33:28.224Z",
+        "etag": "3e30c8b94b5fb6e901c9e01c36ed261b"
+      },
+      {
+        "key": "promotions/samsclub750.svg",
+        "size_bytes": 10808,
+        "last_modified": "2025-09-20T10:32:45.273Z",
+        "etag": "85810af2e0a7193d24a8a788401d6f51"
+      },
+      {
+        "key": "promotions/ross1000.svg",
+        "size_bytes": 17914,
+        "last_modified": "2025-09-20T10:31:39.470Z",
+        "etag": "18f258025b6aa2fe6209f43d03a3d479"
+      },
+      {
+        "key": "promotions/burlington1000.svg",
+        "size_bytes": 10821,
+        "last_modified": "2025-09-20T10:30:48.030Z",
+        "etag": "b2d6d41925d1f8fac7e8fced946008bf"
+      },
+      {
+        "key": "promotions/tjmaxx1000.svg",
+        "size_bytes": 8892,
+        "last_modified": "2025-09-20T10:29:55.062Z",
+        "etag": "2369b7b58b6fff90056d4812fb415e12"
+      },
+      {
+        "key": "promotions/marshalls1000.svg",
+        "size_bytes": 8807,
+        "last_modified": "2025-09-20T10:28:54.827Z",
+        "etag": "110e7e6a2f060eabaf80fdb33b099ad8"
+      },
+      {
+        "key": "promotions/starbucks1000.svg",
+        "size_bytes": 26647,
+        "last_modified": "2025-09-20T10:28:09.671Z",
+        "etag": "05753af02efd71afdc810e3916505755"
+      },
+      {
+        "key": "promotions/banktransfer1000.png",
+        "size_bytes": 462123,
+        "last_modified": "2025-09-20T10:26:52.631Z",
+        "etag": "3f1910a38596d7ca4a050353bf2fb358"
+      },
+      {
+        "key": "promotions/bestbuy1000.svg",
+        "size_bytes": 7968,
+        "last_modified": "2025-09-20T10:25:40.058Z",
+        "etag": "77c57f7657c88883057dccdc044438d4"
+      },
+      {
+        "key": "promotions/dreamvacation.png",
+        "size_bytes": 394444,
+        "last_modified": "2025-09-20T10:24:51.675Z",
+        "etag": "e371a2dd89e50c33578f488321d807b1"
+      },
+      {
+        "key": "promotions/adidas.svg",
+        "size_bytes": 6345,
+        "last_modified": "2025-09-20T10:22:31.526Z",
+        "etag": "9e6c89d2b0c6f98c55c899489c53bbd1"
+      },
+      {
+        "key": "promotions/nike.svg",
+        "size_bytes": 4482,
+        "last_modified": "2025-09-20T10:21:43.834Z",
+        "etag": "ddca0caf6042e6c8ca597538e4b3859f"
+      },
+      {
+        "key": "promotions/macys_mystery.png",
+        "size_bytes": 314048,
+        "last_modified": "2025-09-20T10:20:29.724Z",
+        "etag": "55d21ec9adaf6678fcfc23b943cbaa1f"
+      },
+      {
+        "key": "promotions/nfl_jersey500.png",
+        "size_bytes": 406231,
+        "last_modified": "2025-09-20T10:19:12.654Z",
+        "etag": "40b3d2f502ae51ef2f1f451b61cd4d00"
+      },
+      {
+        "key": "promotions/playstation5.png",
+        "size_bytes": 247068,
+        "last_modified": "2025-09-20T10:18:15.602Z",
+        "etag": "0b8fe6d7e30d0afbbbe68c86d3bd9a53"
+      },
+      {
+        "key": "promotions/nfl_jersey.png",
+        "size_bytes": 440478,
+        "last_modified": "2025-09-20T10:17:22.285Z",
+        "etag": "876a7231c72facaf3cdc75bf3306fb89"
+      },
+      {
+        "key": "promotions/powerball750.svg",
+        "size_bytes": 17609,
+        "last_modified": "2025-09-20T10:16:08.704Z",
+        "etag": "ce9bbc9e696014c21696a7b74c1dba1a"
+      },
+      {
+        "key": "promotions/ultaset250.png",
+        "size_bytes": 416913,
+        "last_modified": "2025-09-20T10:14:58.704Z",
+        "etag": "848cd05ff539e41f20c025a1e0d78d2c"
+      },
+      {
+        "key": "promotions/ultaset.png",
+        "size_bytes": 438349,
+        "last_modified": "2025-09-20T10:13:55.510Z",
+        "etag": "51584469f96ed323b56bb0dcff23fad8"
+      },
+      {
+        "key": "promotions/samsung_tv.png",
+        "size_bytes": 538409,
+        "last_modified": "2025-09-20T10:12:51.464Z",
+        "etag": "0c26ded1155a0151ee4d0dfbb2db171b"
+      },
+      {
+        "key": "promotions/maybelline.png",
+        "size_bytes": 298179,
+        "last_modified": "2025-09-20T10:11:39.103Z",
+        "etag": "97eced49fdf385fce3a96cfab71ff641"
+      },
+      {
+        "key": "promotions/gift500.png",
+        "size_bytes": 188398,
+        "last_modified": "2025-09-20T10:09:10.596Z",
+        "etag": "859fd816c89163c1bd8d5fe1be7ee974"
+      },
+      {
+        "key": "promotions/gift1000.png",
+        "size_bytes": 188383,
+        "last_modified": "2025-09-20T10:07:46.974Z",
+        "etag": "0a302f138b8bf3ecce368a58f6ec9961"
+      },
+      {
+        "key": "promotions/gift_willyoubenext.png",
+        "size_bytes": 191074,
+        "last_modified": "2025-09-20T10:05:10.455Z",
+        "etag": "fe9d4e03e98cbb6bd17cfcfe5325f733"
+      },
+      {
+        "key": "promotions/gift_entertodaywintomorrow.png",
+        "size_bytes": 184025,
+        "last_modified": "2025-09-20T10:03:40.930Z",
+        "etag": "78730f1bb69215450b6c62f958465d6a"
+      },
+      {
+        "key": "promotions/oncloud.png",
+        "size_bytes": 367196,
+        "last_modified": "2025-09-20T10:01:40.615Z",
+        "etag": "eb7bb4425a87b144816b8d9ec1a0688d"
+      },
+      {
+        "key": "promotions/snackbox.png",
+        "size_bytes": 458299,
+        "last_modified": "2025-09-20T10:00:38.490Z",
+        "etag": "07f0642b1b4f64bcb4fe79b108728781"
+      },
+      {
+        "key": "promotions/perfumeset_v2.png",
+        "size_bytes": 516685,
+        "last_modified": "2025-09-20T10:00:04.003Z",
+        "etag": "c8e5e17a7a5177f63dbe2ef802f8bd6c"
+      },
+      {
+        "key": "promotions/7eleven1000.svg",
+        "size_bytes": 7215,
+        "last_modified": "2025-09-20T09:58:29.244Z",
+        "etag": "078204d47398fe37c843475f75ebb3b4"
+      },
+      {
+        "key": "promotions/xbox500.svg",
+        "size_bytes": 8225,
+        "last_modified": "2025-09-20T09:57:33.798Z",
+        "etag": "4cec9a0f0cacce238e895a7f7768d45a"
+      },
+      {
+        "key": "promotions/walgreens1000.svg",
+        "size_bytes": 11652,
+        "last_modified": "2025-09-20T09:56:48.468Z",
+        "etag": "84d0cc7e701af7c6457bb1c635afbcd5"
+      },
+      {
+        "key": "promotions/startupgrant_v2.png",
+        "size_bytes": 411733,
+        "last_modified": "2025-09-20T09:56:02.341Z",
+        "etag": "0305cad77febef2550ef9ed118f6da13"
+      },
+      {
+        "key": "promotions/rockstarminifridge.png",
+        "size_bytes": 303027,
+        "last_modified": "2025-09-20T09:53:51.469Z",
+        "etag": "eb19878d20bd114938476d2ce89ebccc"
+      },
+      {
+        "key": "promotions/monsterminifridge.png",
+        "size_bytes": 356331,
+        "last_modified": "2025-09-20T09:53:06.250Z",
+        "etag": "f8dc4bff086307336e8b3ed75c6f06af"
+      },
+      {
+        "key": "promotions/drpepperminifridge.png",
+        "size_bytes": 315521,
+        "last_modified": "2025-09-20T09:52:21.854Z",
+        "etag": "38f4eb0bd5a38e9bb2c83a6710b8c7c7"
+      },
+      {
+        "key": "promotions/pepsiminifridge.png",
+        "size_bytes": 247782,
+        "last_modified": "2025-09-20T09:51:34.506Z",
+        "etag": "98a85ff6c58e18bc83dd0cfe9e90f4ae"
+      },
+      {
+        "key": "promotions/nintendo_switch2.png",
+        "size_bytes": 224545,
+        "last_modified": "2025-09-20T09:49:32.969Z",
+        "etag": "fba38c5f7cf7e9491a3e8535891b8d3a"
+      },
+      {
+        "key": "promotions/jesuscalling100_book.png",
+        "size_bytes": 292652,
+        "last_modified": "2025-09-20T09:48:40.360Z",
+        "etag": "c206ba92812b2393e4714f4b86cc3509"
+      },
+      {
+        "key": "promotions/jesuscalling_book.png",
+        "size_bytes": 334129,
+        "last_modified": "2025-09-20T09:47:32.357Z",
+        "etag": "dc5cdfaf93705b81c832d336f5798a28"
+      },
+      {
+        "key": "promotions/stanley.png",
+        "size_bytes": 319122,
+        "last_modified": "2025-09-20T01:03:23.364Z",
+        "etag": "980f228bf7aa63c7c38bbcd737edbadb"
+      },
+      {
+        "key": "promotions/camperrv.png",
+        "size_bytes": 425731,
+        "last_modified": "2025-09-20T01:01:23.753Z",
+        "etag": "4b9326f463fb088c0400ea7bdbb5dbee"
+      },
+      {
+        "key": "promotions/hisense.png",
+        "size_bytes": 411054,
+        "last_modified": "2025-09-20T01:00:07.395Z",
+        "etag": "b5e8799a21707e8fcde986367f515e63"
+      },
+      {
+        "key": "promotions/zara_mystery.png",
+        "size_bytes": 310643,
+        "last_modified": "2025-09-20T00:51:48.845Z",
+        "etag": "5bce309e598528de7c9be2459029abd6"
+      },
+      {
+        "key": "promotions/wegmans1000.svg",
+        "size_bytes": 12518,
+        "last_modified": "2025-09-20T00:51:12.432Z",
+        "etag": "a2908b7d11680610d4e74a7b4dac20cd"
+      },
+      {
+        "key": "promotions/doveset1000.png",
+        "size_bytes": 222964,
+        "last_modified": "2025-09-20T00:50:25.531Z",
+        "etag": "68da1a41268ee8ead9533152c9728d41"
+      },
+      {
+        "key": "promotions/lululemon.svg",
+        "size_bytes": 4034,
+        "last_modified": "2025-09-20T00:48:54.046Z",
+        "etag": "d36522c0438307388737c85f21368590"
+      },
+      {
+        "key": "promotions/mobil1000.svg",
+        "size_bytes": 6700,
+        "last_modified": "2025-09-20T00:48:13.690Z",
+        "etag": "3b1f04384598af3eadb6cbe70aff822d"
+      },
+      {
+        "key": "promotions/shellgas1000.svg",
+        "size_bytes": 11208,
+        "last_modified": "2025-09-20T00:47:28.465Z",
+        "etag": "c52ad5f248598bee4bc2be1e1db211a4"
+      },
+      {
+        "key": "promotions/crackerbarrel500.svg",
+        "size_bytes": 81800,
+        "last_modified": "2025-09-20T00:46:47.530Z",
+        "etag": "bfb54209e290c15e197ff7bb7bce41dd"
+      },
+      {
+        "key": "promotions/crackerbarrel.svg",
+        "size_bytes": 77160,
+        "last_modified": "2025-09-20T00:46:02.744Z",
+        "etag": "7d3bb023b18f16d4dd648a8ba7bd3305"
+      },
+      {
+        "key": "promotions/chilis500.svg",
+        "size_bytes": 17568,
+        "last_modified": "2025-09-20T00:45:20.715Z",
+        "etag": "c24ed6baa3f96f03c2fbde2e2be0e56b"
+      },
+      {
+        "key": "promotions/chilis.svg",
+        "size_bytes": 12928,
+        "last_modified": "2025-09-20T00:44:43.235Z",
+        "etag": "a0f7b025b8bbe65ebe256f6d70a56a99"
+      },
+      {
+        "key": "promotions/olivegarden.svg",
+        "size_bytes": 22012,
+        "last_modified": "2025-09-20T00:43:38.416Z",
+        "etag": "370db40c3f3159cd4f2616154e24b986"
+      },
+      {
+        "key": "promotions/olivegarden500.svg",
+        "size_bytes": 26673,
+        "last_modified": "2025-09-20T00:43:01.665Z",
+        "etag": "6ae72ab7c4b8a6c4c9e3bcc5da06e53b"
+      },
+      {
+        "key": "promotions/studentloanrelief.png",
+        "size_bytes": 269638,
+        "last_modified": "2025-09-20T00:36:34.322Z",
+        "etag": "76488c7ccad852328d40608de3047b69"
+      },
+      {
+        "key": "promotions/maccosmetics.png",
+        "size_bytes": 389262,
+        "last_modified": "2025-09-20T00:34:10.968Z",
+        "etag": "88879c57cbc72c75ca34d38d2d4c3f59"
+      },
+      {
+        "key": "promotions/cruise1000.png",
+        "size_bytes": 275156,
+        "last_modified": "2025-09-20T00:33:18.288Z",
+        "etag": "5b16b30c46de1f5d16377ab7ffe28ba5"
+      },
+      {
+        "key": "promotions/mobilityscooter1000.png",
+        "size_bytes": 197472,
+        "last_modified": "2025-09-20T00:32:15.448Z",
+        "etag": "8ab6c397859648a55127d6296486bb72"
+      },
+      {
+        "key": "promotions/mobilityscooter.png",
+        "size_bytes": 214092,
+        "last_modified": "2025-09-20T00:31:28.629Z",
+        "etag": "40a17024328b5935c833d81fddb66fae"
+      },
+      {
+        "key": "promotions/skechers100.svg",
+        "size_bytes": 9715,
+        "last_modified": "2025-09-20T00:29:59.478Z",
+        "etag": "c20a0669ebc1100e8f25dadd023b0a4a"
+      },
+      {
+        "key": "promotions/labubu.png",
+        "size_bytes": 176784,
+        "last_modified": "2025-09-20T00:29:19.853Z",
+        "etag": "dd04ec0fdcb7af415bb9f8aa8b869d3a"
+      },
+      {
+        "key": "promotions/cloudsofa1000.png",
+        "size_bytes": 295005,
+        "last_modified": "2025-09-20T00:27:22.408Z",
+        "etag": "5f3432d83d939134f619f792622a96bd"
+      },
+      {
+        "key": "promotions/beddingset1000_v2.png",
+        "size_bytes": 454651,
+        "last_modified": "2025-09-20T00:26:01.496Z",
+        "etag": "7637a0b7c8373b7663cd31cb559ad2dd"
+      },
+      {
+        "key": "promotions/fivebelow1000.svg",
+        "size_bytes": 8609,
+        "last_modified": "2025-09-20T00:25:06.077Z",
+        "etag": "47f211313ccc1b1ced7b40768c075fe5"
+      },
+      {
+        "key": "promotions/makeupbox.png",
+        "size_bytes": 289233,
+        "last_modified": "2025-09-20T00:24:20.011Z",
+        "etag": "cd68d1a72b99f2b212845c3f7b5ff5f4"
+      },
+      {
+        "key": "promotions/mystery_amazon750.png",
+        "size_bytes": 272014,
+        "last_modified": "2025-09-20T00:23:42.154Z",
+        "etag": "c6d308645442c8c78ce8772c4db83574"
+      },
+      {
+        "key": "promotions/kwiktrip1000.svg",
+        "size_bytes": 10847,
+        "last_modified": "2025-09-20T00:22:46.022Z",
+        "etag": "08b6a52e5271086db4931cfa9707c32e"
+      },
+      {
+        "key": "promotions/zara500.png",
+        "size_bytes": 185051,
+        "last_modified": "2025-09-20T00:21:38.530Z",
+        "etag": "ed0985295665969b85e499c58aa31f00"
+      },
+      {
+        "key": "promotions/lecreuset.png",
+        "size_bytes": 344294,
+        "last_modified": "2025-09-20T00:13:44.527Z",
+        "etag": "2a34a6dcaa6c4d7ee8adea06a4510b83"
+      },
+      {
+        "key": "promotions/minijesus2.png",
+        "size_bytes": 151203,
+        "last_modified": "2025-09-20T00:12:13.891Z",
+        "etag": "9f31a055fcba97a968654d21723fd754"
+      },
+      {
+        "key": "promotions/lecreuset750.svg",
+        "size_bytes": 12140,
+        "last_modified": "2025-09-20T00:11:08.721Z",
+        "etag": "7963291d532cf409f44aa676f16d078b"
+      },
+      {
+        "key": "promotions/macaron100.png",
+        "size_bytes": 401407,
+        "last_modified": "2025-09-20T00:10:18.086Z",
+        "etag": "82e165bb70c662c5bd878a8d9a35268c"
+      },
+      {
+        "key": "promotions/minijesus100.png",
+        "size_bytes": 329651,
+        "last_modified": "2025-09-20T00:09:15.643Z",
+        "etag": "92625530fa185d2938afc03d15e1ea94"
+      },
+      {
+        "key": "promotions/shoprite1000.svg",
+        "size_bytes": 24628,
+        "last_modified": "2025-09-20T00:06:35.253Z",
+        "etag": "e7bcb5521e6feb6c47ab1288f930cf94"
+      },
+      {
+        "key": "promotions/schnucks1000.svg",
+        "size_bytes": 11311,
+        "last_modified": "2025-09-20T00:05:31.275Z",
+        "etag": "0df1357182e78d4e1628b5856e2e4050"
+      },
+      {
+        "key": "promotions/pigglywiggly1000.svg",
+        "size_bytes": 29344,
+        "last_modified": "2025-09-20T00:04:51.227Z",
+        "etag": "4f85f5228a2117db9e077328b95c3c83"
+      },
+      {
+        "key": "promotions/meijer1000.svg",
+        "size_bytes": 9025,
+        "last_modified": "2025-09-20T00:03:53.371Z",
+        "etag": "a273e4c2ba62af1f7aa20bd1291091e4"
+      },
+      {
+        "key": "promotions/foodlion1000.svg",
+        "size_bytes": 10459,
+        "last_modified": "2025-09-19T20:25:08.924Z",
+        "etag": "462ce04200cf729be0b7545a38364457"
+      },
+      {
+        "key": "promotions/planterseeds.png",
+        "size_bytes": 354126,
+        "last_modified": "2025-09-19T20:16:51.820Z",
+        "etag": "9cb6291a7d10d75b35a363a1514f74be"
+      },
+      {
+        "key": "promotions/metaldetector1000.png",
+        "size_bytes": 216335,
+        "last_modified": "2025-09-19T20:14:49.234Z",
+        "etag": "e698d37240c5fc45f9536ba55a14577f"
+      },
+      {
+        "key": "promotions/walmart750.svg",
+        "size_bytes": 10531,
+        "last_modified": "2025-09-19T20:13:09.338Z",
+        "etag": "dcbf57d8c0a77c2a8431af42124a7614"
+      },
+      {
+        "key": "promotions/ross750.svg",
+        "size_bytes": 16514,
+        "last_modified": "2025-09-19T20:11:30.815Z",
+        "etag": "8480535998137601b10faab3b861e6fd"
+      },
+      {
+        "key": "promotions/familydollar750.svg",
+        "size_bytes": 26402,
+        "last_modified": "2025-09-19T20:10:42.144Z",
+        "etag": "8a3faa86ee6827a7ce089e6213f035a6"
+      },
+      {
+        "key": "promotions/samsungsmarttv1000.png",
+        "size_bytes": 495695,
+        "last_modified": "2025-09-19T20:07:14.210Z",
+        "etag": "c1faca7472a279aa50e2a28985840430"
+      },
+      {
+        "key": "promotions/kroger1000.svg",
+        "size_bytes": 12630,
+        "last_modified": "2025-09-19T20:06:19.823Z",
+        "etag": "73c1642cbe72b0e182b358229b999e4b"
+      },
+      {
+        "key": "promotions/f1truck1000.png",
+        "size_bytes": 238167,
+        "last_modified": "2025-09-19T20:05:33.986Z",
+        "etag": "f32d08d9332919b0a8845f100adf96f2"
+      },
+      {
+        "key": "promotions/travelcenters1000.svg",
+        "size_bytes": 6208,
+        "last_modified": "2025-09-19T20:02:26.459Z",
+        "etag": "745ca8ec723965176928d3b11d9ba562"
+      },
+      {
+        "key": "promotions/amazon750.svg",
+        "size_bytes": 11705,
+        "last_modified": "2025-09-19T20:01:20.922Z",
+        "etag": "c89b764fe2a92bd794a41f11e121836c"
+      },
+      {
+        "key": "promotions/target750.svg",
+        "size_bytes": 6120,
+        "last_modified": "2025-09-19T20:00:15.469Z",
+        "etag": "809be4cc2f39f6785246347be9c9dc38"
+      },
+      {
+        "key": "promotions/flowerknows100.png",
+        "size_bytes": 364205,
+        "last_modified": "2025-09-19T19:57:53.732Z",
+        "etag": "20cb7c00a8540c1aaa47e54540ac88b5"
+      },
+      {
+        "key": "promotions/wwechampionshipbelt100.png",
+        "size_bytes": 453147,
+        "last_modified": "2025-09-19T19:56:36.284Z",
+        "etag": "e6686ce2ad56fa1d44ae5bc7d4d1b6e5"
+      },
+      {
+        "key": "promotions/mrbeast1000.svg",
+        "size_bytes": 44138,
+        "last_modified": "2025-09-19T19:46:08.217Z",
+        "etag": "3010a241642b7b65c12c01fda35e238c"
+      },
+      {
+        "key": "promotions/laptopgaming799.png",
+        "size_bytes": 300458,
+        "last_modified": "2025-09-19T19:43:08.787Z",
+        "etag": "7d2edf2e9d932658031ad7c28f5dbff2"
+      },
+      {
+        "key": "promotions/walmart1000.svg",
+        "size_bytes": 11947,
+        "last_modified": "2025-09-19T19:35:45.389Z",
+        "etag": "7ea84a65c9b1243a3cc2ada023849e0c"
+      },
+      {
+        "key": "promotions/bouquetflowers100.png",
+        "size_bytes": 44595,
+        "last_modified": "2025-09-19T19:34:02.504Z",
+        "etag": "3fac3d082db7b9fa250276bcfb614e9f"
+      },
+      {
+        "key": "promotions/stackablecontainers100.png",
+        "size_bytes": 31442,
+        "last_modified": "2025-09-19T19:33:00.274Z",
+        "etag": "1b094bc318d0ebbda9dfc503e1e2b8e2"
+      },
+      {
+        "key": "promotions/kidscamera100.png",
+        "size_bytes": 53813,
+        "last_modified": "2025-09-19T19:20:12.180Z",
+        "etag": "2273228e235e923bc9d0f77049721dec"
+      },
+      {
+        "key": "promotions/kidsmartphoneblue100.png",
+        "size_bytes": 45423,
+        "last_modified": "2025-09-19T19:19:22.092Z",
+        "etag": "aa1eed740a58b5cee97b19d0f68931f7"
+      },
+      {
+        "key": "promotions/kidsmartphonepink100.png",
+        "size_bytes": 47262,
+        "last_modified": "2025-09-19T19:18:43.788Z",
+        "etag": "b907ad4f67fc30403802fc66e2a0ea35"
+      },
+      {
+        "key": "promotions/caseys750.svg",
+        "size_bytes": 8980,
+        "last_modified": "2025-09-19T19:17:38.730Z",
+        "etag": "50589786d1b443dde0f6f1200ad827f8"
+      },
+      {
+        "key": "promotions/sephora500.svg",
+        "size_bytes": 7339,
+        "last_modified": "2025-09-19T19:14:18.746Z",
+        "etag": "101faa93943d0e5a18207c9f7ffd8a60"
+      },
+      {
+        "key": "promotions/sephora250.png",
+        "size_bytes": 432997,
+        "last_modified": "2025-09-19T19:13:32.691Z",
+        "etag": "f22cdd351fcdc75518d19e1a5bec4ac3"
+      },
+      {
+        "key": "promotions/culvers750.svg",
+        "size_bytes": 9224,
+        "last_modified": "2025-09-19T19:10:57.574Z",
+        "etag": "f74f91d6ff7b1702ee13815859168f4c"
+      },
+      {
+        "key": "promotions/heb750.svg",
+        "size_bytes": 5968,
+        "last_modified": "2025-09-19T19:10:15.999Z",
+        "etag": "a23a034c95ba8493d1a8947dfdc29c69"
+      },
+      {
+        "key": "promotions/mysterybox1000.png",
+        "size_bytes": 274624,
+        "last_modified": "2025-09-19T19:08:40.458Z",
+        "etag": "ed084cbe229f2545224e0d8a836c130f"
+      },
+      {
+        "key": "promotions/cerave.png",
+        "size_bytes": 304176,
+        "last_modified": "2025-09-19T17:57:50.941Z",
+        "etag": "72c4e0c2d8744478269e1e0768e1e497"
+      },
+      {
+        "key": "promotions/downy.png",
+        "size_bytes": 365847,
+        "last_modified": "2025-09-19T17:57:10.251Z",
+        "etag": "3e9e7791208723deaca6ece1ce952594"
+      },
+      {
+        "key": "promotions/crumblcookies.png",
+        "size_bytes": 494722,
+        "last_modified": "2025-09-19T17:56:26.422Z",
+        "etag": "a6a7472cf8552459cd44ffc35b00191f"
+      },
+      {
+        "key": "promotions/tacklebox.png",
+        "size_bytes": 332571,
+        "last_modified": "2025-09-19T17:55:27.120Z",
+        "etag": "57ddc53629aa90c3376acda5583e0df5"
+      },
+      {
+        "key": "promotions/cross.png",
+        "size_bytes": 162941,
+        "last_modified": "2025-09-19T17:53:58.702Z",
+        "etag": "6c45409bec69a20d804314f5c4a59cee"
+      },
+      {
+        "key": "promotions/stopshop1000.svg",
+        "size_bytes": 11199,
+        "last_modified": "2025-09-19T17:52:13.084Z",
+        "etag": "2bab795742066b633c22536a7d9e5d51"
+      },
+      {
+        "key": "promotions/esteelauder1000.svg",
+        "size_bytes": 15514,
+        "last_modified": "2025-09-19T17:20:08.901Z",
+        "etag": "a2a663421229f4ee61b6e47a14baed14"
+      },
+      {
+        "key": "promotions/metaldetector.png",
+        "size_bytes": 235068,
+        "last_modified": "2025-09-19T17:18:07.351Z",
+        "etag": "aea61b32f29797a3e0700132916a4f90"
+      },
+      {
+        "key": "promotions/planterseeds1000.png",
+        "size_bytes": 308272,
+        "last_modified": "2025-09-19T17:16:32.628Z",
+        "etag": "70df2b1f194b17fbd2fa98d1d3227c04"
+      },
+      {
+        "key": "promotions/dollargeneral100.svg",
+        "size_bytes": 10278,
+        "last_modified": "2025-09-19T17:13:55.028Z",
+        "etag": "1bf1dd3411ab162435b68aa21b9e98f1"
+      },
+      {
+        "key": "promotions/bible100.png",
+        "size_bytes": 201858,
+        "last_modified": "2025-09-19T17:12:26.559Z",
+        "etag": "4e9f7897661c85aefe67b658ced33665"
+      },
+      {
+        "key": "promotions/fiidobeastelectricscooter1000.png",
+        "size_bytes": 205420,
+        "last_modified": "2025-09-19T17:11:44.197Z",
+        "etag": "43e8c1c3f2274c8e18f28d663416abf2"
+      },
+      {
+        "key": "promotions/costco750.svg",
+        "size_bytes": 14890,
+        "last_modified": "2025-09-19T17:09:13.894Z",
+        "etag": "c259111e3380dae8f892c797a30d5a07"
+      },
+      {
+        "key": "promotions/goldbar1000_v2.png",
+        "size_bytes": 159521,
+        "last_modified": "2025-09-19T17:07:38.718Z",
+        "etag": "6716b6c309b45d72a28e7e411ad4a0c6"
+      },
+      {
+        "key": "promotions/hydrojug500.png",
+        "size_bytes": 277766,
+        "last_modified": "2025-09-19T16:33:12.041Z",
+        "etag": "5a97afd241211936f29637f7b4e1f1fc"
+      },
+      {
+        "key": "promotions/dior100.png",
+        "size_bytes": 74934,
+        "last_modified": "2025-09-19T16:20:12.786Z",
+        "etag": "83027e01711fd00d28b0b81e7a189ca7"
+      },
+      {
+        "key": "promotions/fivebelow750.svg",
+        "size_bytes": 7200,
+        "last_modified": "2025-09-19T16:18:40.748Z",
+        "etag": "cd6a57e419b8c3436939f6ee92e13ccf"
+      },
+      {
+        "key": "promotions/walmart500.svg",
+        "size_bytes": 11616,
+        "last_modified": "2025-09-19T16:17:47.061Z",
+        "etag": "294206a33859d99baa1456d136bfc21a"
+      },
+      {
+        "key": "promotions/sheetz750.svg",
+        "size_bytes": 7603,
+        "last_modified": "2025-09-19T16:16:53.613Z",
+        "etag": "f5620b5b9986dea1d99c9740ee2c66e1"
+      },
+      {
+        "key": "promotions/wawa750.svg",
+        "size_bytes": 13844,
+        "last_modified": "2025-09-18T18:24:09.328Z",
+        "etag": "9e29d6c6ce2f7891346558d4516a54a6"
+      },
+      {
+        "key": "promotions/shein500.svg",
+        "size_bytes": 7585,
+        "last_modified": "2025-09-18T18:19:58.697Z",
+        "etag": "d35efc50165016c17374795b4d390e95"
+      },
+      {
+        "key": "promotions/nike1000.svg",
+        "size_bytes": 9428,
+        "last_modified": "2025-09-18T18:19:14.819Z",
+        "etag": "11bd0c98c31217209b3ab926c88d7daf"
+      },
+      {
+        "key": "promotions/nivea250.svg",
+        "size_bytes": 5490,
+        "last_modified": "2025-09-18T18:18:36.041Z",
+        "etag": "7113cbf9dbb15f73ca89441df21a5031"
+      },
+      {
+        "key": "promotions/bassproshop1000.png",
+        "size_bytes": 466005,
+        "last_modified": "2025-09-18T18:12:52.132Z",
+        "etag": "37eec10b2be62ba51835aed6560805f2"
+      },
+      {
+        "key": "promotions/heb1000.svg",
+        "size_bytes": 7378,
+        "last_modified": "2025-09-18T18:11:46.537Z",
+        "etag": "2888a835ac08a914201773bdd40885a0"
+      },
+      {
+        "key": "promotions/uber500.svg",
+        "size_bytes": 8744,
+        "last_modified": "2025-09-18T18:10:49.369Z",
+        "etag": "e9696dd2a64144291de510637aaf057e"
+      },
+      {
+        "key": "promotions/uber750.svg",
+        "size_bytes": 7658,
+        "last_modified": "2025-09-18T18:10:07.751Z",
+        "etag": "81d5f848abca36e8fe2441878ecd177e"
+      },
+      {
+        "key": "themes/1742473036180-2.ico",
+        "size_bytes": 8254,
+        "last_modified": "2025-09-09T21:16:06.782Z",
+        "etag": "434f4874e29d08786d47584d6670dae8"
+      },
+      {
+        "key": "promotions/versus_cokepepsi.svg",
+        "size_bytes": 16773,
+        "last_modified": "2025-09-09T16:24:13.270Z",
+        "etag": "54f0e86cb452ac455d02687ba4994e98"
+      },
+      {
+        "key": "promotions/versus_politics.svg",
+        "size_bytes": 4797,
+        "last_modified": "2025-09-09T16:22:24.322Z",
+        "etag": "db6f7190c6ee5ee1a6647236b1cb8da7"
+      },
+      {
+        "key": "promotions/automaticlitterbox250.png",
+        "size_bytes": 171294,
+        "last_modified": "2025-09-08T14:39:43.540Z",
+        "etag": "fca5bd1514f4b76eee12fe1cd44f4fa0"
+      },
+      {
+        "key": "promotions/grocery1000_easter.svg",
+        "size_bytes": 2633838,
+        "last_modified": "2025-09-08T14:39:02.612Z",
+        "etag": "f1588b1b3215d67b4b3b82b0f4618ea8"
+      },
+      {
+        "key": "promotions/bitcoin.svg",
+        "size_bytes": 1854,
+        "last_modified": "2025-09-08T14:35:31.864Z",
+        "etag": "be8695fc515fdd507a0c45c72aa7ff2a"
+      },
+      {
+        "key": "promotions/steelrockingchair200.png",
+        "size_bytes": 251722,
+        "last_modified": "2025-09-08T14:33:55.317Z",
+        "etag": "9417e4827251cef33d72ab0fcb1259cf"
+      },
+      {
+        "key": "promotions/winco1000.svg",
+        "size_bytes": 9819,
+        "last_modified": "2025-09-05T18:35:57.603Z",
+        "etag": "29c01bb5e2a9ed32ecc463a82f7cea48"
+      },
+      {
+        "key": "promotions/mcdonalds250.png",
+        "size_bytes": 492355,
+        "last_modified": "2025-09-05T17:43:44.620Z",
+        "etag": "44dd7a9b2314c6716fa4efdb0f9cfc1d"
+      },
+      {
+        "key": "promotions/crocs100.png",
+        "size_bytes": 337788,
+        "last_modified": "2025-09-05T17:42:15.746Z",
+        "etag": "b73176a7858b0b2dd7d77c575331a51f"
+      },
+      {
+        "key": "promotions/redtiger330.png",
+        "size_bytes": 184738,
+        "last_modified": "2025-09-05T17:39:54.572Z",
+        "etag": "1215fdeb7f466c1dba9b5ecf3d657b6a"
+      },
+      {
+        "key": "promotions/calphaloncookware730.png",
+        "size_bytes": 163927,
+        "last_modified": "2025-09-05T17:35:45.172Z",
+        "etag": "ee66664f3c164940abbc61d3935922d9"
+      },
+      {
+        "key": "promotions/mystery_target1000.png",
+        "size_bytes": 264099,
+        "last_modified": "2025-09-05T17:33:42.709Z",
+        "etag": "db390a9f17104bd8ce17235a1fc37e69"
+      },
+      {
+        "key": "promotions/dollartree100.svg",
+        "size_bytes": 51759,
+        "last_modified": "2025-09-05T17:32:53.611Z",
+        "etag": "16551e5017bdc8e3c7683b4a1dbe913f"
+      },
+      {
+        "key": "promotions/walmart_easter1000.svg",
+        "size_bytes": 1002267,
+        "last_modified": "2025-09-05T17:30:21.850Z",
+        "etag": "9ca31a614961d6a13cc4b59095ae462a"
+      },
+      {
+        "key": "promotions/amazon_easter1000.svg",
+        "size_bytes": 973299,
+        "last_modified": "2025-09-05T17:27:27.564Z",
+        "etag": "96e306a031fa50482e54264ea940502d"
+      },
+      {
+        "key": "promotions/canon800.png",
+        "size_bytes": 282637,
+        "last_modified": "2025-09-05T17:25:47.696Z",
+        "etag": "1b61a93f4c10a87999082a95b5196310"
+      },
+      {
+        "key": "promotions/lenovolaptop500.png",
+        "size_bytes": 169277,
+        "last_modified": "2025-09-05T17:20:24.635Z",
+        "etag": "c02ffae69d8755a282d1aa12155489d2"
+      },
+      {
+        "key": "promotions/hplaptop300.png",
+        "size_bytes": 240808,
+        "last_modified": "2025-09-05T17:19:25.398Z",
+        "etag": "0e37dacad082070756b036bb921d4d23"
+      },
+      {
+        "key": "promotions/niveahaul100.png",
+        "size_bytes": 324412,
+        "last_modified": "2025-09-05T17:16:00.707Z",
+        "etag": "234264045a5a8d97c5f2a74fce1b09ff"
+      },
+      {
+        "key": "promotions/michelintires250.png",
+        "size_bytes": 205112,
+        "last_modified": "2025-09-05T17:14:59.438Z",
+        "etag": "95d3d763ea58d9c6f3f51db5b01a14d1"
+      },
+      {
+        "key": "promotions/levishaul250.png",
+        "size_bytes": 408136,
+        "last_modified": "2025-09-05T17:14:01.845Z",
+        "etag": "24b5b28ad4a096435561f603aad12047"
+      },
+      {
+        "key": "promotions/milwaukeetools750.png",
+        "size_bytes": 408656,
+        "last_modified": "2025-09-05T17:11:06.050Z",
+        "etag": "f21f743b5e2939d8cf98c9693a6d6687"
+      },
+      {
+        "key": "promotions/keurigcoffeepods250.png",
+        "size_bytes": 511966,
+        "last_modified": "2025-09-05T17:07:26.323Z",
+        "etag": "6e65d0cd9786fcd2658779d0282058a1"
+      },
+      {
+        "key": "promotions/metaraybans329.png",
+        "size_bytes": 231411,
+        "last_modified": "2025-09-05T17:05:28.082Z",
+        "etag": "5e69e091c369b3ac4c90972ab6f56380"
+      },
+      {
+        "key": "promotions/jackerysolargenerator600.png",
+        "size_bytes": 318159,
+        "last_modified": "2025-09-05T17:04:16.491Z",
+        "etag": "36766c74b37c17e4a0c56266cbbd8669"
+      },
+      {
+        "key": "promotions/sakerminichainsaw120.png",
+        "size_bytes": 77219,
+        "last_modified": "2025-09-05T16:18:51.220Z",
+        "etag": "689fcf64b62d30bc5293aa569d3df6f4"
+      },
+      {
+        "key": "promotions/amazon100.svg",
+        "size_bytes": 11947,
+        "last_modified": "2025-09-05T16:15:37.373Z",
+        "etag": "5c2172da1ca03cf03b388fcd862e8c51"
+      },
+      {
+        "key": "promotions/jblpartybox310_500.png",
+        "size_bytes": 110818,
+        "last_modified": "2025-09-05T16:13:43.149Z",
+        "etag": "fa0abf78d37899fc1762283be71fe429"
+      },
+      {
+        "key": "promotions/christiansubscriptionboxes1000.png",
+        "size_bytes": 319695,
+        "last_modified": "2025-09-05T16:12:42.793Z",
+        "etag": "1cc648cd7eb5ca14e7055c0ba344aae2"
+      },
+      {
+        "key": "promotions/christiancruiseship1000.png",
+        "size_bytes": 226160,
+        "last_modified": "2025-09-05T16:11:42.971Z",
+        "etag": "9c7a7e96f17b5022d015a251abe931e6"
+      },
+      {
+        "key": "promotions/mcdonalds100.svg",
+        "size_bytes": 9708,
+        "last_modified": "2025-09-05T16:07:05.578Z",
+        "etag": "f00903c2da318033e9a9757913b90a19"
+      },
+      {
+        "key": "promotions/houseplantshop250.png",
+        "size_bytes": 34904,
+        "last_modified": "2025-09-05T16:03:39.840Z",
+        "etag": "c9eeea404232e1d8265642231eecc849"
+      },
+      {
+        "key": "promotions/plantset250.png",
+        "size_bytes": 307980,
+        "last_modified": "2025-09-05T16:02:37.210Z",
+        "etag": "3b15e9bded803feef599dc8e883b054f"
+      },
+      {
+        "key": "promotions/mysterybag1000.png",
+        "size_bytes": 194483,
+        "last_modified": "2025-09-05T15:59:51.340Z",
+        "etag": "c70fdb2e8e5fd9400a4f9cdb83d5c11f"
+      },
+      {
+        "key": "promotions/kiko700.png",
+        "size_bytes": 279418,
+        "last_modified": "2025-09-05T15:58:33.391Z",
+        "etag": "7d40746511d6d42c54e826c9c7478929"
+      },
+      {
+        "key": "promotions/capitalone1000.svg",
+        "size_bytes": 11854,
+        "last_modified": "2025-09-05T15:57:45.038Z",
+        "etag": "66ee678244d69a935399159cf64a3b99"
+      },
+      {
+        "key": "promotions/ipad1000.png",
+        "size_bytes": 207363,
+        "last_modified": "2025-09-05T15:56:37.790Z",
+        "etag": "7b389da325bc394855d2302edf72288c"
+      },
+      {
+        "key": "promotions/yetisamplepack1000.png",
+        "size_bytes": 128181,
+        "last_modified": "2025-09-05T15:55:27.292Z",
+        "etag": "55a551a6e83681d098156691608127a7"
+      },
+      {
+        "key": "promotions/dominos250.svg",
+        "size_bytes": 34481,
+        "last_modified": "2025-09-05T15:54:09.724Z",
+        "etag": "156289b1233f928c2e83b9273ce3abd1"
+      },
+      {
+        "key": "promotions/innoutburger750.svg",
+        "size_bytes": 14643,
+        "last_modified": "2025-09-05T15:53:31.276Z",
+        "etag": "e046acf70e578d6106be511943d4bbd7"
+      },
+      {
+        "key": "promotions/chipotle750.svg",
+        "size_bytes": 13586,
+        "last_modified": "2025-09-05T15:52:38.970Z",
+        "etag": "1138804685bba58ad01f47301dd6588e"
+      },
+      {
+        "key": "promotions/wafflehouse750.svg",
+        "size_bytes": 11489,
+        "last_modified": "2025-09-05T15:51:44.930Z",
+        "etag": "187324a9d4fde8030f787d8819ede5c3"
+      },
+      {
+        "key": "promotions/dominos750.svg",
+        "size_bytes": 33730,
+        "last_modified": "2025-09-05T15:50:50.732Z",
+        "etag": "956291b2ae3d626e642ebd9413379e99"
+      },
+      {
+        "key": "promotions/menscologne.png",
+        "size_bytes": 397344,
+        "last_modified": "2025-09-05T15:50:01.709Z",
+        "etag": "c08b38da39d09c529a5a96e50237f0b3"
+      },
+      {
+        "key": "promotions/louisvuittonpurse.png",
+        "size_bytes": 281644,
+        "last_modified": "2025-09-05T15:48:57.689Z",
+        "etag": "2ce0f26004067dfb2b6e6af651f42ed4"
+      },
+      {
+        "key": "promotions/dellinspironlaptop.png",
+        "size_bytes": 179959,
+        "last_modified": "2025-09-05T15:47:58.691Z",
+        "etag": "250a004cb8555b673cc7e289c8b83551"
+      },
+      {
+        "key": "promotions/dewalt.svg",
+        "size_bytes": 3291,
+        "last_modified": "2025-09-05T15:46:42.303Z",
+        "etag": "40ef15e6fc95aa5521e9126727f7bbeb"
+      },
+      {
+        "key": "promotions/megamillions500.png",
+        "size_bytes": 116123,
+        "last_modified": "2025-09-05T15:45:35.767Z",
+        "etag": "7c20fedb59dacbfc609892009375d62e"
+      },
+      {
+        "key": "promotions/powerball500.svg",
+        "size_bytes": 18670,
+        "last_modified": "2025-09-05T14:50:54.489Z",
+        "etag": "e6f2c42a984e2fdb73ce7d6abed0b1f0"
+      },
+      {
+        "key": "promotions/starbucks100.svg",
+        "size_bytes": 25459,
+        "last_modified": "2025-09-05T14:48:27.006Z",
+        "etag": "1a21448fbdd681e705816532a838245f"
+      },
+      {
+        "key": "promotions/treadmill250.png",
+        "size_bytes": 79829,
+        "last_modified": "2025-09-05T14:46:25.692Z",
+        "etag": "c77b403e6ceb833b066d8257d21d82c8"
+      },
+      {
+        "key": "promotions/amazonfire200.png",
+        "size_bytes": 271064,
+        "last_modified": "2025-09-05T14:44:21.538Z",
+        "etag": "857b54a1779b6352dfe467adbeabc001"
+      },
+      {
+        "key": "promotions/icemachine100.png",
+        "size_bytes": 130820,
+        "last_modified": "2025-09-05T14:43:17.038Z",
+        "etag": "de498c64f220d976347d679ae7b31a47"
+      },
+      {
+        "key": "promotions/sephorahaul100.png",
+        "size_bytes": 370945,
+        "last_modified": "2025-09-05T14:38:54.536Z",
+        "etag": "2f188ebc7ee92968fabef29aad0b4366"
+      },
+      {
+        "key": "promotions/dyson1000.png",
+        "size_bytes": 235990,
+        "last_modified": "2025-09-05T14:36:51.396Z",
+        "etag": "99ecb93c520eaef6161ad0ac275f151d"
+      },
+      {
+        "key": "promotions/kirkland1000.svg",
+        "size_bytes": 849801,
+        "last_modified": "2025-09-05T14:34:17.328Z",
+        "etag": "40d5c571bae0dfcf3aab0e24b3773a49"
+      },
+      {
+        "key": "promotions/keurig250.png",
+        "size_bytes": 256771,
+        "last_modified": "2025-09-05T14:33:15.586Z",
+        "etag": "666a1fe8c6e58b1099c33bb9f57602bb"
+      },
+      {
+        "key": "promotions/keurig.png",
+        "size_bytes": 282319,
+        "last_modified": "2025-09-05T14:31:55.114Z",
+        "etag": "41e689095fd5ad8bcc507c1ba27dda07"
+      },
+      {
+        "key": "promotions/redbullminifridge250.png",
+        "size_bytes": 254213,
+        "last_modified": "2025-09-05T14:29:52.189Z",
+        "etag": "04ab9f58bcb5326f54f389484c245587"
+      },
+      {
+        "key": "promotions/cocacolaminifridge250.png",
+        "size_bytes": 272167,
+        "last_modified": "2025-09-05T14:27:42.989Z",
+        "etag": "b7b85d3a919f434cb7e492012777919b"
+      },
+      {
+        "key": "promotions/chime1000.svg",
+        "size_bytes": 8155,
+        "last_modified": "2025-09-05T01:41:08.223Z",
+        "etag": "164c3fdd2b402eca7c8246a9b51369b9"
+      },
+      {
+        "key": "promotions/survivalkit1000.png",
+        "size_bytes": 247215,
+        "last_modified": "2025-09-05T01:39:02.493Z",
+        "etag": "a1936c397ba8639dd5d513fe1ddf145e"
+      },
+      {
+        "key": "promotions/mysteryelectronics1000.png",
+        "size_bytes": 132856,
+        "last_modified": "2025-09-05T01:37:29.757Z",
+        "etag": "5ae9835bc5092ebdcdadc2329f516144"
+      },
+      {
+        "key": "promotions/mysterygiftcard1000 (1).svg",
+        "size_bytes": 18555,
+        "last_modified": "2025-09-05T01:33:44.100Z",
+        "etag": "e731e460328b08f2b82761e661e4d4a0"
+      },
+      {
+        "key": "promotions/dollartree1000.svg",
+        "size_bytes": 65399,
+        "last_modified": "2025-09-05T01:32:49.303Z",
+        "etag": "465427190ec14e92fb6fa09678741421"
+      },
+      {
+        "key": "promotions/fooddelivery1000.svg",
+        "size_bytes": 39721,
+        "last_modified": "2025-09-05T01:31:57.044Z",
+        "etag": "9fda516f97d46d9e433dce17b41e2a34"
+      },
+      {
+        "key": "promotions/disney1000.svg",
+        "size_bytes": 18395,
+        "last_modified": "2025-09-05T01:30:34.692Z",
+        "etag": "a5b31508b6975a129046b69a3aab8270"
+      },
+      {
+        "key": "promotions/oxo250.png",
+        "size_bytes": 363437,
+        "last_modified": "2025-09-05T01:29:26.398Z",
+        "etag": "c974fcef97c469e3af16c0e86481ba8e"
+      },
+      {
+        "key": "promotions/rubbermaid250.png",
+        "size_bytes": 535130,
+        "last_modified": "2025-09-05T01:28:07.497Z",
+        "etag": "0ad08dbf6a1541081997e054b25829fa"
+      },
+      {
+        "key": "promotions/jetblue1000.svg",
+        "size_bytes": 13896,
+        "last_modified": "2025-09-04T22:00:32.687Z",
+        "etag": "1ae689484e219629f8b816fb9a92763e"
+      },
+      {
+        "key": "promotions/airlineticket1000.svg",
+        "size_bytes": 565602,
+        "last_modified": "2025-09-04T21:59:19.872Z",
+        "etag": "2fd4e92dd0a757009ecf4c1908ea163f"
+      },
+      {
+        "key": "promotions/streaming1000.svg",
+        "size_bytes": 22555,
+        "last_modified": "2025-09-04T21:57:58.839Z",
+        "etag": "d6f50416ed256b9969a24ae54f4ca06c"
+      },
+      {
+        "key": "promotions/netflix1000.svg",
+        "size_bytes": 6612,
+        "last_modified": "2025-09-04T21:56:19.534Z",
+        "etag": "e1220997ba94e795b7fae38b13b7f39f"
+      },
+      {
+        "key": "promotions/netflix.svg",
+        "size_bytes": 1663,
+        "last_modified": "2025-09-04T21:55:21.143Z",
+        "etag": "9bd386532cfbbf65ccc678d9f507df8c"
+      },
+      {
+        "key": "promotions/mysterycandybox.png",
+        "size_bytes": 297969,
+        "last_modified": "2025-09-04T21:54:47.100Z",
+        "etag": "76087f788d518d5e9e410ee453537b9f"
+      },
+      {
+        "key": "promotions/samsclub1000.svg",
+        "size_bytes": 12210,
+        "last_modified": "2025-09-04T21:53:31.899Z",
+        "etag": "d145a7ac286d01d2ec7778c0a9bafabe"
+      },
+      {
+        "key": "promotions/outback1000.svg",
+        "size_bytes": 39499,
+        "last_modified": "2025-09-04T21:44:37.268Z",
+        "etag": "5ec7527a1047dd49882c1ab0d3d1c9f3"
+      },
+      {
+        "key": "promotions/cvs1000.svg",
+        "size_bytes": 7163,
+        "last_modified": "2025-09-04T21:43:22.372Z",
+        "etag": "394a482f6080eb4afc502fd7ffe1f4c6"
+      },
+      {
+        "key": "promotions/pharmacy1000.svg",
+        "size_bytes": 30850,
+        "last_modified": "2025-09-04T21:42:30.996Z",
+        "etag": "b80eea5781bf0ef32a588672a2bf71e8"
+      },
+      {
+        "key": "promotions/tupperware250.png",
+        "size_bytes": 192695,
+        "last_modified": "2025-09-04T21:41:33.363Z",
+        "etag": "a26650c3f66d05bc7eb5c902dffd76d3"
+      },
+      {
+        "key": "promotions/chewy1000.svg",
+        "size_bytes": 8545,
+        "last_modified": "2025-09-04T21:40:47.810Z",
+        "etag": "56390a3db9782ce10a9c2774fbc8d328"
+      },
+      {
+        "key": "promotions/chewy500.svg",
+        "size_bytes": 8167,
+        "last_modified": "2025-09-04T21:40:07.394Z",
+        "etag": "15f3031c8b16e9db773d95baca032b6c"
+      },
+      {
+        "key": "promotions/taxes1000.svg",
+        "size_bytes": 39918,
+        "last_modified": "2025-09-04T21:37:45.015Z",
+        "etag": "b152cd0942dd37ba5a1515cad0edd41f"
+      },
+      {
+        "key": "promotions/taxes500.svg",
+        "size_bytes": 39652,
+        "last_modified": "2025-09-04T21:35:13.328Z",
+        "etag": "150fb44579a078ae81628b150df3771f"
+      },
+      {
+        "key": "promotions/visa500.svg",
+        "size_bytes": 6211,
+        "last_modified": "2025-09-04T21:31:53.689Z",
+        "etag": "b95ea5da70fafbfd275877feb6c57f63"
+      },
+      {
+        "key": "promotions/lowes1000.svg",
+        "size_bytes": 8502,
+        "last_modified": "2025-09-04T21:26:45.237Z",
+        "etag": "e6b8e78f2a61a2dacfd400ff12de0922"
+      },
+      {
+        "key": "promotions/mattel250.svg",
+        "size_bytes": 7386,
+        "last_modified": "2025-09-04T21:25:32.489Z",
+        "etag": "0ef1e54b2c98d0643375b87c0f5cfd19"
+      },
+      {
+        "key": "promotions/lego250.svg",
+        "size_bytes": 11293,
+        "last_modified": "2025-09-04T20:58:40.620Z",
+        "etag": "af1b297211e51ab95fccc53ccfb6d71a"
+      },
+      {
+        "key": "promotions/amazonholiday1000.png",
+        "size_bytes": 192683,
+        "last_modified": "2025-09-04T20:49:58.805Z",
+        "etag": "f07bb3b4494c649fac6608383e0d5277"
+      },
+      {
+        "key": "promotions/cashapp_holiday.png",
+        "size_bytes": 76992,
+        "last_modified": "2025-09-04T20:46:07.192Z",
+        "etag": "e26691762490f8ff9d772812f174441d"
+      },
+      {
+        "key": "promotions/walmart_bundle_750.png",
+        "size_bytes": 272913,
+        "last_modified": "2025-09-04T20:43:46.355Z",
+        "etag": "eeb1b49853cd159de229447896a1a497"
+      },
+      {
+        "key": "promotions/apple_bundle_1000.png",
+        "size_bytes": 382219,
+        "last_modified": "2025-09-04T20:41:41.596Z",
+        "etag": "0494da1911f9d560a3c131770de928a0"
+      },
+      {
+        "key": "promotions/groceryreward1000.svg",
+        "size_bytes": 2751191,
+        "last_modified": "2025-09-04T20:39:51.224Z",
+        "etag": "a501344eb9f63092f2907570e5b0adee"
+      },
+      {
+        "key": "promotions/walmart250.svg",
+        "size_bytes": 11272,
+        "last_modified": "2025-09-04T20:36:55.318Z",
+        "etag": "368dc7bd9a3db56e6e8f626fe67dc3b7"
+      },
+      {
+        "key": "promotions/costco620.svg",
+        "size_bytes": 48750,
+        "last_modified": "2025-09-04T20:35:03.463Z",
+        "etag": "36d4cdca430a1ac694e586e4de5c1c11"
+      },
+      {
+        "key": "promotions/walmart600.png",
+        "size_bytes": 138568,
+        "last_modified": "2025-09-04T20:33:42.467Z",
+        "etag": "45cfb91b125645070fa8e12f6eee78cf"
+      },
+      {
+        "key": "promotions/temu750.svg",
+        "size_bytes": 8678,
+        "last_modified": "2025-09-04T20:32:31.141Z",
+        "etag": "3d42e9638ba4158672c715291ff232dd"
+      },
+      {
+        "key": "promotions/adidas500.svg",
+        "size_bytes": 11022,
+        "last_modified": "2025-09-04T20:30:21.031Z",
+        "etag": "9c5586326b08f7fa205f7c02aaa811aa"
+      },
+      {
+        "key": "promotions/doordash250.svg",
+        "size_bytes": 10141,
+        "last_modified": "2025-09-04T20:29:40.163Z",
+        "etag": "987444ab82f1c241d0f6fc91d98d0361"
+      },
+      {
+        "key": "promotions/gascard1000.svg",
+        "size_bytes": 1887007,
+        "last_modified": "2025-09-04T20:27:42.926Z",
+        "etag": "2fe600b3a610ce2b0eee3a0bf620554f"
+      },
+      {
+        "key": "promotions/traderjoes1000.svg",
+        "size_bytes": 10939,
+        "last_modified": "2025-09-04T20:26:03.224Z",
+        "etag": "6b1a02001c233f5c207a41f7227d0754"
+      },
+      {
+        "key": "promotions/hyvee1000.svg",
+        "size_bytes": 12954,
+        "last_modified": "2025-09-04T20:20:59.622Z",
+        "etag": "f7c521b1e770480bec707f1523e7b2f2"
+      },
+      {
+        "key": "promotions/publix1000.svg",
+        "size_bytes": 8700,
+        "last_modified": "2025-09-04T20:20:04.826Z",
+        "etag": "9ffab05ab869daedbe142cf50369643b"
+      },
+      {
+        "key": "promotions/kiko700.svg",
+        "size_bytes": 9114,
+        "last_modified": "2025-09-04T19:25:01.096Z",
+        "etag": "6263447a8b915d64a2b9e97cc67fb0d7"
+      },
+      {
+        "key": "promotions/iphone16pro.png",
+        "size_bytes": 249233,
+        "last_modified": "2025-09-04T19:24:15.486Z",
+        "etag": "8a150d7e60df9f47a0993c3cd7244b14"
+      },
+      {
+        "key": "promotions/redlobster1000_old.svg",
+        "size_bytes": 416694,
+        "last_modified": "2025-09-04T19:22:00.427Z",
+        "etag": "ddff71619cef069d555bef609c2f0ade"
+      },
+      {
+        "key": "promotions/huggies550.svg",
+        "size_bytes": 13499,
+        "last_modified": "2025-09-04T19:15:59.097Z",
+        "etag": "a86b79e6453d207d9b71a4d357db207d"
+      },
+      {
+        "key": "promotions/amazon_haul.png",
+        "size_bytes": 415049,
+        "last_modified": "2025-09-04T19:14:48.488Z",
+        "etag": "abb6c1da6f8580c61966f3e1ee275014"
+      },
+      {
+        "key": "promotions/doordash750.svg",
+        "size_bytes": 9403,
+        "last_modified": "2025-09-04T19:03:01.824Z",
+        "etag": "805d200c1724099a76698c50fe07a976"
+      },
+      {
+        "key": "promotions/mcdonalds250.svg",
+        "size_bytes": 10204,
+        "last_modified": "2025-09-04T18:56:30.639Z",
+        "etag": "f9339d97805cdc5911362e31b51a9089"
+      },
+      {
+        "key": "promotions/chickfila750.svg",
+        "size_bytes": 14095,
+        "last_modified": "2025-09-04T18:53:39.612Z",
+        "etag": "6896e5f54079c8f629cf67f5ec5ac1cf"
+      },
+      {
+        "key": "promotions/macbook1000.png",
+        "size_bytes": 204420,
+        "last_modified": "2025-09-04T18:50:18.369Z",
+        "etag": "193f830a1df0500db4a82744b8b0df75"
+      },
+      {
+        "key": "promotions/walmart100.svg",
+        "size_bytes": 10717,
+        "last_modified": "2025-09-04T18:48:46.122Z",
+        "etag": "066e18e10c7d50f596b8e6447de52c03"
+      },
+      {
+        "key": "promotions/cocacola1000.svg",
+        "size_bytes": 15706,
+        "last_modified": "2025-09-04T18:47:08.811Z",
+        "etag": "2f1b70cddd1ad2db0113708eabc7466f"
+      },
+      {
+        "key": "promotions/kfc1000.svg",
+        "size_bytes": 28805,
+        "last_modified": "2025-09-04T18:45:58.744Z",
+        "etag": "d3df8c6294a536c518f7aea185f24c34"
+      },
+      {
+        "key": "promotions/wendys1000.svg",
+        "size_bytes": 48951,
+        "last_modified": "2025-09-04T18:45:11.255Z",
+        "etag": "92ab18e5d85237f826062fca32d4721c"
+      },
+      {
+        "key": "promotions/starbucks.svg",
+        "size_bytes": 21647,
+        "last_modified": "2025-09-04T18:44:25.737Z",
+        "etag": "7eb3a3973f3b086c037049c15b75cb53"
+      },
+      {
+        "key": "promotions/toyotarav4_1000.png",
+        "size_bytes": 160167,
+        "last_modified": "2025-09-04T18:34:06.883Z",
+        "etag": "6aad4d52ca2f03dc1d795919f43c8600"
+      },
+      {
+        "key": "promotions/dove1000.png",
+        "size_bytes": 242861,
+        "last_modified": "2025-09-04T18:28:48.091Z",
+        "etag": "51ea3ee04a5517d9f3202a36f4256371"
+      },
+      {
+        "key": "promotions/pandora750.svg",
+        "size_bytes": 12697,
+        "last_modified": "2025-09-04T18:26:13.039Z",
+        "etag": "3537bb8a0f3759c82e5b2ee2ad38c359"
+      },
+      {
+        "key": "promotions/dewalt750.svg",
+        "size_bytes": 6862,
+        "last_modified": "2025-09-04T18:25:16.536Z",
+        "etag": "ac76f3d4121095e3e7454a3edb23ac02"
+      },
+      {
+        "key": "promotions/binance1000.svg",
+        "size_bytes": 9274,
+        "last_modified": "2025-09-03T22:01:37.563Z",
+        "etag": "675a2424ea37629e76235ed62b9a6dcd"
+      },
+      {
+        "key": "promotions/milwaukee750.svg",
+        "size_bytes": 7274,
+        "last_modified": "2025-09-03T22:00:40.070Z",
+        "etag": "2821a51ceb7beeb10a72fd8725abad05"
+      },
+      {
+        "key": "promotions/arbys750.svg",
+        "size_bytes": 14292,
+        "last_modified": "2025-09-03T21:48:08.811Z",
+        "etag": "0f0bd65a27c4a8d627acb1a1aac993fe"
+      },
+      {
+        "key": "promotions/stevemadden750.svg",
+        "size_bytes": 9592,
+        "last_modified": "2025-09-03T21:29:19.407Z",
+        "etag": "59bccad20aa3026ce64b7f7a425b6aeb"
+      },
+      {
+        "key": "promotions/katespade750.svg",
+        "size_bytes": 16463,
+        "last_modified": "2025-09-03T21:28:37.542Z",
+        "etag": "acc2cf779b7f0b0d6826687846f11a89"
+      },
+      {
+        "key": "promotions/whitefox750.svg",
+        "size_bytes": 9888,
+        "last_modified": "2025-09-03T21:26:17.353Z",
+        "etag": "b8d7f98964d26911863c1f0b84d7fea4"
+      },
+      {
+        "key": "promotions/expedia750.svg",
+        "size_bytes": 11072,
+        "last_modified": "2025-09-03T21:25:15.639Z",
+        "etag": "525f20067d671a209e13dc83c666a278"
+      },
+      {
+        "key": "promotions/ikea750.svg",
+        "size_bytes": 6099,
+        "last_modified": "2025-09-03T21:24:23.654Z",
+        "etag": "e2370e05369bda19847e6082f0c25491"
+      },
+      {
+        "key": "promotions/target1000.svg",
+        "size_bytes": 7567,
+        "last_modified": "2025-09-03T21:22:49.440Z",
+        "etag": "9af9627029866224bad3526ac3abcbbb"
+      },
+      {
+        "key": "promotions/dollargeneral1000.svg",
+        "size_bytes": 11464,
+        "last_modified": "2025-09-03T21:21:33.159Z",
+        "etag": "d323bdb0b0014c632974f9f972f06f12"
+      },
+      {
+        "key": "promotions/target_card.svg",
+        "size_bytes": 2549,
+        "last_modified": "2025-09-03T21:20:44.516Z",
+        "etag": "2611f2a8c36a784fb69c73444bc9b8bf"
+      },
+      {
+        "key": "promotions/costco1000.svg",
+        "size_bytes": 16337,
+        "last_modified": "2025-09-03T21:13:47.708Z",
+        "etag": "f506feef793c4455c2a08772f576c375"
+      },
+      {
+        "key": "promotions/mcdonalds500.svg",
+        "size_bytes": 10568,
+        "last_modified": "2025-09-03T21:12:06.273Z",
+        "etag": "a147afe1e4973bc74e76adc3819e1197"
+      },
+      {
+        "key": "promotions/zelle1000.svg",
+        "size_bytes": 10518,
+        "last_modified": "2025-09-03T21:10:55.018Z",
+        "etag": "8958cfd440013e990ec999db7caa721b"
+      },
+      {
+        "key": "promotions/torrid750.svg",
+        "size_bytes": 8122,
+        "last_modified": "2025-09-03T21:09:35.106Z",
+        "etag": "9f49997838165bcf9f4ada5659a5821f"
+      },
+      {
+        "key": "promotions/bathbodyworks750.svg",
+        "size_bytes": 10222,
+        "last_modified": "2025-09-03T21:08:39.961Z",
+        "etag": "9366189224bf1900476bed8ba15180c7"
+      },
+      {
+        "key": "promotions/mcdonalds1000.svg",
+        "size_bytes": 10858,
+        "last_modified": "2025-09-03T21:07:46.129Z",
+        "etag": "6ba175301946574361c82b4dbb41352f"
+      },
+      {
+        "key": "promotions/zara750.svg",
+        "size_bytes": 5976,
+        "last_modified": "2025-09-03T21:06:04.846Z",
+        "etag": "361fd8f6336dd2658429241a5071c4cc"
+      },
+      {
+        "key": "promotions/venmo.svg",
+        "size_bytes": 1222,
+        "last_modified": "2025-09-03T21:05:04.697Z",
+        "etag": "ded69412f4f57c5b3dfb102420de62e4"
+      },
+      {
+        "key": "promotions/sephora750.svg",
+        "size_bytes": 6277,
+        "last_modified": "2025-09-03T21:03:49.052Z",
+        "etag": "8c3399ff14bcd8f66af352aecb33c7ad"
+      },
+      {
+        "key": "promotions/fashionnova750.svg",
+        "size_bytes": 8728,
+        "last_modified": "2025-09-03T21:02:53.443Z",
+        "etag": "ae1ab37f4cfa1e57b09a75094b1ccbe0"
+      },
+      {
+        "key": "promotions/carnival750.svg",
+        "size_bytes": 11411,
+        "last_modified": "2025-09-03T21:02:04.291Z",
+        "etag": "951888cbdd7d3fffdf16806936b788a9"
+      },
+      {
+        "key": "promotions/kroger750.svg",
+        "size_bytes": 11168,
+        "last_modified": "2025-09-03T20:59:55.748Z",
+        "etag": "6bd96c4dda80264d38256fdc6e418430"
+      },
+      {
+        "key": "promotions/aldi750.svg",
+        "size_bytes": 18662,
+        "last_modified": "2025-09-03T20:58:14.368Z",
+        "etag": "a5dcb92df2c327474abe6321d8bc269e"
+      },
+      {
+        "key": "promotions/bathbodyworks.svg",
+        "size_bytes": 14289,
+        "last_modified": "2025-09-03T20:56:50.991Z",
+        "etag": "fe9259c3cfbfae1454a07b42ccb1c899"
+      },
+      {
+        "key": "promotions/shein750.svg",
+        "size_bytes": 6514,
+        "last_modified": "2025-09-03T20:44:53.262Z",
+        "etag": "82a53b012b0f0c0f82298ebb43a127f5"
+      },
+      {
+        "key": "promotions/mac750.svg",
+        "size_bytes": 8807,
+        "last_modified": "2025-09-03T20:41:47.819Z",
+        "etag": "8f06ff50f4ca0eb85acebf35712393ec"
+      },
+      {
+        "key": "promotions/mac.svg",
+        "size_bytes": 5235,
+        "last_modified": "2025-09-03T20:01:29.014Z",
+        "etag": "036ca0393c486d13806cbf6caa27ad99"
+      },
+      {
+        "key": "promotions/burgerking1000.svg",
+        "size_bytes": 13193,
+        "last_modified": "2025-09-03T19:59:29.891Z",
+        "etag": "637bc95cfbcc868c715bea9fa4e9364d"
+      },
+      {
+        "key": "promotions/mysterybox_1000.svg",
+        "size_bytes": 51587,
+        "last_modified": "2025-09-03T19:51:00.763Z",
+        "etag": "da3a3ae946adbb93939758df492743aa"
+      },
+      {
+        "key": "promotions/amazon1000.svg",
+        "size_bytes": 13133,
+        "last_modified": "2025-09-03T19:48:22.345Z",
+        "etag": "6135c0726d0ced9c0ddec2b87eb174ad"
+      },
+      {
+        "key": "promotions/sephora1000.svg",
+        "size_bytes": 7679,
+        "last_modified": "2025-09-03T19:46:43.813Z",
+        "etag": "7fb3b9d8a38f53db54e8a2c01b01cf42"
+      },
+      {
+        "key": "promotions/sephora.svg",
+        "size_bytes": 2680,
+        "last_modified": "2025-09-03T19:20:57.508Z",
+        "etag": "f381173f11ad3d0b8a7975fb67138660"
+      },
+      {
+        "key": "promotions/mcdonalds_old.svg",
+        "size_bytes": 2290,
+        "last_modified": "2025-09-03T19:18:55.191Z",
+        "etag": "40968fece2557d52094748413e1d98d8"
+      },
+      {
+        "key": "promotions/paypal.svg",
+        "size_bytes": 3509,
+        "last_modified": "2025-09-03T19:10:15.344Z",
+        "etag": "878cff0c3e48e95a1c80d1d82e7db442"
+      },
+      {
+        "key": "promotions/gascard500.svg",
+        "size_bytes": 1886712,
+        "last_modified": "2025-08-28T20:22:11.791Z",
+        "etag": "3e30c8b94b5fb6e901c9e01c36ed261b"
+      },
+      {
+        "key": "promotions/apple_watch.png",
+        "size_bytes": 254085,
+        "last_modified": "2025-08-28T18:51:57.730Z",
+        "etag": "1ec7762aa4bc3cd45637cc14ef55fe83"
+      },
+      {
+        "key": "promotions/shein_mystery.png",
+        "size_bytes": 306994,
+        "last_modified": "2025-08-27T19:08:28.154Z",
+        "etag": "63e3550bc23f0a10c5960c05f8706787"
+      },
+      {
+        "key": "themes/favicon_health_site.ico",
+        "size_bytes": 4286,
+        "last_modified": "2025-08-27T02:17:50.540Z",
+        "etag": "13d3da767b7f9e3929d5e5ba7df9a004"
+      },
+      {
+        "key": "pages/healthplanscouts_light_logo.svg",
+        "size_bytes": 15537,
+        "last_modified": "2025-08-27T02:14:07.554Z",
+        "etag": "ccac875f30531b9cc1a12940322573c2"
+      },
+      {
+        "key": "pages/healthplanscouts_dark_logo.svg",
+        "size_bytes": 15595,
+        "last_modified": "2025-08-27T02:14:04.540Z",
+        "etag": "1063e864c978c6c11d6e9f89aa86d23a"
+      },
+      {
+        "key": "promotions/mysterygiftcard1000.svg",
+        "size_bytes": 18555,
+        "last_modified": "2025-08-26T15:10:57.196Z",
+        "etag": "e731e460328b08f2b82761e661e4d4a0"
+      },
+      {
+        "key": "promotions/mystery_walmart1000.png",
+        "size_bytes": 275238,
+        "last_modified": "2025-08-26T15:08:16.796Z",
+        "etag": "ca5e216d6b6ef52f62bdd95cbacff928"
+      },
+      {
+        "key": "promotions/groceryreward.svg",
+        "size_bytes": 2751191,
+        "last_modified": "2025-08-25T18:46:10.022Z",
+        "etag": "a501344eb9f63092f2907570e5b0adee"
+      },
+      {
+        "key": "promotions/stanley1000.png",
+        "size_bytes": 171390,
+        "last_modified": "2025-08-22T18:25:08.254Z",
+        "etag": "1af0ddb67c069292aa66deda2c1145ea"
+      },
+      {
+        "key": "promotions/ebike1000.png",
+        "size_bytes": 257120,
+        "last_modified": "2025-08-22T18:03:46.246Z",
+        "etag": "e2cb6811f1eade51e4e2e8be9fbd3ee7"
+      },
+      {
+        "key": "promotions/jordan.png",
+        "size_bytes": 363308,
+        "last_modified": "2025-08-22T18:01:01.002Z",
+        "etag": "f67576bbc36bd91762494b363b6789cc"
+      },
+      {
+        "key": "promotions/mystery_amazon1000.png",
+        "size_bytes": 272777,
+        "last_modified": "2025-08-22T16:46:44.432Z",
+        "etag": "471605f7e68e90bd1406a45156df4e2f"
+      },
+      {
+        "key": "promotions/amazon boxes.png",
+        "size_bytes": 299905,
+        "last_modified": "2025-08-22T16:45:39.683Z",
+        "etag": "e3d50816a57a4f2fec6d7442496f84df"
+      },
+      {
+        "key": "promotions/amazon_old.svg",
+        "size_bytes": 7154,
+        "last_modified": "2025-08-22T16:44:19.009Z",
+        "etag": "db9787100d1b9e57de4503e0349dd74d"
+      },
+      {
+        "key": "promotions/kroger_old.png",
+        "size_bytes": 44187,
+        "last_modified": "2025-08-22T16:41:57.048Z",
+        "etag": "c93a0f6bd609951fe32f55370489fbf0"
+      },
+      {
+        "key": "promotions/walmart1000_holiday.png",
+        "size_bytes": 67010,
+        "last_modified": "2025-08-22T16:39:50.345Z",
+        "etag": "b391452e4bea79bec2ad8f175b20e67c"
+      },
+      {
+        "key": "promotions/mysterybox.png",
+        "size_bytes": 283961,
+        "last_modified": "2025-08-22T16:38:01.129Z",
+        "etag": "9fe4d29e48e149a7c242b98420c8a25a"
+      },
+      {
+        "key": "promotions/walmart.svg",
+        "size_bytes": 5447,
+        "last_modified": "2025-08-22T16:34:19.437Z",
+        "etag": "8c73e30a2d59ca3d7527b935f44ce4ce"
+      },
+      {
+        "key": "promotions/txt4.png",
+        "size_bytes": 47943,
+        "last_modified": "2025-08-21T22:02:33.089Z",
+        "etag": "51a73f73c54d5be88bc7949def503812"
+      },
+      {
+        "key": "promotions/texasroadhouse1000.svg",
+        "size_bytes": 118933,
+        "last_modified": "2025-08-21T21:40:28.595Z",
+        "etag": "281e9e77f04bb88fd65abad1fd239512"
+      },
+      {
+        "key": "promotions/shein1000.svg",
+        "size_bytes": 7944,
+        "last_modified": "2025-08-21T21:39:37.129Z",
+        "etag": "0814a8d86f3941007b6c39180d447e9a"
+      },
+      {
+        "key": "promotions/homedepot1000.svg",
+        "size_bytes": 17567,
+        "last_modified": "2025-08-21T21:37:53.283Z",
+        "etag": "1bc341ae9e2614ae49dcad75cc2de6be"
+      },
+      {
+        "key": "pages/dark-green-checkmark.svg",
+        "size_bytes": 587,
+        "last_modified": "2025-08-20T12:10:20.135Z",
+        "etag": "04de6b4596ce665ad7f1eb84e7dce831"
+      },
+      {
+        "key": "themes/favicon_getngoods.svg",
+        "size_bytes": 57383,
+        "last_modified": "2025-08-19T21:07:07.112Z",
+        "etag": "5ab17f4725e086b2b8c334d1a3a27a75"
+      },
+      {
+        "key": "promotions/walmartgeneric.svg",
+        "size_bytes": 96851,
+        "last_modified": "2025-08-19T12:55:11.335Z",
+        "etag": "b4a67c7de7b3924d8f988e3f0417db05"
+      },
+      {
+        "key": "pages/grey_wavy_background.webp",
+        "size_bytes": 16256,
+        "last_modified": "2025-08-13T19:08:22.827Z",
+        "etag": "4143916622e899f2d4412f91e8ed87eb"
+      },
+      {
+        "key": "pages/white_checkmark.svg",
+        "size_bytes": 589,
+        "last_modified": "2025-08-13T15:53:22.883Z",
+        "etag": "4938a368903b9b976d0b2426ccb5b1de"
+      },
+      {
+        "key": "pages/intro_icon_play.svg",
+        "size_bytes": 2652,
+        "last_modified": "2025-08-13T15:53:02.038Z",
+        "etag": "d3231f9069d8e252344388601dccb49e"
+      },
+      {
+        "key": "pages/intro_icon_discover.svg",
+        "size_bytes": 2906,
+        "last_modified": "2025-08-13T15:52:49.486Z",
+        "etag": "1ef2ee95422e05e412b7f81ca7e97493"
+      },
+      {
+        "key": "pages/intro_icon_shop.svg",
+        "size_bytes": 2594,
+        "last_modified": "2025-08-13T15:51:28.440Z",
+        "etag": "ee301b1adff11953d67474449b5053a1"
+      },
+      {
+        "key": "pages/blue_giftcard.svg",
+        "size_bytes": 1481,
+        "last_modified": "2025-08-13T15:50:13.981Z",
+        "etag": "c7fd980de4f910a57624b6ee8e76cdd9"
+      },
+      {
+        "key": "pages/getngoods_logo.svg",
+        "size_bytes": 117071,
+        "last_modified": "2025-08-12T15:26:31.453Z",
+        "etag": "93734e583ac51221b38ab3a7b8d39f08"
+      },
+      {
+        "key": "promotions/visa1000.svg",
+        "size_bytes": 6492,
+        "last_modified": "2025-08-08T14:15:50.193Z",
+        "etag": "e998fdad763dbf4d1ba9c22b44892194"
+      },
+      {
+        "key": "pages/white_check_transparent_bg.svg",
+        "size_bytes": 1838,
+        "last_modified": "2025-08-05T20:12:06.590Z",
+        "etag": "0b8d1b1c218f631c36e526a413b433ac"
+      },
+      {
+        "key": "promotions/generic1000_green.svg",
+        "size_bytes": 6635,
+        "last_modified": "2025-08-02T21:00:44.951Z",
+        "etag": "4fcdab97f2ae0daabd5cbef5bd5e281e"
+      },
+      {
+        "key": "themes/smiling-emoji.webp",
+        "size_bytes": 1698,
+        "last_modified": "2025-07-31T14:05:52.958Z",
+        "etag": "440b0355bb49d8d821c8ff5621923b1b"
+      },
+      {
+        "key": "promotions/amazon_giveaway.png",
+        "size_bytes": 30367,
+        "last_modified": "2025-07-18T17:01:46.418Z",
+        "etag": "522e79c9f17ee9725e618c21ad7f68f3"
+      },
+      {
+        "key": "promotions/Everflow Firehose vs Site Reporting (1).png",
+        "size_bytes": 38951,
+        "last_modified": "2025-05-24T18:56:22.087Z",
+        "etag": "c2e67f23d113d58189b79043d6bd92b0"
+      },
+      {
+        "key": "promotions/renamed.svg",
+        "size_bytes": 53330,
+        "last_modified": "2025-05-24T18:55:44.651Z",
+        "etag": "47f9e6b91c2f2c930d19a916f3f4c99d"
+      },
+      {
+        "key": "pages/green_flag_bg.png",
+        "size_bytes": 551054,
+        "last_modified": "2025-05-21T14:27:21.904Z",
+        "etag": "1ccae0db5c511d2158bc541389bd53b2"
+      },
+      {
+        "key": "promotions/cashapp.svg",
+        "size_bytes": 2125,
+        "last_modified": "2025-05-02T13:48:32.145Z",
+        "etag": "dc42ac44487a59440f1bedb4c87295d7"
+      },
+      {
+        "key": "promotions/check1000.svg",
+        "size_bytes": 293580,
+        "last_modified": "2025-05-02T13:48:11.407Z",
+        "etag": "ba406652dfe9d54a8fdda79e5227c510"
+      },
+      {
+        "key": "promotions/promoimage_tupperware100.png",
+        "size_bytes": 34483,
+        "last_modified": "2025-04-29T15:19:56.660Z",
+        "etag": "20c5b95b692d50f069df0080dfa5eaba"
+      },
+      {
+        "key": "promotions/gifcard.png",
+        "size_bytes": 7408,
+        "last_modified": "2025-04-24T17:28:15.604Z",
+        "etag": "3614f802859eddfca99d75828ba2d287"
+      },
+      {
+        "key": "promotions/appicon.png",
+        "size_bytes": 2809,
+        "last_modified": "2025-04-24T17:28:10.960Z",
+        "etag": "da44a7fe5db70f1434fdd5dbe328f5ff"
+      },
+      {
+        "key": "promotions/cashgiveaway.svg",
+        "size_bytes": 36722,
+        "last_modified": "2025-04-24T17:22:21.035Z",
+        "etag": "3226598c062a3e706ddf3bbdecf05dc7"
+      },
+      {
+        "key": "promotions/image-1500x1270.jpg",
+        "size_bytes": 108780,
+        "last_modified": "2025-04-20T00:31:08.641Z",
+        "etag": "3d6f99a305b923d3612b8f52f355ae77"
+      },
+      {
+        "key": "promotions/1715574950253 (1) (2).svg",
+        "size_bytes": 53330,
+        "last_modified": "2025-04-20T00:29:29.378Z",
+        "etag": "47f9e6b91c2f2c930d19a916f3f4c99d"
+      },
+      {
+        "key": "promotions/1715574950253 (1) (1).svg",
+        "size_bytes": 53702,
+        "last_modified": "2025-04-20T00:28:30.038Z",
+        "etag": "25e03da20a8088931bf71d97f3411ce7"
+      },
+      {
+        "key": "promotions/1715574950253.svg",
+        "size_bytes": 36350,
+        "last_modified": "2025-04-17T20:34:47.248Z",
+        "etag": "23e4e11e0f2650473d9c8a7e5e36d57b"
+      },
+      {
+        "key": "promotions/cashapp_icon_withstroke.svg",
+        "size_bytes": 2092,
+        "last_modified": "2025-04-08T18:45:11.911Z",
+        "etag": "e23a74260df6384a155bdb6c74199d7a"
+      },
+      {
+        "key": "promotions/content_copy_24dp_5985E1_FILL0_wght400_GRAD0_opsz24.svg",
+        "size_bytes": 340,
+        "last_modified": "2025-04-08T17:45:30.576Z",
+        "etag": "f578b4f198435980988753260db54dfb"
+      },
+      {
+        "key": "pages/cashapp_icon_withstroke.svg",
+        "size_bytes": 2092,
+        "last_modified": "2025-03-14T17:49:35.658Z",
+        "etag": "e23a74260df6384a155bdb6c74199d7a"
+      },
+      {
+        "key": "pages/shield_badge.png",
+        "size_bytes": 3956,
+        "last_modified": "2025-03-13T15:01:19.633Z",
+        "etag": "bde3e46d4e6207cba4a33c8912c1bc93"
+      },
+      {
+        "key": "pages/credit_card_badge.png",
+        "size_bytes": 2969,
+        "last_modified": "2025-03-13T15:01:15.086Z",
+        "etag": "60986db2acd1014c445ffac5b91cbb3f"
+      },
+      {
+        "key": "pages/treasure_chest_badge.png",
+        "size_bytes": 3600,
+        "last_modified": "2025-03-13T15:01:10.894Z",
+        "etag": "b353277373fb0a3e4628fa045cff0a6d"
+      },
+      {
+        "key": "pages/shopping_cart_badge.png",
+        "size_bytes": 4175,
+        "last_modified": "2025-03-13T15:01:05.553Z",
+        "etag": "d9b6eb1135549bc5e0a54b1e1271e41a"
+      },
+      {
+        "key": "pages/svglogo_prizezappy.svg",
+        "size_bytes": 5225,
+        "last_modified": "2025-03-13T14:38:58.348Z",
+        "etag": "f2c52cc9a966d6c126453b352153fd62"
+      },
+      {
+        "key": "pages/logo_prizezappy_gray.svg",
+        "size_bytes": 5468,
+        "last_modified": "2025-03-12T21:19:23.033Z",
+        "etag": "6b4599875c3fdcbd3942a8aa4df10a5b"
+      },
+      {
+        "key": "pages/3-icon-banner-gray-green.png",
+        "size_bytes": 12254,
+        "last_modified": "2025-03-12T20:26:41.689Z",
+        "etag": "d2c27f2a7f1175564a426b3e2e09bd78"
+      },
+      {
+        "key": "pages/cash-app-logo-white-border.png",
+        "size_bytes": 3200,
+        "last_modified": "2025-03-12T19:30:51.233Z",
+        "etag": "b0f0e7360df0f656e3ce30ecff492964"
+      },
+      {
+        "key": "pages/light-green-checkmark.svg",
+        "size_bytes": 605,
+        "last_modified": "2025-03-12T19:24:59.773Z",
+        "etag": "2785249fc243e2a3517a199ec1586cd2"
+      },
+      {
+        "key": "pages/pattern_noodletheme.png",
+        "size_bytes": 97216,
+        "last_modified": "2025-03-12T18:05:08.389Z",
+        "etag": "859cbc20777381b30aafdcec2a209d4c"
+      },
+      {
+        "key": "pages/image 21 (1).png",
+        "size_bytes": 37995,
+        "last_modified": "2025-02-11T11:47:01.982Z",
+        "etag": "a9c04a8e834ebac33366eb86c2e94f42"
+      },
+      {
+        "key": "pages/image 21.png",
+        "size_bytes": 37937,
+        "last_modified": "2025-02-11T11:46:56.850Z",
+        "etag": "f4264ee2a8babb9fbb5e67b1f2925b46"
+      },
+      {
+        "key": "themes/favicon-32x32.png",
+        "size_bytes": 1591,
+        "last_modified": "2024-12-20T15:12:56.197Z",
+        "etag": "0ea79a38181ea7820797d05ac53fc320"
+      },
+      {
+        "key": "themes/favicon-16x16.png",
+        "size_bytes": 1011,
+        "last_modified": "2024-12-20T15:12:49.291Z",
+        "etag": "341a362bb0bbc163343034ccdd37483d"
+      },
+      {
+        "key": "themes/favicon.ico",
+        "size_bytes": 15406,
+        "last_modified": "2024-12-20T10:32:11.723Z",
+        "etag": "2cd41422303b9821404b1e1346f06b30"
+      },
+      {
+        "key": "pages/PrizeZappy_Offer_bg.png",
+        "size_bytes": 122424,
+        "last_modified": "2024-11-20T16:44:35.341Z",
+        "etag": "b16203b8f346ac2e373fd817edb7de8e"
+      },
+      {
+        "key": "pages/cash app icon - lg.png",
+        "size_bytes": 4574,
+        "last_modified": "2024-11-20T12:28:46.818Z",
+        "etag": "1cd01733ccee4165c2f1cd2af68dae00"
+      },
+      {
+        "key": "pages/Lndrbackground.svg",
+        "size_bytes": 1428038,
+        "last_modified": "2024-11-19T21:21:58.882Z",
+        "etag": "0988079d6933ba7b7cfa37f86b90cccb"
+      },
+      {
+        "key": "themes/Vector2.png",
+        "size_bytes": 983,
+        "last_modified": "2024-11-19T14:49:10.806Z",
+        "etag": "6af172a86acfa861e1cee136dc4d97db"
+      },
+      {
+        "key": "themes/bg_net (1).png",
+        "size_bytes": 122547,
+        "last_modified": "2024-11-18T19:53:49.326Z",
+        "etag": "87246a393b1e037e7ea72bce76826609"
+      },
+      {
+        "key": "pages/bg_net (1).svg",
+        "size_bytes": 1428038,
+        "last_modified": "2024-11-13T18:39:28.693Z",
+        "etag": "0988079d6933ba7b7cfa37f86b90cccb"
+      },
+      {
+        "key": "pages/bg_net (1).png",
+        "size_bytes": 122547,
+        "last_modified": "2024-11-13T18:37:23.794Z",
+        "etag": "87246a393b1e037e7ea72bce76826609"
+      },
+      {
+        "key": "pages/logo_prizezappy.svg",
+        "size_bytes": 5465,
+        "last_modified": "2024-11-13T18:18:43.680Z",
+        "etag": "d9ef3387808e691e73ef99dc1215544f"
+      },
+      {
+        "key": "themes/Screenshot 2024-10-16 at 2.05.32\u202fPM.png",
+        "size_bytes": 14274,
+        "last_modified": "2024-10-29T21:26:33.775Z",
+        "etag": "53493407b5ba92552e61a49c2e352f30"
+      },
+      {
+        "key": "pages/arrow_white.svg",
+        "size_bytes": 589,
+        "last_modified": "2024-10-29T21:18:00.395Z",
+        "etag": "4938a368903b9b976d0b2426ccb5b1de"
+      },
+      {
+        "key": "pages/plus-one_cool.gif",
+        "size_bytes": 1421,
+        "last_modified": "2024-10-29T21:17:40.241Z",
+        "etag": "c4f095bd6a37f55a7de5a5981e498d8c"
+      },
+      {
+        "key": "pages/plusone.png",
+        "size_bytes": 1298,
+        "last_modified": "2024-10-29T21:12:00.224Z",
+        "etag": "e3fe456e8ba6d90f80acbd0172fd4d34"
+      },
+      {
+        "key": "pages/1711483128775.png",
+        "size_bytes": 4155,
+        "last_modified": "2024-10-29T20:45:17.400Z",
+        "etag": "bd2652d4a0b90c278d2507f0e09d88e2"
+      },
+      {
+        "key": "pages/money-test-img.jpg",
+        "size_bytes": 45937,
+        "last_modified": "2024-10-29T20:24:58.469Z",
+        "etag": "4d3aa9c39f5641b28148e58857fd0435"
+      },
+      {
+        "key": "themes/money-test-img.jpg",
+        "size_bytes": 45937,
+        "last_modified": "2024-10-22T19:10:37.294Z",
+        "etag": "4d3aa9c39f5641b28148e58857fd0435"
+      }
+    ]
+  },
+  "sassets_noodledit": {
+    "bucket": "sassets.noodledit.com",
+    "total_objects": 28,
+    "total_size_bytes": 3881772,
+    "total_size_mb": 3.7,
+    "newest": {
+      "key": "promotions/check1000.svg",
+      "size_bytes": 293580,
+      "last_modified": "2025-09-16T17:26:19.456Z",
+      "etag": "ba406652dfe9d54a8fdda79e5227c510"
+    },
+    "oldest": {
+      "key": "pages/$1000-image-blue.png",
+      "size_bytes": 43390,
+      "last_modified": "2024-11-07T16:56:08.088Z",
+      "etag": "581c11278896adb728301becafa6a4dd"
+    },
+    "categories": {
+      "promotions": {
+        "count": 17,
+        "total_bytes": 3561558
+      },
+      "pages": {
+        "count": 10,
+        "total_bytes": 311960
+      },
+      "themes": {
+        "count": 1,
+        "total_bytes": 8254
+      }
+    },
+    "sensitive_files_flagged": [],
+    "objects": [
+      {
+        "key": "promotions/check1000.svg",
+        "size_bytes": 293580,
+        "last_modified": "2025-09-16T17:26:19.456Z",
+        "etag": "ba406652dfe9d54a8fdda79e5227c510"
+      },
+      {
+        "key": "promotions/groceryreward.svg",
+        "size_bytes": 2751191,
+        "last_modified": "2025-08-21T22:20:13.969Z",
+        "etag": "a501344eb9f63092f2907570e5b0adee"
+      },
+      {
+        "key": "promotions/adidas500.svg",
+        "size_bytes": 11022,
+        "last_modified": "2025-05-08T20:03:09.177Z",
+        "etag": "9c5586326b08f7fa205f7c02aaa811aa"
+      },
+      {
+        "key": "pages/adidas500.svg",
+        "size_bytes": 11022,
+        "last_modified": "2025-05-07T20:02:26.016Z",
+        "etag": "9c5586326b08f7fa205f7c02aaa811aa"
+      },
+      {
+        "key": "promotions/301x193.png",
+        "size_bytes": 5854,
+        "last_modified": "2025-05-01T14:51:39.794Z",
+        "etag": "2435c927f6d0433e366af45bcf72a571"
+      },
+      {
+        "key": "promotions/600x380.png",
+        "size_bytes": 12999,
+        "last_modified": "2025-05-01T14:50:50.382Z",
+        "etag": "e24a20ddf72025a58c08010c6b9c054e"
+      },
+      {
+        "key": "promotions/432x264.png",
+        "size_bytes": 78872,
+        "last_modified": "2025-05-01T14:46:43.704Z",
+        "etag": "dc0b02c609ff6839ddb51f03a143495a"
+      },
+      {
+        "key": "promotions/630x402.png",
+        "size_bytes": 228854,
+        "last_modified": "2025-04-30T21:35:15.833Z",
+        "etag": "371e5045e7d97e6f823908ce1337294f"
+      },
+      {
+        "key": "promotions/510x285.png",
+        "size_bytes": 10633,
+        "last_modified": "2025-04-30T21:34:12.041Z",
+        "etag": "32d4f82e311ff483800e0f1579a366c7"
+      },
+      {
+        "key": "promotions/stackablecontainers100.png",
+        "size_bytes": 31442,
+        "last_modified": "2025-04-29T20:31:29.195Z",
+        "etag": "1b094bc318d0ebbda9dfc503e1e2b8e2"
+      },
+      {
+        "key": "promotions/100Amazon.png",
+        "size_bytes": 12725,
+        "last_modified": "2025-04-29T19:17:14.061Z",
+        "etag": "78ef679d0dc373a785d934724e15fbea"
+      },
+      {
+        "key": "promotions/promoimage_bouquetflowers100.png",
+        "size_bytes": 44595,
+        "last_modified": "2025-04-29T19:09:41.766Z",
+        "etag": "3fac3d082db7b9fa250276bcfb614e9f"
+      },
+      {
+        "key": "promotions/promoimage_caseys750.svg",
+        "size_bytes": 9006,
+        "last_modified": "2025-04-29T18:59:10.722Z",
+        "etag": "f2ab886b33e9366fb1a65d7106fafb4e"
+      },
+      {
+        "key": "promotions/promoimage_tupperware100.png",
+        "size_bytes": 34483,
+        "last_modified": "2025-04-29T18:49:25.023Z",
+        "etag": "20c5b95b692d50f069df0080dfa5eaba"
+      },
+      {
+        "key": "promotions/automaticlitterbox250.png",
+        "size_bytes": 28930,
+        "last_modified": "2025-04-29T18:46:52.932Z",
+        "etag": "ffcc451aa476367224dbb6b2ac92132b"
+      },
+      {
+        "key": "promotions/750_chipotle.png",
+        "size_bytes": 5475,
+        "last_modified": "2025-04-29T18:45:48.535Z",
+        "etag": "3c5a2b322c7b4953feea62318413f41c"
+      },
+      {
+        "key": "promotions/giftbox_Testimg.svg",
+        "size_bytes": 1557,
+        "last_modified": "2025-04-29T18:39:02.021Z",
+        "etag": "26b9561dc5253370856228ac57c482cc"
+      },
+      {
+        "key": "pages/icon_dollarsign.png",
+        "size_bytes": 3363,
+        "last_modified": "2025-04-21T14:40:39.970Z",
+        "etag": "403be67d31a0dc0a961fb0d213a33ff3"
+      },
+      {
+        "key": "themes/faveicon_mydailysurge.ico",
+        "size_bytes": 8254,
+        "last_modified": "2025-04-18T17:07:26.377Z",
+        "etag": "434f4874e29d08786d47584d6670dae8"
+      },
+      {
+        "key": "pages/form_arrow.svg",
+        "size_bytes": 136,
+        "last_modified": "2025-04-17T19:58:22.244Z",
+        "etag": "fd542ab55a613906f79cac52c295ecec"
+      },
+      {
+        "key": "pages/checkered_grey_bg.png",
+        "size_bytes": 117265,
+        "last_modified": "2025-04-17T18:31:45.420Z",
+        "etag": "f01e1a1eaaea0297d0b2ba547a4b3d75"
+      },
+      {
+        "key": "pages/logo_mydailysurge.svg",
+        "size_bytes": 11079,
+        "last_modified": "2025-04-16T14:34:25.175Z",
+        "etag": "bb756859f4aab981e4e8795451d2fa79"
+      },
+      {
+        "key": "promotions/content_copy_24dp_5985E1_FILL0_wght400_GRAD0_opsz24.svg",
+        "size_bytes": 340,
+        "last_modified": "2025-04-01T19:41:49.057Z",
+        "etag": "f578b4f198435980988753260db54dfb"
+      },
+      {
+        "key": "pages/light-green-checkmark.svg",
+        "size_bytes": 605,
+        "last_modified": "2025-03-19T15:21:39.709Z",
+        "etag": "2785249fc243e2a3517a199ec1586cd2"
+      },
+      {
+        "key": "pages/logo_prizezappy.svg",
+        "size_bytes": 5468,
+        "last_modified": "2025-02-11T19:52:37.163Z",
+        "etag": "6b4599875c3fdcbd3942a8aa4df10a5b"
+      },
+      {
+        "key": "pages/money_right.png",
+        "size_bytes": 59481,
+        "last_modified": "2025-02-11T19:52:11.088Z",
+        "etag": "06e5037ab7442bd180dbb7eab3eb452a"
+      },
+      {
+        "key": "pages/money_left.png",
+        "size_bytes": 60151,
+        "last_modified": "2025-02-11T19:52:05.915Z",
+        "etag": "b2d4b156057d4bace33c0b9a769909b0"
+      },
+      {
+        "key": "pages/$1000-image-blue.png",
+        "size_bytes": 43390,
+        "last_modified": "2024-11-07T16:56:08.088Z",
+        "etag": "581c11278896adb728301becafa6a4dd"
+      }
+    ]
+  }
+}

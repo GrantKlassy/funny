@@ -1,0 +1,231 @@
+{
+  "probe": "threat_actor_attribution",
+  "timestamp": "2026-04-09T06:54:55+00:00",
+  "source": "Redis slowlog — 23 unique external IPs (excluding investigator 192.184.150.96 and localhost 127.0.0.1)",
+  "summary": {
+    "total_external_ips": 23,
+    "countries": {
+      "CN": 16,
+      "US": 2,
+      "DE": 1,
+      "MY": 1,
+      "MX": 1,
+      "NL": 1,
+      "unknown_tencent_cn": 1
+    },
+    "top_providers": {
+      "Baidu Cloud": 6,
+      "ChinaNet (China Telecom)": 5,
+      "Alibaba Cloud": 2,
+      "Others": 10
+    }
+  },
+  "actors": [
+    {
+      "ip": "120.48.43.118",
+      "org": "Baidu Cloud",
+      "country": "CN",
+      "asn": "AS38365",
+      "attack_type": "CRONTAB INJECTION — CONFIG SET dir /var/spool/cron/crontabs + CONFIG SET dbfilename httpgd",
+      "threat_level": "HIGH",
+      "slowlog_entries": ["348: CONFIG SET dir /var/spool/cron/crontabs", "350: CONFIG SET dbfilename httpgd", "multiple FLUSHALL + SAVE"],
+      "notes": "Most sophisticated actor. Classic Redis RCE: overwrite crontab via RDB dump. Baidu Cloud VM — likely compromised or rented for botnet ops."
+    },
+    {
+      "ip": "47.112.215.87",
+      "org": "Alibaba Cloud",
+      "country": "CN",
+      "asn": "APNIC (Alibaba Cloud range)",
+      "cidr": "47.98.0.0 - 47.112.255.255",
+      "attack_type": "LUA RCE — EVAL with package.loadlib(/usr/lib/x86_64-linux-gnu/liblua*.so)",
+      "threat_level": "HIGH",
+      "slowlog_entries": ["294: EVAL package.loadlib exploit (1047 bytes)"],
+      "notes": "Attempted to load native Lua library for arbitrary code execution. More advanced than crontab injection — targets Redis Lua sandbox escape."
+    },
+    {
+      "ip": "27.185.41.158",
+      "org": "ChinaNet Hebei (China Telecom)",
+      "country": "CN",
+      "netname": "CHINANET-HE",
+      "attack_type": "CRON.D INJECTION — CONFIG SET dir /etc/cron.d",
+      "threat_level": "HIGH",
+      "slowlog_entries": ["300: CONFIG SET dir /etc/cron.d"],
+      "notes": "Same technique as 120.48.43.118 but targeting /etc/cron.d instead of user crontabs. Residential/business IP, not cloud — possibly compromised endpoint or VPN exit."
+    },
+    {
+      "ip": "180.76.114.78",
+      "org": "Baidu Cloud",
+      "country": "CN",
+      "asn": "AS38365",
+      "attack_type": "FLUSHALL + SAVE spam",
+      "threat_level": "MEDIUM",
+      "slowlog_entries": ["Multiple FLUSHALL, SAVE, COMMAND sequences across several sessions"],
+      "notes": "Repeated attacker — appears in slowlog at multiple timestamps spanning weeks. Automated scanner."
+    },
+    {
+      "ip": "180.76.52.82",
+      "org": "Baidu Cloud",
+      "country": "CN",
+      "asn": "AS38365",
+      "attack_type": "FLUSHALL + SAVE + COMMAND",
+      "threat_level": "MEDIUM",
+      "notes": "Same Baidu Cloud ASN as 180.76.114.78. Likely same botnet or scanner fleet."
+    },
+    {
+      "ip": "180.76.58.237",
+      "org": "Baidu Cloud",
+      "country": "CN",
+      "asn": "AS38365",
+      "attack_type": "FLUSHALL + SAVE",
+      "threat_level": "MEDIUM",
+      "notes": "Third Baidu Cloud IP in 180.76.0.0/16 range. Coordinated scanning operation."
+    },
+    {
+      "ip": "120.48.174.141",
+      "org": "Baidu Cloud",
+      "country": "CN",
+      "attack_type": "SAVE",
+      "threat_level": "LOW",
+      "notes": "Same /16 as the crontab injector (120.48.43.118). Single SAVE command in slowlog."
+    },
+    {
+      "ip": "120.48.35.163",
+      "org": "Baidu Cloud",
+      "country": "CN",
+      "attack_type": "FLUSHALL + SAVE",
+      "threat_level": "MEDIUM",
+      "notes": "Same /16 as crontab injector. Multiple sessions."
+    },
+    {
+      "ip": "183.6.4.31",
+      "org": "ChinaNet Guangdong (China Telecom)",
+      "country": "CN",
+      "netname": "CHINANET-GD",
+      "attack_type": "FLUSHALL + SAVE + COMMAND",
+      "threat_level": "MEDIUM",
+      "notes": "Persistent attacker — appears across multiple weeks in slowlog."
+    },
+    {
+      "ip": "183.56.243.176",
+      "org": "ChinaNet Guangdong (China Telecom)",
+      "country": "CN",
+      "netname": "CHINANET-GD",
+      "attack_type": "FLUSHALL + SAVE + COMMAND",
+      "threat_level": "MEDIUM"
+    },
+    {
+      "ip": "183.56.219.190",
+      "org": "ChinaNet Guangdong (China Telecom)",
+      "country": "CN",
+      "netname": "CHINANET-GD",
+      "attack_type": "FLUSHALL + SAVE + COMMAND",
+      "threat_level": "MEDIUM"
+    },
+    {
+      "ip": "14.18.118.84",
+      "org": "ChinaNet Guangdong (China Telecom)",
+      "country": "CN",
+      "netname": "CHINANET-GD",
+      "attack_type": "FLUSHALL + SAVE",
+      "threat_level": "MEDIUM"
+    },
+    {
+      "ip": "113.209.196.69",
+      "org": "Beijing Primezone Technologies",
+      "country": "CN",
+      "netname": "PRIMETELECOM",
+      "attack_type": "FLUSHALL + SAVE",
+      "threat_level": "MEDIUM"
+    },
+    {
+      "ip": "116.153.32.50",
+      "org": "China Unicom",
+      "country": "CN",
+      "asn": "AS4837",
+      "attack_type": "FLUSHALL + SAVE",
+      "threat_level": "MEDIUM"
+    },
+    {
+      "ip": "47.94.213.192",
+      "org": "Alibaba Cloud",
+      "country": "CN",
+      "cidr": "47.92.0.0 - 47.97.255.255",
+      "attack_type": "SAVE",
+      "threat_level": "LOW"
+    },
+    {
+      "ip": "81.71.51.170",
+      "org": "Tencent Cloud",
+      "country": "CN",
+      "notes": "RIPE-registered but Tencent Cloud range (81.68-81.71). FLUSHALL + SAVE.",
+      "attack_type": "FLUSHALL + SAVE",
+      "threat_level": "MEDIUM"
+    },
+    {
+      "ip": "118.196.34.36",
+      "org": "ByteDance / Volcano Engine",
+      "country": "CN",
+      "asn": "AS137718",
+      "abuse_contact": "gnoc@bytedance.com",
+      "attack_type": "COMMAND (reconnaissance)",
+      "threat_level": "LOW",
+      "notes": "Volcano Engine is ByteDance's cloud platform. Single COMMAND query — likely automated scanner, not a weaponized attack."
+    },
+    {
+      "ip": "200.188.48.146",
+      "org": "Unknown ISP",
+      "country": "MX",
+      "cidr": "200.188.0.0/17",
+      "attack_type": "FLUSHALL + CONFIG SET stop-writes-on-bgsave-error no + SAVE",
+      "threat_level": "MEDIUM",
+      "notes": "CONFIG SET stop-writes-on-bgsave-error no is a setup step for RDB-based attacks. Mexican IP — unusual origin for Redis botnet activity."
+    },
+    {
+      "ip": "111.90.158.78",
+      "org": "Shinjiru Technology",
+      "country": "MY",
+      "asn": "AS19324",
+      "netname": "SHINJIRU-MY",
+      "attack_type": "FLUSHALL",
+      "threat_level": "MEDIUM",
+      "notes": "Shinjiru is a known bulletproof hosting provider popular with cybercriminals."
+    },
+    {
+      "ip": "194.163.170.77",
+      "org": "Contabo GmbH",
+      "country": "DE",
+      "asn": "AS51167",
+      "reverse_dns": "vmi3002568.contaboserver.net.",
+      "attack_type": "SAVE + COMMAND DOCS",
+      "threat_level": "LOW",
+      "notes": "Contabo VPS. COMMAND DOCS suggests reconnaissance/fingerprinting rather than exploitation."
+    },
+    {
+      "ip": "198.74.62.88",
+      "org": "Linode / Akamai",
+      "country": "US",
+      "netname": "LINODE-US",
+      "reverse_dns": "198-74-62-88.ip.linodeusercontent.com.",
+      "attack_type": "FLUSHALL + SAVE",
+      "threat_level": "MEDIUM"
+    },
+    {
+      "ip": "3.132.26.232",
+      "org": "Amazon Web Services",
+      "country": "US",
+      "reverse_dns": "scan.visionheight.com.",
+      "attack_type": "INFO (reconnaissance)",
+      "threat_level": "LOW",
+      "notes": "Reverse DNS 'scan.visionheight.com' — a known internet-wide scanner. INFO-only, no destructive commands."
+    },
+    {
+      "ip": "130.131.161.238",
+      "org": "Stretchoid (internet scanner)",
+      "country": "NL",
+      "reverse_dns": "azpdcgeh5752.stretchoid.com.",
+      "attack_type": "INFO (reconnaissance)",
+      "threat_level": "SCANNER",
+      "notes": "Stretchoid is a well-known internet measurement/scanning company. Not a threat actor — just cataloging open Redis instances."
+    }
+  ]
+}

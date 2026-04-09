@@ -1,0 +1,49 @@
+{
+  "probe": "hestia_panel",
+  "timestamp": "2026-04-09T06:36:22+00:00",
+  "target": "https://13.220.193.170:8083",
+  "login_page": {
+    "status": "200",
+    "page_size": 1884
+  },
+  "api_get_paths": [
+    {"path": "/api/", "status": "405"},
+    {"path": "/list/user/", "status": "302"},
+    {"path": "/list/web/", "status": "302"},
+    {"path": "/list/dns/", "status": "302"},
+    {"path": "/list/mail/", "status": "302"},
+    {"path": "/list/db/", "status": "302"},
+    {"path": "/list/cron/", "status": "302"},
+    {"path": "/list/backup/", "status": "302"},
+    {"path": "/list/fs/", "status": "404"},
+    {"path": "/list/log/", "status": "400"},
+    {"path": "/list/sys/", "status": "404"},
+    {"path": "/edit/", "status": "403"},
+    {"path": "/add/", "status": "403"},
+    {"path": "/delete/", "status": "403"},
+    {"path": "/schedule/", "status": "403"},
+    {"path": "/download/", "status": "403"},
+    {"path": "/upload/", "status": "404"}
+  ],
+  "api_post_attempts": [
+    {"description": "empty_password", "status": "401", "response": "Error: IP is not allowed to connect with API"},
+    {"description": "v-list-sys-info", "status": "401", "response": "10"}
+  ],
+  "directory_enumeration": [
+    {"path": "/robots.txt", "status": "200"},
+    {"path": "/sitemap.xml", "status": "404"},
+    {"path": "/.well-known/security.txt", "status": "404"},
+    {"path": "/favicon.ico", "status": "200"},
+    {"path": "/images/", "status": "403"},
+    {"path": "/css/", "status": "403"},
+    {"path": "/js/", "status": "403"},
+    {"path": "/fonts/", "status": "404"},
+    {"path": "/fm/", "status": "500"},
+    {"path": "/reset/", "status": "302"},
+    {"path": "/error/", "status": "404"},
+    {"path": "/generate/ssl/", "status": "400"},
+    {"path": "/generate/dns/", "status": "404"},
+    {"path": "/list/log/auth/", "status": "400"}
+  ],
+  "ssl_certificate": "subject=C = US, ST = California, L = San Francisco, O = Hestia Control Panel, OU = IT, CN = fqdn.olivimails.com\nissuer=C = US, ST = California, L = San Francisco, O = Hestia Control Panel, OU = IT, CN = fqdn.olivimails.com\nnotBefore=Aug 28 09:24:26 2025 GMT\nnotAfter=Aug 28 09:24:26 2026 GMT"
+}

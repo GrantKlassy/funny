@@ -1,0 +1,19 @@
+{
+  "probe": "postgresql_discovery",
+  "timestamp": "2026-04-09T06:28:39+00:00",
+  "target": "13.220.193.170:5432",
+  "connection_attempts": [
+    {"user": "postgres", "exit_code": 0, "response": "psql: error: connection to server at \"13.220.193.170\", port 5432 failed: fe_sendauth: no password supplied"},
+    {"user": "admin", "exit_code": 0, "response": "psql: error: connection to server at \"13.220.193.170\", port 5432 failed: fe_sendauth: no password supplied"},
+    {"user": "root", "exit_code": 0, "response": "psql: error: connection to server at \"13.220.193.170\", port 5432 failed: fe_sendauth: no password supplied"},
+    {"user": "hestiacp", "exit_code": 0, "response": "psql: error: connection to server at \"13.220.193.170\", port 5432 failed: fe_sendauth: no password supplied"},
+    {"user": "hst_admin", "exit_code": 0, "response": "psql: error: connection to server at \"13.220.193.170\", port 5432 failed: fe_sendauth: no password supplied"},
+    {"user": "app", "exit_code": 0, "response": "psql: error: connection to server at \"13.220.193.170\", port 5432 failed: fe_sendauth: no password supplied"},
+    {"user": "web", "exit_code": 0, "response": "psql: error: connection to server at \"13.220.193.170\", port 5432 failed: fe_sendauth: no password supplied"},
+    {"user": "nobody", "exit_code": 0, "response": "psql: error: connection to server at \"13.220.193.170\", port 5432 failed: fe_sendauth: no password supplied"}
+  ],
+  "enumeration": {
+    "databases": "psql: error: connection to server at \"13.220.193.170\", port 5432 failed: fe_sendauth: no password supplied\nERROR"
+    ,"note": "Authentication required or connection failed"
+  }
+}

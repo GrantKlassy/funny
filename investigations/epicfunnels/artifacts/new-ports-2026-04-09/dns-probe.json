@@ -1,0 +1,44 @@
+{
+  "probe": "dns_recursive_resolver",
+  "timestamp": "2026-04-09T06:54:48+00:00",
+  "target": "13.220.193.170:53",
+  "result": "recursive_resolver_not_authoritative",
+  "findings": {
+    "server_type": "Recursive resolver (flags: qr rd ra), NOT an authoritative nameserver",
+    "zone_transfers": "Failed (expected — not authoritative)",
+    "version_bind": "NXDOMAIN with 'recursion requested but not available' for CH class",
+    "likely_software": "Hestia Control Panel built-in DNS (BIND-based local resolver)"
+  },
+  "queries": {
+    "epicfunnels.net": {
+      "SOA": "cheryl.ns.cloudflare.com. dns.cloudflare.com. (resolves normally via Cloudflare)",
+      "NS": ["logan.ns.cloudflare.com.", "cheryl.ns.cloudflare.com."],
+      "MX": "10 _dc-mx.16d4f49190c7.epicfunnels.net."
+    },
+    "olivimails.com": {
+      "SOA": "NXDOMAIN (domain expired)",
+      "NS": "NXDOMAIN",
+      "MX": "NXDOMAIN"
+    }
+  },
+  "subdomain_resolution": {
+    "jessica.epicfunnels.net": ["172.67.192.166", "104.21.11.211"],
+    "webmail.epicfunnels.net": ["104.21.11.211", "172.67.192.166"],
+    "mail.epicfunnels.net": ["104.21.11.211", "172.67.192.166"],
+    "jenny.epicfunnels.net": "no response (NXDOMAIN)",
+    "kylie.epicfunnels.net": "no response (NXDOMAIN)",
+    "app.epicfunnels.net": "no response (NXDOMAIN)",
+    "demo.epicfunnels.net": "no response (NXDOMAIN)",
+    "admin.epicfunnels.net": "no response (NXDOMAIN)",
+    "ftp.epicfunnels.net": "no response (NXDOMAIN)",
+    "dns.epicfunnels.net": "no response (NXDOMAIN)"
+  },
+  "olivimails_subdomains": "all NXDOMAIN (domain expired)",
+  "reverse_dns": "ec2-13-220-193-170.compute-1.amazonaws.com.",
+  "notes": [
+    "Port 53 is a recursive resolver, not a zone authority — no hidden zones to dump",
+    "Resolves public DNS normally — useful to the server but not an intel goldmine",
+    "Only jessica, webmail, and mail subdomains still live (all behind Cloudflare)",
+    "olivimails.com fully dead — no records resolve even locally"
+  ]
+}
