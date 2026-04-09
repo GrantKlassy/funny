@@ -6,15 +6,15 @@ Also that TikTok like, that was pretty cool :)
 It's at least somewhat funny
 Investigate!!
 
-## Investigate!!
+## Investigation: epicfunnels.net
 
-https://jessica.epicfunnels.net/
-Lovable AI?
-Legit what is going on here.
-Is it some supply chain thing?
-is it some gov thing? 
-Dix? Standard security shit
-We DO NOT BUILD SHIT
+Initial questions when the site was discovered:
+
+- Is Lovable AI being abused to mass-produce scam sites, or is the platform itself compromised? (supply chain angle)
+- Is this state-sponsored infrastructure? (honeypot, surveillance)
+- Or just standard scam operators using cheap AI tooling?
+
+**Rule: investigation only.** No building exploit code, replicating infrastructure, or creating tools. Research and document.
 
 ## Findings
 
