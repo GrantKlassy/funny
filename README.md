@@ -73,7 +73,13 @@ Our **58,400 satisfied customers** at @jessytheupgradeclub agree — this is the
 - A CPA affiliate tracker that got **sinkholed to `10.0.0.1`** (the entire scam funnel goes absolutely nowhere)
 - An operator who is **STILL updating their SEO blog** (last modified: April 5, 2026) despite the scam being broken for months
 - **500 cached Lua scripts** in Redis (someone was working hard... on something)
-- A **coordinated TikTok engagement bot network** that is still actively liking people's old comments from multiple accounts, driving them to profiles that link to funnels that redirect to a sinkhole
+- A **coordinated TikTok engagement bot network** that is still actively liking people's old comments from multiple accounts, driving them to profiles that link to funnels that redirect to a sinkhole:
+
+<p align="center">
+<img src="investigations/epicfunnels/tiktok/tiktok-activity-upgrade-club-liked.jpg" width="500">
+</p>
+
+<p align="center"><em>This showed up in our TikTok notifications. While we were investigating them. The engagement bots liked our old comments on the sword guy's video. They are liking your comments right now.</em></p>
 - A Redis database that **someone else already cryptojacked** — 4 malware crontab payloads planted by **[WatchDog](https://unit42.paloaltonetworks.com/watchdog-cryptojacking/)**, a cryptojacking operation active since 2019, first exposed by Palo Alto Unit 42. Campaign ID `b2f628`, C2 domain `oracle.zzhreceive.top` (dead), XMRig Monero miner. Attack failed because Redis runs in Docker. The malware keys persist because WatchDog keeps re-injecting them after each FLUSHALL wipe by competing botnets. Scammers getting scammed by cryptojackers getting wiped by other cryptojackers.
 
 **The Redis Warzone — Who's Attacking:**
@@ -110,6 +116,74 @@ The scam operator left their Redis database open to the internet with no passwor
 
 The scam operator's Redis isn't just open — it's a **live battlefield** where botnets from multiple countries are competing to plant malware, wipe each other's payloads, and hijack the server's compute resources. WatchDog plants its crontab payloads. Another botnet FLUSHALLs the database. WatchDog re-injects. Someone else tries to make the server a replica. The whole thing has been wiped **337 times** in 75 days. Nobody is winning. The scam operator has no idea any of this is happening.
 
+```mermaid
+graph TD
+    subgraph "THE REDIS WARZONE"
+        REDIS["<b>Redis 7.4.7</b><br/>13.220.193.170:6379<br/>NO PASSWORD<br/>protected-mode: no<br/>bound to *"]
+    end
+
+    subgraph "BAIDU CLOUD BOTNET FLEET (6 IPs, AS38365)"
+        B1["180.76.114.78"]
+        B2["180.76.52.82"]
+        B3["180.76.58.237"]
+        B4["120.48.43.118<br/><b>CRONTAB INJECTION</b>"]
+        B5["120.48.35.163"]
+        B6["120.48.174.141"]
+    end
+
+    subgraph "OTHER CHINESE CLOUD"
+        ALI1["47.112.215.87<br/><b>Alibaba Cloud</b><br/>LUA RCE ATTEMPT"]
+        ALI2["47.94.213.192<br/>Alibaba Cloud"]
+        TEN["81.71.51.170<br/>Tencent Cloud"]
+        BYTE["118.196.34.36<br/><b>ByteDance / Volcano Engine</b><br/>yes, TikTok's parent company"]
+    end
+
+    subgraph "CHINANET (China Telecom)"
+        CT1["183.6.4.31<br/>Guangdong"]
+        CT2["183.56.243.176<br/>Guangdong"]
+        CT3["183.56.219.190<br/>Guangdong"]
+        CT4["14.18.118.84<br/>Guangdong"]
+        CT5["27.185.41.158<br/>Hebei<br/><b>CRON.D INJECTION</b>"]
+    end
+
+    subgraph "REST OF WORLD"
+        MX["200.188.48.146<br/>Mexico<br/>RDB attack prep"]
+        MY["111.90.158.78<br/><b>Shinjiru (bulletproof hosting)</b><br/>Malaysia"]
+        US1["198.74.62.88<br/>Linode / USA"]
+        DE["194.163.170.77<br/>Contabo / Germany"]
+    end
+
+    subgraph "WATCHDOG MALWARE (Palo Alto Unit 42)"
+        WD["backup1-backup4 keys<br/>Campaign: b2f628<br/>C2: oracle.zzhreceive.top (DEAD)<br/>Payload: XMRig Monero miner<br/><b>Active since 2019</b>"]
+    end
+
+    B1 & B2 & B3 & B4 & B5 & B6 -->|"FLUSHALL + SAVE"| REDIS
+    ALI1 -->|"EVAL package.loadlib"| REDIS
+    ALI2 & TEN -->|"SAVE"| REDIS
+    BYTE -->|"COMMAND recon"| REDIS
+    CT1 & CT2 & CT3 & CT4 -->|"FLUSHALL + SAVE"| REDIS
+    CT5 -->|"CONFIG SET dir /etc/cron.d"| REDIS
+    MX -->|"CONFIG SET stop-writes-on-bgsave-error no"| REDIS
+    MY & US1 & DE -->|"FLUSHALL"| REDIS
+    WD -.->|"persists after every wipe"| REDIS
+
+    style REDIS fill:#ff0000,color:#fff,stroke:#fff
+    style B4 fill:#ff6600,color:#fff
+    style ALI1 fill:#ff6600,color:#fff
+    style CT5 fill:#ff6600,color:#fff
+    style WD fill:#9900cc,color:#fff
+    style BYTE fill:#ff3399,color:#fff
+    style MY fill:#cc6600,color:#fff
+```
+
+<p align="center"><em>23 threat actors from 8 countries fighting over one passwordless Redis. 337 database wipes in 75 days. The scam operator has no idea.</em></p>
+
+<p align="center">
+<img src="memes/sword-guy-redis.jpg" width="500">
+</p>
+
+<p align="center"><em>When someone asks why your Redis has no password. Protected mode: no.</em></p>
+
 <p align="center">
 <img src="memes/the-operator.png" width="500">
 </p>
@@ -145,6 +219,13 @@ The same operation that runs fake iPhone giveaways for TikTok teenagers also tar
 </p>
 
 <p align="center"><em>Unemployment benefits (with the Capitol building for legitimacy). "Startup grants" (a briefcase full of cash).</em></p>
+
+<p align="center">
+<img src="investigations/epicfunnels/artifacts/probe-2026-04-08/gov-benefits-evidence/snap_bac.png" width="300">
+<img src="investigations/epicfunnels/artifacts/probe-2026-04-08/gov-benefits-evidence/food_assistance_image_bundle.png" width="300">
+</p>
+
+<p align="center"><em>SNAP benefits with stock groceries. This is what they show people who can't afford food. The groceries are from a stock photo. The benefits don't exist. The data goes to telemarketers.</em></p>
 
 The victim enters their personal information — name, address, phone, email, income, household size — believing they're applying for assistance. The data gets sold as CPA leads. The victim gets nothing. No food stamps. No rental help. No stimulus check. Spam calls and a data broker list.
 
@@ -195,6 +276,36 @@ The entity behind it: **[Moxxi Digital, LLC](investigations/epicfunnels/OPERATOR
 10. The SSL cert expired in January
 11. Nobody renewed it
 
+```mermaid
+graph TD
+    TIKTOK["<b>TikTok</b><br/>@jessytheupgradeclub<br/>58,400 followers"]
+    BOTS["<b>Engagement Bots</b><br/>Like old comments<br/>from multiple accounts"]
+    VICTIM["You get a notification:<br/><i>'The Upgrade Club liked<br/>your comment'</i>"]
+    PROFILE["Visit scam profile<br/>Click bio link"]
+    JESSICA["<b>jessica.epicfunnels.net</b><br/>Lovable AI scam page<br/>'You've been selected!'"]
+    API["<b>/api/continue</b><br/>HTTP 302 redirect"]
+    TRACKER["<b>phef6trk.com</b><br/>CPA affiliate tracker"]
+    SINKHOLE["<b>10.0.0.1</b><br/>SINKHOLED"]
+    NOWHERE["<b>NOWHERE</b><br/>The operator gets $0<br/>The victim gets nothing<br/>The bots keep running"]
+
+    TIKTOK --> BOTS
+    BOTS -->|"like your comment"| VICTIM
+    VICTIM --> PROFILE
+    PROFILE --> JESSICA
+    JESSICA -->|"Click 'Confirm'"| API
+    API -->|"302 redirect"| TRACKER
+    TRACKER -->|"DNS: 10.0.0.1"| SINKHOLE
+    SINKHOLE --> NOWHERE
+
+    style TIKTOK fill:#000,color:#fff
+    style BOTS fill:#ff3399,color:#fff
+    style JESSICA fill:#ff6600,color:#fff
+    style SINKHOLE fill:#ff0000,color:#fff
+    style NOWHERE fill:#333,color:#fff
+```
+
+<p align="center"><em>The entire scam funnel. From TikTok engagement bot to sinkhole. Every step documented. Every endpoint probed. It goes nowhere.</em></p>
+
 ---
 
 <p align="center">
@@ -213,7 +324,19 @@ The entity behind it: **[Moxxi Digital, LLC](investigations/epicfunnels/OPERATOR
 
 This page was professionally built using Lovable AI ("Build something lovable"). Lovable scored **1.8 out of 10** for scam prevention in Guardio Labs' VibeScamming research. That's the lowest score of any tool tested. They built something lovable, all right.
 
-The Upgrade Club liked your comment. This is real engagement from a real scam operation with 58,400 real followers. They liked our comment. We feel special.
+The Upgrade Club liked your comment. This is real engagement from a real scam operation with 58,400 real followers. They liked our comment on a video of a man with a sword. We feel special.
+
+<p align="center">
+<img src="investigations/epicfunnels/tiktok/tiktok-comments-sword-guy.jpg" width="350">
+</p>
+
+<p align="center"><em>The video. The comments. The sword. The man. 248 comments. This is where the investigation started.</em></p>
+
+<p align="center">
+<img src="memes/zamphexotrorp.jpg" width="400">
+</p>
+
+<p align="center"><em>This man has nothing to do with the investigation. He was just in the comments.</em></p>
 
 **Exhibit B:**
 
@@ -222,6 +345,14 @@ The Upgrade Club liked your comment. This is real engagement from a real scam op
 </p>
 
 The engagement bots are still running. The tracker is sinkholed. The machine runs. The gears turn. Nothing happens.
+
+**Exhibit C:**
+
+<p align="center">
+<img src="investigations/epicfunnels/artifacts/iphone17promax1000.png" width="300">
+</p>
+
+<p align="center"><em>This is the actual promotional image from their CDN bucket at b.noodledit.com. "Valued at $1000." The filename is literally <code>iphone17promax1000.png</code>. The $1000 is the value, not the price. There is no iPhone. There is no prize. There is a $1,000 cash drawing once a year, administered by a company founded by a professional bridge player in Dallas.</em></p>
 
 **Exhibit D:**
 
@@ -250,6 +381,50 @@ The victim enters their personal information on a fake government benefits page.
 The lead is now packaged with a TrustedForm consent certificate, a Jornaya behavioral profile, and AMOE sweepstakes compliance. It is sold to CPA network buyers — insurance companies, loan providers, telemarketers — who can point to all of this documentation as proof they followed the law. The victim gets spam calls. No food stamps. No rental help. No stimulus check.
 
 Total cost of this legal cover to the scammer: **approximately nothing.** TrustedForm Certify is free. Jornaya's JS tag is free to embed. SCA charges for prize administration, but the "prize" is $1,000 once a year. Total harm: industrial scale.
+
+```mermaid
+graph LR
+    subgraph "VICTIM"
+        V["Person searching for<br/><b>food stamps</b>"]
+    end
+
+    subgraph "THE SCAM"
+        FAKE["<b>Fake SNAP Application</b><br/>BenefitsAccessCenter<br/>Powered by Lovable AI"]
+    end
+
+    subgraph "THE CONSENT WASHING MACHINE"
+        AP["<b>ActiveProspect</b><br/>TrustedForm certificate<br/><i>Free tier. No review.</i>"]
+        JN["<b>Jornaya</b><br/>LeadiD + behavioral tracking<br/><i>Same company as ActiveProspect<br/>since Jan 2026</i>"]
+        SCA["<b>SCA Promotions</b><br/>AMOE sweepstakes wrapper<br/><i>$1,000 prize, once a year</i>"]
+    end
+
+    subgraph "THE BUYER"
+        CPA["<b>CPA Network Buyer</b><br/>Insurance / loans / telemarketing<br/><i>Pays $15-$200 per lead</i>"]
+    end
+
+    subgraph "THE RESULT"
+        SPAM["Spam calls forever"]
+        NOTHING["No food stamps.<br/>No rental help.<br/>No stimulus check."]
+    end
+
+    V -->|"name, address, phone,<br/>email, income, household size"| FAKE
+    FAKE -->|"generate consent cert"| AP
+    FAKE -->|"track session"| JN
+    FAKE -->|"legal wrapper"| SCA
+    AP & JN & SCA -->|"certified lead"| CPA
+    CPA --> SPAM
+    CPA --> NOTHING
+
+    style V fill:#4488ff,color:#fff
+    style FAKE fill:#ff0000,color:#fff
+    style AP fill:#ff6600,color:#fff
+    style JN fill:#ff6600,color:#fff
+    style SCA fill:#ff6600,color:#fff
+    style SPAM fill:#333,color:#fff
+    style NOTHING fill:#333,color:#fff
+```
+
+<p align="center"><em>The victim thinks they're applying for food stamps. Their data gets "consent washed" through three vendors (two of which are now the same company), packaged as a certified lead, and sold to telemarketers. The whole legal shield costs the scammer approximately nothing.</em></p>
 
 ### The "Office"
 
@@ -283,6 +458,28 @@ The Moxxi Digital leadership team rebuilt the same operation as a private compan
 Fluent's subsidiary **American Prize Center LLC** was incorporated in 2012 with CEO Ryan Schulke and President Matthew Conlin (Fluent's founders). The scam operation's flagship brand is **MyAmericanPrizes**. The naming is not coincidental.
 
 `moxxi.io` was registered **May 23, 2023** — two months before the FTC sued Fluent. `myamericanprizes.com` was registered **August 22, 2023** — one month after. They were already building the exit.
+
+```mermaid
+timeline
+    title The Fluent-to-Moxxi Pipeline
+    section Fluent Inc (NASDAQ: FLNT)
+        2012 : American Prize Center LLC incorporated
+             : (CEO Ryan Schulke, President Matthew Conlin)
+        2015-2022 : Carl Augustin at Fluent (7 years, founding member)
+        2018-2019 : Fluent sells 620M+ consent farm leads ($93.4M revenue)
+        Nov 2019 : Jeffrey Kauffman deploys TrustedForm at Fluent
+    section The Exit
+        May 2023 : moxxi.io registered (2 months BEFORE FTC suit)
+        Jul 2023 : FTC sues Fluent ($2.5M settlement)
+        Aug 2023 : myamericanprizes.com registered (1 month AFTER)
+             : Name echoes Fluent's "American Prize Center LLC"
+    section Moxxi Digital
+        2023-2024 : Same playbook, same vendors (ActiveProspect + Jornaya)
+             : Same people (Laniado, Riehl, Kauffman, Augustin)
+        2025-2026 : 15+ brands, 747 CDN assets, gov benefits fraud
+             : epicfunnels.net, BenefitsAccessCenter, RewardZinga
+             : BBB rated D+. No FTC action yet.
+```
 
 Moxxi Digital acquires leads at **$1.44-$2.00** via fake sweepstakes (confirmed via [Affplus CPA listings](https://www.affplus.com/search?q=myamericanprizes)). The same leads, enriched with personal/financial data and packaged with TCPA consent certificates, sell into health insurance and lending verticals at **$15-$200+ each**. 36 employees. Bootstrapped. Profitable. Actively hiring via [Greenhouse](https://job-boards.greenhouse.io/moxxidigital).
 
