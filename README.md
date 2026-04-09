@@ -135,14 +135,6 @@ This page was professionally built using Lovable AI ("Build something lovable").
 **Exhibit B:**
 
 <p align="center">
-<img src="investigations/epicfunnels/tiktok/tiktok-activity-upgrade-club-liked.jpg" width="300">
-</p>
-
-The Upgrade Club liked your comment. This is real engagement from a real scam operation with 58,400 real followers. They liked our comment. We feel special.
-
-**Exhibit C:**
-
-<p align="center">
 <img src="memes/bots-vs-sinkhole.png" width="500">
 </p>
 
