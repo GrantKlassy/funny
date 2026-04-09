@@ -3,8 +3,8 @@
     "investigation": "epicfunnels-cpa-scam",
     "description": "CPA affiliate scam network — Lovable AI generated funnels distributed via TikTok",
     "generated": "2026-04-08T00:00:00Z",
-    "last_probed": "2026-04-09T02:27:00Z",
-    "version": 2
+    "last_probed": "2026-04-09T02:40:00Z",
+    "version": 3
   },
   "nodes": [
     {
@@ -476,11 +476,21 @@
         "port": 6379,
         "protocol": "Redis",
         "host": "13.220.193.170",
-        "software": "Redis",
+        "software": "Redis 7.4.7",
         "status": "open",
         "first_seen": "2026-04-09",
         "severity": "critical",
-        "note": "NEW — not present in original investigation. Redis exposed to public internet. Likely caching or session store."
+        "auth": "NONE (requirepass empty, protected-mode disabled)",
+        "bind": "* -::* (all interfaces)",
+        "uptime_days": 75,
+        "uptime_since": "~2026-01-24",
+        "db0_keys": 4,
+        "os": "Linux 6.1.0-42-cloud-amd64 (Debian cloud)",
+        "process_id": 1,
+        "executable": "/data/redis-server",
+        "total_system_memory": "3.78G",
+        "used_memory": "2.56M",
+        "note": "COMPLETELY OPEN — no auth, protected mode disabled, bound to all interfaces. Running as PID 1 in Docker container. 4 keys in database."
       }
     },
     {
@@ -681,6 +691,84 @@
         "record_type": "DMARC",
         "value": "v=DMARC1; p=quarantine; pct=100",
         "policy": "quarantine"
+      }
+    },
+
+    {
+      "id": "domain:olivimails.com",
+      "type": "domain",
+      "label": "olivimails.com",
+      "metadata": {
+        "status": "no_dns",
+        "role": "original_server_hostname",
+        "first_seen": "2025-08-28",
+        "note": "5th domain — discovered via Hestia Control Panel self-signed cert on SMTP/IMAPS/port 8083. FQDN: fqdn.olivimails.com. No public DNS records, no CT logs. Virtual host configured on EC2 nginx. Original server domain before epicfunnels.net was added."
+      }
+    },
+    {
+      "id": "subdomain:fqdn.olivimails.com",
+      "type": "subdomain",
+      "label": "fqdn.olivimails.com",
+      "metadata": {
+        "parent": "olivimails.com",
+        "status": "no_dns",
+        "purpose": "server_fqdn",
+        "vhost_content": "Coming Soon / under construction page",
+        "note": "Hestia default hostname. Serves 'under construction' page on direct EC2 connection."
+      }
+    },
+
+    {
+      "id": "service:ec2:hestia:8083",
+      "type": "service",
+      "label": "Hestia Control Panel :8083",
+      "metadata": {
+        "port": 8083,
+        "protocol": "HTTPS",
+        "host": "13.220.193.170",
+        "software": "Hestia Control Panel",
+        "version": "1.9.4",
+        "status": "open",
+        "first_seen": "2026-04-09",
+        "severity": "critical",
+        "cert_cn": "fqdn.olivimails.com",
+        "cert_org": "Hestia Control Panel",
+        "cert_location": "San Francisco, California, US",
+        "cert_created": "2025-08-28",
+        "tls": "TLSv1.3",
+        "session_cookie": "HESTIASID (HttpOnly, Secure, SameSite=Strict)",
+        "note": "Full server admin panel exposed to internet. Manages nginx, Dovecot, PostgreSQL, Node.js. Self-signed cert with fqdn.olivimails.com hostname."
+      }
+    },
+
+    {
+      "id": "verification:google",
+      "type": "verification",
+      "label": "Google Search Console",
+      "metadata": {
+        "domain": "epicfunnels.net",
+        "record": "google-site-verification=qWPTL9H_t4lE4Lja7ZwdNCdmGBQEaTmtJiX7KpXbkxM",
+        "note": "Operator has Google Search Console access for epicfunnels.net"
+      }
+    },
+    {
+      "id": "verification:microsoft",
+      "type": "verification",
+      "label": "Microsoft 365",
+      "metadata": {
+        "domain": "epicfunnels.net",
+        "record": "MS=ms66511106",
+        "note": "Microsoft 365 / Azure AD domain verification — operator has or had M365 account"
+      }
+    },
+    {
+      "id": "verification:activeprospect",
+      "type": "verification",
+      "label": "ActiveProspect",
+      "metadata": {
+        "domain": "epicfunnels.net",
+        "record": "activeprospect-domain-verification=M+mUYgTDEprxDUAdcdobLA==",
+        "note": "TCPA compliance / consent verification platform for lead generation. Confirms CPA lead gen operation."
       }
     },
 
@@ -914,6 +1002,54 @@
       "target": "email:dkim",
       "type": "has_email_config",
       "metadata": { "evidence": "dig mail._domainkey.epicfunnels.net TXT", "confidence": "high", "note": "DKIM configured but not activated" }
+    },
+    {
+      "source": "ip:13.220.193.170",
+      "target": "service:ec2:hestia:8083",
+      "type": "hosts",
+      "metadata": { "evidence": "curl -sk https://13.220.193.170:8083/", "confidence": "high", "note": "Hestia Control Panel admin interface — manages entire server" }
+    },
+    {
+      "source": "service:ec2:hestia:8083",
+      "target": "domain:olivimails.com",
+      "type": "configured_for",
+      "metadata": { "evidence": "Self-signed cert CN=fqdn.olivimails.com, login page title", "confidence": "high" }
+    },
+    {
+      "source": "domain:olivimails.com",
+      "target": "ip:13.220.193.170",
+      "type": "virtual_host_on",
+      "metadata": { "evidence": "nginx responds to Host: olivimails.com with 200 OK", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:fqdn.olivimails.com",
+      "target": "domain:olivimails.com",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "domain:olivimails.com",
+      "target": "domain:epicfunnels.net",
+      "type": "same_operator",
+      "metadata": { "evidence": "olivimails.com is the Hestia FQDN on the same EC2 server that hosts epicfunnels.net email infrastructure", "confidence": "high" }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "verification:google",
+      "type": "has_verification",
+      "metadata": { "evidence": "TXT record", "confidence": "high" }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "verification:microsoft",
+      "type": "has_verification",
+      "metadata": { "evidence": "TXT record", "confidence": "high" }
+    },
+    {
+      "source": "domain:epicfunnels.net",
+      "target": "verification:activeprospect",
+      "type": "has_verification",
+      "metadata": { "evidence": "TXT record", "confidence": "high" }
     },
 
     {

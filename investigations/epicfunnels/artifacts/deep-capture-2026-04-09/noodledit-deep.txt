@@ -1,0 +1,58 @@
+=== b.noodledit.com BUCKET ENUMERATION ===
+b.noodledit.com/promotions/ -> HTTP 404
+b.noodledit.com/promotions/index.html -> HTTP 404
+b.noodledit.com/promotions -> HTTP 404
+b.noodledit.com/assets/ -> HTTP 404
+b.noodledit.com/images/ -> HTTP 404
+b.noodledit.com/media/ -> HTTP 404
+b.noodledit.com/uploads/ -> HTTP 404
+b.noodledit.com/files/ -> HTTP 404
+b.noodledit.com/static/ -> HTTP 404
+b.noodledit.com/public/ -> HTTP 404
+b.noodledit.com/pages/ -> HTTP 404
+b.noodledit.com/ -> HTTP 404
+
+=== TRY MORE PROMO ASSETS ===
+FOUND: /promotions/iphone17promax.png (427034
+427034 bytes)
+
+=== b.noodledit.com HEADERS ===
+HTTP/2 200 
+date: Thu, 09 Apr 2026 02:37:04 GMT
+content-type: image/png
+content-length: 392047
+x-guploader-uploadid: AOCedOEh63bMpRJzB1XqzjlVBJl6D5Zq3VHNkzT3kT5Y2xQaci_Oodb46jkXTR4vc7-pDhxtgFRAy2Q
+x-goog-generation: 1759182281965900
+x-goog-metageneration: 1
+x-goog-stored-content-encoding: identity
+x-goog-stored-content-length: 392047
+x-goog-hash: crc32c=qNwB9A==
+x-goog-hash: md5=BzQ9Kv+vCXUBDIJnFGni6w==
+x-goog-storage-class: STANDARD
+accept-ranges: bytes
+server: cloudflare
+expires: Thu, 09 Apr 2026 02:00:35 GMT
+cache-control: public, max-age=14400
+age: 3590
+last-modified: Mon, 29 Sep 2025 21:44:42 GMT
+etag: "07343d2affaf0975010c82671469e2eb"
+alt-svc: h3=":443"; ma=86400
+cf-cache-status: HIT
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=ap7GkTiyZNIsIL9yS%2BDhzQ00csUX3OopNVPutPHZYgO5OQcPUmcFobOJQx0CmwYaori6uhII5FzwA7Qzu90HE8Fn5R1zEz9eNTeUH4B6rJRh1fP1M0Rf0x2ksIs88FdCXFVtLQCGlxn3U6SpATE%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-ray: 9e9620b87f1beb1e-SJC
+
+
+=== sassets.noodledit.com ENUMERATION ===
+sassets.noodledit.com/pages/ -> HTTP 404
+sassets.noodledit.com/pages/index.html -> HTTP 404
+sassets.noodledit.com/assets/ -> HTTP 404
+sassets.noodledit.com/images/ -> HTTP 404
+sassets.noodledit.com/css/ -> HTTP 404
+sassets.noodledit.com/js/ -> HTTP 404
+sassets.noodledit.com/fonts/ -> HTTP 404
+sassets.noodledit.com/ -> HTTP 404
+
+=== MORE SASSETS PAGES ===
+
+=== TRY OTHER SUBDOMAINS ===

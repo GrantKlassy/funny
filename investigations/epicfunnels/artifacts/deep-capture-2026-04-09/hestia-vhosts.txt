@@ -1,0 +1,340 @@
+=== HESTIA LOGIN PAGE ===
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>LOGIN - fqdn.olivimails.com - Hestia Control Panel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate icon" href="/images/favicon.png" type="image/png">
+<link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/themes/default.min.css?v=1.9.4">
+
+<link rel="stylesheet" href="/css/themes/dark.min.css?v=1.9.4"><script defer src="/js/dist/main.min.js?v=1.9.4"></script>
+<script defer src="/js/dist/alpinejs-collapse.min.js?v=1.9.4"></script>
+<script defer src="/js/dist/alpinejs.min.js?v=1.9.4"></script>
+<script>
+	document.documentElement.classList.replace('no-js', 'js');
+	document.addEventListener('alpine:init', () => {
+		Alpine.store('globals', {
+			USER_PREFIX: '_',
+			UNLIMITED: 'Unlimited',
+			NOTIFICATIONS_EMPTY: 'No notifications',
+			NOTIFICATIONS_DELETE_ALL: 'Delete all notifications',
+			CONFIRM_LEAVE_PAGE: 'Are you sure you want to leave the page?',
+			ERROR_MESSAGE: '',
+			BLACKLIST: 'BLACKLIST',
+			IPVERSE: 'IPVERSE'
+		});
+	})
+</script>
+
+</head>
+
+<body class="page-login lang-en">
+	<div class="app">
+<div class="login">
+	<a href="/" class="u-block u-mb40">
+		<img src="/images/logo.svg" alt="Hestia Control Panel" width="100" height="120">
+	</a>
+	<form id="login-form" method="post" action="/login/">
+		<input type="hidden" name="token" value="24847b47dd11bbdafb9c120d65a4d17f">
+		<h1 class="login-title">
+			Welcome to Hestia Control Panel		</h1>
+				<div class="u-mb20">
+			<label for="username" class="form-label">Username</label>
+			<input type="text" class="form-control" name="user" id="username" autocomplete="username" required autofocus>
+		</div>
+		<button type="submit" class="button">
+			<i class="fas fa-right-to-bracket"></i>Next		</button>
+	</form>
+</div>
+	</div> 
+</body>
+</html>
+
+=== HESTIA LOGIN PAGE HEADERS ===
+HTTP/2 302 
+server: nginx
+date: Thu, 09 Apr 2026 02:40:37 GMT
+content-type: text/html; charset=UTF-8
+set-cookie: HESTIASID=b96l2akev0lpo8d65a58vfdhlf; path=/; secure; HttpOnly; SameSite=Strict
+expires: Thu, 19 Nov 1981 08:52:00 GMT
+cache-control: no-store, no-cache, must-revalidate
+pragma: no-cache
+location: /login/
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+
+
+=== OLIVIMAILS.COM VIRTUAL HOST CONTENT ===
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Success!</title>
+		<style>
+			body {
+				background-color: #f5f5f5;
+				margin-top: 8%;
+				color: #5d5d5d;
+				font-family:
+					-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+					"Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+					"Noto Color Emoji";
+				text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+				text-align: center;
+			}
+
+			h1 {
+				font-size: 2.45em;
+				font-weight: 700;
+				color: #5d5d5d;
+				letter-spacing: -0.02em;
+				margin-bottom: 30px;
+				margin-top: 30px;
+			}
+
+			.container {
+				width: 100%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			.animate__animated {
+				animation-duration: 1s;
+				animation-fill-mode: both;
+			}
+
+			.animate__fadeIn {
+				animation-name: fadeIn;
+			}
+
+			.info {
+				color: #5594cf;
+				fill: #5594cf;
+			}
+
+			.error {
+				color: #c92127;
+				fill: #c92127;
+			}
+
+			.warning {
+				color: #ffcc33;
+				fill: #ffcc33;
+			}
+
+			.success {
+				color: #5aba47;
+				fill: #5aba47;
+			}
+
+			.icon-large {
+				height: 132px;
+				width: 132px;
+			}
+
+			.description-text {
+				color: #707070;
+				letter-spacing: -0.01em;
+				font-size: 1.25em;
+				line-height: 20px;
+			}
+
+			.footer {
+				margin-top: 40px;
+				font-size: 0.7em;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="animate__animated animate__fadeIn">
+						<i class="success">
+							<svg
+								class="success icon-large fa-check-circle"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+							>
+								<path
+									d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+								></path>
+							</svg>
+						</i>
+					</div>
+					<h1 class="animate__animated animate__fadeIn">Success!</h1>
+					<div class="description-text animate__animated animate__fadeIn">
+						<p>Your new web server is ready to use.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+=== FQDN.OLIVIMAILS.COM VIRTUAL HOST CONTENT ===
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Coming Soon</title>
+		<style>
+			body {
+				background-color: #f5f5f5;
+				margin-top: 8%;
+				color: #5d5d5d;
+				font-family:
+					-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+					"Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+					"Noto Color Emoji";
+				text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+				text-align: center;
+			}
+
+			h1 {
+				font-size: 2.45em;
+				font-weight: 700;
+				color: #5d5d5d;
+				letter-spacing: -0.02em;
+				margin-bottom: 30px;
+				margin-top: 30px;
+			}
+
+			.container {
+				width: 100%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			.animate__animated {
+				animation-duration: 1s;
+				animation-fill-mode: both;
+			}
+
+			.animate__fadeIn {
+				animation-name: fadeIn;
+			}
+
+			.info {
+				color: #5594cf;
+				fill: #5594cf;
+			}
+
+			.error {
+				color: #c92127;
+				fill: #c92127;
+			}
+
+			.warning {
+				color: #ffcc33;
+				fill: #ffcc33;
+			}
+
+			.success {
+				color: #5aba47;
+				fill: #5aba47;
+			}
+
+			.icon-large {
+				height: 132px;
+				width: 132px;
+			}
+
+			.description-text {
+				color: #707070;
+				letter-spacing: -0.01em;
+				font-size: 1.25em;
+				line-height: 20px;
+			}
+
+			.footer {
+				margin-top: 40px;
+				font-size: 0.7em;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="animate__animated animate__fadeIn">
+						<svg
+							class="warning icon-large fa-hard-hat"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"
+						>
+							<path
+								d="M480 288c0-80.25-49.28-148.92-119.19-177.62L320 192V80a16 16 0 0 0-16-16h-96a16 16 0 0 0-16 16v112l-40.81-81.62C81.28 139.08 32 207.75 32 288v64h448zm16 96H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h480a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
+							></path>
+						</svg>
+					</div>
+					<h1 class="animate__animated animate__fadeIn">We're working on it!</h1>
+					<div class="description-text animate__animated animate__fadeIn">
+						<p>This site is currently under construction.</p>
+						<p>Please check back soon.</p>
+						<section class="footer"><strong>Domain:</strong> fqdn.olivimails.com</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+=== OTHER VIRTUAL HOSTS ON :80 ===
+epicfunnels.net -> HTTP 200, Content-Length: 472
+jessica.epicfunnels.net -> HTTP 200, Content-Length: 2520
+webmail.epicfunnels.net -> HTTP 200, Content-Length: 
+noodledit.com -> HTTP 200, Content-Length: 2520
+mydailysurge.com -> HTTP 200, Content-Length: 2520
+mail.epicfunnels.net -> HTTP 200, Content-Length: 
+phef6trk.com -> HTTP 200, Content-Length: 2520
+
+=== HESTIA API CHECK ===
+HTTP/2 405 
+server: nginx
+date: Thu, 09 Apr 2026 02:40:40 GMT
+content-type: text/html; charset=UTF-8
+hestia-exit-code: 405
+
+HTTP/2 200 
+server: nginx
+date: Thu, 09 Apr 2026 02:40:42 GMT
+content-type: text/html; charset=UTF-8
+vary: Accept-Encoding
+set-cookie: HESTIASID=gbl8hd3h3n61qiou89u6cca8ah; path=/; secure; HttpOnly; SameSite=Strict
+expires: Thu, 19 Nov 1981 08:52:00 GMT
+cache-control: no-store, no-cache, must-revalidate
+pragma: no-cache
+x-content-type-options: nosniff
+
+=== PORT 8083 CERT DETAILS ===
+        Serial Number:
+        Issuer: C = US, ST = California, L = San Francisco, O = Hestia Control Panel, OU = IT, CN = fqdn.olivimails.com
+            Not Before: Aug 28 09:24:26 2025 GMT
+            Not After : Aug 28 09:24:26 2026 GMT
+        Subject: C = US, ST = California, L = San Francisco, O = Hestia Control Panel, OU = IT, CN = fqdn.olivimails.com
+                Public-Key: (4096 bit)

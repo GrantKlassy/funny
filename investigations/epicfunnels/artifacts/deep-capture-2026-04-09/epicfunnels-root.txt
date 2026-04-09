@@ -1,0 +1,157 @@
+=== epicfunnels.net ROOT PAGE ===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free iPhone 17 Pro Max Don't Miss This 👀</title>
+    <meta name="description" content="You've been selected! Claim your chance at exclusive rewards including the $1000 iPhone 17 Pro Max. Shop, Play & Earn with GetnGoods." />
+    <meta name="author" content="GetnGoods" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <meta property="og:title" content="GetnGoods - Unlock Your Exclusive Rewards" />
+    <meta property="og:description" content="Claim your chance at exclusive rewards including the $1000 iPhone 17 Pro Max." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GetnGoods" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="module" crossorigin src="/assets/index-CUlwK__p.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D8N5ZY6U.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+=== RESPONSE HEADERS ===
+HTTP/2 200 
+date: Thu, 09 Apr 2026 02:35:09 GMT
+content-type: text/html
+server: cloudflare
+last-modified: Sun, 15 Mar 2026 07:06:08 GMT
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=IGfiO0Vc3zeQeg5ytQuC60K%2FN1uuO2DDgxQAEvBK%2BhEeEQOVF69%2FuE0RrKzPVzm9%2FiLJFDqHaGIbFxi4kvQj97u5H9z6mtMFQWtBz4nQ0RVsA89aG0WDBLl5PcC3yq20n5rWM4G2qrKwfQoR3sg%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-cache-status: DYNAMIC
+cf-ray: 9e961de86d03138a-SJC
+alt-svc: h3=":443"; ma=86400
+
+
+=== www.epicfunnels.net PAGE ===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free iPhone 17 Pro Max Don't Miss This 👀</title>
+    <meta name="description" content="You've been selected! Claim your chance at exclusive rewards including the $1000 iPhone 17 Pro Max. Shop, Play & Earn with GetnGoods." />
+    <meta name="author" content="GetnGoods" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <meta property="og:title" content="GetnGoods - Unlock Your Exclusive Rewards" />
+    <meta property="og:description" content="Claim your chance at exclusive rewards including the $1000 iPhone 17 Pro Max." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GetnGoods" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="module" crossorigin src="/assets/index-CUlwK__p.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D8N5ZY6U.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+=== www HEADERS ===
+HTTP/2 200 
+date: Thu, 09 Apr 2026 02:35:10 GMT
+content-type: text/html
+server: cloudflare
+last-modified: Sun, 15 Mar 2026 07:06:08 GMT
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=6xx6D2y1JUdcWD4nQltZ4PoH1hyksXzrNZwfNi%2FNAEOSLyv%2B8nxsr88EGjF1Uve9n2KTdiELQfUxtVIrprWYQl3V44JKk%2BzQZ76nofTprQwttfp0InCfFPf9toKPVsyUrw8TDLPA9Jh9OpnMZQcPR9j9"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-cache-status: DYNAMIC
+cf-ray: 9e961debf82df3db-SJC
+alt-svc: h3=":443"; ma=86400
+
+
+=== robots.txt ===
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+=== sitemap.xml ===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free iPhone 17 Pro Max Don't Miss This 👀</title>
+    <meta name="description" content="You've been selected! Claim your chance at exclusive rewards including the $1000 iPhone 17 Pro Max. Shop, Play & Earn with GetnGoods." />
+    <meta name="author" content="GetnGoods" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <meta property="og:title" content="GetnGoods - Unlock Your Exclusive Rewards" />
+    <meta property="og:description" content="Claim your chance at exclusive rewards including the $1000 iPhone 17 Pro Max." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GetnGoods" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="module" crossorigin src="/assets/index-CUlwK__p.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D8N5ZY6U.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+=== /.well-known/ checks ===
+/.well-known/security.txt -> HTTP 403
+/.well-known/assetlinks.json -> HTTP 403
+/.well-known/apple-app-site-association -> HTTP 403
+/.well-known/openid-configuration -> HTTP 403
+
+=== Common paths ===
+/admin -> HTTP 200
+/login -> HTTP 200
+/dashboard -> HTTP 200
+/api -> HTTP 200
+/api/health -> HTTP 200
+/api/status -> HTTP 200
+/app -> HTTP 200
+/panel -> HTTP 200
+/_next -> HTTP 200
+/wp-admin -> HTTP 200
+/wp-login.php -> HTTP 404
+/.env -> HTTP 403
+/config.json -> HTTP 200
+/package.json -> HTTP 200
+/favicon.ico -> HTTP 200

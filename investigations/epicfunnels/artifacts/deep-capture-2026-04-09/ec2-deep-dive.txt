@@ -1,0 +1,297 @@
+=== REDIS :6379 ===
+$5712
+# Server
+redis_version:7.4.7
+redis_git_sha1:00000000
+redis_git_dirty:0
+redis_build_id:31a84af2bcf7caf1
+redis_mode:standalone
+os:Linux 6.1.0-42-cloud-amd64 x86_64
+arch_bits:64
+monotonic_clock:POSIX clock_gettime
+multiplexing_api:epoll
+atomicvar_api:c11-builtin
+gcc_version:14.2.0
+process_id:1
+process_supervised:no
+run_id:3e6b6d8d71c43baebe2411d4d22c70aef2855f64
+tcp_port:6379
+server_time_usec:1775702121765472
+uptime_in_seconds:6519701
+uptime_in_days:75
+hz:10
+configured_hz:10
+lru_clock:14094441
+executable:/data/redis-server
+config_file:
+io_threads_active:0
+listener0:name=tcp,bind=*,bind=-::*,port=6379
+
+# Clients
+connected_clients:1
+cluster_connections:0
+maxclients:10000
+client_recent_max_input_buffer:0
+client_recent_max_output_buffer:0
+blocked_clients:0
+tracking_clients:0
+pubsub_clients:0
+watching_clients:0
+clients_in_timeout_table:0
+total_watched_keys:0
+total_blocking_keys:0
+total_blocking_keys_on_nokey:0
+
+# Memory
+used_memory:2680008
+used_memory_human:2.56M
+used_memory_rss:10854400
+used_memory_rss_human:10.35M
+used_memory_peak:3195360
+used_memory_peak_human:3.05M
+used_memory_peak_perc:83.87%
+used_memory_overhead:1356888
+used_memory_startup:948360
+used_memory_dataset:1323120
+used_memory_dataset_perc:76.41%
+allocator_allocated:3643112
+allocator_active:4177920
+allocator_resident:7237632
+allocator_muzzy:0
+total_system_memory:4055707648
+total_system_memory_human:3.78G
+used_memory_lua:704512
+used_memory_vm_eval:704512
+used_memory_lua_human:688.00K
+used_memory_scripts_eval:407648
+number_of_cached_scripts:500
+number_of_functions:0
+number_of_libraries:0
+used_memory_vm_functions:33792
+used_memory_vm_total:738304
+used_memory_vm_total_human:721.00K
+used_memory_functions:192
+used_memory_scripts:407840
+used_memory_scripts_human:398.28K
+maxmemory:0
+maxmemory_human:0B
+maxmemory_policy:noeviction
+allocator_frag_ratio:1.16
+allocator_frag_bytes:322520
+allocator_rss_ratio:1.73
+allocator_rss_bytes:3059712
+rss_overhead_ratio:1.50
+rss_overhead_bytes:3616768
+mem_fragmentation_ratio:4.11
+mem_fragmentation_bytes:8214400
+mem_not_counted_for_evict:0
+mem_replication_backlog:0
+mem_total_replication_buffers:0
+mem_clients_slaves:0
+mem_clients_normal:0
+mem_cluster_links:0
+mem_aof_buffer:0
+mem_allocator:jemalloc-5.3.0
+mem_overhead_db_hashtable_rehashing:0
+active_defrag_running:0
+lazyfree_pending_objects:0
+lazyfreed_objects:2023
+
+# Persistence
+loading:0
+
+=== REDIS KEYSPACE ===
+$56
+# Keyspace
+db0:keys=4,expires=0,avg_ttl=0,subexpiry=0
+
+
+=== REDIS CONFIG ===
+*2
+$4
+bind
+$6
+* -::*
+*2
+$11
+requirepass
+$0
+
+*2
+$14
+protected-mode
+$2
+no
+
+=== REDIS DBSIZE ===
+:4
+
+=== REDIS CLIENT LIST ===
+$307
+id=217948 addr=192.184.150.96:36650 laddr=172.29.0.4:6379 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=12 qbuf-free=20462 argv-mem=10 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=37786 events=r cmd=client|list user=default redir=-1 resp=2 lib-name= lib-ver=
+
+
+=== NODE.JS :3000 FULL RESPONSE ===
+*   Trying 13.220.193.170:3000...
+* Connected to 13.220.193.170 (13.220.193.170) port 3000 (#0)
+> GET / HTTP/1.1
+> Host: 13.220.193.170:3000
+> User-Agent: curl/7.88.1
+> Accept: */*
+> 
+< HTTP/1.1 500 Internal Server Error
+< Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+< Date: Thu, 09 Apr 2026 02:35:21 GMT
+< Content-Length: 21
+< 
+{ [21 bytes data]
+* Connection #0 to host 13.220.193.170 left intact
+Internal Server Error
+=== NODE.JS COMMON ENDPOINTS ===
+:3000/health -> HTTP/1.1 500 Internal Server Error Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate Date: Thu, 09 Apr 2026 02:35:22 GMT Content-Length: 21  
+:3000/status -> HTTP/1.1 500 Internal Server Error Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate Date: Thu, 09 Apr 2026 02:35:22 GMT Content-Length: 21  
+:3000/api -> HTTP/1.1 500 Internal Server Error Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate Date: Thu, 09 Apr 2026 02:35:22 GMT Content-Length: 21  
+:3000/api/health -> HTTP/1.1 500 Internal Server Error Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate Date: Thu, 09 Apr 2026 02:35:22 GMT Content-Length: 21  
+:3000/api/v1 -> HTTP/1.1 500 Internal Server Error Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate Date: Thu, 09 Apr 2026 02:35:22 GMT Content-Length: 21  
+:3000/api/continue -> HTTP/1.1 500 Internal Server Error Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate Date: Thu, 09 Apr 2026 02:35:22 GMT Content-Length: 21  
+:3000/api/continue-click -> HTTP/1.1 500 Internal Server Error Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate Date: Thu, 09 Apr 2026 02:35:24 GMT Content-Length: 21  
+:3000/.env -> HTTP/1.1 500 Internal Server Error Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate Date: Thu, 09 Apr 2026 02:35:24 GMT Content-Length: 21  
+:3000/package.json -> HTTP/1.1 500 Internal Server Error Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate Date: Thu, 09 Apr 2026 02:35:24 GMT Content-Length: 21  
+
+=== NGINX :80 FULL PAGE ===
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Success!</title>
+		<style>
+			body {
+				background-color: #f5f5f5;
+				margin-top: 8%;
+				color: #5d5d5d;
+				font-family:
+					-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+					"Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+					"Noto Color Emoji";
+				text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+				text-align: center;
+			}
+
+			h1 {
+				font-size: 2.45em;
+				font-weight: 700;
+				color: #5d5d5d;
+				letter-spacing: -0.02em;
+				margin-bottom: 30px;
+				margin-top: 30px;
+			}
+
+			.container {
+				width: 100%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			.animate__animated {
+				animation-duration: 1s;
+				animation-fill-mode: both;
+			}
+
+			.animate__fadeIn {
+				animation-name: fadeIn;
+			}
+
+			.info {
+				color: #5594cf;
+				fill: #5594cf;
+			}
+
+			.error {
+				color: #c92127;
+				fill: #c92127;
+			}
+
+			.warning {
+				color: #ffcc33;
+				fill: #ffcc33;
+			}
+
+			.success {
+				color: #5aba47;
+				fill: #5aba47;
+			}
+
+			.icon-large {
+				height: 132px;
+				width: 132px;
+			}
+
+			.description-text {
+				color: #707070;
+				letter-spacing: -0.01em;
+				font-size: 1.25em;
+				line-height: 20px;
+			}
+
+			.footer {
+				margin-top: 40px;
+				font-size: 0.7em;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="animate__animated animate__fadeIn">
+						<i class="success">
+							<svg
+								class="success icon-large fa-check-circle"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+							>
+								<path
+									d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+								></path>
+							</svg>
+						</i>
+					</div>
+					<h1 class="animate__animated animate__fadeIn">Success!</h1>
+					<div class="description-text animate__animated animate__fadeIn">
+						<p>Your new web server is ready to use.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+=== NGINX :80 COMMON PATHS ===
+:80/admin -> HTTP 404
+:80/api -> HTTP 404
+:80/status -> HTTP 404
+:80/.env -> HTTP 404
+:80/server-status -> HTTP 403
+:80/nginx_status -> HTTP 404
+
+=== POSTGRESQL :5432 BANNER ===
+
+=== SSH BANNER ===
+SSH-2.0-OpenSSH_9.2p1
+
+=== IMAPS :993 FULL CAPABILITY ===
+* OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Mail Delivery Agent
+* CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN
+a001 OK Pre-login capabilities listed, post-login capabilities have more.
+* BYE Logging out
+a002 OK Logout completed.

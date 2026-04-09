@@ -297,6 +297,150 @@ The operator is **actively maintaining infrastructure** despite the broken monet
 ### Graph Data
 
 Network graph JSON with all entities and connections: `graph/network-graph.json`
-- **63 nodes**: 4 domains, 20 subdomains, 8 IPs, 10 services, 5 platforms, 2 brands, 5 certs, 4 email configs, 4 assets, 1 tracker
-- **71 edges**: resolves_to, hosts, serves, redirects_to, shared_cloudflare_account, uses_platform, has_certificate, has_email_config, backed_by, hosts_assets_for, same_operator, child_of
+- **69 nodes**: 5 domains, 21 subdomains, 11 IPs, 11 services, 5 platforms, 2 brands, 5 certs, 4 email configs, 4 assets, 1 tracker, 3 verifications
+- **79 edges**: resolves_to, hosts, serves, redirects_to, shared_cloudflare_account, uses_platform, has_certificate, has_email_config, backed_by, hosts_assets_for, same_operator, child_of, virtual_host_on, configured_for, has_verification
 - Compatible with D3.js, Cytoscape.js, Sigma.js for visualization
+
+## Deep Capture (2026-04-09 02:35-02:41 UTC)
+
+6 parallel containerized probes + JS bundle analysis + olivimails.com follow-up. All raw data in `artifacts/deep-capture-2026-04-09/`.
+
+### CRITICAL: 5th Domain — olivimails.com
+
+SMTP STARTTLS and IMAPS certificates on 13.220.193.170 reveal a **self-signed cert** not seen through Cloudflare:
+
+```
+Subject: CN = fqdn.olivimails.com
+Issuer:  O = Hestia Control Panel, L = San Francisco, ST = California, C = US
+Created: Aug 28, 2025 09:24:26 (same day as server provisioning)
+```
+
+**olivimails.com** is the **original server hostname** before epicfunnels.net was added. No public DNS, no CT logs — a "shadow domain" only visible via direct server connection. The EC2 nginx has virtual hosts for both `olivimails.com` (serves "Success!" default) and `fqdn.olivimails.com` (serves "Coming Soon" page with domain name in footer).
+
+### CRITICAL: Hestia Control Panel on Port 8083
+
+`https://13.220.193.170:8083/` serves the **Hestia Control Panel v1.9.4** login page — the admin interface that manages the entire server (nginx, Dovecot, PostgreSQL, Node.js, Redis). Login title: "LOGIN - fqdn.olivimails.com - Hestia Control Panel". Session cookie HESTIASID uses HttpOnly + Secure + SameSite=Strict.
+
+### CRITICAL: Redis 7.4.7 — COMPLETELY OPEN
+
+Port 6379 `INFO` dump reveals:
+- **No authentication**: `requirepass` is empty, `protected-mode: no`
+- **Bound to all interfaces**: `bind: * -::*`
+- **Uptime**: 75 days (~January 24, 2026)
+- **Running in Docker**: PID 1, executable `/data/redis-server`
+- **OS**: Linux 6.1.0-42-cloud-amd64 (Debian cloud kernel)
+- **Database**: 4 keys in db0, 2.56MB used, 3.78GB total system memory
+- **500 cached Lua scripts** — indicates active programmatic use
+
+### TXT Record Intelligence
+
+Three verification records on epicfunnels.net reveal third-party service integrations:
+
+| Record | Service | Significance |
+|--------|---------|-------------|
+| `google-site-verification=qWPTL9H_t4lE4Lja7ZwdNCdmGBQEaTmtJiX7KpXbkxM` | Google Search Console | Operator has GSC access (identity clue) |
+| `MS=ms66511106` | Microsoft 365 | Domain verified for M365/Azure AD |
+| `activeprospect-domain-verification=M+mUYgTDEprxDUAdcdobLA==` | ActiveProspect | TCPA consent/lead verification — confirms CPA lead gen |
+
+**Two conflicting SPF records** (invalid per RFC 7208):
+1. `v=spf1 a mx ip4:13.220.193.170 -all` (mail server)
+2. `v=spf1 include:spf.protection.outlook.com include:mail.zendesk.com -all` (M365 + Zendesk)
+
+### epicfunnels.net Root Domain — Now Serving Scam Page
+
+epicfunnels.net and www.epicfunnels.net now serve the **exact same scam page** as jessica.epicfunnels.net — same HTML, same JS bundle (`index-CUlwK__p.js`), same "Free iPhone 17 Pro Max" title, same GetnGoods branding. Previously these were NXDOMAIN.
+
+**robots.txt** explicitly allows Googlebot, Bingbot, Twitterbot, and facebookexternalhit — contradicting the `noindex, nofollow` meta tags. Purpose: enable social media preview cards while blocking search indexing.
+
+### SMTP Capabilities (EHLO)
+
+```
+250-SIZE 52428800        (50MB message size limit)
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-CHUNKING
+250-STARTTLS
+250 HELP
+```
+
+EHLO response includes our IP in the greeting: `Hello [our-ip]` — no relay restrictions tested.
+
+### Roundcube Details
+
+- **Version confirmed**: rcversion 10611 (1.6.11)
+- **Install date**: Asset timestamp `?s=1755356738` = Aug 16, 2025
+- **cookie_secure: false** — cookies sent over HTTP
+- **session_lifetime: 600** (10 minutes)
+- **CSRF token present** per-session
+
+### Virtual Host Map (nginx on EC2 :80)
+
+| Host header | Response | Content |
+|------------|----------|---------|
+| olivimails.com | 200, 2520 bytes | "Success!" default |
+| fqdn.olivimails.com | 200, 2499 bytes | "Coming Soon" construction page |
+| epicfunnels.net | 200, 472 bytes | Smaller page (different content!) |
+| jessica.epicfunnels.net | 200, 2520 bytes | "Success!" default |
+| noodledit.com | 200, 2520 bytes | "Success!" default |
+| mydailysurge.com | 200, 2520 bytes | "Success!" default |
+| phef6trk.com | 200, 2520 bytes | "Success!" default |
+| webmail.epicfunnels.net | 200, no length | Roundcube redirect |
+| mail.epicfunnels.net | 200, no length | Roundcube redirect |
+
+### Additional Findings
+
+- **SSH**: OpenSSH 9.2p1 (Debian Bookworm)
+- **IPv6**: `2606:4700:3031::ac43:c0a6`, `2606:4700:3033::6815:bd3` (Cloudflare)
+- **Node.js :3000**: Every endpoint returns 500 — app is completely dead. Cloudflare Workers handles /api/continue redirects.
+- **nginx /server-status**: 403 (mod_status exists but blocked)
+- **/.env on epicfunnels.net**: 403 (blocked but file exists)
+- **iphone17promax.png** (no "1000" suffix): 427KB, different from iphone17promax1000.png (392KB) — higher res variant
+- **8 Unsplash stock photos** used as fake testimonial faces (IDs extracted from JS bundle)
+- **crt.sh history**: epicfunnels.net subdomains date back to June 2025 (earlier than Aug 2025 registration — domain was transferred). mydailysurge.com first cert July 21, 2025 (Cloudflare TLS).
+- **Sectigo certs** appeared for mydailysurge.com Dec 2025 / Feb 2026 — a third CA alongside Let's Encrypt and Google Trust Services
+
+### Updated Infrastructure Diagram
+
+```
+┌─ MANAGEMENT LAYER ──────────────────────────────────────────────┐
+│  Hestia Control Panel v1.9.4 (:8083)                            │
+│  FQDN: fqdn.olivimails.com                                      │
+│  Manages: nginx, Dovecot, PostgreSQL, Node.js, Redis             │
+│  *** EXPOSED TO INTERNET ***                                     │
+└─────────────────────────────────────────────────────────────────┘
+     │
+     ▼
+┌─ AWS EC2 (13.220.193.170) ──────────────────────────────────────┐
+│  :22  SSH (OpenSSH 9.2p1)                                        │
+│  :80  nginx ("Success!" + virtual hosts)                         │
+│  :443 HTTPS (cert expired Jan 2026)                              │
+│  :143 IMAP (Dovecot)                                             │
+│  :587 SMTP (leaks ip-172-26-15-175.ec2.internal)                 │
+│  :993 IMAPS (Dovecot, AUTH=PLAIN, cert=fqdn.olivimails.com)      │
+│  :3000 Node.js (DEAD — HTTP 500 on all endpoints)                │
+│  :5432 PostgreSQL (EXPOSED to internet)                          │
+│  :6379 Redis 7.4.7 (NO AUTH, protected-mode off, 4 keys)        │
+│  :8083 Hestia Control Panel (ADMIN PANEL EXPOSED)                │
+└─────────────────────────────────────────────────────────────────┘
+     │
+     ▼
+┌─ DOMAINS (5) ───────────────────────────────────────────────────┐
+│  olivimails.com ─── original server hostname (no public DNS)     │
+│  epicfunnels.net ── scam funnels + email (CF: cheryl/logan)      │
+│  noodledit.com ──── asset CDN on GCS (CF: cass/felicity)         │
+│  mydailysurge.com ─ SEO content farm (CF: cass/felicity)         │
+│  phef6trk.com ───── CPA tracker (SINKHOLED at 10.0.0.1)         │
+└─────────────────────────────────────────────────────────────────┘
+     │
+     ▼
+┌─ THIRD-PARTY INTEGRATIONS ──────────────────────────────────────┐
+│  Google Search Console ── domain verified                        │
+│  Microsoft 365 ────────── MS=ms66511106                          │
+│  ActiveProspect ───────── TCPA consent verification              │
+│  Zendesk ──────────────── included in SPF                        │
+│  Outlook.com ──────────── included in SPF                        │
+│  Lovable AI ───────────── scam page generator                    │
+│  Webflow ──────────────── SEO blog host                          │
+└─────────────────────────────────────────────────────────────────┘
+```

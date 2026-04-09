@@ -1,0 +1,190 @@
+=== JESSICA FULL PAGE ===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free iPhone 17 Pro Max Don't Miss This 👀</title>
+    <meta name="description" content="You've been selected! Claim your chance at exclusive rewards including the $1000 iPhone 17 Pro Max. Shop, Play & Earn with GetnGoods." />
+    <meta name="author" content="GetnGoods" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <meta property="og:title" content="GetnGoods - Unlock Your Exclusive Rewards" />
+    <meta property="og:description" content="Claim your chance at exclusive rewards including the $1000 iPhone 17 Pro Max." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GetnGoods" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="module" crossorigin src="/assets/index-CUlwK__p.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D8N5ZY6U.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+=== ALL RESPONSE HEADERS ===
+HTTP/2 200 
+date: Thu, 09 Apr 2026 02:35:32 GMT
+content-type: text/html
+server: cloudflare
+last-modified: Sun, 15 Mar 2026 07:06:08 GMT
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=xDmMj%2Bg5grIoh%2FHpXTWUwWIfSWyBQMCRHQW9hZpWYH6BSDlImYhHl389tNoleY%2FcLEXYispFA%2Be1JX84Vt9DwRYll9D3hGUOPSa7bU4N2G5oPYtzMk0T97nOShKg%2FQk%2Bp2ToU%2F%2BD5PYV3923%2BBl9KY7nl%2FN9CQ%3D%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-cache-status: DYNAMIC
+cf-ray: 9e961e763fffeb25-SJC
+alt-svc: h3=":443"; ma=86400
+
+
+=== /api/continue FULL REDIRECT CHAIN ===
+*   Trying [2606:4700:3031::ac43:c0a6]:443...
+* Connected to jessica.epicfunnels.net (2606:4700:3031::ac43:c0a6) port 443 (#0)
+* ALPN: offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [19 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2539 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [80 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=epicfunnels.net
+*  start date: Feb 19 22:41:22 2026 GMT
+*  expire date: May 20 23:40:11 2026 GMT
+*  subjectAltName: host "jessica.epicfunnels.net" matched cert's "*.epicfunnels.net"
+*  issuer: C=US; O=Google Trust Services; CN=WE1
+*  SSL certificate verify ok.
+} [5 bytes data]
+* using HTTP/2
+* h2h3 [:method: GET]
+* h2h3 [:path: /api/continue]
+* h2h3 [:scheme: https]
+* h2h3 [:authority: jessica.epicfunnels.net]
+* h2h3 [user-agent: curl/7.88.1]
+* h2h3 [accept: */*]
+* Using Stream ID: 1 (easy handle 0x55fe80a717a0)
+} [5 bytes data]
+> GET /api/continue HTTP/2
+> Host: jessica.epicfunnels.net
+> user-agent: curl/7.88.1
+> accept: */*
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [230 bytes data]
+
+=== /api/continue-click FULL REDIRECT CHAIN ===
+*   Trying [2606:4700:3031::ac43:c0a6]:443...
+* Connected to jessica.epicfunnels.net (2606:4700:3031::ac43:c0a6) port 443 (#0)
+* ALPN: offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [19 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2539 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [79 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=epicfunnels.net
+*  start date: Feb 19 22:41:22 2026 GMT
+*  expire date: May 20 23:40:11 2026 GMT
+*  subjectAltName: host "jessica.epicfunnels.net" matched cert's "*.epicfunnels.net"
+*  issuer: C=US; O=Google Trust Services; CN=WE1
+*  SSL certificate verify ok.
+} [5 bytes data]
+* using HTTP/2
+* h2h3 [:method: GET]
+* h2h3 [:path: /api/continue-click]
+* h2h3 [:scheme: https]
+* h2h3 [:authority: jessica.epicfunnels.net]
+* h2h3 [user-agent: curl/7.88.1]
+* h2h3 [accept: */*]
+* Using Stream ID: 1 (easy handle 0x55bad50347a0)
+} [5 bytes data]
+> GET /api/continue-click HTTP/2
+> Host: jessica.epicfunnels.net
+> user-agent: curl/7.88.1
+> accept: */*
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [230 bytes data]
+
+=== TRY OTHER PERSON NAMES ===
+jessica.epicfunnels.net -> HTTP 200
+jenny.epicfunnels.net -> DOWN
+kylie.epicfunnels.net -> DOWN
+emma.epicfunnels.net -> DOWN
+sophia.epicfunnels.net -> DOWN
+olivia.epicfunnels.net -> DOWN
+sarah.epicfunnels.net -> DOWN
+ashley.epicfunnels.net -> DOWN
+amanda.epicfunnels.net -> DOWN
+tiffany.epicfunnels.net -> DOWN
+brittany.epicfunnels.net -> DOWN
+megan.epicfunnels.net -> DOWN
+lauren.epicfunnels.net -> DOWN
+rachel.epicfunnels.net -> DOWN
+stephanie.epicfunnels.net -> DOWN
+
+=== CHECK FOR OTHER API ENDPOINTS ===
+/api -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:33 GMT content-type: text/html 
+/api/health -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:33 GMT content-type: text/html 
+/api/status -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:34 GMT content-type: text/html 
+/api/config -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:34 GMT content-type: text/html 
+/api/user -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:34 GMT content-type: text/html 
+/api/track -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:34 GMT content-type: text/html 
+/api/submit -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:34 GMT content-type: text/html 
+/api/register -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:34 GMT content-type: text/html 
+/api/login -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:34 GMT content-type: text/html 
+/api/webhook -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:34 GMT content-type: text/html 
+/api/click -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:35 GMT content-type: text/html 
+/api/redirect -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:35 GMT content-type: text/html 
+/api/funnel -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:35 GMT content-type: text/html 
+/api/lead -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:35 GMT content-type: text/html 
+/api/pixel -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:35 GMT content-type: text/html 
+/api/event -> HTTP/2 200  date: Thu, 09 Apr 2026 02:35:35 GMT content-type: text/html 
+
+=== CLOUDFLARE HEADERS ANALYSIS ===
+server: cloudflare
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=XEexkfTUJQgarmK3JixLQXs7VWY5M98qJHxsEHadcz0f%2FH9DKL9%2BMST81hnnoIE6WeLSbLM5TjZZNrtHWTAzzHYcadWI8MLNWCykcwOEd1xeG2awhH3x1thr8HUE4QBViGfSdqM3U6359ssftWaOZEsUrNrxXQ%3D%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-cache-status: DYNAMIC
+cf-ray: 9e961e8d1cdb4d21-SJC
+alt-svc: h3=":443"; ma=86400

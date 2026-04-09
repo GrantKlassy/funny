@@ -1,0 +1,548 @@
+=== ROUNDCUBE FULL LOGIN PAGE ===
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Roundcube Webmail :: Welcome to Roundcube Webmail</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0"><meta name="theme-color" content="#f4f4f4"><meta name="msapplication-navbutton-color" content="#f4f4f4">
+	<link rel="shortcut icon" href="skins/elastic/images/favicon.ico?s=1755356738">
+	<link rel="stylesheet" href="skins/elastic/deps/bootstrap.min.css?s=1755356738">
+	
+		<link rel="stylesheet" href="skins/elastic/styles/styles.min.css?s=1755356738">
+		
+	
+	
+		<script>
+		try {
+			if (document.cookie.indexOf('colorMode=dark') > -1
+				|| (document.cookie.indexOf('colorMode=light') === -1 && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.className += ' dark-mode';
+			}
+		} catch (e) { }
+		</script>
+	
+<link rel="stylesheet" type="text/css" href="plugins/jqueryui/themes/elastic/jquery-ui.min.css?s=1755356738"><script src="program/js/jquery.min.js?s=1755356738"></script><script src="program/js/common.min.js?s=1755356738"></script><script src="program/js/app.min.js?s=1755356738"></script><script src="program/js/jstz.min.js?s=1755356738"></script><script>
+/*
+        @licstart  The following is the entire license notice for the 
+        JavaScript code in this page.
+
+        Copyright (C) The Roundcube Dev Team
+
+        The JavaScript code in this page is free software: you can redistribute
+        it and/or modify it under the terms of the GNU General Public License
+        as published by the Free Software Foundation, either version 3 of
+        the License, or (at your option) any later version.
+
+        The code is distributed WITHOUT ANY WARRANTY; without even the implied
+        warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+        See the GNU GPL for more details.
+
+        @licend  The above is the entire license notice
+        for the JavaScript code in this page.
+*/
+var rcmail = new rcube_webmail();
+rcmail.set_env({"task":"login","standard_windows":false,"locale":"en_US","devel_mode":null,"rcversion":10611,"cookie_domain":"","cookie_path":"/","cookie_secure":false,"dark_mode_support":true,"skin":"elastic","blankpage":"skins/elastic/watermark.html","refresh_interval":60,"session_lifetime":600,"action":"","comm_path":"/?_task=login","compose_extwin":false,"date_format":"yy-mm-dd","date_format_localized":"YYYY-MM-DD","request_token":"9EYhRnCknw4xO226Uvyptyc6likUdfHk"});
+rcmail.add_label({"loading":"Loading...","servererror":"Server Error!","connerror":"Connection Error (Failed to reach the server)!","requesttimedout":"Request timed out","refreshing":"Refreshing...","windowopenerror":"The popup window was blocked!","uploadingmany":"Uploading files...","uploading":"Uploading file...","close":"Close","save":"Save","cancel":"Cancel","alerttitle":"Attention","confirmationtitle":"Are you sure...","delete":"Delete","continue":"Continue","ok":"OK","back":"Back","errortitle":"An error occurred!","options":"Options","plaintoggle":"Plain text","htmltoggle":"HTML","previous":"Previous","next":"Next","select":"Select","browse":"Browse","choosefile":"Choose file...","choosefiles":"Choose files..."});
+rcmail.gui_container("loginfooter","login-footer");rcmail.gui_object('loginform', 'login-form');
+rcmail.gui_object('message', 'messagestack');
+</script>
+
+<script src="plugins/jqueryui/js/jquery-ui.min.js?s=1755356738"></script>
+</head>
+<body class="task-login action-none">
+	
+		<div id="layout">
+	
+
+
+<h1 class="voice">Roundcube Webmail Login</h1>
+
+<div id="layout-content" class="selected no-navbar" role="main">
+	<img src="skins/elastic/images/logo.svg?s=1755356738" id="logo" alt="Logo">
+	<form id="login-form" name="login-form" method="post" class="propform" action="/?_task=login">
+<input type="hidden" name="_token" value="9EYhRnCknw4xO226Uvyptyc6likUdfHk">
+	<input type="hidden" name="_task" value="login"><input type="hidden" name="_action" value="login"><input type="hidden" name="_timezone" id="rcmlogintz" value="_default_"><input type="hidden" name="_url" id="rcmloginurl" value=""><table><tbody><tr><td class="title"><label for="rcmloginuser">Username</label></td><td class="input"><input name="_user" id="rcmloginuser" required size="40" class="form-control" autocapitalize="off" autocomplete="off" value="" type="text"></td></tr><tr><td class="title"><label for="rcmloginpwd">Password</label></td><td class="input"><input name="_pass" id="rcmloginpwd" required size="40" class="form-control" autocapitalize="off" autocomplete="off" type="password"></td></tr></tbody></table><p class="formbuttons"><button type="submit" id="rcmloginsubmit" class="button mainaction submit">Login</button></p>
+		<div id="login-footer" role="contentinfo">
+			Roundcube Webmail
+			
+			
+			
+		</div>
+	</form>
+</div>
+
+<noscript>
+	<p class="noscriptwarning">Warning: This webmail service requires Javascript! In order to use it please enable Javascript in your browser's settings.</p>
+</noscript>
+
+
+</div>
+
+
+
+<div id="messagestack"></div>
+<script>
+$(function() {
+rcmail.init();
+});
+</script>
+
+
+
+<script src="skins/elastic/deps/bootstrap.bundle.min.js?s=1755356738"></script>
+<script src="skins/elastic/ui.min.js?s=1755356738"></script>
+
+</body>
+</html>
+=== ROUNDCUBE HTTP-ONLY LOGIN ===
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Roundcube Webmail :: Welcome to Roundcube Webmail</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0"><meta name="theme-color" content="#f4f4f4"><meta name="msapplication-navbutton-color" content="#f4f4f4">
+	<link rel="shortcut icon" href="skins/elastic/images/favicon.ico?s=1755356738">
+	<link rel="stylesheet" href="skins/elastic/deps/bootstrap.min.css?s=1755356738">
+	
+		<link rel="stylesheet" href="skins/elastic/styles/styles.min.css?s=1755356738">
+		
+	
+	
+		<script>
+		try {
+			if (document.cookie.indexOf('colorMode=dark') > -1
+				|| (document.cookie.indexOf('colorMode=light') === -1 && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.className += ' dark-mode';
+			}
+		} catch (e) { }
+		</script>
+	
+<link rel="stylesheet" type="text/css" href="plugins/jqueryui/themes/elastic/jquery-ui.min.css?s=1755356738"><script src="program/js/jquery.min.js?s=1755356738"></script><script src="program/js/common.min.js?s=1755356738"></script><script src="program/js/app.min.js?s=1755356738"></script><script src="program/js/jstz.min.js?s=1755356738"></script><script>
+/*
+        @licstart  The following is the entire license notice for the 
+        JavaScript code in this page.
+
+        Copyright (C) The Roundcube Dev Team
+
+        The JavaScript code in this page is free software: you can redistribute
+        it and/or modify it under the terms of the GNU General Public License
+        as published by the Free Software Foundation, either version 3 of
+        the License, or (at your option) any later version.
+
+        The code is distributed WITHOUT ANY WARRANTY; without even the implied
+        warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+        See the GNU GPL for more details.
+
+        @licend  The above is the entire license notice
+        for the JavaScript code in this page.
+*/
+var rcmail = new rcube_webmail();
+rcmail.set_env({"task":"login","standard_windows":false,"locale":"en_US","devel_mode":null,"rcversion":10611,"cookie_domain":"","cookie_path":"/","cookie_secure":false,"dark_mode_support":true,"skin":"elastic","blankpage":"skins/elastic/watermark.html","refresh_interval":60,"session_lifetime":600,"action":"","comm_path":"/?_task=login","compose_extwin":false,"date_format":"yy-mm-dd","date_format_localized":"YYYY-MM-DD","request_token":"p0TUkEMr5nbQ3Nh4tqDWxKch2JGAxtcK"});
+rcmail.add_label({"loading":"Loading...","servererror":"Server Error!","connerror":"Connection Error (Failed to reach the server)!","requesttimedout":"Request timed out","refreshing":"Refreshing...","windowopenerror":"The popup window was blocked!","uploadingmany":"Uploading files...","uploading":"Uploading file...","close":"Close","save":"Save","cancel":"Cancel","alerttitle":"Attention","confirmationtitle":"Are you sure...","delete":"Delete","continue":"Continue","ok":"OK","back":"Back","errortitle":"An error occurred!","options":"Options","plaintoggle":"Plain text","htmltoggle":"HTML","previous":"Previous","next":"Next","select":"Select","browse":"Browse","choosefile":"Choose file...","choosefiles":"Choose files..."});
+rcmail.gui_container("loginfooter","login-footer");rcmail.gui_object('loginform', 'login-form');
+rcmail.gui_object('message', 'messagestack');
+</script>
+
+<script src="plugins/jqueryui/js/jquery-ui.min.js?s=1755356738"></script>
+</head>
+<body class="task-login action-none">
+	
+		<div id="layout">
+	
+
+
+<h1 class="voice">Roundcube Webmail Login</h1>
+
+<div id="layout-content" class="selected no-navbar" role="main">
+	<img src="skins/elastic/images/logo.svg?s=1755356738" id="logo" alt="Logo">
+	<form id="login-form" name="login-form" method="post" class="propform" action="/?_task=login">
+<input type="hidden" name="_token" value="p0TUkEMr5nbQ3Nh4tqDWxKch2JGAxtcK">
+	<input type="hidden" name="_task" value="login"><input type="hidden" name="_action" value="login"><input type="hidden" name="_timezone" id="rcmlogintz" value="_default_"><input type="hidden" name="_url" id="rcmloginurl" value=""><table><tbody><tr><td class="title"><label for="rcmloginuser">Username</label></td><td class="input"><input name="_user" id="rcmloginuser" required size="40" class="form-control" autocapitalize="off" autocomplete="off" value="" type="text"></td></tr><tr><td class="title"><label for="rcmloginpwd">Password</label></td><td class="input"><input name="_pass" id="rcmloginpwd" required size="40" class="form-control" autocapitalize="off" autocomplete="off" type="password"></td></tr></tbody></table><p class="formbuttons"><button type="submit" id="rcmloginsubmit" class="button mainaction submit">Login</button></p>
+		<div id="login-footer" role="contentinfo">
+			Roundcube Webmail
+			
+			
+			
+		</div>
+	</form>
+</div>
+
+<noscript>
+	<p class="noscriptwarning">Warning: This webmail service requires Javascript! In order to use it please enable Javascript in your browser's settings.</p>
+</noscript>
+
+
+</div>
+
+
+
+<div id="messagestack"></div>
+<script>
+$(function() {
+rcmail.init();
+});
+</script>
+
+
+
+<script src="skins/elastic/deps/bootstrap.bundle.min.js?s=1755356738"></script>
+<script src="skins/elastic/ui.min.js?s=1755356738"></script>
+
+</body>
+</html>
+=== ROUNDCUBE ALL HEADERS ===
+HTTP/2 301 
+date: Thu, 09 Apr 2026 02:36:57 GMT
+content-type: text/html
+location: http://webmail.epicfunnels.net/
+server: cloudflare
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-cache-status: DYNAMIC
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=RnEqxLrxPbC88Zmp7PydHDxFtTpWTIKuqrgbaNx8KUUDNhMoUcC%2BXw9Dp%2FBJJ4E7%2FAEGtvYKuQ21xP%2B6YDbkXsu6%2FzwCrT%2B1GXG1V%2BYDe86TYJOKZexFTKEdz3xAbpHhvnwqZ2bCGhqhQcwirlTWMM%2FMtfqfpg%3D%3D"}]}
+cf-ray: 9e9620882d0d15a8-SJC
+alt-svc: h3=":443"; ma=86400
+
+
+=== ROUNDCUBE COOKIES ===
+
+=== SMTP EHLO ENUMERATION ===
+220 ip-172-26-15-175.ec2.internal
+250-ip-172-26-15-175.ec2.internal Hello 192-184-150-96.fiber.dynamic.sonic.net [192.184.150.96]
+250-SIZE 52428800
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-CHUNKING
+250-STARTTLS
+250 HELP
+221 ip-172-26-15-175.ec2.internal closing connection
+
+=== SMTP STARTTLS CHECK ===
+220 ip-172-26-15-175.ec2.internal
+250-ip-172-26-15-175.ec2.internal Hello 192-184-150-96.fiber.dynamic.sonic.net [192.184.150.96]
+250-SIZE 52428800
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-CHUNKING
+250-STARTTLS
+250 HELP
+220 TLS go ahead
+ 
+
+=== IMAP FULL CAPABILITY ===
+* OK Waiting for authentication process to respond..
+* OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN] Mail Delivery Agent
+* CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN
+a001 OK Pre-login capabilities listed, post-login capabilities have more.
+* BYE Logging out
+a002 OK Logout completed.
+
+=== SSL CERT CHAIN (direct :443) ===
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:CN = epicfunnels.net
+   i:C = US, O = Let's Encrypt, CN = R13
+   a:PKEY: rsaEncryption, 4096 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Oct 27 02:16:30 2025 GMT; NotAfter: Jan 25 02:16:29 2026 GMT
+-----BEGIN CERTIFICATE-----
+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
+IAwTWqXhsnCJPtYvRMLyHKXRjV9fhg==
+-----END CERTIFICATE-----
+ 1 s:C = US, O = Let's Encrypt, CN = R13
+   i:C = US, O = Internet Security Research Group, CN = ISRG Root X1
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Mar 13 00:00:00 2024 GMT; NotAfter: Mar 12 23:59:59 2027 GMT
+-----BEGIN CERTIFICATE-----
+MIIFBTCCAu2gAwIBAgIQWgDyEtjUtIDzkkFX6imDBTANBgkqhkiG9w0BAQsFADBP
+MQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJuZXQgU2VjdXJpdHkgUmVzZWFy
+Y2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBYMTAeFw0yNDAzMTMwMDAwMDBa
+Fw0yNzAzMTIyMzU5NTlaMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBF
+bmNyeXB0MQwwCgYDVQQDEwNSMTMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQClZ3CN0FaBZBUXYc25BtStGZCMJlA3mBZjklTb2cyEBZPs0+wIG6BgUUNI
+fSvHSJaetC3ancgnO1ehn6vw1g7UDjDKb5ux0daknTI+WE41b0VYaHEX/D7YXYKg
+L7JRbLAaXbhZzjVlyIuhrxA3/+OcXcJJFzT/jCuLjfC8cSyTDB0FxLrHzarJXnzR
+yQH3nAP2/Apd9Np75tt2QnDr9E0i2gB3b9bJXxf92nUupVcM9upctuBzpWjPoXTi
+dYJ+EJ/B9aLrAek4sQpEzNPCifVJNYIKNLMc6YjCR06CDgo28EdPivEpBHXazeGa
+XP9enZiVuppD0EqiFwUBBDDTMrOPAgMBAAGjgfgwgfUwDgYDVR0PAQH/BAQDAgGG
+MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATASBgNVHRMBAf8ECDAGAQH/
+AgEAMB0GA1UdDgQWBBTnq58PLDOgU9NeT3jIsoQOO9aSMzAfBgNVHSMEGDAWgBR5
+tFnme7bl5AFzgAiIyBpY9umbbjAyBggrBgEFBQcBAQQmMCQwIgYIKwYBBQUHMAKG
+Fmh0dHA6Ly94MS5pLmxlbmNyLm9yZy8wEwYDVR0gBAwwCjAIBgZngQwBAgEwJwYD
+VR0fBCAwHjAcoBqgGIYWaHR0cDovL3gxLmMubGVuY3Iub3JnLzANBgkqhkiG9w0B
+AQsFAAOCAgEAUTdYUqEimzW7TbrOypLqCfL7VOwYf/Q79OH5cHLCZeggfQhDconl
+k7Kgh8b0vi+/XuWu7CN8n/UPeg1vo3G+taXirrytthQinAHGwc/UdbOygJa9zuBc
+VyqoH3CXTXDInT+8a+c3aEVMJ2St+pSn4ed+WkDp8ijsijvEyFwE47hulW0Ltzjg
+9fOV5Pmrg/zxWbRuL+k0DBDHEJennCsAen7c35Pmx7jpmJ/HtgRhcnz0yjSBvyIw
+6L1QIupkCv2SBODT/xDD3gfQQyKv6roV4G2EhfEyAsWpmojxjCUCGiyg97FvDtm/
+NK2LSc9lybKxB73I2+P2G3CaWpvvpAiHCVu30jW8GCxKdfhsXtnIy2imskQqVZ2m
+0Pmxobb28Tucr7xBK7CtwvPrb79os7u2XP3O5f9b/H66GNyRrglRXlrYjI1oGYL/
+f4I1n/Sgusda6WvA6C190kxjU15Y12mHU4+BxyR9cx2hhGS9fAjMZKJss28qxvz6
+Axu4CaDmRNZpK/pQrXF17yXCXkmEWgvSOEZy6Z9pcbLIVEGckV/iVeq0AOo2pkg9
+p4QRIy0tK2diRENLSF2KysFwbY6B26BFeFs3v1sYVRhFW9nLkOrQVporCS0KyZmf
+wVD89qSTlnctLcZnIavjKsKUu1nA1iU0yYMdYepKR7lWbnwhdx3ewok=
+-----END CERTIFICATE-----
+---
+Server certificate
+subject=CN = epicfunnels.net
+issuer=C = US, O = Let's Encrypt, CN = R13
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 3652 bytes and written 385 bytes
+Verification error: certificate has expired
+---
+New, TLSv1.3, Cipher is TLS_AES_128_GCM_SHA256
+Server public key is 4096 bit
+Secure Renegotiation IS NOT supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 10 (certificate has expired)
+---
+
+=== SSL CERT CHAIN (jessica via CF) ===
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:CN = epicfunnels.net
+   i:C = US, O = Google Trust Services, CN = WE1
+   a:PKEY: id-ecPublicKey, 256 (bit); sigalg: ecdsa-with-SHA256
+   v:NotBefore: Feb 19 22:41:22 2026 GMT; NotAfter: May 20 23:40:11 2026 GMT
+-----BEGIN CERTIFICATE-----
+MIIDrzCCA1agAwIBAgIRAJSgkOADQlTrDSTqZUi8+CswCgYIKoZIzj0EAwIwOzEL
+MAkGA1UEBhMCVVMxHjAcBgNVBAoTFUdvb2dsZSBUcnVzdCBTZXJ2aWNlczEMMAoG
+A1UEAxMDV0UxMB4XDTI2MDIxOTIyNDEyMloXDTI2MDUyMDIzNDAxMVowGjEYMBYG
+A1UEAxMPZXBpY2Z1bm5lbHMubmV0MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE
+kw9pjp6PeKAUABRXTFcrT4idQ2V9xtwngQ1CSXOSNG1c4O6natrQH4Wr13xJp6rA
+7pZZ2bdRBKGr6EWykpZeE6OCAlowggJWMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUE
+DDAKBggrBgEFBQcDATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBRpeY5jFPrY4UKP
+aPWSr39+H0YcwTAfBgNVHSMEGDAWgBSQd5I1Z8T/qMyp5nvZgHl7zJP5ODBeBggr
+BgEFBQcBAQRSMFAwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vLnBraS5nb29nL3Mvd2Ux
+L2xLQTAlBggrBgEFBQcwAoYZaHR0cDovL2kucGtpLmdvb2cvd2UxLmNydDAtBgNV
+HREEJjAkgg9lcGljZnVubmVscy5uZXSCESouZXBpY2Z1bm5lbHMubmV0MBMGA1Ud
+IAQMMAowCAYGZ4EMAQIBMDYGA1UdHwQvMC0wK6ApoCeGJWh0dHA6Ly9jLnBraS5n
+b29nL3dlMS9GQVJlUHh5ME0yTS5jcmwwggEDBgorBgEEAdZ5AgQCBIH0BIHxAO8A
+dgCWl2S/VViXrfdDh2g3CEJ36fA61fak8zZuRqQ/D8qpxgAAAZx4R5ReAAAEAwBH
+MEUCIEtzzRH9pdNfdA5q9cj/ru9yClGtJIm9dXidH0RivR+nAiEA9T5EQvpNg71C
+4Op9BcmUVOV6rWeRu5/cAilPEBKb90sAdQBkEcRspBLsp4kcogIuALyrTygH1B41
+J6vq/tUDyX3N8AAAAZx4R5RZAAAEAwBGMEQCIFRg9fHpblToe+JVM07Z++hNUXcM
+b9G7GuL2wj5pQMlxAiBzgnlx+37KVOHjtMAiRSzI7Jc6Ak8ifGgt31m8H8aUETAK
+BggqhkjOPQQDAgNHADBEAiAw9btiSL7FPEefIBn9dVs9yRzmFBZBiYrMzvdlz4Cr
+zQIgT9UAbmco4Qp21xT5dhbEcF+ZReupx9WRMIgkPa10jnY=
+-----END CERTIFICATE-----
+ 1 s:C = US, O = Google Trust Services, CN = WE1
+   i:C = US, O = Google Trust Services LLC, CN = GTS Root R4
+   a:PKEY: id-ecPublicKey, 256 (bit); sigalg: ecdsa-with-SHA384
+   v:NotBefore: Dec 13 09:00:00 2023 GMT; NotAfter: Feb 20 14:00:00 2029 GMT
+-----BEGIN CERTIFICATE-----
+MIICnzCCAiWgAwIBAgIQf/MZd5csIkp2FV0TttaF4zAKBggqhkjOPQQDAzBHMQsw
+CQYDVQQGEwJVUzEiMCAGA1UEChMZR29vZ2xlIFRydXN0IFNlcnZpY2VzIExMQzEU
+MBIGA1UEAxMLR1RTIFJvb3QgUjQwHhcNMjMxMjEzMDkwMDAwWhcNMjkwMjIwMTQw
+MDAwWjA7MQswCQYDVQQGEwJVUzEeMBwGA1UEChMVR29vZ2xlIFRydXN0IFNlcnZp
+Y2VzMQwwCgYDVQQDEwNXRTEwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARvzTr+
+Z1dHTCEDhUDCR127WEcPQMFcF4XGGTfn1XzthkubgdnXGhOlCgP4mMTG6J7/EFmP
+LCaY9eYmJbsPAvpWo4H+MIH7MA4GA1UdDwEB/wQEAwIBhjAdBgNVHSUEFjAUBggr
+BgEFBQcDAQYIKwYBBQUHAwIwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQU
+kHeSNWfE/6jMqeZ72YB5e8yT+TgwHwYDVR0jBBgwFoAUgEzW63T/STaj1dj8tT7F
+avCUHYwwNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzAChhhodHRwOi8vaS5wa2ku
+Z29vZy9yNC5jcnQwKwYDVR0fBCQwIjAgoB6gHIYaaHR0cDovL2MucGtpLmdvb2cv
+ci9yNC5jcmwwEwYDVR0gBAwwCjAIBgZngQwBAgEwCgYIKoZIzj0EAwMDaAAwZQIx
+AOcCq1HW90OVznX+0RGU1cxAQXomvtgM8zItPZCuFQ8jSBJSjz5keROv9aYsAm5V
+sQIwJonMaAFi54mrfhfoFNZEfuNMSQ6/bIBiNLiyoX46FohQvKeIoJ99cx7sUkFN
+7uJW
+-----END CERTIFICATE-----
+ 2 s:C = US, O = Google Trust Services LLC, CN = GTS Root R4
+   i:C = BE, O = GlobalSign nv-sa, OU = Root CA, CN = GlobalSign Root CA
+   a:PKEY: id-ecPublicKey, 384 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Nov 15 03:43:21 2023 GMT; NotAfter: Jan 28 00:00:42 2028 GMT
+-----BEGIN CERTIFICATE-----
+MIIDejCCAmKgAwIBAgIQf+UwvzMTQ77dghYQST2KGzANBgkqhkiG9w0BAQsFADBX
+MQswCQYDVQQGEwJCRTEZMBcGA1UEChMQR2xvYmFsU2lnbiBudi1zYTEQMA4GA1UE
+CxMHUm9vdCBDQTEbMBkGA1UEAxMSR2xvYmFsU2lnbiBSb290IENBMB4XDTIzMTEx
+NTAzNDMyMVoXDTI4MDEyODAwMDA0MlowRzELMAkGA1UEBhMCVVMxIjAgBgNVBAoT
+GUdvb2dsZSBUcnVzdCBTZXJ2aWNlcyBMTEMxFDASBgNVBAMTC0dUUyBSb290IFI0
+MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAE83Rzp2iLYK5DuDXFgTB7S0md+8Fhzube
+Rr1r1WEYNa5A3XP3iZEwWus87oV8okB2O6nGuEfYKueSkWpz6bFyOZ8pn6KY019e
+WIZlD6GEZQbR3IvJx3PIjGov5cSr0R2Ko4H/MIH8MA4GA1UdDwEB/wQEAwIBhjAd
+BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDwYDVR0TAQH/BAUwAwEB/zAd
+BgNVHQ4EFgQUgEzW63T/STaj1dj8tT7FavCUHYwwHwYDVR0jBBgwFoAUYHtmGkUN
+l8qJUC99BM00qP/8/UswNgYIKwYBBQUHAQEEKjAoMCYGCCsGAQUFBzAChhpodHRw
+Oi8vaS5wa2kuZ29vZy9nc3IxLmNydDAtBgNVHR8EJjAkMCKgIKAehhxodHRwOi8v
+Yy5wa2kuZ29vZy9yL2dzcjEuY3JsMBMGA1UdIAQMMAowCAYGZ4EMAQIBMA0GCSqG
+SIb3DQEBCwUAA4IBAQAYQrsPBtYDh5bjP2OBDwmkoWhIDDkic574y04tfzHpn+cJ
+odI2D4SseesQ6bDrarZ7C30ddLibZatoKiws3UL9xnELz4ct92vID24FfVbiI1hY
++SW6FoVHkNeWIP0GCbaM4C6uVdF5dTUsMVs/ZbzNnIdCp5Gxmx5ejvEau8otR/Cs
+kGN+hr/W5GvT1tMBjgWKZ1i4//emhA1JG1BbPzoLJQvyEotc03lXjTaCzv8mEbep
+8RqZ7a2CPsgRbuvTPBwcOMBBmuFeU88+FSBX6+7iP0il8b4Z0QFqIwwMHfs/L6K1
+vepuoxtGzi4CZ68zJpiq1UvSqTbFJjtbD4seiMHl
+-----END CERTIFICATE-----
+---
+Server certificate
+subject=CN = epicfunnels.net
+issuer=C = US, O = Google Trust Services, CN = WE1
+---
+
+=== SMTP 587 SSL CERT (STARTTLS) ===
+        Serial Number:
+        Issuer: C = US, ST = California, L = San Francisco, O = Hestia Control Panel, OU = IT, CN = fqdn.olivimails.com
+            Not Before: Aug 28 09:24:26 2025 GMT
+            Not After : Aug 28 09:24:26 2026 GMT
+        Subject: C = US, ST = California, L = San Francisco, O = Hestia Control Panel, OU = IT, CN = fqdn.olivimails.com
+
+=== IMAPS :993 CERT ===
+        Serial Number:
+        Issuer: C = US, ST = California, L = San Francisco, O = Hestia Control Panel, OU = IT, CN = fqdn.olivimails.com
+            Not Before: Aug 28 09:24:26 2025 GMT
+            Not After : Aug 28 09:24:26 2026 GMT
+        Subject: C = US, ST = California, L = San Francisco, O = Hestia Control Panel, OU = IT, CN = fqdn.olivimails.com
+
+=== FULL crt.sh DUMP (epicfunnels.net) ===
+18931950975	2025-06-10T08:43:32.43	afiliados.epicfunnels.net	C=US, O=Let's Encrypt, CN=R11
+18937401969	2025-06-10T14:48:44.272	app.epicfunnels.net	C=US, O=Let's Encrypt, CN=R11
+18937199242	2025-06-10T14:48:46.384	app.epicfunnels.net	C=US, O=Let's Encrypt, CN=R11
+18951163038	2025-06-11T06:42:45.585	vpn.epicfunnels.net	C=US, O=Let's Encrypt, CN=R10
+18951162495	2025-06-11T06:42:45.799	vpn.epicfunnels.net	C=US, O=Let's Encrypt, CN=R10
+18982925561	2025-06-12T19:42:14.478	www.epicfunnels.net	C=US, O=Let's Encrypt, CN=R11
+18982923720	2025-06-12T19:42:14.803	www.epicfunnels.net	C=US, O=Let's Encrypt, CN=R11
+19021581873	2025-06-14T18:04:14.936	socios.epicfunnels.net	C=US, O=Let's Encrypt, CN=R10
+19021143854	2025-06-14T18:04:15.108	socios.epicfunnels.net	C=US, O=Let's Encrypt, CN=R10
+19068927784	2025-06-17T07:23:59.288	evento.epicfunnels.net	C=US, O=Let's Encrypt, CN=R10
+19068928088	2025-06-17T07:24:03.637	evento.epicfunnels.net	C=US, O=Let's Encrypt, CN=R10
+19100127177	2025-06-18T16:26:11.892	demo.epicfunnels.net	C=US, O=Let's Encrypt, CN=R11
+19100109644	2025-06-18T16:26:13.784	demo.epicfunnels.net	C=US, O=Let's Encrypt, CN=R11
+20587499044	2025-08-26T12:36:02.017	epicfunnels.net	C=US, O=Google Trust Services, CN=WE1
+20587523661	2025-08-26T12:37:44.027	epicfunnels.net	C=US, O=Let's Encrypt, CN=E8
+20587531682	2025-08-26T12:37:46.259	epicfunnels.net	C=US, O=Let's Encrypt, CN=E8
+20587587257	2025-08-26T12:41:47.096	epicfunnels.net	C=US, O=Let's Encrypt, CN=R13
+20587598625	2025-08-26T12:41:47.396	epicfunnels.net	C=US, O=Let's Encrypt, CN=R13
+20637799528	2025-08-28T20:00:41.271	epicfunnels.net	C=US, O=Let's Encrypt, CN=R12
+20637802262	2025-08-28T20:00:41.677	epicfunnels.net	C=US, O=Let's Encrypt, CN=R12
+20742440487	2025-09-02T10:23:50.879	epicfunnels.net	C=US, O=Google Trust Services, CN=WE1
+21973725226	2025-10-24T16:22:15.198	epicfunnels.net	C=US, O=Google Trust Services, CN=WE1
+22002524880	2025-10-25T21:27:43.169	epicfunnels.net	C=US, O=Let's Encrypt, CN=E8
+22002524048	2025-10-25T21:27:43.452	epicfunnels.net	C=US, O=Let's Encrypt, CN=E8
+22029764457	2025-10-27T03:15:00.419	epicfunnels.net	C=US, O=Let's Encrypt, CN=R13
+22029797408	2025-10-27T03:15:01.036	epicfunnels.net	C=US, O=Let's Encrypt, CN=R13
+23103030782	2025-12-14T01:02:47.891	kylie.epicfunnels.net	C=US, O=Let's Encrypt, CN=R12
+23103053290	2025-12-14T01:02:49.005	kylie.epicfunnels.net	C=US, O=Let's Encrypt, CN=R12
+23122268608	2025-12-14T23:58:04.332	epicfunnels.net	C=US, O=Let's Encrypt, CN=E8
+23122283259	2025-12-14T23:58:04.721	epicfunnels.net	C=US, O=Let's Encrypt, CN=E8
+23122529948	2025-12-15T00:13:37.363	kylie.epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+23122546673	2025-12-15T00:13:37.895	kylie.epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+23300795101	2025-12-22T20:00:42.535	epicfunnels.net	C=US, O=Google Trust Services, CN=WE1
+23300790915	2025-12-22T20:01:47.128	epicfunnels.net	C=US, O=Google Trust Services, CN=WE1
+23325384704	2025-12-23T23:16:13.578	epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+23325385181	2025-12-23T23:16:13.977	epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+23503000285	2026-01-01T23:11:19.78	kylie.epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+23503018155	2026-01-01T23:11:20.685	kylie.epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+23841313862	2026-01-18T14:18:15.782	jessica.epicfunnels.net	C=US, O=Let's Encrypt, CN=E8
+23841310139	2026-01-18T14:18:15.884	jessica.epicfunnels.net	C=US, O=Let's Encrypt, CN=E8
+24471414505	2026-02-17T17:00:49.346	jenny.epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+24471428934	2026-02-17T17:00:49.759	jenny.epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+24522317582	2026-02-19T23:41:22.905	epicfunnels.net	C=US, O=Google Trust Services, CN=WE1
+24522337594	2026-02-19T23:41:29.46	epicfunnels.net	C=US, O=Google Trust Services, CN=WE1
+24564531630	2026-02-22T00:35:34.977	epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+24564531407	2026-02-22T00:35:35.917	epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+24752490840	2026-03-03T05:20:46.694	kylie.epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+24752506854	2026-03-03T05:20:46.924	kylie.epicfunnels.net	C=US, O=Let's Encrypt, CN=E7
+25108673689	2026-03-20T08:41:07.758	jessica.epicfunnels.net	C=US, O=Let's Encrypt, CN=E8
+25108686268	2026-03-20T08:41:08.655	jessica.epicfunnels.net	C=US, O=Let's Encrypt, CN=E8
+
+=== FULL crt.sh DUMP (mydailysurge.com) ===
+19807775858	2025-07-21T04:35:26.318	mydailysurge.com	C=US, O="CLOUDFLARE, INC.", CN=Cloudflare TLS Issuing ECC CA 1
+20493660143	2025-08-22T01:31:47.892	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WR1
+20493675382	2025-08-22T01:32:38.913	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+20503557767	2025-08-22T13:11:05.083	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+21002455443	2025-09-14T01:43:58.564	mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+21003647578	2025-09-14T03:02:48.799	mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+21321453575	2025-09-27T04:47:48.016	mydailysurge.com	C=US, O="CLOUDFLARE, INC.", CN=Cloudflare TLS Issuing RSA CA 1
+21676260660	2025-10-12T21:50:15.92	mydailysurge.com	C=US, O="CLOUDFLARE, INC.", CN=Cloudflare TLS Issuing ECC CA 1
+21846403854	2025-10-20T06:41:23.348	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WR1
+21846409031	2025-10-20T06:41:33.617	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+21848942092	2025-10-20T08:54:56.321	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+22395926344	2025-11-11T19:36:40.959	mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+22970329281	2025-12-02T20:29:36.482	mydailysurge.com	C=US, O=Google Trust Services, CN=WR3
+22899333244	2025-12-03T22:07:06.49	mydailysurge.com	C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36
+22899333694	2025-12-03T22:07:08.01	mydailysurge.com	C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36
+22893538339	2025-12-03T22:08:57.457	mydailysurge.com	C=US, O=Google Trust Services, CN=WR3
+23199257948	2025-12-18T11:51:35.988	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WR1
+23199257419	2025-12-18T11:51:47.599	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+23200389251	2025-12-18T13:06:40.613	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+23667302658	2026-01-10T00:14:10.973	mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+23977643855	2026-01-25T21:57:59.377	mydailysurge.com	C=US, O=Google Trust Services, CN=WR3
+23993547598	2026-01-26T16:33:15.415	mydailysurge.com	C=US, O=Google Trust Services, CN=WR3
+24108068516	2026-02-01T00:09:01.794	mydailysurge.com	C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36
+24108068310	2026-02-01T00:09:02.958	mydailysurge.com	C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36
+24429571616	2026-02-15T17:11:48.627	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WR1
+24429589195	2026-02-15T17:11:57.048	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+24429594378	2026-02-15T17:13:45.125	explore.mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+24891249282	2026-03-10T04:55:48.17	mydailysurge.com	C=US, O=Google Trust Services, CN=WE1
+25107475276	2026-03-20T07:17:48.226	mydailysurge.com	C=US, O=Google Trust Services, CN=WR3
+25107498482	2026-03-20T07:20:51.32	mydailysurge.com	C=US, O=Google Trust Services, CN=WR3
+
+=== DNS ZONE TRANSFER ATTEMPT ===
+AXFR from cheryl.ns.cloudflare.com:
+
+; <<>> DiG 9.18.47-1~deb12u1-Debian <<>> @cheryl.ns.cloudflare.com epicfunnels.net AXFR
+; (6 servers found)
+;; global options: +cmd
+; Transfer failed.
+AXFR from logan.ns.cloudflare.com:
+
+; <<>> DiG 9.18.47-1~deb12u1-Debian <<>> @logan.ns.cloudflare.com epicfunnels.net AXFR
+; (6 servers found)
+;; global options: +cmd
+; Transfer failed.
+
+=== ALL TXT RECORDS ===
+"v=spf1 a mx ip4:13.220.193.170 -all"
+"google-site-verification=qWPTL9H_t4lE4Lja7ZwdNCdmGBQEaTmtJiX7KpXbkxM"
+"MS=ms66511106"
+"activeprospect-domain-verification=M+mUYgTDEprxDUAdcdobLA=="
+"v=spf1 include:spf.protection.outlook.com include:mail.zendesk.com -all"
+
+=== ADDITIONAL DNS RECORDS ===
+epicfunnels.net AAAA: 2606:4700:3031::ac43:c0a6
+2606:4700:3033::6815:bd3
+epicfunnels.net SOA: cheryl.ns.cloudflare.com. dns.cloudflare.com. 2398600125 10000 2400 604800 1800

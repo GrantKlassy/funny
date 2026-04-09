@@ -1,0 +1,350 @@
+=== ALL URLs IN BUNDLE ===
+https://b.noodledit.com/promotions/iphone17promax1000.png
+https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face
+https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face
+https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face
+https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face
+https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face
+https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face
+https://images.unsplash.com/photo-1517841905240-472988babdf9?w=80&h=80&fit=crop&crop=face
+https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face
+https://reactjs.org/docs/error-decoder.html?invariant=
+https://sassets.noodledit.com/pages/logo_mydailysurge.svg
+http://www.w3.org/1998/Math/MathML
+http://www.w3.org/1999/xhtml
+http://www.w3.org/1999/xlink
+http://www.w3.org/2000/svg
+http://www.w3.org/XML/1998/namespace
+
+=== ALL EMAIL ADDRESSES ===
+
+=== ALL DOMAIN REFERENCES ===
+a.co
+c.co
+Children.co
+currentTarget.co
+e.app
+e.co
+e.com
+e.net
+f.co
+i.co
+i.com
+ie.co
+Iv.app
+j.co
+Js.app
+k.co
+Kw.app
+l.co
+L.co
+Mv.app
+n.app
+N.app
+n.co
+n.com
+noodledit.com
+o.co
+o.com
+options.net
+p.co
+P.co
+props.com
+push.app
+Q.co
+r.app
+r.co
+r.com
+react.co
+reactjs.org
+Reflect.co
+Rr.co
+Ru.co
+s.co
+s.com
+state.co
+stateNode.co
+style.co
+t.app
+t.co
+t.com
+this.co
+this.com
+t.net
+type.co
+u.co
+unsplash.com
+v.co
+v.com
+w3.org
+w.co
+y.co
+y.com
+Zs.app
+
+=== API ENDPOINTS ===
+"/api/continue"
+"/api/continue-click"
+
+=== SOCIAL MEDIA HANDLES ===
+@iterator
+@keyframes
+@license
+@media
+@remix
+
+=== PERSON NAMES IN WINNERS SECTION ===
+"New York"
+
+=== UNSPLASH IMAGE IDS ===
+unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face
+unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face
+unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face
+unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face
+unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face
+unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face
+unsplash.com/photo-1517841905240-472988babdf9?w=80&h=80&fit=crop&crop=face
+unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face
+
+=== COUNTDOWN/TIMER LOGIC ===
+549:        w = typeof setTimeout == "function" ? setTimeout : null,
+557:            else if (P.startTime <= N) r(u), P.sortIndex = P.expirationTime, t(a, P);
+576:            for (y(P), d = n(a); d !== null && (!(d.expirationTime > P) || N && !D());) {
+580:                    var F = z(d.expirationTime <= P);
+708:            expirationTime: F,
+1742:    for (var n = e.suspendedLanes, r = e.pingedLanes, o = e.expirationTimes, i = e.pendingLanes; 0 < i;) {
+1746:        a === -1 ? (!(l & n) || l & r) && (o[s] = Kv(l, t)) : a <= t && (e.expiredLanes |= l), i &= ~l
+1770:    e.pendingLanes = t, e.suspendedLanes = 0, e.pingedLanes = 0, e.expiredLanes &= t, e.mutableReadLanes &= t, e.entangledLanes &= t, t = e.entanglements;
+1772:    for (e = e.expirationTimes; 0 < n;) {
+2968:var $a = typeof setTimeout == "function" ? setTimeout : void 0,
+2976:    setTimeout(function() {
+4430:        setTimeout(function() {
+5979:    if (r & 30 || r & e.expiredLanes || t) t = Ws(e, r);
+6081:    for (t &= ~fc, t &= ~dl, e.suspendedLanes |= t, e.pingedLanes &= ~t, e = e.expirationTimes; 0 < t;) {
+6794:    this.tag = t, this.containerInfo = e, this.finishedWork = this.pingCache = this.current = this.pendingChildren = null, this.timeoutHandle = -1, this.callbackNode = this.pendingContext = this.context = null, this.callbackPriority = 0, this.eventTimes = Bl(0), this.expirationTimes = Bl(-1), this.entangledLanes = this.finishedLanes = this.mutableReadLanes = this.expiredLanes = this.pingedLanes = this.suspendedLanes = this.pendingLanes = 0, this.entanglements = Bl(0), this.identifierPrefix = r, this.onRecoverableError = o, this.mutableSourceEagerHydrationData = null
+7168:        const t = setTimeout(() => {
+7664:            s = window.setTimeout(() => {
+7779:                        t.style.animationFillMode = "forwards", u = c.setTimeout(() => {
+8119:        !O || O === 1 / 0 || (window.clearTimeout(T.current), k.current = new Date().getTime(), T.current = window.setTimeout(D, O))
+8233:        const u = window.setTimeout(() => a(!0), 1e3);
+10349:        Ee(!0), ot(xn.current), w(G => G.filter(re => re.toastId !== f.id)), setTimeout(() => {
+10362:        })() : xt.current !== 1 / 0 && (wn.current = new Date().getTime(), G = setTimeout(() => {
+10555:        setTimeout(() => {
+11931:                b ? s(!1, b) : r = setTimeout(() => {
+12500:                window.clearTimeout(a.current), a.current = window.setTimeout(() => s.current = !0, r)
+12979:        setTimeout(t, e)
+13192:var GS = e => setTimeout(e, 0);
+13256:            this.clearGcTimeout(), DS(this.gcTime) && q(this, fr, setTimeout(() => {
+16541:    return L(t, n), setTimeout(() => a.emit("init"), 0), Ee
+16620:        O.clearTimeout(s), s = O.setTimeout(D, o[n.selectedScrollSnap()]), i = new Date().getTime(), n.emit("autoplay:timerset")
+
+=== TRACKING/ANALYTICS ===
+1357:    track: !0,
+9256:                "font-smoothing": ["antialiased", "subpixel-antialiased"],
+9270:                tracking: [{
+9271:                    tracking: ["tighter", "tight", "normal", "wide", "wider", "widest", X]
+17212:                    navigator.sendBeacon ? navigator.sendBeacon("/api/continue-click", P) : fetch("/api/continue-click", {
+
+=== NAVIGATOR/GEOLOCATION ===
+552:    typeof navigator < "u" && navigator.scheduling !== void 0 && navigator.scheduling.isInputPending !== void 0 && navigator.scheduling.isInputPending.bind(navigator.scheduling);
+10902:        platform: s
+10933:            platform: s,
+10968:        platform: i,
+11016:                platform: s,
+11075:                    platform: a,
+11207:        platform: r,
+11377:                    platform: s,
+11998:                platform: zx,
+12002:                ...o.platform,
+12007:            platform: i
+12060:        platform: o,
+12088:        D.current && (N.platform = D.current), Gx(k.current, b.current, N).then(P => {
+17212:                    navigator.sendBeacon ? navigator.sendBeacon("/api/continue-click", P) : fetch("/api/continue-click", {
+
+=== LOCALSTORAGE/SESSIONSTORAGE ===
+9982:        f = e ? `!function(){${c}${h(e)}}()` : r ? `!function(){try{${c}var e=localStorage.getItem('${t}');if('system'===e||(!e&&${u})){var t='${y1}',m=window.matchMedia(t);if(m.media!==t||m.matches){${h("dark")}}else{${h("light")}}}else if(e){${s?`var x=${JSON.stringify(s)};`:""}${h(s?"x[e]":"e",!0)}}${u?"":"else{"+h(i,!1,!1)+"}"}${d}}catch(e){}}()` : `!function(){try{${c}var e=localStorage.getItem('${t}');if(e){${s?`var x=${JSON.stringify(s)};`:""}${h(s?"x[e]":"e",!0)}}else{${h(i,!1,!1)};}${d}}catch(t){}}();`;
+
+=== SONNER TOAST MESSAGES ===
+                type: "REMOVE_TOAST",
+                toastId: e
+            })
+        }, Ny);
+        ua.set(e, t)
+--
+                return {
+                    ...e, toasts: [t.toast, ...e.toasts].slice(0, Ty)
+                };
+            case "UPDATE_TOAST":
+                return {
+                    ...e, toasts: e.toasts.map(n => n.id === t.toast.id ? {
+                        ...n,
+                        ...t.toast
+                    } : n)
+                };
+            case "DISMISS_TOAST": {
+                const {
+                    toastId: n
+                } = t;
+                return n ? nf(n) : e.toasts.forEach(r => {
+                    nf(r.id)
+                }), {
+                    ...e,
+                    toasts: e.toasts.map(r => r.id === n || n === void 0 ? {
+                        ...r,
+                        open: !1
+                    } : r)
+--
+            case "REMOVE_TOAST":
+                return t.toastId === void 0 ? {
+                    ...e,
+                    toasts: []
+                } : {
+                    ...e,
+                    toasts: e.toasts.filter(n => n.id !== t.toastId)
+                }
+        }
+    },
+--
+let xs = {
+    toasts: []
+};
+
+function qo(e) {
+--
+            type: "UPDATE_TOAST",
+            toast: {
+                ...o,
+                id: t
+            }
+--
+            type: "DISMISS_TOAST",
+            toastId: t
+        });
+    return qo({
+        type: "ADD_TOAST",
+        toast: {
+            ...e,
+            id: t,
+
+=== SURVEY/FORM LOGIC ===
+                        }), S.jsx("p", {
+                            className: "font-inter text-xs text-gray-500 mt-1",
+                            children: "Answer 2 quick questions to confirm your entry."
+                        })]
+                    })]
+                }), S.jsxs("div", {
+                    className: "mb-4",
+                    children: [S.jsxs("div", {
+--
+                }), S.jsxs("p", {
+                    className: "font-rubik font-bold text-2xl text-foreground leading-snug",
+                    children: ["One last step —", S.jsx("br", {}), "confirm your location", S.jsx("br", {}), "to claim your prize"]
+                })]
+            })
+        }) : S.jsxs("div", {
+            className: "min-h-screen bg-[#e9eff0]",
+            style: H,
+--
+                            }), S.jsx("p", {
+                                className: "font-inter text-xs text-gray-600 mt-1.5 leading-snug",
+                                children: "Your comment was randomly chosen, 1 step left to claim your iPhone 17 Pro Max"
+                            }), S.jsxs("p", {
+                                className: "font-inter text-xs mt-2 flex items-center gap-1",
+                                children: [S.jsx("span", {
+                                    children: "⏰ Your spot expires in:"
+                                }), S.jsx("span", {
+--
+                    }), S.jsx("p", {
+                        className: "text-center font-inter text-gray-400 text-xs mb-3",
+                        children: "Confirm → Answer survey → Claim prize."
+                    }), S.jsx(OC, {
+                        visible: j,
+                        name: b == null ? void 0 : b.name,
+                        location: b == null ? void 0 : b.location,
+                        action: b == null ? void 0 : b.action,
+
+=== COLOR VARIANTS REFERENCED ===
+739:    for (var t = "https://reactjs.org/docs/error-decoder.html?invariant=" + e, n = 1; n < arguments.length; n++) t += "&args[]=" + encodeURIComponent(arguments[n]);
+833:"accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule flood-color flood-opacity font-family font-size font-size-adjust font-stretch font-style font-variant font-weight glyph-name glyph-orientation-horizontal glyph-orientation-vertical horiz-adv-x horiz-origin-x image-rendering letter-spacing lighting-color marker-end marker-mid marker-start overline-position overline-thickness paint-order panose-1 pointer-events rendering-intent shape-rendering stop-color stop-opacity strikethrough-position strikethrough-thickness stroke-dasharray stroke-dashoffset stroke-linecap stroke-linejoin stroke-miterlimit stroke-opacity stroke-width text-anchor text-decoration text-rendering underline-position underline-thickness unicode-bidi unicode-range units-per-em v-alphabetic v-hanging v-ideographic v-mathematical vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mode xmlns:xlink x-height".split(" ").forEach(function(e) {
+1376:        case "color-profile":
+2371:    color: !0,
+8408:        if ((t == null ? void 0 : t.variants) == null) return uf(e, n == null ? void 0 : n.class, n == null ? void 0 : n.className);
+8410:            variants: o,
+8472:    color: e = "currentColor",
+8919:        const e = ue("colors"),
+8952:            H = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"],
+8961:                colors: [_o],
+9288:                "placeholder-color": [{
+9297:                "text-color": [{
+9313:                "text-decoration-color": [{
+9367:                "bg-color": [{
+9480:                "border-color": [{
+9483:                "border-color-x": [{
+9486:                "border-color-y": [{
+9489:                "border-color-s": [{
+9492:                "border-color-e": [{
+9495:                "border-color-t": [{
+
+=== PRIZE/REWARD VALUES ===
+33:        value: "Module"
+157:        $$typeof: bi,
+168:        $$typeof: bi,
+178:    return typeof e == "object" && e !== null && e.$$typeof === bi
+186:    return "$" + e.replace(/[=:]/g, function(n) {
+207:            switch (e.$$typeof) {
+213:    if (s) return s = e, o = o(s), e = r === "" ? "." + Il(s, 0) : r, Gc(o) ? (n = "", e != null && (n = e.replace(Yc, "$&/") + "/"), ls(o, t, n, "", function(u) {
+215:    })) : o != null && (ju(o) && (o = pv(o, n + (!o.key || s && s.key === o.key ? "" : ("" + o.key).replace(Yc, "$&/") + "/") + e)), t.push(o)), 1;
+222:            for (e = a.call(e), l = 0; !(i = e.next()).done;) i = i.value, a = r + Il(i, l++), s += ls(i, t, n, a, o);
+312:        $$typeof: bi,
+322:        $$typeof: lv,
+331:        $$typeof: sv,
+347:        $$typeof: av,
+354:        $$typeof: dv,
+364:        $$typeof: cv,
+460:        $$typeof: yv,
+752:var fn = !(typeof window > "u" || typeof window.document > "u" || typeof window.document.createElement > "u"),
+754:    kv = /^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,
+807:["contentEditable", "draggable", "spellCheck", "value"].forEach(function(e) {
+858:    $i = Symbol.for("react.element"),
+991:    if (typeof e == "object") switch (e.$$typeof) {
+1081:    var t = Sp(e) ? "checked" : "value",
+1105:                e._valueTracker = null, delete e[t]
+1112:    e._valueTracker || (e._valueTracker = jv(e))
+1117:    var t = e._valueTracker;
+1121:    return e && (r = Sp(e) ? e.checked ? "true" : "false" : e.value), e = r, e !== n ? (t.setValue(e), !0) : !1
+1138:        value: void 0,
+1146:    n = Gn(t.value != null ? t.value : n), e._wrapperState = {
+1149:        controlled: t.type === "checkbox" || t.type === "radio" ? t.checked != null : t.value != null
+1159:    var n = Gn(t.value),
+
+=== ERROR HANDLING / BACKEND CALLS ===
+5:var R = (e, t, n) => (_l(e, t, "read from private field"), n ? n.call(e) : t.get(e)),
+57:        fetch(o.href, i)
+1846:            return ti.set(i, No(ti.get(i) || null, e, t, n, r, o)), !0;
+1848:            return i = o.pointerId, ni.set(i, No(ni.get(i) || null, e, t, n, r, o)), !0
+2733:            var h = ah.get(e);
+3408:        if (typeof E == "string" && E !== "" || typeof E == "number") return p = p.get(y) || null, l(m, p, "" + E, C);
+3412:                    return p = p.get(E.key === null ? y : E.key) || null, a(m, p, E, C);
+3414:                    return p = p.get(E.key === null ? y : E.key) || null, u(m, p, E, C);
+3419:            if (Do(E) || Po(E)) return p = p.get(y) || null, c(m, p, E, C, null);
+4474:    } else o = r.get(t), o === void 0 && (o = new Set, r.set(t, o));
+8667:            r = t.nextPart.get(n),
+8725:            }), n = n.nextPart.get(r)
+8746:                let s = n.get(i);
+8748:                if ((s = r.get(i)) !== void 0) return o(i, s), s
+11759:    const n = t.get(e);
+13343:            t == null || t.refetch({
+13350:            t == null || t.refetch({
+13378:        fetch(t, n) {
+13582:            let s = this.get(i);
+13599:            const n = R(this, Qt).get(t.queryHash);
+13613:            return R(this, Qt).get(t)
+13824:            const r = R(this, At).get(n);
+13836:                const r = R(this, At).get(n);
+13852:            const r = R(this, At).get(n),
+13861:            const o = (r = R(this, At).get(n)) == null ? void 0 : r.find(i => i !== t && i.state.isPaused);
+14040:            return (n = R(this, we).get(t.queryHash)) == null ? void 0 : n.state.data
+14061:                o = R(this, we).get(r.queryHash),
+14079:            return (n = R(this, we).get(t.queryHash)) == null ? void 0 : n.state
+14120:                    let i = o.fetch(void 0, n);
+14129:            return n.isStaleByTime(wu(t.staleTime, n)) ? n.fetch(t) : Promise.resolve(n.state.data)
