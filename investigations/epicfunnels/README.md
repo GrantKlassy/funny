@@ -1372,7 +1372,7 @@ Pritchard is **not ex-Fluent**. He's the tech co-founder — brought engineering
 | **Daniel Palevo** | Director of Account Management | — |
 | **Lexi Camhe** | VP, Solutions & Operations | — |
 
-Additional employees: Christian Carpenter (Media & Analytics), Oliver Walke (ad tech), Dmitry Mitrofanov (Director of Quality), Joseph Mele (Director of Media), Syed Masthan.
+Additional employees: Syed Masthan (Head of Engineering), **Irina Yelyashkevich** (Senior UI/UX Designer, **ex-Fluent Senior Web Designer** — another Fluent connection), Joseph LaMantia Jr (Software Engineer, ex-BHG Financial — recruited by Pritchard), Shawn Bertram (Software Engineer, ex-BHG Financial), Christian Carpenter (Media Operations), Oliver Walke (ad tech). Daniel Palevo and Dmitry Mitrofanov have both departed.
 
 ### Moxxi Digital — Florida Registration (Sunbiz)
 
@@ -1383,7 +1383,7 @@ Registered as Foreign LLC in Florida:
 - **Status**: ACTIVE
 - **Principal address**: 32 Monmouth Street, Suite 305, Red Bank, NJ 07701
 
-Note: 32 Monmouth Street is a DIFFERENT Red Bank address than the UPS Store (68 White St #7-291). The Sunbiz filing uses what appears to be an actual office. The UPS Store is the address on consumer-facing sweepstakes rules.
+Note: 32 Monmouth Street Suite 305 is a **Cowerks coworking space** — also available as an **Opus Virtual Offices** virtual address for $99/month. NOT a dedicated office. Both Red Bank addresses are rented mail drops / shared spaces.
 
 ### Jeffrey Kauffman Timeline (Critical)
 
@@ -1393,7 +1393,7 @@ Note: 32 Monmouth Street is a DIFFERENT Red Bank address than the UPS Store (68 
 4. **Jan 2025**: Left Fluent for Moxxi Digital as General Counsel.
 5. **At Moxxi**: Deployed the same TrustedForm/consent washing stack on epicfunnels.net and myamericanprizes.com.
 
-Three consecutive companies with regulatory problems. He knows exactly what he's doing.
+Three consecutive companies with regulatory problems. The pattern is damning: Affinion's "Live Check" deceptive practice involved **mailing physical items** to trick people into subscriptions. The BBB Scam Tracker victim received a **physical postcard** with a fake reward claim. Same playbook, different wrapper. He knows exactly what he's doing.
 
 ### Kevin Riehl — "The Smart Wallet"
 

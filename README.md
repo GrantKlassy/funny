@@ -408,7 +408,7 @@ Both MyAmericanPrizes and MyDailySurge list their sponsor address as:
 
 This is **[The UPS Store #3488](https://locations.theupsstore.com/nj/red-bank/68-white-st)**.
 
-"Suite 7" is the UPS Store's suite number in the building. "291" is the mailbox number. UPS Store mailboxes provide a street address instead of a PO Box — so a rented mailbox looks like a real office. The operation that runs 15+ brands, 747 CDN assets, fake government benefit portals, and an active TikTok bot network operates out of a mailbox in a strip mall in Red Bank, New Jersey.
+"Suite 7" is the UPS Store's suite number in the building. "291" is the mailbox number. UPS Store mailboxes provide a street address instead of a PO Box — so a rented mailbox looks like a real office. Their Florida Sunbiz filing uses a different Red Bank address — 32 Monmouth Street, Suite 305 — which is a **Cowerks coworking space**, also available as an **Opus Virtual Offices** virtual address for $99/month. Neither address is a real office. The operation that runs 15+ brands, 747 CDN assets, fake government benefit portals, and an active TikTok bot network has **two addresses in one town, and both are rented mail drops**.
 
 The mail-in sweepstakes entry address goes to SCA Promotions at 3030 LBJ Freeway, Suite 300, Dallas, TX 75234. The Zendesk help center is at `mydailysurge.zendesk.com`. The contact email is `support@mydailysurge.com`. The terms and conditions are governed by Texas law. Mandatory arbitration. 30-day opt-out window.
 

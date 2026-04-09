@@ -83,9 +83,17 @@ This matches the infrastructure we found: the rewardzinga.com terms carry copyri
 ### FTC "Operation Stop Scam Calls" Details
 - FTC blog title: "E-I-E-I-NO: Operation Stop Scam Calls targets operators that facilitate illegal robocalls, including 'consent farms'"
 - Case: United States v. Fluent, LLC (9:23-cv-81045, S.D. Florida)
+- Defendants included: Fluent LLC, **RewardZone USA LLC** (d/b/a Up Rewards, The Reward Genius, Flash Rewards, National Consumer Center), Deliver Technology LLC, Search Works Media LLC, Ease Wins LLC
+- Conduct: Sold **620 million+ telemarketing leads** (Jan 2018–Dec 2019) generating **$93.4 million revenue**, deceived nearly **1 million people per day**
 - CBS News: "'Consent farms' enabled billions of illegal robocalls, feds say"
 - National Law Review: "Fluent Just Asked Everyone Who Bought Consumer Data From It Prior to May, 2023 to Delete It"
-- Fluent was forced to tell ALL downstream data buyers to DELETE pre-May 2023 consumer data
+- Settlement: $2.5M civil penalty, lifetime ban from robocalls, required destruction of all collected consumer data
+
+### PA AG Complaint Named American Prize Center
+The Pennsylvania AG complaint specifically named: Fluent LLC d/b/a CAC, **American Prize Center LLC**, **Deliver Technology LLC**, **RewardZone USA LLC**, and Samples & Savings USA LLC. Fluent collected data from **4.2 million Pennsylvania consumers** via promotional offers (Amazon/Walmart gift cards), sold as leads to telemarketers including those on Do Not Call lists.
+
+### Berman v. Freedom Financial Network (TCPA class action)
+Multi-defendant TCPA class action including Fluent. Settlement: **$9.75 million**. 40,000 class members paid $116–$232 each.
 
 ## TCPA Lawsuits
 
@@ -141,12 +149,22 @@ This matches the infrastructure we found: the rewardzinga.com terms carry copyri
 
 ## Jeffrey Kauffman — Affinion Group
 
-- Previously at Affinion Group (now Connexus)
-- Affinion settled for **$30 million across 46 states** for deceptive enrollment practices
-- This is Kauffman's THIRD company with regulatory problems:
-  1. Affinion Group ($30M settlement)
-  2. Fluent Inc ($16.2M total regulatory damage)
-  3. Moxxi Digital (D+ BBB, 0/100 ScamAdviser, BBB Scam Tracker reports — no regulatory action yet)
+- SVP, Regulatory Affairs at Affinion Group from **August 2011 to April 2019**
+- Then Associate General Counsel, Litigation, Regulatory & Privacy at Fluent from April 2019
+- Elevated to Co-General Counsel & CCO at Fluent in August 2023
+- Left for Moxxi in January 2025
+
+Affinion Group (now Connexus) settled for **$30 million across 47 jurisdictions** (46 states + DC) for deceptive enrollment in discount clubs. Subsidiaries Trilegiant and Webloyalty were co-defendants. Deceptive practices included:
+- **"Live Check"**: Consumers deposited mailed checks, unknowingly authorized enrollment in subscription services
+- **"Online Data Pass"**: Billing info passed from retailers to Affinion without consumer knowledge or consent
+- **$19 million refund fund** established for affected consumers
+
+This is Kauffman's THIRD company with regulatory problems:
+1. Affinion Group ($30M settlement — deceptive subscription enrollment)
+2. Fluent Inc ($16.2M total — consent farms, fake comments, robocalls)
+3. Moxxi Digital (D+ BBB, 0/100 ScamAdviser, BBB Scam Tracker — no regulatory action yet)
+
+The pattern: Affinion's "Live Check" mailed physical items to trick people into subscriptions. Moxxi's BBB Scam Tracker victim received a **physical postcard** with a fake reward claim. Same playbook, different wrapper.
 
 ## Assessment
 
