@@ -24,6 +24,7 @@ CPA affiliate scam funnel built with Lovable AI, distributed via TikTok.
 - **2026-04-08**: Investigation conducted
 - **2026-04-08**: Deep OSINT investigation — 12 avenues probed, 2 new domains found
 - **2026-04-08**: Engagement bot network observed LIVE — multiple accounts liking investigator's old TikTok comments simultaneously
+- **2026-04-09**: Operator fully identified — Moxxi Digital (NYC), founded by ex-Fluent Inc veterans. Full chain of attribution from scam page to real humans documented in [OPERATOR-INTEL.md](OPERATOR-INTEL.md)
 
 ## Scam Flow
 
@@ -51,8 +52,9 @@ CPA affiliate scam funnel built with Lovable AI, distributed via TikTok.
 | **phef6trk.com** | Squarespace (2024-06-25) | Google Cloud DNS | CPA affiliate tracker (sinkholed) |
 | **myamericanprizes.com** | GoDaddy (**2023-08-22**) | Cloudflare (cass/felicity) | OG sweepstakes brand, M365 email (Moxxi Media) |
 | **olivimails.com** | — | — | EC2 hostname, **domain expired** |
+| **rewardzinga.com** | Cloudflare (2024-04-10) | Cloudflare (cass/felicity) | Subscription scam site (BBB alternate name for Moxxi Digital) |
 
-noodledit.com, mydailysurge.com, and myamericanprizes.com share identical Cloudflare nameservers (cass/felicity) — same Cloudflare account. epicfunnels.net uses different CF nameservers (cheryl/logan).
+noodledit.com, mydailysurge.com, myamericanprizes.com, and rewardzinga.com share identical Cloudflare nameservers (cass/felicity) — same Cloudflare account. epicfunnels.net uses different CF nameservers (cheryl/logan).
 
 ### Infrastructure
 
@@ -203,18 +205,22 @@ Layer 5: EMAIL
 
 ### Operator Profile
 
-- **Language**: Likely Spanish-speaking (afiliados, socio, socios, evento subdomains)
-- **Entity**: **Moxxi Media** (moxximedia.onmicrosoft.com) — M365 tenant behind myamericanprizes.com
+- **Entity**: **Moxxi Digital** (d/b/a Moxxi Media, d/b/a Reward Zinga) — 85 Broad St NYC (WeWork), 36 employees
+- **M365 tenant**: moxximedia.onmicrosoft.com — confirmed linked to Moxxi Digital
+- **BBB address**: 68 White St #7-291, Red Bank, NJ (UPS Store #3488) — Morris Laniado's home turf
+- **Leadership**: Morris Laniado (President), Kevin Riehl (CPO), Jeffrey Kauffman (GC), Carl Augustin (VP) — **all ex-Fluent Inc**
+- **Corporate ancestor**: Fluent, Inc. (NASDAQ: FLNT) — FTC consent farm settlement ($2.5M, 620M+ leads), NY AG ($3.7M), PA AG ($250K)
 - **Platform**: **CustomerTestConnect** (Express.js + Handlebars) — the backend that powers myamericanprizes.com
-- **Brands**: 15+ including GetnGoods, MyDailySurge, PrizeZappy, SnagNGoods, PlayZoodle, HealthPlanScouts, Fresh Health Plan, LendliV2, Prismique, BenefitsAccessCenter, OPG Housing, and more
-- **Verticals**: Gift card sweepstakes, electronics, vehicles, luxury goods, gas rewards, government benefits fraud (food stamps, stimulus, rental assistance), health insurance lead gen, lending
-- **Tools**: Lovable AI (scam generation), Webflow (SEO blog), standard DevOps (nginx, Dovecot, PostgreSQL, Node.js)
+- **Brands**: 15+ including GetnGoods, MyDailySurge, PrizeZappy, SnagNGoods, PlayZoodle, HealthPlanScouts, Fresh Health Plan, LendliV2, Prismique, BenefitsAccessCenter, OPG Housing, Reward Zinga, and more
+- **Verticals**: Gift card sweepstakes, electronics, vehicles, luxury goods, gas rewards, government benefits fraud (food stamps, stimulus, rental assistance), health insurance lead gen, lending, subscription traps
+- **Tools**: Lovable AI (scam generation), Webflow (SEO blog), standard DevOps (nginx, Dovecot, PostgreSQL, Node.js, Redis, Google Cloud, Docker, Kubernetes)
 - **Scale**: 747+ assets across 2 GCS buckets, 15+ brand names, daily rotating subdomains (1-31), multiple product variants — this is an **industrial-scale CPA lead generation factory**
 - **OpSec**: EXIF stripped, `noindex/nofollow`, Cloudflare proxied — but leaked internal hostname via SMTP, exposed PostgreSQL to internet, exposed Redis with no auth (now contains cryptojacking malware from a third party), publicly listable GCS buckets, expired SSL cert not renewed, olivimails.com domain expired
+- **Full operator attribution**: See [OPERATOR-INTEL.md](OPERATOR-INTEL.md) for the complete chain from scam page to real humans
 
 ## Conclusion
 
-What started as a funny TikTok scam link turned out to be an industrial-scale CPA lead generation operation run by an entity called **Moxxi Media**, active since at least August 2023, spanning 7 connected domains, 15+ brand names, and 8 scam verticals.
+What started as a funny TikTok scam link turned out to be an industrial-scale CPA lead generation operation run by **Moxxi Digital** (NYC, d/b/a Moxxi Media, d/b/a Reward Zinga), active since at least August 2023, spanning 10 connected domains, 15+ brand names, and 8+ scam verticals. The company was founded by veterans of Fluent, Inc. — a publicly traded company the FTC sued in July 2023 for the exact same scam (consent farm lead generation using fake sweepstakes). They took the playbook, the vendor relationships (Jornaya/ActiveProspect), and the compliance expertise, and rebuilt it as a private company. The flagship brand "MyAmericanPrizes" echoes Fluent's subsidiary "American Prize Center LLC." See [OPERATOR-INTEL.md](OPERATOR-INTEL.md) for the complete attribution chain.
 
 The operation uses Lovable AI (scored 1.8/10 in Guardio Labs' VibeScamming research — the most exploitable tool tested) to generate scam funnel pages, Webflow for SEO content farming, Google Cloud Storage for a 747-asset promotional library, AWS EC2 for email and backend services, and Cloudflare for DNS proxy and SSL. It maintains professionally assembled legal cover — ActiveProspect TCPA consent, Jornaya lead intelligence, AMOE sweepstakes compliance — to legitimize the sale of harvested personal data.
 

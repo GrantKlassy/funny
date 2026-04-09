@@ -114,7 +114,7 @@ The same operation that runs fake iPhone giveaways for TikTok teenagers also tar
 
 The victim enters their personal information — name, address, phone, email, income, household size — believing they're applying for assistance. The data gets sold as CPA leads. The victim gets nothing. No food stamps. No rental help. No stimulus check. Spam calls and a data broker list.
 
-The entity behind it: **Moxxi Media** (`moxximedia.onmicrosoft.com`). 15+ brand names. 747 assets in their CDN. New material uploaded the day we investigated.
+The entity behind it: **[Moxxi Digital, LLC](investigations/epicfunnels/OPERATOR-INTEL.md)** (`moxximedia.onmicrosoft.com`), founded by ex-Fluent Inc. executives whose previous company was sued by the FTC for the exact same scam. 15+ brand names. 747 assets in their CDN. New material uploaded the day we investigated.
 
 **[Full evidence: investigations/epicfunnels/](investigations/epicfunnels/)** — 70 assets catalogued, 10 captured as evidence, complete timeline of the pivot into government benefits fraud.
 
@@ -132,6 +132,8 @@ The entity behind it: **Moxxi Media** (`moxximedia.onmicrosoft.com`). 15+ brand 
 | :bust_in_silhouette: | The Redis database | Exposed (no auth, all interfaces, 75 days uptime) |
 | :bust_in_silhouette: | ActiveProspect TCPA verification | Definitely legit lead gen |
 | :bust_in_silhouette: | The engagement bots | Still liking old TikTok comments (into a sinkhole) |
+| :bust_in_silhouette: | Morris Laniado | President, Moxxi Digital. Ex-Fluent Inc. AVP Data Revenue. Lives near the UPS Store. |
+| :bust_in_silhouette: | Jeffrey Kauffman | General Counsel. Built the same TrustedForm stack at Fluent. Third company to get regulatory heat. |
 | :bust_in_silhouette: | The operator | Still updating the SEO blog |
 | :bust_in_silhouette: | The Node.js app | HTTP 500 Internal Server Error |
 | :bust_in_silhouette: | fqdn.olivimails.com | Coming Soon |
@@ -227,13 +229,32 @@ This is **[The UPS Store #3488](https://locations.theupsstore.com/nj/red-bank/68
 
 The mail-in sweepstakes entry address goes to SCA Promotions at 3030 LBJ Freeway, Suite 300, Dallas, TX 75234. The Zendesk help center is at `mydailysurge.zendesk.com`. The contact email is `support@mydailysurge.com`. The terms and conditions are governed by Texas law. Mandatory arbitration. 30-day opt-out window.
 
-### Who Is Moxxi Media?
+### Who Runs This
 
-The M365 tenant behind myamericanprizes.com is `moxximedia.onmicrosoft.com`. The domain `moxximedia.com` is not registered. They exist only as a Microsoft 365 tenant — a ghost.
+**[Moxxi Digital, LLC](https://www.linkedin.com/company/moxxi-digital)** (EIN 93-2214452), operating as Moxxi Media and Reward Zinga. 85 Broad Street, New York, NY 10004 (WeWork). Legal address: UPS Store #3488, 68 White St #7-291, Red Bank, NJ 07701 — the same mailbox as the MyAmericanPrizes sweepstakes sponsor.
 
-There is a company called **[Moxxi Digital](https://www.linkedin.com/company/moxxi-digital)** in New York City. It was co-founded by **Morris Laniado**, previously of **[Fluent, Inc.](https://www.linkedin.com/in/morris-laniado-0958384)** (NYSE: FLNT) — one of the largest publicly traded performance marketing and lead generation companies in the United States. Moxxi Digital's business is described as "promotion-based marketing that drives lead opt-in lead generation and ROI-focused customer acquisition at scale." That is a precise description of what this scam operation does.
+The BBB profile lists Moxxi Digital d/b/a "Reward Zinga" at that UPS Store address. The [RewardZinga terms and conditions](https://9.rewardzinga1.com/rewards-terms-and-conditions) carry the copyright notice *"(c) My American Prizes, 2024."* **Moxxi Digital = Reward Zinga = My American Prizes = this scam.**
 
-The M365 tenant says `moxxiMEDIA`. The public company calls itself `moxxiDIGITAL`. This could be a rebrand, a subsidiary, a DBA, or a completely different entity. **This is not a confirmed identification.** But the business model alignment — CPA lead generation via promotions, at scale, using AI and proprietary adtech — is exact.
+Founded by veterans of **[Fluent, Inc.](https://www.fluentco.com/)** (NASDAQ: FLNT) — a publicly traded performance marketing company the **[FTC sued in July 2023](https://www.ftc.gov/legal-library/browse/cases-proceedings/1923230-fluent-llc-us-v)** for operating **"consent farms"** that sold **620 million+ telemarketing leads** using fake sweepstakes and $1,000 Walmart gift card offers. Fluent paid **$2.5 million** to the FTC, **$3.7 million** to the NY Attorney General (for fabricating millions of fake net neutrality comments), **$250,000** to the PA Attorney General (for selling 4.2 million consumers' data to telemarketers), and was co-defendant in a **$9.75 million TCPA class action**. Total regulatory damage: **~$16.2 million**.
+
+The Moxxi Digital leadership team rebuilt the same operation as a private company:
+
+| Name | Moxxi Digital Role | What They Did at Fluent |
+|------|--------------------|------------------------|
+| **[Morris Laniado](https://www.linkedin.com/in/morris-laniado-0958384)** | President & Co-Founder | **Associate VP, Data Revenue** — ran the team that sold Fluent's consent farm leads. Previously SVP Marketing at SelectQuote Insurance Services (insurance lead gen). Lives in Monmouth County, NJ. His previous company (Jade Global Group LLC) is registered in Red Bank — the same town as the UPS Store mailbox. |
+| **[Kevin Riehl](https://www.linkedin.com/in/kevriehl/)** | CPO & Co-Founder | **Director of Product Management** — built "The Smart Wallet," one of Fluent's reward/offer wall properties. Education: Rutgers, NJ. |
+| **[Jeffrey Kauffman](https://www.linkedin.com/in/jeffreyakauffman/)** | General Counsel | **Co-General Counsel & Chief Compliance Officer** — managed Fluent's regulatory compliance during the FTC investigation. In November 2019, [announced](https://activeprospect.com/blog/fluent-inc-announces-implementation-of-trustedform/) Fluent's deployment of ActiveProspect TrustedForm. Now deploys the same technology at Moxxi on epicfunnels.net and myamericanprizes.com. Previously at Affinion Group ($30 million settlement across 46 states for deceptive enrollment). |
+| **Carl Augustin** | VP, Media & Business Development | **Director of Publisher Development** — 7 years at Fluent (2015-2022). Founding member of Fluent, Inc. (2011). |
+
+Fluent's subsidiary **American Prize Center LLC** was incorporated in 2012 with CEO Ryan Schulke and President Matthew Conlin (Fluent's founders). The scam operation's flagship brand is **MyAmericanPrizes**. The naming is not coincidental.
+
+`moxxi.io` was registered **May 23, 2023** — two months before the FTC sued Fluent. `myamericanprizes.com` was registered **August 22, 2023** — one month after. They were already building the exit.
+
+Moxxi Digital acquires leads at **$1.44-$2.00** via fake sweepstakes (confirmed via [Affplus CPA listings](https://www.affplus.com/search?q=myamericanprizes)). The same leads, enriched with personal/financial data and packaged with TCPA consent certificates, sell into health insurance and lending verticals at **$15-$200+ each**. 36 employees. Bootstrapped. Profitable. Actively hiring via [Greenhouse](https://job-boards.greenhouse.io/moxxidigital).
+
+No FTC action against Moxxi Digital yet.
+
+**[Full operator attribution chain: investigations/epicfunnels/OPERATOR-INTEL.md](investigations/epicfunnels/OPERATOR-INTEL.md)**
 
 ### The Full Picture
 
@@ -245,9 +266,11 @@ The M365 tenant says `moxxiMEDIA`. The public company calls itself `moxxiDIGITAL
 
 If, somehow, you are still reading and want the real technical details:
 
-**[investigations/epicfunnels/](investigations/epicfunnels/)** — Full write-up of a CPA affiliate scam operation run by Moxxi Media, built with Lovable AI, distributed via TikTok, running on a hilariously misconfigured AWS EC2 instance with 9 domains, 15+ brands, 747 CDN assets, fake government benefit portals targeting people in financial distress, a Redis that got cryptojacked by a third party, a shadow hostname called "olivimails.com" (now expired), a Hestia Control Panel login page visible to the entire internet, and an operator who is *still actively uploading new scam assets* despite the fact that the monetization has been broken for months.
+**[investigations/epicfunnels/](investigations/epicfunnels/)** — Full write-up of a CPA affiliate scam operation run by Moxxi Digital (ex-Fluent Inc. alumni), built with Lovable AI, distributed via TikTok, running on a hilariously misconfigured AWS EC2 instance with 10 domains, 15+ brands, 747 CDN assets, fake government benefit portals targeting people in financial distress, a Redis that got cryptojacked by a third party, a shadow hostname called "olivimails.com" (now expired), a Hestia Control Panel login page visible to the entire internet, and an operator who is *still actively uploading new scam assets* despite the fact that the monetization has been broken for months. Plus a [complete chain of attribution](investigations/epicfunnels/OPERATOR-INTEL.md) from scam landing page to real humans.
 
 **:world_map: [THE COMPLETE SCAM FLOW](https://github.com/GrantKlassy/funny/blob/main/investigations/epicfunnels/SCAM-FLOW.md)** — Every domain, subdomain, DNS record, port, service, certificate, and connection mapped out in Mermaid diagrams. The crown jewel. GitHub renders the Mermaid live.
+
+**:bust_in_silhouette: [OPERATOR INTELLIGENCE](investigations/epicfunnels/OPERATOR-INTEL.md)** — The complete chain of attribution from scam landing page to real human beings. Who they are, where they came from, why they do it, and how much they make.
 
 **[investigations/epicfunnels/tiktok/](investigations/epicfunnels/tiktok/)** — TikTok distribution evidence (profile, comments, scam page screenshots, and yes, the sword guy).
 
@@ -257,8 +280,11 @@ If, somehow, you are still reading and want the real technical details:
 
 ### By The Numbers
 
-- **1** operating entity identified: Moxxi Media
-- **9** connected domains (was 7 — snagalot.com, myamericanprizes1.com added)
+- **1** operating entity: **Moxxi Digital, LLC** (d/b/a Moxxi Media, d/b/a Reward Zinga, d/b/a My American Prizes)
+- **4** ex-Fluent Inc executives running the show
+- **$16.2 million** in regulatory penalties at their previous employer (FTC + NY AG + PA AG + TCPA class action)
+- **$93.4 million** in revenue Fluent made selling 620M+ consent farm leads (2018-2019) — the business model Moxxi Digital replicated
+- **10** connected domains (epicfunnels.net, noodledit.com, mydailysurge.com, phef6trk.com, myamericanprizes.com, olivimails.com, rewardzinga.com, easyscanamoe.com, snagalot.com, myamericanprizes1.com)
 - **15+** brand names
 - **747** assets in the GCS CDN bucket (publicly listable, actively updated)
 - **70** promotional assets impersonating government benefit programs

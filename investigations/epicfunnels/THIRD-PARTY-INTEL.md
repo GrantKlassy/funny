@@ -23,18 +23,33 @@ Who are the companies providing legitimacy infrastructure to the Moxxi Media sca
 - **Google Search Console**: `qWPTL9H_t4lE4Lja7ZwdNCdmGBQEaTmtJiX7KpXbkxM` on epicfunnels.net
 - **Spamhaus**: blocklisted (CSS — Combined Spam Sources)
 
-### Strongest Candidate: Moxxi Digital (NYC)
+### Confirmed Operator: Moxxi Digital (NYC)
 
-- **Company**: Moxxi Digital
-- **Co-Founder/President**: Morris Laniado
-- **LinkedIn**: `linkedin.com/in/morris-laniado-0958384`
-- **Previous employer**: Fluent, Inc. (NYSE: FLNT), SelectQuote Insurance Services, Jade Global Group
-- **Education**: Baruch College, Bachelor's in Entrepreneurship/Communications/Political Science (2007-2011)
-- **Employees**: ~26
-- **HQ**: New York City
-- **Business model**: "Promotion-based marketing that drives lead opt-in lead generation and ROI-focused customer acquisition at scale"
+- **Company**: Moxxi Digital (d/b/a Moxxi Media, d/b/a Reward Zinga)
+- **BBB address**: 68 White St #7-291, Red Bank, NJ 07701 (UPS Store #3488, mailbox 291)
+- **Office**: 85 Broad St, New York, NY 10004 (WeWork)
+- **Website**: moxxi.io (registered May 23, 2023, GoDaddy)
+- **BBB rating**: D+ (file opened 12/5/2024, 1 unanswered complaint)
+- **Employees**: 36
 - **Status**: Bootstrapped, profitable
-- **Caveat**: M365 tenant says "moxxiMEDIA" not "moxxiDIGITAL" — not confirmed, could be rebrand/subsidiary/DBA or different entity
+- **Business model**: "Promotion-based marketing that drives first-party data capture, compliant lead opt-in lead generation, and ROI-focused customer acquisition at scale"
+- **Corporate ancestor**: Fluent, Inc. (NASDAQ: FLNT) — sued by FTC in July 2023 for operating consent farms
+- **Leadership**: 4 of 5 known leaders came directly from Fluent Inc
+- **Full operator deep dive**: See [OPERATOR-INTEL.md](OPERATOR-INTEL.md)
+
+#### Leadership Team
+
+| Name | Title | Fluent Inc Role | Key Detail |
+|------|-------|----------------|------------|
+| **Morris Laniado** | President & Co-Founder | AVP, Data Revenue | Ran lead sales at Fluent. Lives in Monmouth County NJ (Red Bank). Founded Jade Global Group LLC in Red Bank. |
+| **Kevin Riehl** | CPO & Co-Founder | Director of Product | Created "The Smart Wallet" at Fluent. Rutgers NJ education. |
+| **Jeffrey Kauffman** | General Counsel | Co-GC & Chief Compliance Officer | Managed regulatory compliance at Fluent during FTC investigation. Previously at Affinion Group ($30M settlement). |
+| **Carl Augustin** | VP Media & BD | Director of Publisher Development | 7 years at Fluent (2015-2022). Founding member of Fluent Inc. |
+| **Daniel Palevo** | Director of Account Mgmt (departed) | — | Now at BMG360 |
+
+#### Additional Domain
+
+- `rewardzinga.com` — Cloudflare (cass/felicity NS, same account), registered 2024-04-10, ScamAdviser trust score 0/100, documented subscription scam ($9.90 "shipping" -> $89-299/month charges)
 
 ### Infrastructure
 
