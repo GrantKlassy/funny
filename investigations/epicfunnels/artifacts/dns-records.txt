@@ -1,0 +1,42 @@
+=== dig epicfunnels.net ANY ===
+
+=== dig epicfunnels.net MX ===
+epicfunnels.net.	300	IN	MX	10 _dc-mx.16d4f49190c7.epicfunnels.net.
+
+=== dig epicfunnels.net TXT ===
+epicfunnels.net.	300	IN	TXT	"v=spf1 a mx ip4:13.220.193.170 -all"
+
+=== dig epicfunnels.net NS ===
+epicfunnels.net.	62430	IN	NS	logan.ns.cloudflare.com.
+epicfunnels.net.	62430	IN	NS	cheryl.ns.cloudflare.com.
+
+=== dig noodledit.com NS ===
+noodledit.com.		71403	IN	NS	felicity.ns.cloudflare.com.
+noodledit.com.		71403	IN	NS	cass.ns.cloudflare.com.
+
+=== dig mydailysurge.com NS ===
+mydailysurge.com.	71543	IN	NS	cass.ns.cloudflare.com.
+mydailysurge.com.	71543	IN	NS	felicity.ns.cloudflare.com.
+
+=== dig mydailysurge.com A ===
+mydailysurge.com.	162	IN	A	34.36.210.5
+
+=== dig phef6trk.com A ===
+phef6trk.com.		30	IN	A	10.0.0.1
+
+=== dig b.noodledit.com A ===
+b.noodledit.com.	135	IN	A	104.21.50.252
+b.noodledit.com.	135	IN	A	172.67.215.119
+
+=== dig sassets.noodledit.com A ===
+sassets.noodledit.com.	57	IN	A	172.67.215.119
+sassets.noodledit.com.	57	IN	A	104.21.50.252
+
+=== dig _dmarc.epicfunnels.net TXT ===
+_dmarc.epicfunnels.net.	300	IN	TXT	"v=DMARC1; p=quarantine; pct=100"
+
+=== dig epicfunnels.net TXT (SPF) ===
+epicfunnels.net.	300	IN	TXT	"v=spf1 a mx ip4:13.220.193.170 -all"
+
+=== Reverse DNS 13.220.193.170 ===
+ec2-13-220-193-170.compute-1.amazonaws.com.

@@ -88,15 +88,37 @@ Both served from Google Cloud Storage (identified via `x-guploader-uploadid`, `x
 
 Real-world example of Guardio Labs' VibeScamming research. Lovable AI (scored 1.8/10 — most exploitable tool tested) used to generate a scam funnel page. Multi-domain infrastructure with shared Cloudflare accounts, email capability (SPF+DMARC+Roundcube), and CPA affiliate monetization. Multiple brands suggest a repeatable operation.
 
-## TODO: Artifacts to capture
+## Artifacts Captured (2026-04-08)
 
-These should be saved before the site goes down:
-- [ ] jessica-page.html (raw HTML snapshot)
-- [ ] index-CUlwK__p.js (JS bundle)
-- [ ] index-CUlwK__p.pretty.js (beautified)
-- [ ] index-D8N5ZY6U.css (CSS bundle)
-- [ ] iphone17promax1000.png (promo image from noodledit.com)
-- [ ] logo_mydailysurge.svg (brand logo from noodledit.com)
-- [ ] SSL certificates (PEM exports)
-- [ ] Screenshots (headless browser capture)
-- [ ] DNS records (dig output snapshots)
+All saved in [artifacts/](artifacts/) before infrastructure goes down:
+
+- [x] `jessica-page.html` — raw HTML snapshot (1.4KB, Vite SPA shell)
+- [x] `index-CUlwK__p.js` — JS bundle (349KB)
+- [x] `index-CUlwK__p.pretty.js` — beautified JS (591KB)
+- [x] `index-D8N5ZY6U.css` — CSS bundle (65KB)
+- [x] `iphone17promax1000.png` — promo image from b.noodledit.com (392KB)
+- [x] `logo_mydailysurge.svg` — brand logo from sassets.noodledit.com (11KB)
+- [x] `ssl-cert-direct.pem` — Let's Encrypt R13 cert from mail server (expired Jan 25, 2026)
+- [x] `ssl-cert-cloudflare.pem` — Google Trust WE1 wildcard cert via Cloudflare (valid through May 20, 2026)
+- [x] `dns-records.txt` — full dig output for all domains (MX, TXT/SPF, DMARC, NS, A, PTR)
+- [x] `favicon.ico` — site favicon (20KB)
+- [ ] Screenshots (headless browser capture) — TODO, needs headless Chrome/Playwright
+
+## Follow-up Investigation (2026-04-08)
+
+Containerized re-investigation confirmed the write-up findings and revealed changes:
+
+### What's Still Live
+- jessica.epicfunnels.net serving the scam page (HTML + JS + CSS)
+- Both API endpoints (`/api/continue-click`, `/api/continue`) still 302 → `phef6trk.com/FGK5P4/2Z57CD5/`
+- noodledit.com asset CDN (b. and sassets. subdomains) still serving promo image + logo
+- Email infrastructure: SMTP 587, IMAP 143, IMAP 993 all responding on 13.220.193.170
+- SMTP banner still leaking internal hostname: `ip-172-26-15-175.ec2.internal`
+- Roundcube paths `/CHANGELOG.md`, `/SQL/`, `/config/`, `/logs/` still return 403
+
+### What Changed
+- **phef6trk.com**: still sinkholed at `10.0.0.1` across all major resolvers (Google, Cloudflare, Quad9). Whois now returns empty — registrar may have scrubbed records
+- **mydailysurge.com**: now returning 404 via Google Frontend — second brand appears abandoned
+- **Roundcube version string**: no longer visible on login page (may have been patched or page changed)
+- **noodledit.com main page**: returns empty response (no content served at root)
+- **Direct SSL cert**: still expired (Jan 25, 2026), Cloudflare auto-renewed wildcard masking it
