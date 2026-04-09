@@ -1,0 +1,26 @@
+{
+  "probe": "smtp_deep",
+  "timestamp": "2026-04-09T03:36:27+00:00",
+  "smtp_587_ehlo": {
+    "response": "220 ip-172-26-15-175.ec2.internal |250-ip-172-26-15-175.ec2.internal Hello 192-184-150-96.fiber.dynamic.sonic.net [192.184.150.96] |250-SIZE 52428800 |250-8BITMIME |250-PIPELINING |250-PIPECONNECT |250-CHUNKING |250-STARTTLS |250 HELP |221 ip-172-26-15-175.ec2.internal closing connection |"
+  },
+  "smtp_587_starttls_cert": {
+    "subject": "C = US, ST = California, L = San Francisco, O = Hestia Control Panel, OU = IT, CN = fqdn.olivimails.com",
+    "issuer": "C = US, ST = California, L = San Francisco, O = Hestia Control Panel, OU = IT, CN = fqdn.olivimails.com",
+    "not_after": "Aug 28 09:24:26 2026 GMT",
+    "san": ""
+  },
+  "imap_143_capability": {
+    "response": "* OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN] Mail Delivery Agent |* CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN |a001 OK Pre-login capabilities listed, post-login capabilities have more. |* BYE Logging out |a002 OK Logout completed. |"
+  },
+  "smtp_465": {
+    "status": "open",
+    "cert_subject": "subject=C = US, ST = California, L = San Francisco, O = Hestia Control Panel, OU = IT, CN = fqdn.olivimails.com"
+  },
+  "smtp_vrfy": {
+    "responses": "252 Administrative prohibition |"
+  },
+  "smtp_rcpt": {
+    "responses": "250-ip-172-26-15-175.ec2.internal Hello 192-184-150-96.fiber.dynamic.sonic.net [192.184.150.96] |250-SIZE 52428800 |250-8BITMIME |250-PIPELINING |250-PIPECONNECT |250-CHUNKING |250-STARTTLS |250 HELP |250 OK |550-Verification failed for <test@test.com> |550-Unrouteable address |550 Sender verify failed |550 Sender verify failed |550 Sender verify failed |550 Sender verify failed |550 Sender verify failed |"
+  }
+}

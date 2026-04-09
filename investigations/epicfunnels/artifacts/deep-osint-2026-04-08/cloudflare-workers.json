@@ -1,0 +1,50 @@
+{
+  "probe": "cloudflare_workers",
+  "timestamp": "2026-04-09T03:36:32+00:00",
+  "cf_trace": {
+    "data": "fl=1232f15,h=jessica.epicfunnels.net,ip=2001:5a8:406b:e000:58a2:e7e8:11d8:3144,ts=1775705792.000,visit_scheme=https,uag=curl/7.88.1,colo=SJC,sliver=none,http=http/2,loc=US,tls=TLSv1.3,sni=plaintext,warp=off,gateway=off,rbi=off,kex=X25519"
+  },
+  "api_ua_test": [
+    {"user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac O", "status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/", "cf_cache": "DYNAMIC"},
+    {"user_agent": "Mozilla/5.0 (Linux; Android 14)", "status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/", "cf_cache": "DYNAMIC"},
+    {"user_agent": "Mozilla/5.0 (X11; Linux x86_64)", "status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/", "cf_cache": "DYNAMIC"},
+    {"user_agent": "TikTok 33.1.3", "status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/", "cf_cache": "DYNAMIC"},
+    {"user_agent": "facebookexternalhit/1.1", "status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/", "cf_cache": "DYNAMIC"},
+    {"user_agent": "Googlebot/2.1", "status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/", "cf_cache": "DYNAMIC"},
+    {"user_agent": "curl/8.0", "status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/", "cf_cache": "DYNAMIC"}
+  ],
+  "api_lang_test": [
+    {"lang": "en-US,en;q=0.9", "status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/"},
+    {"lang": "es-ES,es;q=0.9", "status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/"},
+    {"lang": "pt-BR,pt;q=0.9", "status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/"},
+    {"lang": "zh-CN,zh;q=0.9", "status": "302", "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/"}
+  ],
+  "api_referer_test": {
+    "status": "302",
+    "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/"
+  },
+  "api_post_test": {
+    "method": "POST",
+    "status": "302",
+    "location": "https://www.phef6trk.com/FGK5P4/2Z57CD5/"
+  },
+  "cf_paths": {
+    "/_routes.json": "200",
+    "/functions/": "200",
+    "/_worker.js": "404",
+    "/cdn-cgi/challenge-platform/": "404",
+    "/_next/": "200",
+    "/api/health": "200",
+    "/api/status": "200",
+    "/api/v1": "200",
+    "/api/track": "200",
+    "/api/click": "200",
+    "/api/redirect": "200",
+    "/api/webhook": "200"
+  },
+  "root_vs_jessica": {
+    "root_hash": "e3a85c35a43afd7735610614a87ff740d766fb83ea00510964437d53eca6d01c",
+    "jessica_hash": "e3a85c35a43afd7735610614a87ff740d766fb83ea00510964437d53eca6d01c",
+    "identical": true
+  }
+}

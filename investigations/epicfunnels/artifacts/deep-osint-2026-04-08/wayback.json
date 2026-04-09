@@ -1,0 +1,46 @@
+{
+  "probe": "wayback_machine",
+  "timestamp": "2026-04-09T03:30:56+00:00",
+  "results": {
+    "epicfunnels.net": {
+      "snapshot_count": 12,
+      "first_snapshot": "20240320060854",
+      "last_snapshot": "20250715101425",
+      "unique_urls": "http://epicfunnels.net/,http://epicfunnels.net/feed/,https://epicfunnels.net/"
+    },
+    "noodledit.com": {
+      "snapshot_count": 0,
+      "first_snapshot": "",
+      "last_snapshot": "",
+      "unique_urls": ""
+    },
+    "mydailysurge.com": {
+      "snapshot_count": 11,
+      "first_snapshot": "20250409234151",
+      "last_snapshot": "20260402201442",
+      "unique_urls": "http://mydailysurge.com/,http://www.mydailysurge.com/,https://mydailysurge.com/,https://mydailysurge.com/do-not-sell,https://mydailysurge.com/monthly-daily-giveaway-rules,https://mydailysurge.com/p/pz-terms-daily,https://mydailysurge.com/sweepstakes/terms-and-conditions,https://www.mydailysurge.com/"
+    },
+    "phef6trk.com": {
+      "snapshot_count": 19,
+      "first_snapshot": "20240813142713",
+      "last_snapshot": "20260330204814",
+      "unique_urls": "http://phef6trk.com/,http://www.phef6trk.com/,https://www.phef6trk.com/,https://www.phef6trk.com/361GFK/24X9WZ1/?__rpt=0&__po=612&__ptid=e1fdd858998c439988060c8406a7ccb0&__rpa=0&__rc=1&sub1=42358&sub2=108198994&sub3=r&sub4=&sub5=&source_id=&__pcd=9,https://www.phef6trk.com/361GFK/24X9WZ1/?__rpt=0&__po=628&__ptid=111b0cf8051e408da9b08fafff5c2f53&__rpa=0&__rc=1&sub1=&sub2=&sub3=&sub4=&sub5=&source_id=&__pcd=9,https://www.phef6trk.com/361GFK/24X9WZ1/?__rpt=0&__po=628&__ptid=12a8b030a0444c84bba9f22c4a4f8146&__rpa=0&__rc=1&sub1=47429&sub2=108156414&sub3=&sub4=&sub5=&source_id=&__pcd=9,https://www.phef6trk.com/361GFK/24X9WZ1/?__rpt=0&__po=704&__ptid=fe4881bfac414a429f583ab69b358037&__rpa=0&__rc=1&sub1=51398&sub2=109576632&sub3=&sub4=&sub5=&source_id=&__pcd=9,https://www.phef6trk.com/361GFK/24X9WZ1/?__rpt=0&__po=709&__ptid=21ad59f322d04109b04e4095bcb056a1&__rpa=0&__rc=1&sub1=&sub2=&sub3=&sub4=&sub5=&source_id=&__pcd=9,https://www.phef6trk.com/361GFK/24X9WZ1/?__rpt=0&__po=709&__ptid=970f0603439d4e509c120c91bef2e0a3&__rpa=0&__rc=1&sub1=18603&sub2=108389497&sub3=&sub4=&sub5=&source_id=&__pcd=9,https://www.phef6trk.com/7LKLK3/JHMHC2/?creative_id=3530&uid=68&sub2=69525cd14f95d10001b38125&sub1=3226,https://www.phef6trk.com/JNS98R/24X9WZ1/?__rpt=0&__po=610&__ptid=6b2d95e33e3a4c1c8f77530888a6db54&__rpa=0&__rc=1&sub1=6823cf198c7f65155e8a7999&sub2=&sub3=&sub4=&sub5=&source_id=&__pcd=9,https://www.phef6trk.com/JNS98R/24X9WZ1/?__rpt=0&__po=611&__ptid=4f2c8a70e5f449e1b69701786ae65c2e&__rpa=0&__rc=1&sub1=6853827da7779f51086b776f&sub2=&sub3=&sub4=&sub5=&source_id=&__pcd=9,https://www.phef6trk.com/JNS98R/24X9WZ1/?__rpt=0&__po=611&__ptid=e7265f7c22c846aaa58472f16dd8091c&__rpa=0&__rc=1&sub1=6823cf198c7f65155e8a7999&sub2=&sub3=&sub4=&sub5=&source_id=&__pcd=9,https://www.phef6trk.com/KZDWFR/2JSKXKP/?sub1=ratop,https://www.phef6trk.com/R1HQJL/2M5TG68/?sub2=69aa54e351ec630b03a75f8f&sub1=11_7330282-3775522587-3930541253,https://www.phef6trk.com/THFD9F/2RX68SJ?sub1=14_894697&sub2=69cae18d9f84b1000140ac1d"
+    },
+    "olivimails.com": {
+      "snapshot_count": 0,
+      "first_snapshot": "",
+      "last_snapshot": "",
+      "unique_urls": ""
+    }
+  },
+  "subdomains": {
+    "jessica.epicfunnels.net": {"snapshot_count": 3, "first_snapshot": "20260220041409"},
+    "jenny.epicfunnels.net": {"snapshot_count": 4, "first_snapshot": "20260309052026"},
+    "kylie.epicfunnels.net": {"snapshot_count": 0, "first_snapshot": ""},
+    "socios.epicfunnels.net": {"snapshot_count": 1, "first_snapshot": "20240111175113"},
+    "afiliados.epicfunnels.net": {"snapshot_count": 16, "first_snapshot": "20240522010513"},
+    "evento.epicfunnels.net": {"snapshot_count": 22, "first_snapshot": "20240515112211"},
+    "app.epicfunnels.net": {"snapshot_count": 22, "first_snapshot": "20231214175614"},
+    "explore.mydailysurge.com": {"snapshot_count": 26, "first_snapshot": "20251208014228"}
+  }
+}

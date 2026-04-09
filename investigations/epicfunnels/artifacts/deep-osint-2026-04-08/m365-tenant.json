@@ -1,0 +1,28 @@
+{
+  "probe": "m365_tenant",
+  "timestamp": "2026-04-09T03:35:17+00:00",
+  "openid_config": 
+{
+  "error": "invalid_tenant",
+  "error_description": "AADSTS90002: Tenant 'epicfunnels.net' not found. Check to make sure you have the correct tenant ID and are signing into the correct cloud. Check with your subscription administrator, this may happen if there are no active subscriptions for the tenant. Trace ID: 64aca92b-216a-4c33-b80c-d005d3574700 Correlation ID: 97e7dc91-1789-4ed7-a42b-2479dbe18773 Timestamp: 2026-04-09 03:35:17Z",
+  "error_codes": [
+    90002
+  ],
+  "timestamp": "2026-04-09 03:35:17Z",
+  "trace_id": "64aca92b-216a-4c33-b80c-d005d3574700",
+  "correlation_id": "97e7dc91-1789-4ed7-a42b-2479dbe18773",
+  "error_uri": "https://login.microsoftonline.com/error?code=90002"
+}
+  ,
+  "user_realm": "
+<RealmInfo Success='true'><State>4</State><UserState>1</UserState><Login>test@epicfunnels.net</Login><NameSpaceType>Unknown</NameSpaceType></RealmInfo>
+",
+  "autodiscover": {
+    "status": "302",
+    "response": ""
+  },
+  "mx_identifier": {
+    "hex": "16d4f49190c7",
+    "resolves_to": "13.220.193.170"
+  }
+}

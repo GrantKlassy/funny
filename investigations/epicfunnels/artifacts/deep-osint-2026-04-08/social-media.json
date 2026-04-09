@@ -1,0 +1,26 @@
+{
+  "probe": "social_media",
+  "timestamp": "2026-04-09T03:35:24+00:00",
+  "results": {
+    "twitter_getngoods": {
+      "status": "200"
+    },
+    "twitter_mydailysurge": {
+      "status": "200"
+    },
+    "instagram": {
+      "getngoods": "200",
+      "mydailysurge": "200",
+      "theupgradeclub": "200",
+      "jessytheupgradeclub": "200"
+    },
+    "tiktok": {
+      "getngoods": "200",
+      "mydailysurge": "200"
+    },
+    "facebook": {
+      "getngoods": "200",
+      "mydailysurge": "200"
+    }
+  }
+}

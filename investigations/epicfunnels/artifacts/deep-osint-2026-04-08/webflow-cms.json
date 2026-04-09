@@ -1,0 +1,30 @@
+{
+  "probe": "webflow_cms",
+  "timestamp": "2026-04-09T03:35:34+00:00",
+  "sitemap": {
+  "status": "404",
+  "url_count": 0
+0,
+  "urls": [
+
+  ]
+  },
+  "identity_pages": {
+    "/about": "200",
+    "/contact": "404",
+    "/privacy-policy": "200",
+    "/terms": "404",
+    "/terms-of-service": "404",
+    "/legal": "404",
+    "/team": "404",
+    "/authors": "404"
+  },
+  "articles": [
+    {"slug": "/about", "title": "About", "author": "By turning quick", "meta_author": "", "external_links": "href="https://cdn.prod.website-files.com/68129c0789b42b5281896601/6841b222f313f8672718b0a6_favicon.ico",href="https://cdn.prod.website-files.com/68129c0789b42b5281896601/684b24f5bfee53ef0c4c6602_mds_webclip.png""},
+    {"slug": "/all-articles", "title": "All Articles", "author": "", "meta_author": "", "external_links": "href="https://cdn.prod.website-files.com/68129c0789b42b5281896601/6841b222f313f8672718b0a6_favicon.ico",href="https://cdn.prod.website-files.com/68129c0789b42b5281896601/684b24f5bfee53ef0c4c6602_mds_webclip.png""},
+    {"slug": "/contact-us", "title": "Contact Us", "author": "", "meta_author": "", "external_links": "href="https://cdn.prod.website-files.com/68129c0789b42b5281896601/6841b222f313f8672718b0a6_favicon.ico",href="https://cdn.prod.website-files.com/68129c0789b42b5281896601/684b24f5bfee53ef0c4c6602_mds_webclip.png""},
+    {"slug": "/discover", "title": "Protected page", "author": "", "meta_author": "", "external_links": "href="https://assets.website-files.com/img/favicon.ico",href="https://assets.website-files.com/img/webclip.png""},
+    {"slug": "/privacy-policy", "title": "Privacy Policy", "author": "By accessing and", "meta_author": "", "external_links": "href="https://cdn.prod.website-files.com/68129c0789b42b5281896601/6841b222f313f8672718b0a6_favicon.ico",href="https://cdn.prod.website-files.com/68129c0789b42b5281896601/684b24f5bfee53ef0c4c6602_mds_webclip.png",href="https://activeprospect.com/privacy-policy",href="https://www.jornaya.com/consumer-privacy-policy/",href="https://www.networkadvertising.org/understanding-online-advertising/glossary/",href="https://optout.aboutads.info/?c=2&amp;lang=EN",href="https://optout.aboutads.info/?c=2&amp;lang=EN",href="https://www.networkadvertising.org/mobile-choice",href="https://myamericanprizes.com/terms-and-conditions",href="https://myamericanprizes.com/do-not-sell""},
+    {"slug": "/terms-of-use", "title": "Terms of Use", "author": "by My Daily", "meta_author": "", "external_links": "href="https://cdn.prod.website-files.com/68129c0789b42b5281896601/6841b222f313f8672718b0a6_favicon.ico",href="https://cdn.prod.website-files.com/68129c0789b42b5281896601/684b24f5bfee53ef0c4c6602_mds_webclip.png",href="https://easyscanamoe.com/easyscan/default/enter?amoe_key=4j8lbrw52v""}
+  ]
+}

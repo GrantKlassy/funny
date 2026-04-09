@@ -1,0 +1,18 @@
+{
+  "probe": "gcs_buckets",
+  "timestamp": "2026-04-09T03:35:39+00:00",
+  "bucket_discovery": {
+    "storage_googleapis_com/noodledit.com": "404",
+    "storage_googleapis_com/b.noodledit.com": "200",
+    "storage_googleapis_com/sassets.noodledit.com": "200",
+
+  },
+  "promotions_brute": {
+    "CONTROL_iphone17promax1000.png": "200",
+    "CONTROL_macbook1000.png": "200",
+    "CONTROL_iphone17promax.png": "200"
+  },
+  "path_brute": {
+    "_done": true
+  }
+}

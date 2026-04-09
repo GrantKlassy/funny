@@ -1,0 +1,30 @@
+{
+  "probe": "ip_neighbors",
+  "timestamp": "2026-04-09T03:35:58+00:00",
+  "target_ip": "13.220.193.170",
+  "reverse_dns": {
+    "ptr": "ec2-13-220-193-170.compute-1.amazonaws.com."
+  },
+  "neighbors": [
+    {"ip": "13.220.193.165", "ptr": "ec2-13-220-193-165.compute-1.amazonaws.com.", "http_status": "000000"},
+    {"ip": "13.220.193.166", "ptr": "ec2-13-220-193-166.compute-1.amazonaws.com.", "http_status": "000000"},
+    {"ip": "13.220.193.167", "ptr": "ec2-13-220-193-167.compute-1.amazonaws.com.", "http_status": "200"},
+    {"ip": "13.220.193.168", "ptr": "ec2-13-220-193-168.compute-1.amazonaws.com.", "http_status": "000000"},
+    {"ip": "13.220.193.169", "ptr": "ec2-13-220-193-169.compute-1.amazonaws.com.", "http_status": "000000"},
+    {"ip": "13.220.193.170", "ptr": "ec2-13-220-193-170.compute-1.amazonaws.com.", "http_status": "200"},
+    {"ip": "13.220.193.171", "ptr": "ec2-13-220-193-171.compute-1.amazonaws.com.", "http_status": "000000"},
+    {"ip": "13.220.193.172", "ptr": "ec2-13-220-193-172.compute-1.amazonaws.com.", "http_status": "000000"},
+    {"ip": "13.220.193.173", "ptr": "ec2-13-220-193-173.compute-1.amazonaws.com.", "http_status": "000000"},
+    {"ip": "13.220.193.174", "ptr": "ec2-13-220-193-174.compute-1.amazonaws.com.", "http_status": "000000"},
+    {"ip": "13.220.193.175", "ptr": "ec2-13-220-193-175.compute-1.amazonaws.com.", "http_status": "000000"}
+  ],
+  "cloudflare_ips": {
+    "epicfunnels.net": "104.21.11.211,172.67.192.166",
+    "jessica.epicfunnels.net": "172.67.192.166,104.21.11.211",
+    "explore.mydailysurge.com": "172.67.144.128,104.21.71.114",
+    "noodledit.com": ""
+  },
+  "asn": {
+    "cymru": "'14618 | 13.216.0.0/13 | US | arin | 2019-10-01'"
+  }
+}

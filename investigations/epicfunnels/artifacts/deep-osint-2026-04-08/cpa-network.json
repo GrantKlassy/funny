@@ -1,0 +1,31 @@
+{
+  "probe": "cpa_network",
+  "timestamp": "2026-04-09T03:35:39+00:00",
+  "activeprospect_verification": {
+    "base64": "M+mUYgTDEprxDUAdcdobLA==",
+    "hex": "33e9946204c3129af10d401d71da1b2c",
+    "length_bytes": 16
+  },
+  "tracker_path_analysis": {
+    "full_path": "/FGK5P4/2Z57CD5/",
+    "component_1": "FGK5P4",
+    "component_2": "2Z57CD5",
+    "note": "Likely affiliate_id/campaign_id or offer_id/tracking_id"
+  },
+  "tracker_platform_clues": {
+    "domain_pattern": "phef6trk = random prefix + trk suffix",
+    "trk_suffix": "Common in: HasOffers/TUNE, Everflow, CAKE, Voluum, RedTrack",
+    "registrar": "",
+    "creation_date": "",
+    "updated_date": "",
+    "nameservers": ""
+  },
+  "phef6trk_dns_history": {
+    "A": "10.0.0.1",
+    "AAAA": "fd25:ef1b:4b44:1::1",
+    "MX": "",
+    "TXT": "",
+    "NS": "",
+    "SOA": ""
+  }
+}

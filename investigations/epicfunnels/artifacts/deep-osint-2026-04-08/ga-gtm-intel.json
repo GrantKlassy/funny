@@ -1,0 +1,18 @@
+{
+  "probe": "ga_gtm_intel",
+  "timestamp": "2026-04-09T03:35:23+00:00",
+  "gtm_container": {
+    "status": "200",
+    "ga_ids": "G-BSTM4RV28F",
+    "ua_ids": "",
+    "fb_pixels": "",
+    "domains_referenced": "a.com,b.com,b.io,d.com,doubleclick.net,e.io,google.com,googleadservices.com,googlesyndication.com,googletagmanager.com,internal.com,jquery.org,this.com,veinteractive.com,youtube-nocookie.com,youtube.com",
+    "urls_found": "https://ad.doubleclick.net/activity;,https://ad.doubleclick.net/ccm/s/collect,https://ade.googlesyndication.com,https://adservice.google.com/pagead/regclk,https://cct.google/taggy/agent.js,https://google.com/ccm/form-data,https://google.com/pagead/form-data,https://googleads.g.doubleclick.net/pagead/viewthroughconversion,https://m.youtube.com,https://pagead2.googlesyndication.com,https://pagead2.googlesyndication.com/ccm/collect,https://pagead2.googlesyndication.com/ccm/conversion,https://pagead2.googlesyndication.com/measurement/conversion,https://pagead2.googlesyndication.com/pagead/conversion,https://pagead2.googlesyndication.com/pagead/gen_204?id=tcfe,https://www.google.com,https://www.google.com/,https://www.google.com/ccm/collect,https://www.google.com/ccm/conversion,https://www.google.com/ccm/form-data,https://www.google.com/ccm/geo,https://www.google.com/measurement/conversion,https://www.google.com/pagead/1p-conversion,https://www.google.com/pagead/form-data,https://www.google.com/pagead/uconversion,https://www.google.com/rmkt/collect,https://www.google.com/travel/flights/click/conversion,https://www.googleadservices.com,https://www.googleadservices.com/ccm/conversion,https://www.googleadservices.com/pagead/conversion",
+    "container_size_bytes": 373298
+  },
+  "scam_page_tracking": {
+    "jessica_ga": "",
+    "jessica_gtm": "",
+    "jessica_fb_pixel": ""
+  }
+}

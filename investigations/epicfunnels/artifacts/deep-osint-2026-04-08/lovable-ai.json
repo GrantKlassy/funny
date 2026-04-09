@@ -1,0 +1,56 @@
+{
+  "probe": "lovable_ai",
+  "timestamp": "2026-04-09T03:36:29+00:00",
+  "og_image_metadata": {
+    "exiftool": {
+  "SourceFile": "/tmp/lovable-og.png",
+  "ExifToolVersion": 12.57,
+  "FileName": "lovable-og.png",
+  "Directory": "/tmp",
+  "FileSize": "258 kB",
+  "FileModifyDate": "2026:04:09 03:36:29+00:00",
+  "FileAccessDate": "2026:04:09 03:36:29+00:00",
+  "FileInodeChangeDate": "2026:04:09 03:36:29+00:00",
+  "FilePermissions": "-rw-r--r--",
+  "FileType": "PNG",
+  "FileTypeExtension": "png",
+  "MIMEType": "image/png",
+  "ImageWidth": 1200,
+  "ImageHeight": 629,
+  "BitDepth": 8,
+  "ColorType": "Palette",
+  "Compression": "Deflate/Inflate",
+  "Filter": "Adaptive",
+  "Interlace": "Noninterlaced",
+  "PixelsPerUnitX": 2835,
+  "PixelsPerUnitY": 2835,
+  "PixelUnits": "meters",
+  "SRGBRendering": "Perceptual",
+  "Gamma": 2.2,
+  "Palette": "(Binary data 768 bytes, use -b option to extract)",
+  "Transparency": "(Binary data 253 bytes, use -b option to extract)",
+  "ImageSize": "1200x629",
+  "Megapixels": 0.755
+}
+  },
+  "project_urls": {
+    "/projects/p98pqg": "307",
+    "/p/p98pqg": "404",
+    "/share/p98pqg": "404",
+    "/preview/p98pqg": "404",
+    "/app/p98pqg": "404",
+    "/api/projects/p98pqg": "404"
+  },
+  "lovable_api": {
+    "/api": "404",
+    "/api/v1": "404",
+    "/docs": "404",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/.well-known/security.txt": "404"
+  },
+  "scam_page_lovable_refs": {
+    "lovable_references": "lovable.dev/opengraph-image-p98pqg.png",
+    "p98pqg_count": 2
+  }
+}

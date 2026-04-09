@@ -1,0 +1,30 @@
+{
+  "probe": "threat_intel",
+  "timestamp": "2026-04-09T03:35:30+00:00",
+  "spamhaus": {
+    "zen.spamhaus.org": "127.255.255.254",
+    "bl.spamcop.net": "",
+    "dnsbl.sorbs.net": "",
+    "b.barracudacentral.org": ""
+  },
+  "virustotal_reachable": {
+    "epicfunnels.net": "200",
+    "noodledit.com": "200",
+    "mydailysurge.com": "200",
+    "phef6trk.com": "200"
+  },
+  "urlhaus": {
+    "epicfunnels.net": {"query_status": "", "urls_online": "0"},
+    "phef6trk.com": {"query_status": "", "urls_online": "0"},
+    "noodledit.com": {"query_status": "", "urls_online": "0"},
+    "mydailysurge.com": {"query_status": "", "urls_online": "0"}
+  },
+  "safe_browsing_page": {
+    "epicfunnels.net": "200",
+    "phef6trk.com": "200"
+  },
+  "phishtank": {
+    "epicfunnels.net": "302",
+    "phef6trk.com": "302"
+  }
+}
