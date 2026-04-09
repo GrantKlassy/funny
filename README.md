@@ -41,6 +41,12 @@ Our **58,400 satisfied customers** at @jessytheupgradeclub agree — this is the
 
 ---
 
+### Step 2 of 3 — View the Complete Scam Infrastructure Map (66%)
+
+> **MANDATORY:** Before claiming your prize, you must review the **[Complete Scam Flow](https://github.com/GrantKlassy/funny/blob/main/investigations/epicfunnels/SCAM-FLOW.md)** — every domain, subdomain, DNS record, port, service, certificate, and connection mapped out in Mermaid diagrams. **This step cannot be skipped.**
+
+---
+
 ### Included With Your Prize:
 
 - An **AI-generated scam page** built with Lovable AI (scored 1.8/10 for scam prevention — the lowest of any tool tested)
@@ -158,7 +164,7 @@ If, somehow, you are still reading and want the real technical details:
 
 **[investigations/epicfunnels/](investigations/epicfunnels/)** — Full write-up of a CPA affiliate scam funnel built with Lovable AI, distributed via TikTok, running on a hilariously misconfigured AWS EC2 instance with 6 domains, a shadow hostname called "olivimails.com", a Hestia Control Panel login page visible to the entire internet, and an operator who is *still actively updating their SEO content farm* despite the fact that the scam itself has been broken for months.
 
-**[investigations/epicfunnels/SCAM-FLOW.md](investigations/epicfunnels/SCAM-FLOW.md)** — Every domain, subdomain, DNS record, port, service, certificate, and connection mapped out in Mermaid diagrams.
+**:world_map: [THE COMPLETE SCAM FLOW](https://github.com/GrantKlassy/funny/blob/main/investigations/epicfunnels/SCAM-FLOW.md)** — Every domain, subdomain, DNS record, port, service, certificate, and connection mapped out in Mermaid diagrams. The crown jewel. GitHub renders the Mermaid live.
 
 **[investigations/epicfunnels/tiktok/](investigations/epicfunnels/tiktok/)** — TikTok distribution evidence (profile, comments, scam page screenshots, and yes, the sword guy).
 
