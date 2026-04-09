@@ -84,9 +84,122 @@ Both served from Google Cloud Storage (identified via `x-guploader-uploadid`, `x
 - Brands: "GetnGoods" (meta author, @GetnGoods twitter), "MyDailySurge" (logo in assets)
 - `robots: noindex, nofollow`
 
+### explore.mydailysurge.com — The SEO Content Farm
+
+Discovered alive at `explore.mydailysurge.com` (HTTP 200) while `mydailysurge.com` itself 404s. This is the **SEO/content marketing arm** of the operation:
+
+- **Platform**: Webflow (site ID `68129c0789b42b5281896601`)
+- **Last published**: Thu Mar 26, 2026 11:23:53 UTC
+- **Google Analytics**: `G-BSTM4RV28F`
+- **Google Tag Manager**: `GTM-N3JVLCTN`
+- **Content categories**: Personal Finance, Travel, Home Design, Wellness
+- **Stock photos**: Pexels (not Unsplash like the scam page)
+- **CSS filename**: `staging-mydailysurge-v1` — still marked as staging
+- **Blog CMS**: Webflow CMS with article templates, category pages, sidebar navigation
+
+This is a **legitimate-looking lifestyle blog** designed to build domain authority and drive organic traffic. The scam funnels on epicfunnels.net are the monetization layer — the blog is the traffic funnel.
+
+### Certificate Transparency — Full Subdomain History
+
+CT logs reveal subdomains that **once existed** but are now NXDOMAIN, proving scale-up/scale-down operations:
+
+**epicfunnels.net** (formerly active, now NXDOMAIN):
+- `jessica.epicfunnels.net` — **still live** (the one we found)
+- `jenny.epicfunnels.net` — person-named funnel #2
+- `kylie.epicfunnels.net` — person-named funnel #3
+- `afiliados.epicfunnels.net` — Spanish for "affiliates"
+- `socio.epicfunnels.net` — Spanish for "partner"
+- `socios.epicfunnels.net` — Spanish for "partners"
+- `evento.epicfunnels.net` — Spanish for "event"
+- `app.epicfunnels.net`, `demo.epicfunnels.net`, `link.epicfunnels.net`, `m.epicfunnels.net`, `vpn.epicfunnels.net`
+
+The Spanish subdomains (afiliados, socio, socios, evento) suggest the operator is **Spanish-speaking** or targeting Spanish-speaking markets alongside English ones.
+
+The person-named subdomains (jessica, jenny, kylie) confirm the TikTok distribution model — each name is a personalized funnel ("Jessica said I could win!").
+
+**mydailysurge.com** CT history:
+- Numbered subdomains `1.` through `31.` — **daily rotating landing pages** (all 404 now)
+- `explore.` — Webflow content blog (still live)
+- `signup.` — registration page (404)
+- `trck.` — tracking subdomain (404)
+
+### EC2 Server — More Than Mail
+
+Full port scan of 13.220.193.170 reveals additional services:
+
+| Port | Service | Status | Notes |
+|------|---------|--------|-------|
+| 22 | SSH | OPEN | |
+| 25 | SMTP | BLOCKED | AWS default |
+| 80 | HTTP | OPEN | nginx "Success!" page |
+| 443 | HTTPS | OPEN | Redirects to HTTP (expired cert) |
+| 587 | SMTP Submission | OPEN | Banner: `ip-172-26-15-175.ec2.internal` |
+| 143 | IMAP | OPEN | Dovecot |
+| 993 | IMAPS | OPEN | `AUTH=PLAIN AUTH=LOGIN` |
+| 3000 | **Node.js app** | OPEN | **HTTP 500 Internal Server Error** — crashed |
+| 5432 | **PostgreSQL** | OPEN | Database exposed to internet |
+
+**Port 3000** is a crashed Node.js application — likely the backend that handles `/api/continue-click` and `/api/continue` redirects (fronted by Cloudflare Workers or Pages).
+
+**Port 5432** is a PostgreSQL database **listening on the public internet** — a significant security misconfiguration. This likely stores click tracking data, funnel analytics, or email records.
+
+### Asset CDN — Multiple Scam Variants
+
+The noodledit.com GCS buckets contain assets for **multiple scam campaigns**:
+
+- `b.noodledit.com/promotions/iphone17promax1000.png` — iPhone 17 Pro Max (current campaign)
+- `b.noodledit.com/promotions/macbook1000.png` — **MacBook variant** (204KB, same 720px format)
+- 3 iPhone color variant WebP images on jessica.epicfunnels.net itself (Cosmic Orange 558KB, Deep Blue 477KB, Silver 394KB)
+
+The `1000` suffix in filenames likely refers to the "$1000" prize value used in the scam copy.
+
+## The Full Operation Model
+
+This is a **multi-layer CPA affiliate scam operation**:
+
+```
+Layer 1: SEO CONTENT FARM
+  explore.mydailysurge.com (Webflow blog)
+  Categories: Personal Finance, Travel, Home Design, Wellness
+  Purpose: Build domain authority, drive organic traffic
+  Analytics: G-BSTM4RV28F / GTM-N3JVLCTN
+
+Layer 2: SCAM FUNNELS
+  {jessica,jenny,kylie,...}.epicfunnels.net (Lovable AI)
+  "You've been selected to win an iPhone 17 Pro Max!"
+  Personalized by name for TikTok/social media distribution
+  Also had MacBook variant ready
+
+Layer 3: MONETIZATION
+  phef6trk.com (CPA affiliate tracker, now sinkholed)
+  Operator gets paid per victim click-through
+
+Layer 4: INFRASTRUCTURE
+  AWS EC2 ── mail (Roundcube + Dovecot) + Node.js API + PostgreSQL
+  Google Cloud ── mydailysurge hosting + GCS asset buckets
+  Cloudflare ── DNS proxy, SSL, possibly Workers for API routing
+  Webflow ── SEO content blog
+  Lovable AI ── scam page generation
+
+Layer 5: EMAIL
+  epicfunnels.net ── full email infra (SPF + DMARC + Roundcube)
+  Likely used for spam distribution or affiliate communications
+  Spanish affiliate portal subdomains (afiliados, socio, socios)
+```
+
+### Operator Profile
+
+- **Language**: Likely Spanish-speaking (afiliados, socio, socios, evento subdomains)
+- **Brands**: "GetnGoods" (scam pages), "MyDailySurge" (content blog)
+- **Tools**: Lovable AI (scam generation), Webflow (SEO blog), standard DevOps (nginx, Dovecot, PostgreSQL, Node.js)
+- **Scale**: Multiple funnel names, multiple product variants (iPhone, MacBook), numbered daily landing pages — this is a **repeatable, templated operation**
+- **OpSec**: EXIF stripped, `noindex/nofollow`, Cloudflare proxied — but leaked internal hostname via SMTP, exposed PostgreSQL to internet, expired SSL cert not renewed
+
 ## Conclusion
 
-Real-world example of Guardio Labs' VibeScamming research. Lovable AI (scored 1.8/10 — most exploitable tool tested) used to generate a scam funnel page. Multi-domain infrastructure with shared Cloudflare accounts, email capability (SPF+DMARC+Roundcube), and CPA affiliate monetization. Multiple brands suggest a repeatable operation.
+Real-world example of Guardio Labs' VibeScamming research. Lovable AI (scored 1.8/10 — most exploitable tool tested) used to generate a scam funnel page. Multi-domain infrastructure with shared Cloudflare accounts, email capability (SPF+DMARC+Roundcube), and CPA affiliate monetization.
+
+The deeper investigation reveals this is not a one-off — it's a **multi-brand, multi-language, templated scam factory** with an SEO content farm (Webflow) feeding traffic into AI-generated scam funnels (Lovable), monetized through CPA affiliate tracking. The operator has infrastructure for rapid deployment of new campaigns: just generate a new Lovable page, point a new subdomain, and go.
 
 ## Artifacts Captured (2026-04-08)
 
@@ -102,6 +215,13 @@ All saved in [artifacts/](artifacts/) before infrastructure goes down:
 - [x] `ssl-cert-cloudflare.pem` — Google Trust WE1 wildcard cert via Cloudflare (valid through May 20, 2026)
 - [x] `dns-records.txt` — full dig output for all domains (MX, TXT/SPF, DMARC, NS, A, PTR)
 - [x] `favicon.ico` — site favicon (20KB)
+- [x] `macbook1000.png` — MacBook variant promo image from b.noodledit.com (204KB)
+- [x] `iphone-cosmicorange-prqXxnzj.webp` — iPhone Cosmic Orange variant (558KB)
+- [x] `iphone-deepblue-UwoIw3eQ.webp` — iPhone Deep Blue variant (477KB)
+- [x] `iphone-silver-JpOn6eFE.webp` — iPhone Silver variant (394KB)
+- [x] `explore-mydailysurge.html` — full Webflow SEO blog snapshot (61KB)
+- [x] `lovable-og-image.png` — Lovable AI OG image used by scam page (258KB)
+- [x] `ct-logs.txt` — certificate transparency logs for all 4 domains (31KB)
 - [ ] Screenshots (headless browser capture) — TODO, needs headless Chrome/Playwright
 
 ## Follow-up Investigation (2026-04-08)
