@@ -433,25 +433,36 @@ Fluent's subsidiary **American Prize Center LLC** was incorporated in 2012 with 
 `moxxi.io` was registered **May 23, 2023** — two months before the FTC sued Fluent. `myamericanprizes.com` was registered **August 22, 2023** — one month after. They were already building the exit.
 
 ```mermaid
-timeline
-    title The Fluent-to-Moxxi Pipeline
-    section Fluent Inc (NASDAQ: FLNT)
-        2012 : American Prize Center LLC incorporated
-             : (CEO Ryan Schulke, President Matthew Conlin)
-        2015-2022 : Carl Augustin at Fluent (7 years, founding member)
-        2018-2019 : Fluent sells 620M+ consent farm leads ($93.4M revenue)
-        Nov 2019 : Jeffrey Kauffman deploys TrustedForm at Fluent
-    section The Exit
-        May 2023 : moxxi.io registered (2 months BEFORE FTC suit)
-        Jul 2023 : FTC sues Fluent ($2.5M settlement)
-        Aug 2023 : myamericanprizes.com registered (1 month AFTER)
-             : Name echoes Fluent's "American Prize Center LLC"
-    section Moxxi Digital
-        2023-2024 : Same playbook, same vendors (ActiveProspect + Jornaya)
-             : Same people (Laniado, Riehl, Kauffman, Augustin)
-        2025-2026 : 15+ brands, 747 CDN assets, gov benefits fraud
-             : epicfunnels.net, BenefitsAccessCenter, RewardZinga
-             : BBB rated D+. No FTC action yet.
+graph TD
+    subgraph "FLUENT INC (NASDAQ: FLNT)"
+        F1["<b>2012</b><br/>American Prize Center LLC incorporated"]
+        F2["<b>2015-2022</b><br/>Carl Augustin at Fluent (7 years)"]
+        F3["<b>2018-2019</b><br/>620M+ consent farm leads sold<br/>$93.4M revenue"]
+        F4["<b>Nov 2019</b><br/>Kauffman deploys TrustedForm at Fluent"]
+        F1 --> F2 --> F3 --> F4
+    end
+
+    subgraph "THE EXIT"
+        E1["<b>May 2023</b><br/>moxxi.io registered<br/><i>2 months BEFORE FTC suit</i>"]
+        E2["<b>Jul 2023</b><br/>FTC sues Fluent<br/>$2.5M settlement"]
+        E3["<b>Aug 2023</b><br/>myamericanprizes.com registered<br/><i>1 month AFTER suit</i><br/>Name echoes 'American Prize Center LLC'"]
+        E1 --> E2 --> E3
+    end
+
+    subgraph "MOXXI DIGITAL"
+        M1["<b>2023-2024</b><br/>Same playbook. Same vendors.<br/>Same people."]
+        M2["<b>2025-2026</b><br/>15+ brands, 747 CDN assets<br/>Gov benefits fraud<br/>BBB rated D+"]
+        M3["<b>No FTC action yet.</b>"]
+        M1 --> M2 --> M3
+    end
+
+    F4 --> E1
+    E3 --> M1
+
+    style E1 fill:#ff6600,color:#fff
+    style E2 fill:#ff0000,color:#fff
+    style E3 fill:#ff6600,color:#fff
+    style M3 fill:#333,color:#fff
 ```
 
 Moxxi Digital acquires leads at **$1.44-$2.00** via fake sweepstakes (confirmed via [Affplus CPA listings](https://www.affplus.com/search?q=myamericanprizes)). The same leads, enriched with personal/financial data and packaged with TCPA consent certificates, sell into health insurance and lending verticals at **$15-$200+ each**. 36 employees. Bootstrapped. Profitable. Actively hiring via [Greenhouse](https://job-boards.greenhouse.io/moxxidigital).
