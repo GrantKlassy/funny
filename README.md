@@ -117,63 +117,42 @@ The scam operator left their Redis database open to the internet with no passwor
 The scam operator's Redis isn't just open — it's a **live battlefield** where botnets from multiple countries are competing to plant malware, wipe each other's payloads, and hijack the server's compute resources. WatchDog plants its crontab payloads. Another botnet FLUSHALLs the database. WatchDog re-injects. Someone else tries to make the server a replica. The whole thing has been wiped **337 times** in 75 days. Nobody is winning. The scam operator has no idea any of this is happening.
 
 ```mermaid
-graph TD
-    subgraph "THE REDIS WARZONE"
-        REDIS["<b>Redis 7.4.7</b><br/>13.220.193.170:6379<br/>NO PASSWORD<br/>protected-mode: no<br/>bound to *"]
+pie title Redis Attackers by Country (23 IPs)
+    "China (Baidu Cloud)" : 6
+    "China (ChinaNet)" : 5
+    "China (Alibaba Cloud)" : 2
+    "China (Tencent, Unicom, Primezone, ByteDance)" : 4
+    "Malaysia (Shinjiru bulletproof hosting)" : 1
+    "Mexico" : 1
+    "USA (Linode, AWS)" : 2
+    "Germany (Contabo)" : 1
+    "Netherlands (Stretchoid scanner)" : 1
+```
+
+The three most dangerous attacks — all from Chinese cloud platforms:
+
+```mermaid
+graph LR
+    subgraph "THE 3 HIGH-THREAT ACTORS"
+        direction TB
+        A1["<b>120.48.43.118</b><br/>Baidu Cloud, China"]
+        A2["<b>47.112.215.87</b><br/>Alibaba Cloud, China"]
+        A3["<b>27.185.41.158</b><br/>ChinaNet Hebei, China"]
     end
 
-    subgraph "BAIDU CLOUD BOTNET FLEET (6 IPs, AS38365)"
-        B1["180.76.114.78"]
-        B2["180.76.52.82"]
-        B3["180.76.58.237"]
-        B4["120.48.43.118<br/><b>CRONTAB INJECTION</b>"]
-        B5["120.48.35.163"]
-        B6["120.48.174.141"]
-    end
+    REDIS["<b>Redis 7.4.7</b><br/>NO PASSWORD"]
 
-    subgraph "OTHER CHINESE CLOUD"
-        ALI1["47.112.215.87<br/><b>Alibaba Cloud</b><br/>LUA RCE ATTEMPT"]
-        ALI2["47.94.213.192<br/>Alibaba Cloud"]
-        TEN["81.71.51.170<br/>Tencent Cloud"]
-        BYTE["118.196.34.36<br/><b>ByteDance / Volcano Engine</b><br/>yes, TikTok's parent company"]
-    end
+    A1 -->|"CONFIG SET dir<br/>/var/spool/cron/crontabs<br/>CRONTAB INJECTION"| REDIS
+    A2 -->|"EVAL package.loadlib<br/>LUA SANDBOX ESCAPE<br/>ARBITRARY CODE EXECUTION"| REDIS
+    A3 -->|"CONFIG SET dir<br/>/etc/cron.d<br/>CRON.D INJECTION"| REDIS
 
-    subgraph "CHINANET (China Telecom)"
-        CT1["183.6.4.31<br/>Guangdong"]
-        CT2["183.56.243.176<br/>Guangdong"]
-        CT3["183.56.219.190<br/>Guangdong"]
-        CT4["14.18.118.84<br/>Guangdong"]
-        CT5["27.185.41.158<br/>Hebei<br/><b>CRON.D INJECTION</b>"]
-    end
+    REDIS -.->|"All failed.<br/>Redis is in Docker.<br/>Can't reach host OS."| DOCKER["Container saved them.<br/>By accident."]
 
-    subgraph "REST OF WORLD"
-        MX["200.188.48.146<br/>Mexico<br/>RDB attack prep"]
-        MY["111.90.158.78<br/><b>Shinjiru (bulletproof hosting)</b><br/>Malaysia"]
-        US1["198.74.62.88<br/>Linode / USA"]
-        DE["194.163.170.77<br/>Contabo / Germany"]
-    end
-
-    subgraph "WATCHDOG MALWARE (Palo Alto Unit 42)"
-        WD["backup1-backup4 keys<br/>Campaign: b2f628<br/>C2: oracle.zzhreceive.top (DEAD)<br/>Payload: XMRig Monero miner<br/><b>Active since 2019</b>"]
-    end
-
-    B1 & B2 & B3 & B4 & B5 & B6 -->|"FLUSHALL + SAVE"| REDIS
-    ALI1 -->|"EVAL package.loadlib"| REDIS
-    ALI2 & TEN -->|"SAVE"| REDIS
-    BYTE -->|"COMMAND recon"| REDIS
-    CT1 & CT2 & CT3 & CT4 -->|"FLUSHALL + SAVE"| REDIS
-    CT5 -->|"CONFIG SET dir /etc/cron.d"| REDIS
-    MX -->|"CONFIG SET stop-writes-on-bgsave-error no"| REDIS
-    MY & US1 & DE -->|"FLUSHALL"| REDIS
-    WD -.->|"persists after every wipe"| REDIS
-
-    style REDIS fill:#ff0000,color:#fff,stroke:#fff
-    style B4 fill:#ff6600,color:#fff
-    style ALI1 fill:#ff6600,color:#fff
-    style CT5 fill:#ff6600,color:#fff
-    style WD fill:#9900cc,color:#fff
-    style BYTE fill:#ff3399,color:#fff
-    style MY fill:#cc6600,color:#fff
+    style REDIS fill:#ff0000,color:#fff
+    style A1 fill:#ff6600,color:#fff
+    style A2 fill:#ff6600,color:#fff
+    style A3 fill:#ff6600,color:#fff
+    style DOCKER fill:#228B22,color:#fff
 ```
 
 <p align="center"><em>23 threat actors from 8 countries fighting over one passwordless Redis. 337 database wipes in 75 days. The scam operator has no idea.</em></p>
