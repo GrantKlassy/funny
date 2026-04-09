@@ -322,20 +322,12 @@ The Upgrade Club liked your comment. This is real engagement from a real scam op
 **Exhibit B:**
 
 <p align="center">
-<img src="memes/bots-vs-sinkhole.png" width="500">
-</p>
-
-The engagement bots are still running. The tracker is sinkholed. The machine runs. The gears turn. Nothing happens.
-
-**Exhibit C:**
-
-<p align="center">
 <img src="investigations/epicfunnels/artifacts/iphone17promax1000.png" width="300">
 </p>
 
 <p align="center"><em>This is the actual promotional image from their CDN bucket at b.noodledit.com. "Valued at $1000." The filename is literally <code>iphone17promax1000.png</code>. The $1000 is the value, not the price. There is no iPhone. There is no prize. There is a $1,000 cash drawing once a year, administered by a company founded by a professional bridge player in Dallas.</em></p>
 
-**Exhibit D:**
+**Exhibit C:**
 
 <p align="center">
 <img src="investigations/epicfunnels/tiktok/privacy-iceberg-meme.jpg" width="300">
