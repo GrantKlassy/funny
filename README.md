@@ -37,7 +37,7 @@ To confirm your entry, please complete the following steps.
 
 Our **58,400 satisfied customers** at @jessytheupgradeclub agree — this is the real deal. "Premium tech drops daily. Invite-only access. Claim your spot now."
 
-> "I'm seriously at my limit" — **Zamphexotrorp** (248 comments)
+> "I'm seriously at my limit" — **Grant Klassy** (248 comments)
 
 ---
 
@@ -82,7 +82,7 @@ Our **58,400 satisfied customers** at @jessytheupgradeclub agree — this is the
 | :bust_in_silhouette: | Jessica from TikTok | Won an iPhone 17 Pro Max! |
 | :bust_in_silhouette: | Jenny from TikTok | DNS removed |
 | :bust_in_silhouette: | Kylie from TikTok | DNS removed |
-| :bust_in_silhouette: | Zamphexotrorp | Seriously at his limit |
+| :bust_in_silhouette: | Grant Klassy | Seriously at his limit |
 | :bust_in_silhouette: | Someone from the Zendesk SPF record | Confused |
 | :bust_in_silhouette: | The Redis database | Exposed (no auth, all interfaces, 75 days uptime) |
 | :bust_in_silhouette: | ActiveProspect TCPA verification | Definitely legit lead gen |
