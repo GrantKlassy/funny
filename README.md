@@ -230,6 +230,8 @@ The entity behind it: **[Moxxi Digital, LLC](investigations/epicfunnels/OPERATOR
 | :bust_in_silhouette: | Jeffrey Kauffman | General Counsel. Built the same TrustedForm stack at Fluent. Third company to get regulatory heat. |
 | :bust_in_silhouette: | The operator | Still updating the SEO blog |
 | :bust_in_silhouette: | The Node.js app | HTTP 500 Internal Server Error |
+| :bust_in_silhouette: | myamericanprizes.com | `<<<< do not use this file, use page-index.hbs instead >>>>` |
+| :bust_in_silhouette: | rewardzinga.com | `<<<< do not use this file, use page-index.hbs instead >>>>` |
 | :bust_in_silhouette: | fqdn.olivimails.com | Coming Soon |
 | :bust_in_silhouette: | The guy with the sword | Unclear |
 
@@ -529,6 +531,7 @@ If, somehow, you are still reading and want the real technical details:
 - **1** guy with a sword (unrelated)
 - **1** billion leads certified annually by the consent verification monopoly enabling this
 - **$1,000** — the grand prize (one winner per year, random drawing, good luck)
+- **58** bytes — what myamericanprizes.com and rewardzinga.com return (a raw Handlebars template error: `do not use this file, use page-index.hbs instead`)
 - **0** working parts of the actual scam
 
 ---

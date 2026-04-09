@@ -26,7 +26,8 @@ CPA affiliate scam funnel built with Lovable AI, distributed via TikTok.
 - **2026-04-08**: Engagement bot network observed LIVE — multiple accounts liking investigator's old TikTok comments simultaneously
 - **2026-04-09**: Operator fully identified — Moxxi Digital (NYC), founded by ex-Fluent Inc veterans. Full chain of attribution from scam page to real humans documented in [OPERATOR-INTEL.md](OPERATOR-INTEL.md)
 - **2026-04-09**: Deep probe — Redis is a warzone (22 threat actors from 6 countries, FLUSHALL spam, crontab injection, Lua RCE exploits), 15 open ports (4 new: FTP, DNS, POP3, POP3S), GCS 747-object inventory confirmed, PostgreSQL requires auth, Hestia API IP-whitelisted
-- **2026-04-09**: Follow-up probes — FTP requires auth (no anonymous), DNS is just a recursive resolver (no hidden zones), POP3 confirms Dovecot mail stack. Full threat actor attribution: 23 IPs across 8 countries (74% China), Baidu Cloud 6-IP botnet cluster identified. Redis malware identified as **WatchDog** cryptojacking campaign (Cado Labs 2022) — `b2f628` is a known campaign ID, `oracle.zzhreceive.top` is a known C2 domain
+- **2026-04-09**: Follow-up probes — FTP requires auth (no anonymous), DNS is just a recursive resolver (no hidden zones), POP3 confirms Dovecot mail stack. Full threat actor attribution: 23 IPs across 8 countries (74% China), Baidu Cloud 6-IP botnet cluster identified. Redis malware identified as **WatchDog** cryptojacking campaign (Palo Alto Unit 42, active since 2019) — `b2f628` is a known campaign ID, `oracle.zzhreceive.top` is a known C2 domain
+- **2026-04-09**: End-of-day snapshot — Redis gained 163 new connections in 47 minutes (~3.5/min). GCS temporal analysis: Sep 2025 mass deployment (334 uploads, 45% of all assets), Jan-Feb 2026 gov benefits pivot. myamericanprizes.com and rewardzinga.com both leaking raw Handlebars template errors. phef6trk.com whois intact (not scrubbed) — operator self-decommissioned tracker by pointing A record to 10.0.0.1
 
 ## Scam Flow
 
@@ -1259,3 +1260,88 @@ All saved in `artifacts/new-ports-2026-04-09/`:
 - `dns-probe.json` — DNS recursive resolver analysis, zone transfer attempts, subdomain resolution, version query
 - `pop3-probe.json` — POP3/POP3S banner and capabilities
 - `threat-actor-attribution.json` — Full reverse DNS + whois for all 23 external Redis attacker IPs with ASN, org, country, netname, CIDR, abuse contacts
+- `watchdog-malware-analysis.md` — Complete WatchDog malware report with SHA256 hashes, Monero wallets, attack chain, campaign IDs, and source references
+
+## End-of-Day Snapshot (2026-04-09 ~07:15 UTC)
+
+Quick probes before closing out the session.
+
+### Redis: Still Getting Hit
+
+Comparing deep probe (~06:28 UTC) to end-of-day (~07:15 UTC), ~47 minutes apart:
+
+| Metric | Deep Probe | End of Day | Delta |
+|--------|-----------|------------|-------|
+| total_connections_received | 218,219 | 218,382 | **+163** |
+| total_commands_processed | 241,737 | 241,931 | **+194** |
+| keyspace_hits | 32 | 48 | +16 |
+| keys in db0 | 4 | 4 | 0 |
+
+163 new connections in 47 minutes = **~3.5 new connections per minute**, 24/7. Same 4 WatchDog keys (backup1-4). The wipe-and-reinject cycle continues. Our probe is still the latest slowlog entry — no one else hit it hard enough to exceed the 10ms slowlog threshold since we left.
+
+### GCS Temporal Analysis: The Scaling Timeline
+
+Upload timeline for the 747 objects in b.noodledit.com tells the story of the operation's growth:
+
+```
+2024-10:   7   ███           ← operation begins (money-test-img.jpg, PrizeZappy brand)
+2024-11:   8   ████          ← PrizeZappy logo, early page assets
+2024-12:   3   █
+2025-02:   2   █
+2025-03:  11   █████
+2025-04:  10   █████
+2025-05:   5   ██
+2025-07:   2   █
+2025-08:  36   ██████████████████        ← EC2 provisioned Aug 28
+2025-09: 334   ██████████████████████████████████████████  ← MASS DEPLOYMENT (45% of all assets)
+2025-10:  72   ████████████████████████████████████
+2025-11:  23   ███████████
+2025-12:  31   ███████████████
+2026-01:  66   █████████████████████████████████   ← gov benefits pivot begins
+2026-02:  82   █████████████████████████████████████████  ← peak #2
+2026-03:  51   █████████████████████████
+2026-04:   4   ██                                  ← still uploading (creditcard.png yesterday)
+```
+
+**Key observations:**
+- **October 2024**: Operation begins with test images. PrizeZappy is the first brand.
+- **September 2025**: Massive ramp-up — 334 uploads in one month. This is when they scaled from testing to industrial production. Correlates with EC2 server provisioning on August 28.
+- **January-February 2026**: Second spike (66 + 82 = 148 uploads). This correlates with the government benefits pivot — BenefitsAccessCenter assets, SNAP, unemployment, rental assistance.
+- **April 2026**: Still uploading. `creditcard.png` uploaded April 8 (day of our investigation). New verticals: credit cards, housing (OPG Housing), luxury goods (Kawasaki motorcycle, Norwegian cruise, Hermes purse), Starbucks gift cards.
+
+**Most recent uploads (operator still active):**
+- `promotions/creditcard.png` — April 8, 2026 (same day as investigation)
+- `pages/OPG Housing.jpg` — April 6
+- `pages/Picture2.jpg` — April 6
+- `promotions/starbucks500.svg` — March 31
+- `promotions/kawasakimotorcycle.png` — March 30
+- `promotions/norwegiancruiselinecruise.png` — March 30
+- `promotions/hermespurse.png` — March 30
+
+**Oldest file**: `themes/money-test-img.jpg` (October 22, 2024) — literally a test image. The operation was in development for 11 months before the EC2 server was provisioned.
+
+### Domain Health Check
+
+| Domain | Status | Notes |
+|--------|--------|-------|
+| jessica.epicfunnels.net | HTTP 200, 1415 bytes | Still serving scam page |
+| epicfunnels.net | HTTP 200, 1415 bytes | Root domain now serves same scam page |
+| explore.mydailysurge.com | HTTP 200, 61013 bytes | SEO blog still live, still large |
+| jessica.epicfunnels.net/api/continue | HTTP 302 → phef6trk.com | Still redirecting to sinkholed tracker |
+| myamericanprizes.com | HTTP 200, **58 bytes** | Broken — leaking Handlebars template error |
+| rewardzinga.com | HTTP 200, **58 bytes** | Same broken template |
+
+**myamericanprizes.com and rewardzinga.com** both return raw Handlebars instructions: `<<<< do not use this file, use page-index.hbs instead >>>>`. The **CustomerTestConnect** Express.js + Handlebars backend is deployed with the wrong template. The production index page for both flagship brands is a developer error message visible to the public.
+
+### phef6trk.com: Not Sinkholed — Self-Decommissioned
+
+Previous investigation notes said "whois returns empty — registrar may have scrubbed records." This was incorrect. Full whois check from container (no local DNS involvement):
+
+- **Registrar**: Squarespace Domains II LLC
+- **Created**: June 25, 2024
+- **Expires**: June 25, 2026 (still active)
+- **Name servers**: ns-cloud-e1-e4.googledomains.com (Google Cloud DNS, intact)
+- **DNSSEC**: Signed delegation with DS record
+- **A record**: `10.0.0.1` (returns same from Google DNS, Cloudflare DNS, and Quad9)
+
+The 10.0.0.1 A record is **not a Pi-hole block, not a law enforcement seizure, not a registrar takedown**. It is an actual DNS A record set in Google Cloud DNS, returning consistently from all public resolvers. The operator **deliberately pointed their own tracker to a private RFC 1918 address that routes nowhere on the public internet**. They decommissioned the tracker themselves. The domain is still registered, still paid for, still has working nameservers — someone just changed the A record to kill it.
