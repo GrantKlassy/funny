@@ -73,14 +73,14 @@ Our **58,400 satisfied customers** at @jessytheupgradeclub agree — this is the
 - A CPA affiliate tracker that got **sinkholed to `10.0.0.1`** (the entire scam funnel goes absolutely nowhere)
 - An operator who is **STILL updating their SEO blog** (last modified: April 5, 2026) despite the scam being broken for months
 - **500 cached Lua scripts** in Redis (someone was working hard... on something)
-- A **coordinated TikTok engagement bot network** that is still actively liking people's old comments from multiple accounts, driving them to profiles that link to funnels that redirect to a sinkhole:
+- A **coordinated TikTok engagement bot network** that is still actively liking people's old comments from multiple accounts, driving them to profiles that link to funnels that redirect to a sinkhole
+- A Redis database that **someone else already cryptojacked** — 4 malware crontab payloads planted by **[WatchDog](https://unit42.paloaltonetworks.com/watchdog-cryptojacking/)**, a cryptojacking operation active since 2019, first exposed by Palo Alto Unit 42. Campaign ID `b2f628`, C2 domain `oracle.zzhreceive.top` (dead), XMRig Monero miner. Attack failed because Redis runs in Docker. The malware keys persist because WatchDog keeps re-injecting them after each FLUSHALL wipe by competing botnets. Scammers getting scammed by cryptojackers getting wiped by other cryptojackers.
 
 <p align="center">
 <img src="investigations/epicfunnels/tiktok/tiktok-activity-upgrade-club-liked.jpg" width="500">
 </p>
 
 <p align="center"><em>This showed up in our TikTok notifications. While we were investigating them. The engagement bots liked our old comments on the sword guy's video. They are liking your comments right now.</em></p>
-- A Redis database that **someone else already cryptojacked** — 4 malware crontab payloads planted by **[WatchDog](https://unit42.paloaltonetworks.com/watchdog-cryptojacking/)**, a cryptojacking operation active since 2019, first exposed by Palo Alto Unit 42. Campaign ID `b2f628`, C2 domain `oracle.zzhreceive.top` (dead), XMRig Monero miner. Attack failed because Redis runs in Docker. The malware keys persist because WatchDog keeps re-injecting them after each FLUSHALL wipe by competing botnets. Scammers getting scammed by cryptojackers getting wiped by other cryptojackers.
 
 **The Redis Warzone — Who's Attacking:**
 
