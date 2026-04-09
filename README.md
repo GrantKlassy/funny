@@ -132,6 +132,8 @@ Our **58,400 satisfied customers** at @jessytheupgradeclub agree — this is the
 
 This page was professionally built using Lovable AI ("Build something lovable"). Lovable scored **1.8 out of 10** for scam prevention in Guardio Labs' VibeScamming research. That's the lowest score of any tool tested. They built something lovable, all right.
 
+The Upgrade Club liked your comment. This is real engagement from a real scam operation with 58,400 real followers. They liked our comment. We feel special.
+
 **Exhibit B:**
 
 <p align="center">
