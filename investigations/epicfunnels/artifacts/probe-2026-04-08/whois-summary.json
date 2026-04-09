@@ -1,0 +1,70 @@
+{
+  "probe": "whois_summary",
+  "timestamp": "2026-04-09T04:20:00Z",
+  "domains": {
+    "myamericanprizes.com": {
+      "created": "2023-08-22",
+      "expires": "2026-08-22",
+      "registrar": "GoDaddy.com, LLC",
+      "nameservers": ["cass.ns.cloudflare.com", "felicity.ns.cloudflare.com"],
+      "status": ["clientDeleteProhibited", "clientRenewProhibited", "clientTransferProhibited", "clientUpdateProhibited"],
+      "dnssec": "unsigned"
+    },
+    "phef6trk.com": {
+      "created": "2024-06-25",
+      "expires": "2026-06-25",
+      "registrar": "Squarespace Domains II LLC",
+      "nameservers": ["ns-cloud-e1.googledomains.com", "ns-cloud-e2.googledomains.com", "ns-cloud-e3.googledomains.com", "ns-cloud-e4.googledomains.com"],
+      "status": ["clientDeleteProhibited", "clientTransferProhibited"],
+      "dnssec": "signedDelegation",
+      "dns_sinkholed": true,
+      "a_record": "10.0.0.1"
+    },
+    "noodledit.com": {
+      "created": "2024-10-18",
+      "expires": "2026-10-18",
+      "registrar": "Cloudflare, Inc.",
+      "nameservers": ["cass.ns.cloudflare.com", "felicity.ns.cloudflare.com"],
+      "status": ["clientTransferProhibited"],
+      "dnssec": "unsigned"
+    },
+    "mydailysurge.com": {
+      "created": "2025-03-19",
+      "expires": "2027-03-19",
+      "registrar": "Cloudflare, Inc.",
+      "nameservers": ["cass.ns.cloudflare.com", "felicity.ns.cloudflare.com"],
+      "status": ["clientTransferProhibited"],
+      "dnssec": "unsigned"
+    },
+    "epicfunnels.net": {
+      "created": "2025-08-26",
+      "expires": "2026-08-26",
+      "registrar": "Sav.com, LLC",
+      "nameservers": ["cheryl.ns.cloudflare.com", "logan.ns.cloudflare.com"],
+      "status": ["clientTransferProhibited"],
+      "dnssec": "unsigned"
+    },
+    "olivimails.com": {
+      "status": "EXPIRED/UNREGISTERED",
+      "note": "No WHOIS match - domain has expired or was never registered"
+    }
+  },
+  "new_entities": {
+    "moxximedia": {
+      "source": "M365 DKIM selector",
+      "tenant": "moxximedia.onmicrosoft.com",
+      "ms_tenant_id": "ms46839871",
+      "domain_registered": false
+    },
+    "myamericanprizes_dns": {
+      "mx": "myamericanprizes-com.mail.protection.outlook.com",
+      "spf": "v=spf1 include:spf.protection.outlook.com -all",
+      "dmarc": "v=DMARC1; p=none; rua=mailto:ed520975d12843c3ae17217ffb324256@dmarc-reports.cloudflare.net",
+      "dkim_selector1": "selector1-myamericanprizes-com._domainkey.moxximedia.onmicrosoft.com",
+      "dkim_selector2": "selector2-myamericanprizes-com._domainkey.moxximedia.onmicrosoft.com",
+      "apple_domain_verification": "ySS9fHR4xXuFRiE0",
+      "activeprospect_verification": "DdrUnuCT8xESAT7uOdJmqg==",
+      "autodiscover": "autodiscover.outlook.com"
+    }
+  }
+}

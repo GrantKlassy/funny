@@ -3,8 +3,8 @@
     "investigation": "epicfunnels-cpa-scam",
     "description": "CPA affiliate scam network — Lovable AI generated funnels distributed via TikTok",
     "generated": "2026-04-08T00:00:00Z",
-    "last_probed": "2026-04-09T02:40:00Z",
-    "version": 3
+    "last_probed": "2026-04-09T04:25:00Z",
+    "version": 4
   },
   "nodes": [
     {
@@ -14,6 +14,7 @@
       "metadata": {
         "registrar": "Sav.com",
         "registered": "2025-08-26",
+        "expires": "2026-08-26",
         "nameservers": ["cheryl.ns.cloudflare.com", "logan.ns.cloudflare.com"],
         "cloudflare_ns_pair": "cheryl/logan",
         "status": "live",
@@ -27,6 +28,7 @@
       "metadata": {
         "registrar": "Cloudflare",
         "registered": "2024-10-18",
+        "expires": "2026-10-18",
         "nameservers": ["cass.ns.cloudflare.com", "felicity.ns.cloudflare.com"],
         "cloudflare_ns_pair": "cass/felicity",
         "status": "live",
@@ -38,7 +40,9 @@
       "type": "domain",
       "label": "mydailysurge.com",
       "metadata": {
-        "registrar": "unknown",
+        "registrar": "Cloudflare",
+        "registered": "2025-03-19",
+        "expires": "2027-03-19",
         "nameservers": ["cass.ns.cloudflare.com", "felicity.ns.cloudflare.com"],
         "cloudflare_ns_pair": "cass/felicity",
         "status": "404",
@@ -236,7 +240,10 @@
         "parent": "noodledit.com",
         "status": "live",
         "purpose": "asset_cdn",
-        "backend": "Google Cloud Storage"
+        "backend": "Google Cloud Storage",
+        "objects": 747,
+        "size_mb": 122.4,
+        "publicly_listable": true
       }
     },
     {
@@ -247,7 +254,9 @@
         "parent": "noodledit.com",
         "status": "live",
         "purpose": "asset_cdn",
-        "backend": "Google Cloud Storage"
+        "backend": "Google Cloud Storage",
+        "objects": 28,
+        "publicly_listable": true
       }
     },
     {
@@ -699,10 +708,11 @@
       "type": "domain",
       "label": "olivimails.com",
       "metadata": {
-        "status": "no_dns",
+        "status": "expired",
+        "whois_status": "no_match",
         "role": "original_server_hostname",
         "first_seen": "2025-08-28",
-        "note": "5th domain — discovered via Hestia Control Panel self-signed cert on SMTP/IMAPS/port 8083. FQDN: fqdn.olivimails.com. No public DNS records, no CT logs. Virtual host configured on EC2 nginx. Original server domain before epicfunnels.net was added."
+        "note": "5th domain — discovered via Hestia Control Panel self-signed cert on SMTP/IMAPS/port 8083. FQDN: fqdn.olivimails.com. Whois returns 'no match' — domain expired. Virtual host configured on EC2 nginx. Original server domain before epicfunnels.net was added."
       }
     },
     {
@@ -846,6 +856,293 @@
         "size_bytes": 357376,
         "beautified_bytes": 606208,
         "framework": "Vite + React + Tailwind"
+      }
+    },
+
+    {
+      "id": "domain:myamericanprizes.com",
+      "type": "domain",
+      "label": "myamericanprizes.com",
+      "metadata": {
+        "registrar": "GoDaddy",
+        "registered": "2023-08-22",
+        "expires": "2026-08-22",
+        "nameservers": ["cass.ns.cloudflare.com", "felicity.ns.cloudflare.com"],
+        "cloudflare_ns_pair": "cass/felicity",
+        "status": "live",
+        "role": "sweepstakes_platform",
+        "powered_by": "Express.js + Handlebars"
+      }
+    },
+    {
+      "id": "subdomain:www.myamericanprizes.com",
+      "type": "subdomain",
+      "label": "www.myamericanprizes.com",
+      "metadata": {
+        "parent": "myamericanprizes.com",
+        "status": "live",
+        "purpose": "web",
+        "resolves_to": ["104.21.35.69", "172.67.215.58"]
+      }
+    },
+    {
+      "id": "subdomain:autodiscover.myamericanprizes.com",
+      "type": "subdomain",
+      "label": "autodiscover.myamericanprizes.com",
+      "metadata": {
+        "parent": "myamericanprizes.com",
+        "status": "live",
+        "purpose": "email_autodiscovery",
+        "record_type": "CNAME",
+        "target": "autodiscover.outlook.com"
+      }
+    },
+
+    {
+      "id": "org:moxxi_media",
+      "type": "organization",
+      "label": "Moxxi Media",
+      "metadata": {
+        "tenant": "moxximedia.onmicrosoft.com",
+        "ms_tenant_id": "ms46839871",
+        "domain_registered": false,
+        "role": "operating_entity"
+      }
+    },
+
+    {
+      "id": "platform:customertestconnect",
+      "type": "platform",
+      "label": "CustomerTestConnect",
+      "metadata": {
+        "role": "backend_platform",
+        "serves": "myamericanprizes.com",
+        "tech": ["Express.js", "Handlebars"]
+      }
+    },
+
+    {
+      "id": "malware:redis_cryptojacking",
+      "type": "malware",
+      "label": "Redis Cryptojacking (crontab injection)",
+      "metadata": {
+        "attack_type": "redis_crontab_injection",
+        "payloads": 4,
+        "c2": "oracle.zzhreceive.top",
+        "c2_status": "dead",
+        "success": "failed",
+        "failure_reason": "Docker container — no crontab available",
+        "note": "4 crontab injection payloads found in Redis keys. C2 domain dead. Attack failed because Redis runs as PID 1 in Docker container with no cron daemon."
+      }
+    },
+
+    {
+      "id": "ip:104.21.35.69",
+      "type": "ip",
+      "label": "104.21.35.69",
+      "metadata": {
+        "provider": "Cloudflare",
+        "status": "live",
+        "note": "Cloudflare proxy IP for myamericanprizes.com"
+      }
+    },
+    {
+      "id": "ip:172.67.215.58",
+      "type": "ip",
+      "label": "172.67.215.58",
+      "metadata": {
+        "provider": "Cloudflare",
+        "status": "live",
+        "note": "Cloudflare proxy IP for myamericanprizes.com"
+      }
+    },
+
+    {
+      "id": "email:mx:myamericanprizes",
+      "type": "email_config",
+      "label": "MX record (myamericanprizes.com)",
+      "metadata": {
+        "domain": "myamericanprizes.com",
+        "record_type": "MX",
+        "value": "myamericanprizes-com.mail.protection.outlook.com"
+      }
+    },
+    {
+      "id": "email:spf:myamericanprizes",
+      "type": "email_config",
+      "label": "SPF record (myamericanprizes.com)",
+      "metadata": {
+        "domain": "myamericanprizes.com",
+        "record_type": "SPF",
+        "value": "v=spf1 include:spf.protection.outlook.com -all",
+        "policy": "hard_fail"
+      }
+    },
+    {
+      "id": "email:dmarc:myamericanprizes",
+      "type": "email_config",
+      "label": "DMARC record (myamericanprizes.com)",
+      "metadata": {
+        "domain": "myamericanprizes.com",
+        "record_type": "DMARC",
+        "value": "v=DMARC1; p=none",
+        "policy": "none"
+      }
+    },
+    {
+      "id": "email:dkim:myamericanprizes",
+      "type": "email_config",
+      "label": "DKIM record (myamericanprizes.com)",
+      "metadata": {
+        "domain": "myamericanprizes.com",
+        "record_type": "DKIM",
+        "selectors": ["selector1", "selector2"],
+        "target": "moxximedia.onmicrosoft.com",
+        "note": "DKIM selectors point to Moxxi Media M365 tenant"
+      }
+    },
+
+    {
+      "id": "verification:activeprospect:myamericanprizes",
+      "type": "verification",
+      "label": "ActiveProspect (myamericanprizes.com)",
+      "metadata": {
+        "domain": "myamericanprizes.com",
+        "record": "activeprospect-domain-verification=DdrUnuCT8xESAT7uOdJmqg==",
+        "note": "TCPA compliance verification for myamericanprizes.com"
+      }
+    },
+    {
+      "id": "verification:apple:myamericanprizes",
+      "type": "verification",
+      "label": "Apple (myamericanprizes.com)",
+      "metadata": {
+        "domain": "myamericanprizes.com",
+        "record": "apple-domain-verification=ySS9fHR4xXuFRiE0",
+        "note": "Apple domain verification for myamericanprizes.com"
+      }
+    },
+    {
+      "id": "verification:microsoft:myamericanprizes",
+      "type": "verification",
+      "label": "Microsoft 365 (myamericanprizes.com)",
+      "metadata": {
+        "domain": "myamericanprizes.com",
+        "record": "MS=ms46839871",
+        "note": "M365 domain verification — matches Moxxi Media tenant ID"
+      }
+    },
+
+    {
+      "id": "brand:prizezappy",
+      "type": "brand",
+      "label": "PrizeZappy",
+      "metadata": {
+        "role": "scam_frontend"
+      }
+    },
+    {
+      "id": "brand:snagngoods",
+      "type": "brand",
+      "label": "SnagNGoods",
+      "metadata": {
+        "role": "scam_frontend"
+      }
+    },
+    {
+      "id": "brand:prizar",
+      "type": "brand",
+      "label": "PrizeZar",
+      "metadata": {
+        "role": "scam_frontend"
+      }
+    },
+    {
+      "id": "brand:playzoodle",
+      "type": "brand",
+      "label": "PlayZoodle",
+      "metadata": {
+        "role": "scam_frontend"
+      }
+    },
+    {
+      "id": "brand:healthplanscouts",
+      "type": "brand",
+      "label": "HealthPlanScouts",
+      "metadata": {
+        "role": "lead_gen"
+      }
+    },
+    {
+      "id": "brand:freshhealthplan",
+      "type": "brand",
+      "label": "FreshHealthPlan",
+      "metadata": {
+        "role": "lead_gen"
+      }
+    },
+    {
+      "id": "brand:lendliv2",
+      "type": "brand",
+      "label": "LendliV2",
+      "metadata": {
+        "role": "lead_gen"
+      }
+    },
+    {
+      "id": "brand:prismique",
+      "type": "brand",
+      "label": "Prismique",
+      "metadata": {
+        "role": "brand_identity"
+      }
+    },
+    {
+      "id": "brand:checkgo",
+      "type": "brand",
+      "label": "CheckGo",
+      "metadata": {
+        "role": "lead_gen"
+      }
+    },
+    {
+      "id": "brand:benefitsaccesscenter",
+      "type": "brand",
+      "label": "BenefitsAccessCenter",
+      "metadata": {
+        "role": "lead_gen"
+      }
+    },
+    {
+      "id": "brand:thedailytipjar",
+      "type": "brand",
+      "label": "TheDailyTipJar",
+      "metadata": {
+        "role": "content_farm"
+      }
+    },
+    {
+      "id": "brand:opghousing",
+      "type": "brand",
+      "label": "OPGHousing",
+      "metadata": {
+        "role": "lead_gen"
+      }
+    },
+    {
+      "id": "brand:customertestconnect",
+      "type": "brand",
+      "label": "CustomerTestConnect",
+      "metadata": {
+        "role": "sweepstakes_backend"
+      }
+    },
+    {
+      "id": "brand:myamericanprizes",
+      "type": "brand",
+      "label": "MyAmericanPrizes",
+      "metadata": {
+        "role": "sweepstakes_platform"
       }
     }
   ],
@@ -1346,6 +1643,325 @@
         "confidence": "medium",
         "note": "Tracker may be third-party CPA network rather than operator-owned"
       }
+    },
+
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "platform:cloudflare",
+      "type": "proxied_by",
+      "metadata": { "ns_pair": "cass/felicity", "evidence": "DNS NS records", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "ip:104.21.35.69",
+      "type": "resolves_to",
+      "metadata": { "record_type": "A", "evidence": "dig A record (Cloudflare proxy)", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "ip:172.67.215.58",
+      "type": "resolves_to",
+      "metadata": { "record_type": "A", "evidence": "dig A record (Cloudflare proxy)", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "domain:noodledit.com",
+      "type": "shared_cloudflare_account",
+      "metadata": { "ns_pair": "cass/felicity", "evidence": "Identical Cloudflare nameservers", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "domain:mydailysurge.com",
+      "type": "shared_cloudflare_account",
+      "metadata": { "ns_pair": "cass/felicity", "evidence": "Identical Cloudflare nameservers", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "DKIM selectors resolve to moxximedia.onmicrosoft.com, M365 tenant ID ms46839871 matches DNS TXT record", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "platform:customertestconnect",
+      "type": "uses_platform",
+      "metadata": { "evidence": "Express.js + Handlebars backend serving myamericanprizes.com", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "email:mx:myamericanprizes",
+      "type": "has_email_config",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "email:spf:myamericanprizes",
+      "type": "has_email_config",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "email:dmarc:myamericanprizes",
+      "type": "has_email_config",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "email:dkim:myamericanprizes",
+      "type": "has_email_config",
+      "metadata": { "evidence": "selector1/selector2._domainkey.myamericanprizes.com CNAME to moxximedia.onmicrosoft.com", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "verification:activeprospect:myamericanprizes",
+      "type": "has_verification",
+      "metadata": { "evidence": "TXT record", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "verification:apple:myamericanprizes",
+      "type": "has_verification",
+      "metadata": { "evidence": "TXT record", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "verification:microsoft:myamericanprizes",
+      "type": "has_verification",
+      "metadata": { "evidence": "TXT record", "confidence": "high" }
+    },
+
+    {
+      "source": "subdomain:www.myamericanprizes.com",
+      "target": "domain:myamericanprizes.com",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+    {
+      "source": "subdomain:autodiscover.myamericanprizes.com",
+      "target": "domain:myamericanprizes.com",
+      "type": "child_of",
+      "metadata": { "confidence": "high" }
+    },
+
+    {
+      "source": "service:ec2:redis:6379",
+      "target": "malware:redis_cryptojacking",
+      "type": "compromised_by",
+      "metadata": { "evidence": "4 crontab injection payloads found in Redis keys", "confidence": "high", "note": "Attack failed — Docker container has no cron daemon" }
+    },
+
+    {
+      "source": "brand:getngoods",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets hosted on shared infrastructure", "confidence": "high" }
+    },
+    {
+      "source": "brand:mydailysurge",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets hosted on shared infrastructure", "confidence": "high" }
+    },
+    {
+      "source": "brand:prizezappy",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:snagngoods",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:prizar",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:playzoodle",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:healthplanscouts",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:freshhealthplan",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:lendliv2",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:prismique",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:checkgo",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:benefitsaccesscenter",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:thedailytipjar",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:opghousing",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Brand assets in shared GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "brand:customertestconnect",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Backend platform for myamericanprizes.com, DKIM links to Moxxi Media tenant", "confidence": "high" }
+    },
+    {
+      "source": "brand:myamericanprizes",
+      "target": "org:moxxi_media",
+      "type": "operated_by",
+      "metadata": { "evidence": "Domain DKIM/M365 tenant links to moxximedia.onmicrosoft.com", "confidence": "high" }
+    },
+
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:prizezappy",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:snagngoods",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:prizar",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:playzoodle",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:healthplanscouts",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:freshhealthplan",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:lendliv2",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:prismique",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:checkgo",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:benefitsaccesscenter",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:thedailytipjar",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:opghousing",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:customertestconnect",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+    {
+      "source": "subdomain:b.noodledit.com",
+      "target": "brand:myamericanprizes",
+      "type": "hosts_assets_for",
+      "metadata": { "evidence": "Brand assets found in publicly listable GCS bucket", "confidence": "high" }
+    },
+
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "domain:epicfunnels.net",
+      "type": "same_operator",
+      "metadata": { "evidence": "Shared Cloudflare account (cass/felicity) with noodledit.com and mydailysurge.com, shared GCS asset infrastructure, Moxxi Media tenant", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "domain:noodledit.com",
+      "type": "same_operator",
+      "metadata": { "evidence": "Shared Cloudflare account (cass/felicity), brand assets served from noodledit.com GCS buckets", "confidence": "high" }
+    },
+    {
+      "source": "domain:myamericanprizes.com",
+      "target": "domain:mydailysurge.com",
+      "type": "same_operator",
+      "metadata": { "evidence": "Shared Cloudflare account (cass/felicity)", "confidence": "high" }
+    },
+
+    {
+      "source": "email:dkim:myamericanprizes",
+      "target": "org:moxxi_media",
+      "type": "links_to",
+      "metadata": { "evidence": "DKIM CNAME targets moxximedia.onmicrosoft.com", "confidence": "high" }
+    },
+    {
+      "source": "verification:microsoft:myamericanprizes",
+      "target": "org:moxxi_media",
+      "type": "links_to",
+      "metadata": { "evidence": "MS=ms46839871 matches Moxxi Media M365 tenant", "confidence": "high" }
     }
   ]
 }

