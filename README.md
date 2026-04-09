@@ -86,33 +86,37 @@ Our **58,400 satisfied customers** at @jessytheupgradeclub agree — this is the
 
 The funny part ends here.
 
-The same infrastructure that runs fake iPhone giveaways for TikTok teenagers also runs fake government benefit portals for people who cannot afford food.
+The same operation that runs fake iPhone giveaways for TikTok teenagers also targets people who cannot afford food.
 
-We found **70 promotional assets** in the operation's publicly listable Google Cloud Storage bucket dedicated to impersonating federal assistance programs. They are operated under a dedicated brand called **BenefitsAccessCenter**, complete with its own favicon and Capitol-building-themed imagery.
+<p align="center">
+<img src="investigations/epicfunnels/artifacts/probe-2026-04-08/gov-benefits-evidence/foodstamps_bottom_1.png" width="400">
+</p>
 
-| They made fake landing pages for: | Targeting: |
-|---|---|
-| SNAP / Food Stamps | People who cannot afford groceries |
-| Unemployment Benefits | People who just lost their jobs |
-| Rental Assistance | People about to be evicted |
-| Senior Benefits | Elderly people on fixed incomes |
-| Student Aid (FAFSA) | Students who need financial aid |
-| Startup Grants | People looking for a way forward |
-| Inflation Relief | People squeezed by rising prices |
-| Stimulus Checks | People waiting for government help |
-| Tariff Relief | People worried about trade policy (**9 assets** — the most heavily produced campaign) |
-| Child/Family Assistance | Parents who need help feeding their kids |
-| Unclaimed Money | People hoping something is owed to them |
+<p align="center"><em>This is a stock photo from their CDN bucket. It's for their fake food stamps page.</em></p>
 
-The stock photos are chosen to meet the victim where they are. Bananas, eggs, and bread for the food stamps pages. A FAFSA form on a laptop for student aid. A Medicare card and pill organizer for senior benefits. A mother grocery shopping with her small child for family assistance. A briefcase full of cash for "startup grants."
+**70 promotional assets** in their publicly listable Google Cloud Storage bucket are dedicated to impersonating federal assistance programs — SNAP, unemployment, rental assistance, senior benefits, student aid, stimulus checks, tariff relief, child/family assistance — operated under a dedicated brand called **BenefitsAccessCenter**.
 
-The victim enters their personal information — name, address, phone, email, income, household size — believing they're applying for assistance. The data gets sold as CPA leads. The victim gets nothing. No food stamps. No rental help. No stimulus check. Just spam calls and a spot on a data broker's list.
+<p align="center">
+<img src="investigations/epicfunnels/artifacts/probe-2026-04-08/gov-benefits-evidence/seniorbenefits.png" width="250">
+<img src="investigations/epicfunnels/artifacts/probe-2026-04-08/gov-benefits-evidence/studentaid.png" width="250">
+<img src="investigations/epicfunnels/artifacts/probe-2026-04-08/gov-benefits-evidence/rentalassistance.png" width="250">
+</p>
 
-The operation pivoted into this vertical in September 2025 and went all-in with a mass upload in February 2026 covering every major federal assistance program. The entity behind it — **Moxxi Media** (identified via Microsoft 365 DKIM records on myamericanprizes.com) — has 15+ brand names, 747 assets in their CDN, and uploaded new promotional material as recently as the day this was investigated.
+<p align="center"><em>Senior benefits. Student aid. Rental assistance. All from the same CDN that serves the iPhone scam.</em></p>
 
-The same legal cover (ActiveProspect, Jornaya, AMOE sweepstakes compliance) that wraps the iPhone giveaway scams wraps these too. The machinery doesn't distinguish. A lead is a lead. Whether it came from someone who wanted a free phone or someone who needed help feeding their family.
+<p align="center">
+<img src="investigations/epicfunnels/artifacts/probe-2026-04-08/gov-benefits-evidence/benefitsaccesscenter_promos_unemploymentbenefits.png" width="250">
+<img src="investigations/epicfunnels/artifacts/probe-2026-04-08/gov-benefits-evidence/unemploymentbenefits.png" width="250">
+<img src="investigations/epicfunnels/artifacts/probe-2026-04-08/gov-benefits-evidence/startupgrant_v2.png" width="250">
+</p>
 
-Full evidence and analysis: **[investigations/epicfunnels/](investigations/epicfunnels/)**
+<p align="center"><em>Unemployment benefits (with the Capitol building for legitimacy). "Startup grants" (a briefcase full of cash).</em></p>
+
+The victim enters their personal information — name, address, phone, email, income, household size — believing they're applying for assistance. The data gets sold as CPA leads. The victim gets nothing. No food stamps. No rental help. No stimulus check. Spam calls and a data broker list.
+
+The entity behind it: **Moxxi Media** (`moxximedia.onmicrosoft.com`). 15+ brand names. 747 assets in their CDN. New material uploaded the day we investigated.
+
+**[Full evidence: investigations/epicfunnels/](investigations/epicfunnels/)** — 70 assets catalogued, 10 captured as evidence, complete timeline of the pivot into government benefits fraud.
 
 ---
 
