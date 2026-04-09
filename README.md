@@ -37,16 +37,6 @@ To confirm your entry, please complete the following steps.
 
 Our **58,400 satisfied customers** at @jessytheupgradeclub agree — this is the real deal. "Premium tech drops daily. Invite-only access. Claim your spot now."
 
-#### What Our Community Is Saying
-
-<p align="center">
-<img src="memes/sword-guy-redis.jpg" width="500">
-</p>
-
-<p align="center">
-<img src="memes/zamphexotrorp.jpg" width="450">
-</p>
-
 > "I'm seriously at my limit" — **Zamphexotrorp** (248 comments)
 
 ---
@@ -202,4 +192,6 @@ If, somehow, you are still reading and want the real technical details:
 
 ---
 
+```
 funny funny funny funny funny
+```
