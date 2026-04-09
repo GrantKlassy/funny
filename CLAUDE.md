@@ -53,6 +53,8 @@ See [investigations/epicfunnels/](investigations/epicfunnels/) for the full writ
 
 **Infrastructure**: 15 open ports on one EC2 instance. Redis 7.4.7 with no auth is an active warzone — 218,219 connections in 75 days, 24 unique attacker IPs from 6+ countries, 337 FLUSHALL database wipes, crontab injection (`CONFIG SET dir /var/spool/cron/crontabs`), Lua RCE (`package.loadlib`), 4,355 SLAVEOF replication hijack attempts. The 4 cryptojacking malware keys are **WatchDog** (Cado Labs 2022) — `b2f628` is a known campaign ID, `oracle.zzhreceive.top` is a known C2. Threat actor attribution: 74% Chinese IPs (Baidu Cloud 6-IP botnet cluster, Alibaba Cloud, Tencent Cloud, ChinaNet), plus Malaysia (Shinjiru bulletproof hosting), Mexico, Germany (Contabo), USA (Linode, AWS scanner). FTP requires auth. DNS is just a recursive resolver (no hidden zones). PostgreSQL requires auth. Hestia API is IP-whitelisted. Node.js app crashed (HTTP 500). CPA tracker sinkholed.
 
+**Regulatory status**: No FTC/AG/TCPA actions against Moxxi yet. BBB rated D+ with 1 unresponded complaint. BBB Scam Tracker: victim received physical postcard, scammers had their info and asked for bank account numbers. ScamAdviser: rewardzinga.com scores 0/100 (lowest possible). Combined regulatory damage from leadership's previous companies: $46.2M (Fluent $16.2M + Affinion $30M). 5 co-founders identified (4 ex-Fluent + Ryan Pritchard as tech co-founder). Florida Sunbiz registration found. Kauffman is on his third company with regulatory problems.
+
 See [OPERATOR-INTEL.md](investigations/epicfunnels/OPERATOR-INTEL.md) for the full operator deep dive, [THIRD-PARTY-INTEL.md](investigations/epicfunnels/THIRD-PARTY-INTEL.md) for third-party companies.
 
 ## Next Steps
@@ -80,25 +82,13 @@ We have the full 747-object inventory. Unexplored angles:
 - **Asset fingerprinting**: Do any images contain EXIF metadata we missed? The promo PNGs had EXIF stripped, but what about the SVGs, JPGs, and other formats?
 - **Brand mapping**: Cross-reference every brand name in the GCS inventory against domain registrations, social media accounts, and BBB listings. Are there brands we haven't mapped to domains yet?
 
-### 5. Operator OSINT Expansion
+### ~~5. Operator OSINT Expansion~~ DONE
 
-We identified 4 ex-Fluent leaders at Moxxi. Go deeper:
+5th leader identified: **Ryan Pritchard** (CTO/Co-founder, ex-Matomy/Kabbage/BHG Financial, NOT ex-Fluent). Full 7-person leadership team mapped + 5 additional employees. Florida Sunbiz registration found (Foreign LLC M24000006302, EIN 93-2214452, filed 05/16/2024, principal address 32 Monmouth St Red Bank). Two Red Bank addresses discovered: Sunbiz (32 Monmouth) and consumer-facing (68 White St UPS Store). Blanchard v. Fluent (2017) named American Prize Center, Reward Zone USA, and RewardsFlow as co-defendants. American Prize Center BBB profile: CEO Ryan Schulke, 1 Government Action alert. Kauffman timeline: joined Fluent Aug 2023 (same month as FTC consent decree), left Jan 2025 for Moxxi. moxxi.io Wayback captures from May 2024 (520 error, stealth mode). LifeStreet Q&A interview found. Tech stack confirmed matches infrastructure. 10 open job positions including "Lead AI Product Manager." See `artifacts/new-ports-2026-04-09/osint-expansion.md`.
 
-- **5th leader**: The OPERATOR-INTEL.md mentions a 5th person. Who is it? LinkedIn, corporate filings, Greenhouse job postings may reveal more team members.
-- **Jade Global Group LLC**: Laniado's Red Bank NJ company. NJ business entity search, any filings, any other businesses registered to the same agent?
-- **moxxi.io**: Registered May 2023. Wayback Machine, DNS history, CT logs. Was it ever a live site? What was it before they settled on moxxidigital?
-- **Fluent connection**: The American Prize Center LLC → MyAmericanPrizes naming parallel. Any legal entity search for "My American Prizes LLC" or similar? State incorporation records?
-- **Financial trail**: Affplus shows $1.44-$2.00 CPA rates. Can we find more CPA network listings for their brands? What networks are they on?
+### ~~6. Regulatory Filing Research~~ DONE
 
-### 6. Regulatory Filing Research
-
-This is the endgame — building a case file.
-
-- **FTC complaint database**: Search for any existing complaints against Moxxi Digital, Moxxi Media, Reward Zinga, MyAmericanPrizes, MyDailySurge, or any of the brand names
-- **BBB complaints**: The BBB profile is rated D+. What are the actual complaints? Are victims describing the scam flow we documented?
-- **State AG actions**: NJ (home state), NY (office state), TX (SCA Promotions state). Any pending investigations?
-- **TCPA litigation**: Search PACER or public court records for lawsuits naming Moxxi, Reward Zinga, or MyAmericanPrizes as defendants
-- **Fluent Inc SEC filings**: 10-K, 10-Q — do they mention Moxxi, Laniado, Riehl, Kauffman, or Augustin as related parties or former employees?
+**No FTC/AG/TCPA actions against Moxxi yet** — they're flying under the radar. BBB rates them D+ with 1 unresponded complaint. BBB Scam Tracker Report #924140 (Dec 2024): Ohio victim received physical postcard with fake reward claim, called (855) 520-1726, scammers had their info and asked for bank account numbers. ScamAdviser scores: rewardzinga.com **0/100** (lowest possible), mydailysurge.com 20.8/100, myamericanprizes.com 20.5/100. MalwareTips documented subscription scam: fake survey → fake prize → $9.90 shipping → auto-subscription. Trim v. Reward Zone USA (9th Circuit, 2023): text messages not prerecorded voices under TCPA (helped Fluent). No CourtListener/PACER cases against Moxxi. Fluent SEC Exhibit 21.1 confirms American Prize Center LLC as wholly owned subsidiary. Kauffman's third company with regulatory problems (Affinion $30M → Fluent $16.2M → Moxxi). See `artifacts/new-ports-2026-04-09/regulatory-research.md`.
 
 ### 7. Live Monitoring
 

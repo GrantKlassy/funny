@@ -28,6 +28,8 @@ CPA affiliate scam funnel built with Lovable AI, distributed via TikTok.
 - **2026-04-09**: Deep probe — Redis is a warzone (22 threat actors from 6 countries, FLUSHALL spam, crontab injection, Lua RCE exploits), 15 open ports (4 new: FTP, DNS, POP3, POP3S), GCS 747-object inventory confirmed, PostgreSQL requires auth, Hestia API IP-whitelisted
 - **2026-04-09**: Follow-up probes — FTP requires auth (no anonymous), DNS is just a recursive resolver (no hidden zones), POP3 confirms Dovecot mail stack. Full threat actor attribution: 23 IPs across 8 countries (74% China), Baidu Cloud 6-IP botnet cluster identified. Redis malware identified as **WatchDog** cryptojacking campaign (Palo Alto Unit 42, active since 2019) — `b2f628` is a known campaign ID, `oracle.zzhreceive.top` is a known C2 domain
 - **2026-04-09**: End-of-day snapshot — Redis gained 163 new connections in 47 minutes (~3.5/min). GCS temporal analysis: Sep 2025 mass deployment (334 uploads, 45% of all assets), Jan-Feb 2026 gov benefits pivot. myamericanprizes.com and rewardzinga.com both leaking raw Handlebars template errors. phef6trk.com whois intact (not scrubbed) — operator self-decommissioned tracker by pointing A record to 10.0.0.1
+- **2026-04-09**: OSINT expansion — 5th leader identified: **Ryan Pritchard** (CTO/Co-founder, ex-Matomy/Kabbage/BHG Financial, NOT ex-Fluent). Full leadership team mapped (7 named leaders + 5 additional employees). Florida Sunbiz registration found: Foreign LLC M24000006302, EIN 93-2214452, filed 05/16/2024. Two Red Bank addresses: 32 Monmouth St (Sunbiz) and 68 White St UPS Store (consumer-facing). Blanchard v. Fluent (2017) named American Prize Center, Reward Zone USA, RewardsFlow as co-defendants. LifeStreet Q&A interview found.
+- **2026-04-09**: Regulatory research — **No FTC/AG/TCPA actions against Moxxi yet.** BBB Scam Tracker Report #924140: victim received **physical postcard** with fake reward claim, called (855) 520-1726, scammers had their info and asked for **bank account numbers**. ScamAdviser: rewardzinga.com scored **0/100** (lowest possible). MalwareTips documented the subscription scam: fake survey → fake prize → $9.90 shipping → auto-subscription. Fluent regulatory total confirmed at **$16.2M** across FTC + NY AG + PA AG + TCPA. Kauffman's third company with regulatory problems (Affinion $30M → Fluent $16.2M → Moxxi).
 
 ## Scam Flow
 
@@ -1345,3 +1347,155 @@ Previous investigation notes said "whois returns empty — registrar may have sc
 - **A record**: `10.0.0.1` (returns same from Google DNS, Cloudflare DNS, and Quad9)
 
 The 10.0.0.1 A record is **not a Pi-hole block, not a law enforcement seizure, not a registrar takedown**. It is an actual DNS A record set in Google Cloud DNS, returning consistently from all public resolvers. The operator **deliberately pointed their own tracker to a private RFC 1918 address that routes nowhere on the public internet**. They decommissioned the tracker themselves. The domain is still registered, still paid for, still has working nameservers — someone just changed the A record to kill it.
+
+## OSINT Expansion (2026-04-09)
+
+Full results: [artifacts/new-ports-2026-04-09/osint-expansion.md](artifacts/new-ports-2026-04-09/osint-expansion.md)
+
+### 5th Leader: Ryan Pritchard — CTO & Co-Founder
+
+Ryan Pritchard is the missing 5th co-founder. Based in Alpharetta, GA. Florida Atlantic University.
+
+**Career**: Matomy (Director SWE, 2011–2018) → Kabbage (Manager SWE, 2018) → Micro Focus (Manager SWE, 2018–2020) → BHG Financial (Director SWE, 2020–2023) → **Moxxi Digital (CTO/Co-founder, Sep 2023–present)**
+
+Pritchard is **not ex-Fluent**. He's the tech co-founder — brought engineering leadership from fintech (Kabbage, BHG Financial) and ad tech (Matomy). The 4 ex-Fluent leaders brought the playbook; Pritchard built the platform.
+
+### Complete Leadership Team
+
+| Name | Title | Background |
+|------|-------|------------|
+| **Morris Laniado** | President, Co-Founder | Ex-Fluent AVP Data Revenue. Ex-SelectQuote Insurance SVP Marketing. |
+| **Kevin Riehl** | CPO, Co-Founder | Ex-Fluent Director of Product. Created "The Smart Wallet" at Fluent. |
+| **Jeffrey Kauffman** | General Counsel | Ex-Fluent Co-General Counsel & CCO (Aug 2023–Jan 2025). Ex-Affinion Group ($30M settlement). |
+| **Ryan Pritchard** | CTO, Co-Founder | Ex-Matomy, ex-Kabbage, ex-BHG Financial. NOT ex-Fluent. |
+| **Carl Augustin** | VP, Media & BD | Ex-Fluent (2015–2022). Fluent founding member (2011). |
+| **Daniel Palevo** | Director of Account Management | — |
+| **Lexi Camhe** | VP, Solutions & Operations | — |
+
+Additional employees: Christian Carpenter (Media & Analytics), Oliver Walke (ad tech), Dmitry Mitrofanov (Director of Quality), Joseph Mele (Director of Media), Syed Masthan.
+
+### Moxxi Digital — Florida Registration (Sunbiz)
+
+Registered as Foreign LLC in Florida:
+- **Document**: M24000006302
+- **EIN**: 93-2214452
+- **Filed**: 05/16/2024
+- **Status**: ACTIVE
+- **Principal address**: 32 Monmouth Street, Suite 305, Red Bank, NJ 07701
+
+Note: 32 Monmouth Street is a DIFFERENT Red Bank address than the UPS Store (68 White St #7-291). The Sunbiz filing uses what appears to be an actual office. The UPS Store is the address on consumer-facing sweepstakes rules.
+
+### Jeffrey Kauffman Timeline (Critical)
+
+1. **At Affinion Group**: General Counsel. Affinion settled **$30M across 46 states** for deceptive enrollment.
+2. **Nov 2019**: While at Fluent, announced deployment of ActiveProspect TrustedForm (press release on activeprospect.com).
+3. **Aug 2023**: Joined Fluent as Co-General Counsel & CCO — the **same month** the FTC consent decree was finalized. Brought in to manage regulatory fallout.
+4. **Jan 2025**: Left Fluent for Moxxi Digital as General Counsel.
+5. **At Moxxi**: Deployed the same TrustedForm/consent washing stack on epicfunnels.net and myamericanprizes.com.
+
+Three consecutive companies with regulatory problems. He knows exactly what he's doing.
+
+### Kevin Riehl — "The Smart Wallet"
+
+Kevin Riehl created **"The Smart Wallet"** at Fluent — one of Fluent's reward/offer wall properties that generated "substantial revenue within a year." He held multiple roles: Director of Product Management, Senior Product Manager, Product Manager. Now CPO at Moxxi building the same thing.
+
+### American Prize Center LLC — BBB
+
+Fluent subsidiary, confirmed in SEC Exhibit 21.1:
+- **CEO**: Ryan Schulke (Fluent co-founder)
+- **President**: Matthew Conlin (Fluent co-founder)
+- **Started**: 8/27/2012
+- **Websites**: american-prize-center.com, sweepstakesfordays.com
+- **BBB**: A+ rating, 1 Government Action alert (FTC)
+- **Address**: 99 Wall St #4330, NYC
+
+Moxxi's "MyAmericanPrizes" is the spiritual successor to Fluent's "American Prize Center."
+
+### Blanchard v. Fluent Inc. (2017)
+
+- **Case**: 3:17-cv-04497 (N.D. California), Judge Maxine M. Chesney
+- **Defendants**: Fluent LLC, **Reward Zone USA LLC**, **RewardsFlow LLC**, **American Prize Center LLC**
+- **Claim**: Fraud, ~600 unsolicited emails
+- All three sweepstakes subsidiaries named alongside Fluent
+
+### LifeStreet Q&A
+
+Moxxi gave a public interview: "QA with Moxxi: Unlocking Scalable Success" (lifestreet.com). Kevin Riehl described their "Performance Acquisition Engine" and optimization methods. They talk about their scam pipeline openly as legitimate performance marketing.
+
+### Tech Stack (Built In NYC)
+
+Python, JavaScript, TypeScript, Golang, SQL, PostgreSQL, BigQuery, NoSQL, Redis, Docker, Kubernetes, Node.js, React, GitHub, Terraform, Google Cloud.
+
+This matches what we found: Node.js/Express backend (CustomerTestConnect), PostgreSQL database, Redis, Google Cloud Storage bucket, Docker containers.
+
+### 10 Open Positions (Greenhouse)
+
+Actively hiring: Account Manager, Account Specialist, Full Stack Engineer, Software Engineer, Junior Campaign/Operations/Optimization Specialist (x4), **Lead AI Product Manager**, Lead Product Manager. All NYC. They're integrating AI deeper into the pipeline.
+
+## Regulatory Filing Research (2026-04-09)
+
+Full results: [artifacts/new-ports-2026-04-09/regulatory-research.md](artifacts/new-ports-2026-04-09/regulatory-research.md)
+
+### No Regulatory Action Against Moxxi Digital — Yet
+
+- **FTC**: No complaints, no enforcement actions
+- **NJ Attorney General**: No results
+- **NY Attorney General**: No results
+- **PACER/CourtListener**: No lawsuits found
+- **TCPA litigation**: Nothing
+
+They are currently flying under the radar. The regulatory clock is ticking.
+
+### BBB Scam Tracker Report #924140
+
+**Date**: December 20, 2024 | **Victim**: Ohio (44121) | **Type**: Sweepstakes/Lottery/Prizes
+
+> Victim received a **postcard** claiming "you have an unclaimed reward on your account" offering a "$100.00 voucher" redeemable at major retailers. Upon calling **(855) 520-1726**, the scammers **had the victim's personal information** and requested banking details — "the name of the Bank and the bank numbers on the accounts." When questioned, scammers disconnected.
+
+This is the Moxxi → physical mail pipeline. They're not just running TikTok funnels — they're sending **postcards to people's homes** with fake reward claims, then asking for **bank account numbers** when they call.
+
+### ScamAdviser / Scam Detector Scores
+
+| Domain | ScamAdviser | Scam Detector | Assessment |
+|--------|------------|---------------|------------|
+| rewardzinga.com | **0/100** | — | Lowest possible score |
+| mydailysurge.com | — | **20.8/100** | Suspicious and Unsafe |
+| myamericanprizes.com | — | **20.5/100** | Scam |
+| getngoods.com | 79/100 | — | Newer brand, less reviewed |
+
+### How the Subscription Scam Works
+
+From MalwareTips.com analysis of rewardzinga.com:
+1. Uses known brand names (Amazon, Home Depot, Walmart) to lure victims
+2. Forces victims through an "online survey"
+3. Tells victims they've "won" a valuable prize (iPhone, gift card)
+4. Requires a "$9.90 shipping fee" to claim the prize
+5. After entering payment info, victim is **automatically signed up for a recurring subscription**
+6. Subscription charges continue until victim notices and disputes
+
+### Fluent Inc. — Complete Regulatory Damage
+
+| Date | Agency | Action | Amount |
+|------|--------|--------|--------|
+| Jul 2023 | FTC | "Operation Stop Scam Calls" — consent farms, 620M+ leads | **$2.5M** |
+| May 2021 | NY AG | Fake net neutrality comments to FCC | **$3.7M** |
+| May 2023 | PA AG | Illegal robocalls, 4.2M consumers' data sold | **$250K** |
+| 2023 | 9th Circuit | Trim v. Reward Zone USA — TCPA class action | **$9.75M** |
+| 2017 | N.D. Cal. | Blanchard v. Fluent — fraud, unsolicited emails | — |
+| **Total** | | | **~$16.2M** |
+
+FTC forced Fluent to tell ALL downstream data buyers to **DELETE pre-May 2023 consumer data**. CBS: "'Consent farms' enabled billions of illegal robocalls, feds say."
+
+### Jeffrey Kauffman — Three Companies, Three Regulatory Problems
+
+1. **Affinion Group**: $30M settlement across 46 states (deceptive enrollment)
+2. **Fluent Inc.**: $16.2M total regulatory damage (consent farms, fake comments, robocalls)
+3. **Moxxi Digital**: D+ BBB, 0/100 ScamAdviser, BBB Scam Tracker reports — **no regulatory action yet**
+
+### TikTok Consumer Awareness
+
+TikTok discovery pages exist for:
+- "Reward Zinga Is Legit" — users asking if it's real
+- "Is Reward Zinga Legit Amazon" — users questioning the Amazon giveaway
+
+The victims are searching for answers. They're finding scam warning sites. The scam continues.

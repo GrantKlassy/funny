@@ -227,8 +227,9 @@ The entity behind it: **[Moxxi Digital, LLC](investigations/epicfunnels/OPERATOR
 | :bust_in_silhouette: | ActiveProspect TCPA verification | Definitely legit lead gen |
 | :bust_in_silhouette: | The engagement bots | Still liking old TikTok comments (into a sinkhole) |
 | :bust_in_silhouette: | Morris Laniado | President, Moxxi Digital. Ex-Fluent Inc. AVP Data Revenue. Lives near the UPS Store. |
-| :bust_in_silhouette: | Jeffrey Kauffman | General Counsel. Built the same TrustedForm stack at Fluent. Third company to get regulatory heat. |
-| :bust_in_silhouette: | The operator | Still updating the SEO blog |
+| :bust_in_silhouette: | Jeffrey Kauffman | General Counsel. Third company with regulatory problems. Affinion ($30M), Fluent ($16.2M), now Moxxi. |
+| :bust_in_silhouette: | Ryan Pritchard | CTO & Co-Founder. Not ex-Fluent. Built the platform. Hiring a "Lead AI Product Manager." |
+| :bust_in_silhouette: | The operator | Still updating the SEO blog, still hiring, still sending postcards |
 | :bust_in_silhouette: | The Node.js app | HTTP 500 Internal Server Error |
 | :bust_in_silhouette: | myamericanprizes.com | `<<<< do not use this file, use page-index.hbs instead >>>>` |
 | :bust_in_silhouette: | rewardzinga.com | `<<<< do not use this file, use page-index.hbs instead >>>>` |
@@ -421,14 +422,15 @@ Founded by veterans of **[Fluent, Inc.](https://www.fluentco.com/)** (NASDAQ: FL
 
 The Moxxi Digital leadership team rebuilt the same operation as a private company:
 
-| Name | Moxxi Digital Role | What They Did at Fluent |
-|------|--------------------|------------------------|
-| **[Morris Laniado](https://www.linkedin.com/in/morris-laniado-0958384)** | President & Co-Founder | **Associate VP, Data Revenue** — ran the team that sold Fluent's consent farm leads. Previously SVP Marketing at SelectQuote Insurance Services (insurance lead gen). Lives in Monmouth County, NJ. His previous company (Jade Global Group LLC) is registered in Red Bank — the same town as the UPS Store mailbox. |
-| **[Kevin Riehl](https://www.linkedin.com/in/kevriehl/)** | CPO & Co-Founder | **Director of Product Management** — built "The Smart Wallet," one of Fluent's reward/offer wall properties. Education: Rutgers, NJ. |
-| **[Jeffrey Kauffman](https://www.linkedin.com/in/jeffreyakauffman/)** | General Counsel | **Co-General Counsel & Chief Compliance Officer** — managed Fluent's regulatory compliance during the FTC investigation. In November 2019, [announced](https://activeprospect.com/blog/fluent-inc-announces-implementation-of-trustedform/) Fluent's deployment of ActiveProspect TrustedForm. Now deploys the same technology at Moxxi on epicfunnels.net and myamericanprizes.com. Previously at Affinion Group ($30 million settlement across 46 states for deceptive enrollment). |
-| **Carl Augustin** | VP, Media & Business Development | **Director of Publisher Development** — 7 years at Fluent (2015-2022). Founding member of Fluent, Inc. (2011). |
+| Name | Moxxi Digital Role | What They Did Before |
+|------|--------------------|----------------------|
+| **[Morris Laniado](https://www.linkedin.com/in/morris-laniado-0958384)** | President & Co-Founder | **Fluent: Associate VP, Data Revenue** — ran the team that sold 620M+ consent farm leads. Previously **SVP Marketing at SelectQuote Insurance Services** (insurance lead gen). Lives in Monmouth County, NJ. Founded **Jade Global Group LLC** in Red Bank — the same town as the UPS Store mailbox. |
+| **[Kevin Riehl](https://www.linkedin.com/in/kevriehl/)** | CPO & Co-Founder | **Fluent: Director of Product Management** — created **"The Smart Wallet,"** Fluent's reward/offer wall property (generated "substantial revenue within a year"). Now builds the same thing at Moxxi. Gave a public [interview with LifeStreet](https://lifestreet.com/blog/qa-with-moxxi-unlocking-scalable-success/) about Moxxi's "Performance Acquisition Engine." |
+| **[Jeffrey Kauffman](https://www.linkedin.com/in/jeffreyakauffman/)** | General Counsel | **Three companies. Three regulatory problems.** (1) **Affinion Group**: $30M settlement across 46 states for deceptive enrollment. (2) **Fluent: Co-General Counsel & CCO** (Aug 2023–Jan 2025) — joined the **same month** the FTC consent decree was finalized. In Nov 2019, [deployed](https://activeprospect.com/blog/fluent-inc-announces-implementation-of-trustedform/) ActiveProspect TrustedForm at Fluent. Now deploys the same technology at Moxxi. (3) **Moxxi Digital**: D+ BBB, 0/100 ScamAdviser. |
+| **[Ryan Pritchard](https://www.linkedin.com/in/ryan-pritchard/)** | CTO & Co-Founder | **NOT ex-Fluent.** The tech co-founder. Ex-Matomy (Director SWE, 7 years) → ex-Kabbage → ex-BHG Financial. Based in Alpharetta, GA. The ex-Fluent leaders brought the playbook; Pritchard built the platform. Florida Atlantic University. |
+| **Carl Augustin** | VP, Media & Business Development | **Fluent: Director of Publisher Development** — 7 years at Fluent (2015-2022). Founding member of Fluent, Inc. (2011). |
 
-Fluent's subsidiary **American Prize Center LLC** was incorporated in 2012 with CEO Ryan Schulke and President Matthew Conlin (Fluent's founders). The scam operation's flagship brand is **MyAmericanPrizes**. The naming is not coincidental.
+Fluent's subsidiary **American Prize Center LLC** was incorporated in 2012 with CEO Ryan Schulke and President Matthew Conlin (Fluent's founders). BBB profile has **1 Government Action alert** (FTC). In 2017, **[Blanchard v. Fluent Inc.](https://www.courtlistener.com/docket/6194104/blanchard-v-fluent-inc/)** (3:17-cv-04497, N.D. California) named American Prize Center, Reward Zone USA, and RewardsFlow as co-defendants for fraud and unsolicited emails. The scam operation's flagship brand is **MyAmericanPrizes**. The naming is not coincidental.
 
 `moxxi.io` was registered **May 23, 2023** — two months before the FTC sued Fluent. `myamericanprizes.com` was registered **August 22, 2023** — one month after. They were already building the exit.
 
@@ -471,6 +473,18 @@ No FTC action against Moxxi Digital yet.
 
 **[Full operator attribution chain: investigations/epicfunnels/OPERATOR-INTEL.md](investigations/epicfunnels/OPERATOR-INTEL.md)**
 
+### The Victims Are Already Searching
+
+rewardzinga.com has a ScamAdviser trust score of **0 out of 100** — the lowest possible score. mydailysurge.com scores 20.8. myamericanprizes.com scores 20.5. TikTok has discovery pages for "Reward Zinga Is Legit" and "Is Reward Zinga Legit Amazon" — people are searching for answers.
+
+The BBB has a [Scam Tracker report](https://www.bbb.org/scamtracker/lookupscam/924140) (December 20, 2024) from a victim in Ohio:
+
+> Received a **postcard** claiming "you have an unclaimed reward on your account" offering a "$100.00 voucher." Called **(855) 520-1726**. The scammers **already had the victim's personal information** and asked for "the name of the Bank and the bank numbers on the accounts." When questioned, scammers disconnected.
+
+They're not just running TikTok funnels. They're sending **physical postcards to people's homes**, claiming they have unclaimed rewards, and asking for **bank account numbers** when they call. The BBB rates Moxxi Digital **D+** and notes they have "failed to respond to 1 complaint(s)."
+
+No FTC action against Moxxi Digital. No state AG action. No lawsuits. Yet.
+
 ### The Full Picture
 
 **[investigations/epicfunnels/THIRD-PARTY-INTEL.md](investigations/epicfunnels/THIRD-PARTY-INTEL.md)** — Complete deep dive into ActiveProspect, Jornaya, SCA Promotions, and the Moxxi Media entity. Company profiles, leadership, the acquisition timeline, how TrustedForm works, how scammers abuse it, the UPS Store reveal, and the full consent-washing pipeline mapped end to end.
@@ -496,7 +510,7 @@ If, somehow, you are still reading and want the real technical details:
 ### By The Numbers
 
 - **1** operating entity: **Moxxi Digital, LLC** (d/b/a Moxxi Media, d/b/a Reward Zinga, d/b/a My American Prizes)
-- **4** ex-Fluent Inc executives running the show
+- **5** co-founders (4 ex-Fluent + 1 tech co-founder who built the platform)
 - **$16.2 million** in regulatory penalties at their previous employer (FTC + NY AG + PA AG + TCPA class action)
 - **$93.4 million** in revenue Fluent made selling 620M+ consent farm leads (2018-2019) — the business model Moxxi Digital replicated
 - **10** connected domains (epicfunnels.net, noodledit.com, mydailysurge.com, phef6trk.com, myamericanprizes.com, olivimails.com, rewardzinga.com, easyscanamoe.com, snagalot.com, myamericanprizes1.com)
@@ -535,6 +549,11 @@ If, somehow, you are still reading and want the real technical details:
 - **1** billion leads certified annually by the consent verification monopoly enabling this
 - **$1,000** — the grand prize (one winner per year, random drawing, good luck)
 - **58** bytes — what myamericanprizes.com and rewardzinga.com return (a raw Handlebars template error: `do not use this file, use page-index.hbs instead`)
+- **$46.2 million** — combined regulatory damage across Moxxi leadership's previous companies (Fluent $16.2M + Affinion Group $30M)
+- **$9.90** — the "shipping fee" that signs victims up for recurring subscription charges (documented by MalwareTips)
+- **3** consecutive companies where Jeffrey Kauffman served as General Counsel that had regulatory problems (Affinion $30M, Fluent $16.2M, now Moxxi)
+- **0/100** — ScamAdviser trust score for rewardzinga.com (the lowest possible score)
+- **0** FTC complaints against Moxxi Digital (they haven't been caught yet)
 - **0** working parts of the actual scam
 
 ---
