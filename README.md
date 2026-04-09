@@ -197,11 +197,55 @@ Where this investigation falls on the privacy iceberg.
 
 ---
 
+## Step 3 of 3 — Meet the Companies (100%)
+
+The scam doesn't work without a legal shield. These are the companies that provide it.
+
+### The Consent Washing Machine
+
+The victim enters their personal information on a fake government benefits page. They think they're applying for food stamps. Here's what actually happens to their data:
+
+1. **[ActiveProspect](https://activeprospect.com/)** (Austin, TX) generates a **TrustedForm certificate** — a "Certificate of Authenticity" that "proves" the victim consented to be contacted. [TrustedForm Certify is free](https://activeprospect.com/blog/trustedform-setup/). Sign up online. Verify your domain via DNS TXT record. No human reviews what the page actually does. A fake SNAP application gets the same certificate as a legitimate insurance quote.
+
+2. **[Jornaya](https://www.jornaya.com/)** assigns a **LeadiD** and tracks the victim's session — pages visited, time on page, form interactions. This behavioral data follows the lead through the pipeline. Downstream buyers check the Jornaya record before purchasing. **[Jornaya and ActiveProspect are now the same company](https://www.globenewswire.com/news-release/2026/01/08/3215813/0/en/Verisk-Announces-Sale-of-its-Marketing-Solutions-Business-to-ActiveProspect.html)** — ActiveProspect acquired Verisk Marketing Solutions (Jornaya + Infutor) on January 8, 2026. The scam's privacy policy still references them as separate vendors. They aren't. One company provides both layers of "independent" consent verification. Combined, they certify over **1 billion opt-in leads annually**.
+
+3. **[SCA Promotions](https://scapromotions.com/)** (Dallas, TX) provides the **sweepstakes legal wrapper** via their [EasyScan AMOE](https://scapromotions.com/easyscanamoe/) system. US law requires every sweepstakes to offer a free entry method. SCA's AMOE system satisfies this requirement, preventing the FTC from classifying the operation as an illegal lottery. SCA is the **prize administrator** — the grand prize is one $1,000 cash drawing per year. Founded in 1986 by professional bridge player Bob Hamman. [Not BBB accredited](https://www.bbb.org/us/tx/dallas/profile/advertising-agencies/s-c-a-promotions-0875-29865).
+
+The lead is now packaged with a TrustedForm consent certificate, a Jornaya behavioral profile, and AMOE sweepstakes compliance. It is sold to CPA network buyers — insurance companies, loan providers, telemarketers — who can point to all of this documentation as proof they followed the law. The victim gets spam calls. No food stamps. No rental help. No stimulus check.
+
+Total cost of this legal cover to the scammer: **approximately nothing.** TrustedForm Certify is free. Jornaya's JS tag is free to embed. SCA charges for prize administration, but the "prize" is $1,000 once a year. Total harm: industrial scale.
+
+### The "Office"
+
+Both MyAmericanPrizes and MyDailySurge list their sponsor address as:
+
+> **68 White Street, Suite 7-291, Red Bank, NJ 07701**
+
+This is **[The UPS Store #3488](https://locations.theupsstore.com/nj/red-bank/68-white-st)**.
+
+"Suite 7" is the UPS Store's suite number in the building. "291" is the mailbox number. UPS Store mailboxes provide a street address instead of a PO Box — so a rented mailbox looks like a real office. The operation that runs 15+ brands, 747 CDN assets, fake government benefit portals, and an active TikTok bot network operates out of a mailbox in a strip mall in Red Bank, New Jersey.
+
+The mail-in sweepstakes entry address goes to SCA Promotions at 3030 LBJ Freeway, Suite 300, Dallas, TX 75234. The Zendesk help center is at `mydailysurge.zendesk.com`. The contact email is `support@mydailysurge.com`. The terms and conditions are governed by Texas law. Mandatory arbitration. 30-day opt-out window.
+
+### Who Is Moxxi Media?
+
+The M365 tenant behind myamericanprizes.com is `moxximedia.onmicrosoft.com`. The domain `moxximedia.com` is not registered. They exist only as a Microsoft 365 tenant — a ghost.
+
+There is a company called **[Moxxi Digital](https://www.linkedin.com/company/moxxi-digital)** in New York City. It was co-founded by **Morris Laniado**, previously of **[Fluent, Inc.](https://www.linkedin.com/in/morris-laniado-0958384)** (NYSE: FLNT) — one of the largest publicly traded performance marketing and lead generation companies in the United States. Moxxi Digital's business is described as "promotion-based marketing that drives lead opt-in lead generation and ROI-focused customer acquisition at scale." That is a precise description of what this scam operation does.
+
+The M365 tenant says `moxxiMEDIA`. The public company calls itself `moxxiDIGITAL`. This could be a rebrand, a subsidiary, a DBA, or a completely different entity. **This is not a confirmed identification.** But the business model alignment — CPA lead generation via promotions, at scale, using AI and proprietary adtech — is exact.
+
+### The Full Picture
+
+**[investigations/epicfunnels/THIRD-PARTY-INTEL.md](investigations/epicfunnels/THIRD-PARTY-INTEL.md)** — Complete deep dive into ActiveProspect, Jornaya, SCA Promotions, and the Moxxi Media entity. Company profiles, leadership, the acquisition timeline, how TrustedForm works, how scammers abuse it, the UPS Store reveal, and the full consent-washing pipeline mapped end to end.
+
+---
+
 ## The Actual Investigation
 
 If, somehow, you are still reading and want the real technical details:
 
-**[investigations/epicfunnels/](investigations/epicfunnels/)** — Full write-up of a CPA affiliate scam operation run by Moxxi Media, built with Lovable AI, distributed via TikTok, running on a hilariously misconfigured AWS EC2 instance with 7 domains, 15+ brands, 747 CDN assets, fake government benefit portals targeting people in financial distress, a Redis that got cryptojacked by a third party, a shadow hostname called "olivimails.com" (now expired), a Hestia Control Panel login page visible to the entire internet, and an operator who is *still actively uploading new scam assets* despite the fact that the monetization has been broken for months.
+**[investigations/epicfunnels/](investigations/epicfunnels/)** — Full write-up of a CPA affiliate scam operation run by Moxxi Media, built with Lovable AI, distributed via TikTok, running on a hilariously misconfigured AWS EC2 instance with 9 domains, 15+ brands, 747 CDN assets, fake government benefit portals targeting people in financial distress, a Redis that got cryptojacked by a third party, a shadow hostname called "olivimails.com" (now expired), a Hestia Control Panel login page visible to the entire internet, and an operator who is *still actively uploading new scam assets* despite the fact that the monetization has been broken for months.
 
 **:world_map: [THE COMPLETE SCAM FLOW](https://github.com/GrantKlassy/funny/blob/main/investigations/epicfunnels/SCAM-FLOW.md)** — Every domain, subdomain, DNS record, port, service, certificate, and connection mapped out in Mermaid diagrams. The crown jewel. GitHub renders the Mermaid live.
 
@@ -214,7 +258,7 @@ If, somehow, you are still reading and want the real technical details:
 ### By The Numbers
 
 - **1** operating entity identified: Moxxi Media
-- **7** connected domains
+- **9** connected domains (was 7 — snagalot.com, myamericanprizes1.com added)
 - **15+** brand names
 - **747** assets in the GCS CDN bucket (publicly listable, actively updated)
 - **70** promotional assets impersonating government benefit programs
@@ -223,6 +267,8 @@ If, somehow, you are still reading and want the real technical details:
 - **7** affiliate IDs through one tracker
 - **500** cached Lua scripts in Redis
 - **4** cryptojacking malware payloads in Redis (from a third party — scammers getting scammed)
+- **3** third-party companies providing legal cover (ActiveProspect, SCA Promotions, EasyScan AMOE)
+- **2** TCPA compliance vendors that are actually the same company (ActiveProspect acquired Jornaya, Jan 2026)
 - **2** conflicting SPF records
 - **2** Microsoft 365 tenants (one deleted, one active)
 - **1** DKIM key that says "NOT ACTIVATED"
@@ -233,7 +279,11 @@ If, somehow, you are still reading and want the real technical details:
 - **1** admin panel exposed to the world
 - **1** engagement bot network still grinding (into a sinkhole)
 - **1** expired domain still used as a server hostname
+- **1** UPS Store mailbox pretending to be a corporate office (Red Bank, NJ)
+- **1** professional bridge player's company administering the "prize" (SCA Promotions, Dallas TX)
 - **1** guy with a sword (unrelated)
+- **1** billion leads certified annually by the consent verification monopoly enabling this
+- **$1,000** — the grand prize (one winner per year, random drawing, good luck)
 - **0** working parts of the actual scam
 
 ---

@@ -894,7 +894,7 @@ The BenefitsAccessCenter brand, the professionally produced responsive image set
 ### Updated Statistics
 
 ```
-Domains:                6  (olivimails.com now expired)
+Domains:                9  (was 6 — snagalot.com, myamericanprizes1.com, easyscanamoe.com added)
 Brand names:           15+ (was 2 — massive expansion from GCS bucket inventory)
 GCS bucket objects:   775  (747 + 28 across two buckets)
 GCS bucket size:      122.4 MB
@@ -908,3 +908,19 @@ CT log entries:        130+ (across all domains)
 Registrars used:       4 (GoDaddy, Squarespace, Cloudflare, Sav.com)
 Working parts:         0 (monetization still broken — tracker sinkholed)
 ```
+
+## Third-Party Intelligence (2026-04-08)
+
+Deep research into the companies providing legal cover and compliance infrastructure to the scam operation. Full write-up: **[THIRD-PARTY-INTEL.md](THIRD-PARTY-INTEL.md)**.
+
+### Key Findings
+
+**ActiveProspect + Jornaya are now the same company.** ActiveProspect acquired Verisk Marketing Solutions (parent of Jornaya and Infutor) on January 8, 2026. The two "separate" TCPA compliance vendors referenced in the scam's privacy policy are one entity. Combined, they certify over 1 billion opt-in leads annually. TrustedForm Certify is free for publishers — sign up online, verify your domain via DNS TXT record, no vetting of what the page actually does. The scam has ActiveProspect domain verifications on both epicfunnels.net and myamericanprizes.com.
+
+**SCA Promotions (Dallas, TX) is the prize administrator.** Founded 1986, not BBB accredited. Their EasyScan AMOE system provides the sweepstakes legal wrapper. The mail-in entry address goes directly to SCA's office at 3030 LBJ Freeway, Suite 300, Dallas. They handle the "$1,000 giveaway" — one prize per year, random drawing. SCA is a legitimate company being used to legitimize a scam. Whether they know their client runs fake government benefit portals is an open question.
+
+**The sponsor address is a UPS Store mailbox.** `68 White Street, Suite 7-291, Red Bank, NJ 07701` = The UPS Store #3488. "Suite 7" is the store's suite in the building. "291" is the mailbox number. Both MyAmericanPrizes and MyDailySurge list this as their address. There is no office. Contact: `support@mydailysurge.com`, live Zendesk help center at `mydailysurge.zendesk.com`.
+
+**Moxxi Digital (NYC) is the strongest candidate** for the entity behind `moxximedia.onmicrosoft.com`. Founded by Morris Laniado, ex-Fluent Inc. (NYSE: FLNT). Business model: "promotion-based marketing that drives opt-in lead generation at scale." The M365 tenant says "moxxiMEDIA" but the public company calls itself "moxxiDIGITAL" — possible rebrand, subsidiary, or different entity. Not confirmed, but the business model alignment is exact.
+
+**Three new connected domains**: `snagalot.com` (mirrors giveaway rules), `myamericanprizes1.com` (variant domain), `easyscanamoe.com` (SCA Promotions AMOE system). Total connected domains: **9**.
