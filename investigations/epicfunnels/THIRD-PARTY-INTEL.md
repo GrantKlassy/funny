@@ -4,6 +4,109 @@ Who are the companies providing legitimacy infrastructure to the Moxxi Media sca
 
 ---
 
+## Quick Reference: Every Identifying Detail
+
+### The Operator: Moxxi Media
+
+- **M365 tenant**: `moxximedia.onmicrosoft.com`
+- **M365 tenant ID**: `MS=ms46839871`
+- **Second M365 tenant** (deleted): `MS=ms66511106` on epicfunnels.net
+- **DKIM**: `selector1-myamericanprizes-com._domainkey.moxximedia.onmicrosoft.com`
+- **Registered domain**: none — `moxximedia.com` is not registered
+- **Sponsor address**: 68 White Street, Suite 7-291, Red Bank, NJ 07701 (**UPS Store #3488, mailbox #291**)
+- **Contact email**: `support@mydailysurge.com`
+- **Zendesk**: `mydailysurge.zendesk.com/hc/en-us`
+- **DMARC reporting**: `ed520975d12843c3ae17217ffb324256@dmarc-reports.cloudflare.net`
+- **MX (M365)**: `myamericanprizes-com.mail.protection.outlook.com`
+- **Platform backend**: CustomerTestConnect (Express.js + Handlebars)
+- **Apple domain verification**: `ySS9fHR4xXuFRiE0` on myamericanprizes.com
+- **Google Search Console**: `qWPTL9H_t4lE4Lja7ZwdNCdmGBQEaTmtJiX7KpXbkxM` on epicfunnels.net
+- **Spamhaus**: blocklisted (CSS — Combined Spam Sources)
+
+### Strongest Candidate: Moxxi Digital (NYC)
+
+- **Company**: Moxxi Digital
+- **Co-Founder/President**: Morris Laniado
+- **LinkedIn**: `linkedin.com/in/morris-laniado-0958384`
+- **Previous employer**: Fluent, Inc. (NYSE: FLNT), SelectQuote Insurance Services, Jade Global Group
+- **Education**: Baruch College, Bachelor's in Entrepreneurship/Communications/Political Science (2007-2011)
+- **Employees**: ~26
+- **HQ**: New York City
+- **Business model**: "Promotion-based marketing that drives lead opt-in lead generation and ROI-focused customer acquisition at scale"
+- **Status**: Bootstrapped, profitable
+- **Caveat**: M365 tenant says "moxxiMEDIA" not "moxxiDIGITAL" — not confirmed, could be rebrand/subsidiary/DBA or different entity
+
+### Infrastructure
+
+- **AWS EC2**: `13.220.193.170` (us-east-1)
+- **EC2 reverse DNS**: `ec2-13-220-193-170.compute-1.amazonaws.com`
+- **EC2 internal hostname**: `ip-172-26-15-175.ec2.internal` (leaked via SMTP)
+- **GCP**: `34.36.210.5` (mydailysurge.com)
+- **GCS bucket 1**: `b.noodledit.com` — 747 objects, 122.4 MB, publicly listable
+- **GCS bucket 2**: `sassets.noodledit.com` — 28 objects, publicly listable
+- **Hestia CP**: v1.9.4 on port 8083, hostname `fqdn.olivimails.com`
+- **Redis**: 7.4.7 on port 6379, no auth, Docker container, 500 cached Lua scripts, 4 cryptojacking payloads
+- **PostgreSQL**: port 5432, exposed to internet
+- **Node.js**: port 3000, HTTP 500 on all endpoints (crashed)
+- **Cloudflare account 1** (cass/felicity NS): myamericanprizes.com, noodledit.com, mydailysurge.com
+- **Cloudflare account 2** (cheryl/logan NS): epicfunnels.net
+
+### Domains (9)
+
+- `myamericanprizes.com` — GoDaddy, registered **2023-08-22**, expires 2026-08-22
+- `phef6trk.com` — Squarespace, registered 2024-06-25, **sinkholed to 10.0.0.1**
+- `noodledit.com` — Cloudflare, registered 2024-10-18, GCS asset CDN
+- `mydailysurge.com` — Cloudflare, registered 2025-03-19, SEO content farm
+- `epicfunnels.net` — Sav.com, registered 2025-08-26, scam landing pages + email
+- `olivimails.com` — **expired**, EC2 hostname only
+- `easyscanamoe.com` — SCA Promotions AMOE system
+- `snagalot.com` — mirrors giveaway rules
+- `myamericanprizes1.com` — variant/backup domain
+
+### CPA Tracker (phef6trk.com)
+
+- **Sinkholed**: A record `10.0.0.1`, AAAA `fd25:ef1b:4b44:1::1`
+- **7 affiliate IDs**: `FGK5P4`, `361GFK`, `JNS98R`, `KZDWFR`, `R1HQJL`, `THFD9F`, `7LKLK3`
+- **6+ campaign IDs**: `2Z57CD5`, `24X9WZ1`, `2JSKXKP`, `2M5TG68`, `2RX68SJ`, `JHMHC2`
+- **Offer IDs** (`__po`): 610, 611, 612, 628, 704, 709
+- **Publisher IDs** (`sub1`): 42358, 47429, 51398, 18603, 6823cf198c7f65155e8a7999
+
+### Social Media Accounts (10+)
+
+- **Twitter/X**: @GetnGoods, @mydailysurge
+- **Instagram**: @getngoods, @mydailysurge, @theupgradeclub, @jessytheupgradeclub
+- **TikTok**: @getngoods, @mydailysurge, @jessytheupgradeclub (58.4K followers)
+- **Facebook**: @getngoods, @mydailysurge
+
+### Compliance Vendors
+
+- **ActiveProspect verification (epicfunnels.net)**: `M+mUYgTDEprxDUAdcdobLA==`
+- **ActiveProspect verification (myamericanprizes.com)**: `DdrUnuCT8xESAT7uOdJmqg==`
+- **Jornaya**: referenced in privacy policy on explore.mydailysurge.com
+- **SCA Promotions**: prize administrator, 3030 LBJ Freeway Suite 300, Dallas TX 75234
+- **EasyScan AMOE key**: `4j8lbrw52v`
+- **Lovable AI project ID**: `p98pqg`
+- **Google Analytics**: `G-BSTM4RV28F`
+- **Google Tag Manager**: `GTM-N3JVLCTN`
+- **Webflow site ID**: `68129c0789b42b5281896601`
+- **Ve Global / veinteractive.com**: retargeting platform in GTM
+
+### Brands (15+)
+
+- GetnGoods, MyDailySurge, PrizeZappy, SnagNGoods, PrizeZar, PlayZoodle
+- HealthPlanScouts, Fresh Health Plan, LendliV2, Prismique, CheckGo
+- BenefitsAccessCenter, TheDailyTipJar, OPG Housing, CustomerTestConnect
+- MyAmericanPrizes (legal entity name on sweepstakes rules)
+
+### Key People at Third-Party Companies
+
+- **Steve Rafferty** — CEO/Founder, ActiveProspect (Austin, TX)
+- **Bob Hamman** — Founder, SCA Promotions (Dallas, TX), professional bridge player
+- **Chris Hamman** — VP/Executive Director, SCA Promotions
+- **Morris Laniado** — Co-Founder/President, Moxxi Digital (NYC), ex-Fluent Inc.
+
+---
+
 ## The Stack
 
 ```
